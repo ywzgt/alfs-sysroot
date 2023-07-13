@@ -1,0 +1,19 @@
+#!/bin/bash
+# https://www.linuxfromscratch.org/blfs/view/systemd/general/tree.html
+
+PKG="tree"
+PKG_VERSION="2.1.1"
+PKG_FILE="${PKG}-${PKG_VERSION}.tgz"
+URL="https://mama.indstate.edu/users/ice/tree/src/${PKG_FILE}"
+MD5="1376096bad6b1875d680b18873c249f1"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+make
+make install PREFIX=/usr MANDIR=/usr/share/man
+chmod -v 644 /usr/share/man/man1/tree.1
+xEOFx
+) > tmp
