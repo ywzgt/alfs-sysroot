@@ -1,0 +1,17 @@
+/usr/bin/xmlwf	41520	root:root	755	
+/usr/include/expat.h	43535	root:root	644	
+/usr/include/expat_config.h	4052	root:root	644	
+/usr/include/expat_external.h	6029	root:root	644	
+/usr/lib/cmake/expat-2.5.0/expat-config-version.cmake	2878	root:root	644	
+/usr/lib/cmake/expat-2.5.0/expat-config.cmake	3637	root:root	644	
+/usr/lib/cmake/expat-2.5.0/expat-noconfig.cmake	844	root:root	644	
+/usr/lib/cmake/expat-2.5.0/expat.cmake	4046	root:root	644	
+/usr/lib/libexpat.so	18	root:root	777	libexpat.so.1.8.10
+/usr/lib/libexpat.so.1	18	root:root	777	libexpat.so.1.8.10
+/usr/lib/libexpat.so.1.8.10	190648	root:root	755	
+/usr/lib/pkgconfig/expat.pc	248	root:root	644	
+/usr/share/doc/expat-2.5.0/AUTHORS	142	root:root	644	
+/usr/share/doc/expat-2.5.0/changelog	64807	root:root	644	
+/usr/share/doc/expat-2.5.0/ok.min.css	15844	root:root	644	
+/usr/share/doc/expat-2.5.0/reference.html	104258	root:root	644	
+/usr/share/doc/expat-2.5.0/style.css	1952	root:root	644	
