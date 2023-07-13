@@ -1,0 +1,19 @@
+--- a
++++ b
+@@ -10,12 +10,12 @@
+ RUN_ME="./jhalfs run"
+ BRANCH=y
+ # WORKING_COPY is not set
+-COMMIT="trunk"
+-LFS_MULTILIB_NO=y
+-# LFS_MULTILIB_I686 is not set
++COMMIT="multilib"
++# LFS_MULTILIB_NO is not set
++LFS_MULTILIB_I686=y
+ # LFS_MULTILIB_X32 is not set
+ # LFS_MULTILIB_ALL is not set
+-MULTILIB="default"
++MULTILIB="ml_32"
+ BUILD_CHROOT=y
+ # BUILD_BOOT is not set
+ METHOD="chroot"
