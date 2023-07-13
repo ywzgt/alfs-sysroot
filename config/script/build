@@ -1,0 +1,130 @@
+#!/bin/bash
+
+git config --global user.name "github-actions"
+git config --global user.email "noreply@github.com"
+git config --global init.defaultbranch main
+git config --global advice.detachedHead false
+MISS_FILES=0
+mk32bit=0
+
+case "$2" in
+	sysv|sysV|sys)
+		INITSYS='sysv'
+		;;
+	*)
+		INITSYS='systemd'
+		;;
+esac
+
+_get_sources() {
+	git clone 'https://git.linuxfromscratch.org/jhalfs.git' alfs
+	install -Dm644 cus_pkg/Cus* -t alfs/custom/config #sed -i 's/(( i = 4; i < nb_chaps+4; i++ ))/i in 4/' alfs/LFS/master.sh
+	sed "/^N_PARALLEL/s/=.*/=$(nproc --all)/" configuration.${INITSYS} > alfs/configuration
+	sed -e 's|/no (no)||' -e 's|yes/no||' -e 's|read -r ANSWER|ANSWER=yes|' -i alfs/jhalfs
+	sed -e 's|yes/no (no)| (yes)|' -e 's|read ANSWER|ANSWER=yes|' -i alfs/optimize/optimize_functions
+	sed -e '/^all:/s/ck_terminal//' -i alfs/LFS/master.sh
+	sed -e 's|WGETPARAM=""|WGETPARAM="-nv -c "|' -i alfs/common/libs/func_download_pkgs
+	sed -e '/CHROOT_wrt_RemoveBuildDirs "${PKG}"$/a\      CHROOT_wrt_LogNewFiles "${this_script}"' \
+		-e '/CHROOT_Unpack "${PKG_FILE}"$/i\      CHROOT_wrt_TouchTimestamp' \
+		-e '/CHROOT_Unpack "${PKG_FILE}"$/a\      wrt_makeflags "${PKG}" "-j$(nproc --all)" "$(nproc --all)"\n      wrt_optimize "${PKG}"' \
+		-e '/^`cat tmp`$/a\find /usr ! -type d -name "*.la" -exec rm -f -- "{}" +' -i alfs/common/libs/func_custom_pkgs
+
+	sed -e '/^DEF_OPT_MODE=/c\DEF_OPT_MODE=O2pipe' -e 's/OTHER_CFLAGS/OTHER_CPPFLAGS &/' \
+		-e '/^ACTIVE_OPT_VARS=/s/CFLAGS/CPPFLAGS &/' -i alfs/optimize/opt_config
+	sed -e 's|="-O2.*$|="-march=haswell -O2 -pipe -fno-plt -fPIC -DNDEBUG"|' \
+		-e '/^LDFLAGS/s/=.*$/="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"/' -i alfs/optimize/opt_config.d/O2pipe
+	sed -e '/^gcc/s/noOpt/cusOpt/' -i alfs/optimize/opt_override
+	echo 'CPPFLAGS_O2pipe="-O2 -pipe -fPIC -DNDEBUG"' >>alfs/optimize/opt_config.d/O2pipe
+	echo 'OTHER_CPPFLAGS_O2pipe=$CPPFLAGS_O2pipe' >>alfs/optimize/opt_config.d/O2pipe
+	sed -e '/CFLAGS/s/-DNDEBUG//g' -e 's|O2pipe|cusOpt|g' alfs/optimize/opt_config.d/O2pipe > alfs/optimize/opt_config.d/cusOpt
+}
+
+_install_dep() {
+	sudo apt-get update >/dev/null 2>&1
+	printf 'Install build depends...'
+	sudo apt-get install -y libxml2-utils xsltproc docbook-xml docbook-xsl &>/dev/null
+	printf 'done.\n'
+	local bld_dir="$(grep '^BUILDDIR=' alfs/configuration|sed -e 's/^BUILDDIR=//' -e 's/"//g')"
+	local src_dir="$(grep 'SRC_ARCHIVE=' alfs/configuration|sed -e 's/^SRC_ARCHIVE=//' -e 's/"//g')"
+	sudo mkdir -p "${bld_dir}" "${src_dir}"
+	sudo chown -R $(id -u):$(id -g) "${src_dir}"
+}
+
+_fix_git_repo() {
+	local branch="$(grep '^COMMIT=' alfs/configuration|sed -e 's/^COMMIT=//' -e 's/"//g')"
+	git clone 'https://git.linuxfromscratch.org/lfs.git' --depth=1
+	git clone 'https://git.linuxfromscratch.org/lfs.git' repo -b "$branch"
+
+	[ ! -e repo/chapter08/pkgconfig.xml ] || cp -vf lfs/chapter08/pkgconf.xml repo/chapter08/pkgconfig.xml
+
+	for i in {packages,patches}.ent chapter03/{packages,patches}.xml; do
+		diff -u {lfs,repo}/$i &>/dev/null || { cp -vf lfs/$i repo/$i; }
+	done
+	test ! -e repo/chapter08/isl.xml || rm -v repo/chapter08/isl.xml  # isl 非必需，防止gcc 链接 libisl.so.23 (/usr/libexec/gcc/x86_64-pc-linux-gnu/13.1.0/cc1等)
+	test ! -e repo/chapter08/grub.xml || rm -v repo/chapter08/grub.xml
+	test ! -e repo/chapter10/grub.xml || rm -v repo/chapter10/grub.xml # bios
+	test ! "$mk32bit" -eq 1 || sed -i 's|./configure --prefix=/usr|ABI=32 &|' repo/chapter08/gmp.xml
+	(cd repo; git add .; git commit -m 'fix git repo') >/dev/null 2>&1 || echo '::The git repo No change.'
+	sed -i "s|https://git.linuxfromscratch.org/lfs.git|file://$PWD/repo|" alfs/jhalfs
+}
+
+_fix_error(){
+	local src_dir="$(grep 'SRC_ARCHIVE=' alfs/configuration|sed -e 's/^SRC_ARCHIVE=//' -e 's/"//g')"
+#  	echo; echo "Download MISSING FILES..."
+#  	wget -cP "${src_dir}" -nv https://www.linuxfromscratch.org/patches/downloads/kbd/kbd-2.5.1-backspace-1.patch
+#  	echo
+}
+
+_docmd() {
+	[ ! "$MISS_FILES" -eq 1 ] || _fix_error
+	pushd alfs >/dev/null
+	sed 's/\(NCURSES5\)=y/# \1 is not set/' -i configuration
+	./jhalfs run || _failed
+	popd >/dev/null
+}
+
+_failed() {
+		echo "::::Build failed!"
+		export TZ='Asia/Shanghai'
+		local INITSYS="$(grep '^INITSYS=' configuration|sed -e 's/^INITSYS=//' -e 's/"//g')"
+		local bld_dir="$(grep '^BUILDDIR=' configuration|sed -e 's/^BUILDDIR=//' -e 's/"//g')"
+		cd ..; if [ -e "ENV" ]; then . "ENV"; fi
+		local branch="failed_${INITSYS}${ml}_$(date +%Y%m%d-%H-%M)"
+		local miss_file="${bld_dir}/sources/MISSING_FILES.DMP" mk_file="${bld_dir}/jhalfs/Makefile"
+		git rm -rf . >/dev/null; find "${bld_dir}/sources" -name "$(basename ${miss_file})" -empty -delete
+		cp -a "${bld_dir}/jhalfs/"{logs,installed-files} . || true
+		if [ -e "${miss_file}" ]; then cp "${miss_file}" .; git add "$(basename ${miss_file})"; fi
+		if [ -e "${mk_file}" ]; then cp "${mk_file}" .; git add Makefile; fi
+		git add logs installed-files || true
+		git commit -m "build failed" >/dev/null
+		git checkout --orphan new_tag
+		git commit -m "build failed, $(date|sed -e 's/20[0-9][0-9]$//' -e 's/CST//')"
+		git branch -m "$branch"
+		git push origin "$branch" || git push origin "$branch" --force
+		echo "::::Upload log completed!"; exit 123
+}
+
+
+case "$1" in
+	pre)
+		_get_sources; printf '\n'; _install_dep; printf '\n'; _fix_git_repo; _docmd
+		;;
+	failed)
+		_failed
+		;;
+	m32|i?86)
+		patch -Np1 -i patch/multilib-32.patch "configuration.${INITSYS}"
+		_get_sources; printf '\n'; _install_dep; printf '\n'; _fix_git_repo; _docmd
+		echo "ml=\"-m32\"" >ENV
+		;;
+	multilib|ml-all)
+		patch -Np1 -i patch/multilib-all.patch "configuration.${INITSYS}"
+		_get_sources; printf '\n'; _install_dep; printf '\n'; _fix_git_repo; _docmd
+		echo "ml=\"-multilib\"" >ENV
+		;;
+	32bit|32)
+		mk32bit=1
+		_get_sources; printf '\n'; _install_dep; printf '\n'; _fix_git_repo; _docmd
+		echo "ml=\"-32bit\"" >ENV
+		;;
+esac
