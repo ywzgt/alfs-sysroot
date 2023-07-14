@@ -1,0 +1,16 @@
+Thu Jul 13 21:08:48 UTC 2023
+KB: 1455360	/lfs_build/
+mkdir: created directory '/lfs_build/dev'
+mkdir: created directory '/lfs_build/proc'
+mkdir: created directory '/lfs_build/sys'
+mkdir: created directory '/lfs_build/run'
+mount: /dev bound on /lfs_build/dev.
+mount: /dev/pts bound on /lfs_build/dev/pts.
+mount: proc mounted on /lfs_build/proc.
+mount: sysfs mounted on /lfs_build/sys.
+mount: tmpfs mounted on /lfs_build/run.
+
+
+Totalseconds: 0
+
+KB: 1455360	/lfs_build/

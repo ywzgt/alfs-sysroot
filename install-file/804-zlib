@@ -1,0 +1,19 @@
+/etc/ld.so.cache	10319	root:root	644	
+/usr/include/zconf.h	16589	root:root	644	
+/usr/include/zlib.h	97323	root:root	644	
+/usr/lib/libz.so	14	root:root	777	libz.so.1.2.13
+/usr/lib/libz.so.1	14	root:root	777	libz.so.1.2.13
+/usr/lib/libz.so.1.2.13	108592	root:root	755	
+/usr/lib/pkgconfig/zlib.pc	253	root:root	644	
+/usr/lib32/libz.a	125026	root:root	644	
+/usr/lib32/libz.so	14	root:root	777	libz.so.1.2.13
+/usr/lib32/libz.so.1	14	root:root	777	libz.so.1.2.13
+/usr/lib32/libz.so.1.2.13	107112	root:root	755	
+/usr/lib32/pkgconfig/zlib.pc	245	root:root	644	
+/usr/libx32/libz.a	112650	root:root	644	
+/usr/libx32/libz.so	14	root:root	777	libz.so.1.2.13
+/usr/libx32/libz.so.1	14	root:root	777	libz.so.1.2.13
+/usr/libx32/libz.so.1.2.13	106096	root:root	755	
+/usr/libx32/pkgconfig/zlib.pc	246	root:root	644	
+/usr/share/man/man3/zlib.3	4477	root:root	644	
+/var/cache/ldconfig/aux-cache	7838	root:root	600	

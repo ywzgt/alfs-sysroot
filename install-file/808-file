@@ -1,0 +1,18 @@
+/usr/bin/file	31056	root:root	755	
+/usr/include/magic.h	5909	root:root	644	
+/usr/lib/libmagic.so	17	root:root	777	libmagic.so.1.0.0
+/usr/lib/libmagic.so.1	17	root:root	777	libmagic.so.1.0.0
+/usr/lib/libmagic.so.1.0.0	186520	root:root	755	
+/usr/lib/pkgconfig/libmagic.pc	230	root:root	644	
+/usr/lib32/libmagic.so	17	root:root	777	libmagic.so.1.0.0
+/usr/lib32/libmagic.so.1	17	root:root	777	libmagic.so.1.0.0
+/usr/lib32/libmagic.so.1.0.0	224532	root:root	755	
+/usr/lib32/pkgconfig/libmagic.pc	222	root:root	644	
+/usr/libx32/libmagic.so	17	root:root	777	libmagic.so.1.0.0
+/usr/libx32/libmagic.so.1	17	root:root	777	libmagic.so.1.0.0
+/usr/libx32/libmagic.so.1.0.0	169972	root:root	755	
+/usr/libx32/pkgconfig/libmagic.pc	223	root:root	644	
+/usr/share/man/man1/file.1	22114	root:root	644	
+/usr/share/man/man3/libmagic.3	11326	root:root	644	
+/usr/share/man/man4/magic.4	24436	root:root	644	
+/usr/share/misc/magic.mgc	8247936	root:root	644	
