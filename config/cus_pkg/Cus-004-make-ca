@@ -1,0 +1,20 @@
+#!/bin/bash
+# https://www.linuxfromscratch.org/blfs/view/systemd/postlfs/make-ca.html
+
+PKG="make-ca"
+PKG_VERSION="1.12"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.xz"
+URL="https://github.com/lfs-book/make-ca/releases/download/v${PKG_VERSION}/${PKG_FILE}"
+MD5="67e0b911e73a859fc326171c5153d455"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+make install
+if test -e /usr/lib/systemd/system/update-pki.timer; then
+	rm -fv /usr/lib/systemd/system/update-pki.timer
+fi
+xEOFx
+) > tmp

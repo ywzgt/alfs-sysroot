@@ -1,0 +1,25 @@
+#!/bin/bash
+# https://linuxfromscratch.org/blfs/view/systemd/postlfs/gnutls.html
+
+PKG="gnutls"
+PKG_VERSION="3.8.0"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.xz"
+URL="https://www.gnupg.org/ftp/gcrypt/$PKG/v${PKG_VERSION%.*}/${PKG_FILE}"
+MD5="20a662caf20112b6b9ad1f4a64db3a97"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << xEOFx
+		./configure --prefix=/usr \
+		--disable-static \
+		--disable-tests \
+		--docdir=/usr/share/doc/$PKG-${PKG_VERSION} \
+		--with-default-trust-store-pkcs11="pkcs11:" \
+		--with-included-unistring
+
+make
+make install
+xEOFx
+) > tmp
