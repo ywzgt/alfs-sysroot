@@ -1,0 +1,21 @@
+Sun Jul 30 18:54:28 CST 2023
+tar: stdout: write error
+KB: 1918536	/
+Processing /sources/wheel-0.41.0
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: wheel
+  Building wheel for wheel (pyproject.toml): started
+  Building wheel for wheel (pyproject.toml): finished with status 'done'
+  Created wheel for wheel: filename=wheel-0.41.0-py3-none-any.whl size=64712 sha256=98b7f39721ef50e070a1d865835029f60674e0debb9009257b49fae93648a583
+  Stored in directory: /root/.cache/pip/wheels/64/61/04/2705e03d26e9f7c96645e3177ccd4f24e92be981696089fbf3
+Successfully built wheel
+Looking in links: dist
+Processing ./dist/wheel-0.41.0-py3-none-any.whl
+Installing collected packages: wheel
+Successfully installed wheel-0.41.0
+
+
+Totalseconds: 1
+
+KB: 1920116	/
