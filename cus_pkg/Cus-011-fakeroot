@@ -1,0 +1,21 @@
+#!/bin/bash
+# https://gitlab.archlinux.org/archlinux/packaging/packages/fakeroot
+# https://packages.debian.org/source/sid/fakeroot
+
+PKG="fakeroot"
+PKG_VERSION="$(curl -sL https://packages.debian.org/source/sid/fakeroot|awk '/.orig.tar.gz/{print$2}'|sed 's/.*fakeroot_\|.orig.tar.*//g')"
+URL="$(curl -sL https://packages.debian.org/source/sid/fakeroot|awk '/.orig.tar.gz/'|sed 's/<.*="\|">.*$//g')"
+MD5="$(curl -sL https://packages.debian.org/source/sid/fakeroot| grep -A2 orig.tar.gz|tail -1|sed 's/<.*">\|<\/.*//g')"
+PKG_FILE="$(basename $URL)"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+./configure --prefix=/usr \
+		--disable-static
+make
+make install
+xEOFx
+) > tmp

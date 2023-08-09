@@ -1,0 +1,21 @@
+#!/bin/bash
+# https://linuxfromscratch.org/blfs/view/systemd/general/popt.html
+
+PKG="popt"
+PKG_VERSION="1.19"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.gz"
+URL="http://ftp.rpm.org/popt/releases/popt-1.x/${PKG_FILE}"
+MD5="eaa2135fddb6eb03f2c87ee1823e5a78"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << xEOFx
+		./configure --prefix=/usr \
+		--disable-static
+
+make
+make install
+xEOFx
+) > tmp
