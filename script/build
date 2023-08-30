@@ -51,19 +51,23 @@ _get_sources() {
 
 	sed -e '/^DEF_OPT_MODE=/c\DEF_OPT_MODE=O2pipe' -e 's/OTHER_CFLAGS/OTHER_CPPFLAGS &/' \
 		-e '/^ACTIVE_OPT_VARS=/s/CFLAGS/CPPFLAGS &/' -i alfs/optimize/opt_config
-	sed -e 's|="-O2.*$|="-march=haswell -O2 -pipe -fno-plt -fPIC -DNDEBUG"|' \
+	sed -e 's|="-O2.*$|="-march=%MARCH% -O2 -pipe -fno-plt -fPIC -DNDEBUG"|' \
 		-e '/^LDFLAGS/s/=.*$/="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"/' \
 		-e '/^CXXFLAGS_O2pipe=/s/=.*/="$CFLAGS_O2pipe -Wp,-D_GLIBCXX_ASSERTIONS"/' -i alfs/optimize/opt_config.d/O2pipe
 	sed -e '/^gcc/s/noOpt/cusOpt/' -i alfs/optimize/opt_override
 	echo 'CPPFLAGS_O2pipe="-O2 -pipe -fPIC -DNDEBUG"' >>alfs/optimize/opt_config.d/O2pipe
 	echo 'OTHER_CPPFLAGS_O2pipe=$CPPFLAGS_O2pipe' >>alfs/optimize/opt_config.d/O2pipe
 	sed -e '/CFLAGS/s/-DNDEBUG//g' -e 's|O2pipe|cusOpt|g' alfs/optimize/opt_config.d/O2pipe > alfs/optimize/opt_config.d/cusOpt
+	case "$(uname -m)" in
+		i?86) sed -i "s/%MARCH%/$(uname -m)/" alfs/optimize/opt_config.d/{O2pipe,cusOpt} ;;
+		x86_64) sed -i "s/%MARCH%/x86-64-v3/" alfs/optimize/opt_config.d/{O2pipe,cusOpt} ;;
+	esac
 }
 
 _install_dep() {
 	sudo apt-get update >/dev/null 2>&1
 	printf 'Install build depends...\n'
-	sudo apt-get install -y libxml2-utils xsltproc docbook-xml docbook-xsl $DEPKG &>/dev/null
+	sudo apt-get install -y libxml2-utils xsltproc docbook-xml docbook-xsl &>/dev/null   # 504-libxcrypt 删除了, 不再需要 $DEPKG
 	printf 'done.\n'
 	local bld_dir="$(grep '^BUILDDIR=' alfs/configuration|sed -e 's/^BUILDDIR=//' -e 's/"//g')"
 	local src_dir="$(grep 'SRC_ARCHIVE=' alfs/configuration|sed -e 's/^SRC_ARCHIVE=//' -e 's/"//g')"
@@ -96,6 +100,19 @@ _fix_git_repo() {
 	for i in {packages,patches}.ent chapter03/{packages,patches}.xml; do
 		diff -u {lfs,repo}/$i &>/dev/null || { cp -vf lfs/$i repo/$i; }
 	done
+
+	case "$ML" in
+		m32)
+			for i in repo/chapter0[5-8]/*.xml; do if grep -q 'CC=.*-m32' $i; then
+				sed -i.ori 's;CC=.*-m32;export CFLAGS=${CFLAGS/x86-64-v3/i686}\nexport CXXFLAGS=${CXXFLAGS/x86-64-v3/i686}\n&;' $i; fi
+			done
+			;;
+		all)
+			for i in repo/chapter0[5-8]/*.xml; do if grep -q 'CC=.*-mx32' $i; then
+				sed 's;CC=.*-mx32;export CFLAGS=${CFLAGS/i686/x86-64-v3}\nexport CXXFLAGS=${CXXFLAGS/i686/x86-64-v3}\n&;' $i; fi
+			done
+			;;
+	esac
 
 	case "$abi" in x32)
 		test ! -e repo/chapter08/sysvinit.xml || { rm -v repo/chapter08/sysvinit.xml; sed -i '/sysvinit.xml/d' repo/chapter08/chapter08.xml; }
@@ -162,12 +179,14 @@ case "$1" in
 	m32|i?86)
 		patch -Np1 -i patch/multilib-32.patch "configuration.${INITSYS}"
 		DEPKG=gcc-multilib
+		ML=m32
 		_get_sources; printf '\n'; _install_dep; printf '\n'; _fix_git_repo; _docmd
 		echo "ml=\"-m32\"" >ENV
 		;;
 	multilib|ml-all)
 		patch -Np1 -i patch/multilib-all.patch "configuration.${INITSYS}"
 		DEPKG=gcc-multilib
+		ML=all
 		_get_sources; printf '\n'; _install_dep; printf '\n'; _fix_git_repo; _docmd
 		echo "ml=\"-multilib\"" >ENV
 		;;

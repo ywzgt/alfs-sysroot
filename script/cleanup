@@ -204,7 +204,7 @@ VCSCLIENTS=('bzr::bzr'
             'svn::subversion')
 CARCH="$(uname -m)"
 CHOST="$(uname -m)-pc-linux-gnu"
-CFLAGS="-march=haswell -O2 -pipe -fno-plt -fPIC -DNDEBUG -w"
+CFLAGS="-march=%MARCH% -O2 -pipe -fno-plt -fPIC -DNDEBUG -w"
 CXXFLAGS="\$CFLAGS -Wp,-D_GLIBCXX_ASSERTIONS"
 LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
 LTOFLAGS="-flto=auto"
@@ -242,6 +242,11 @@ EFO
 		if [ "${MKx32}" -eq 1 ]; then
 			sed -e "/^CHOST=/s/$(uname -m)-pc-linux-gnu/&x32/" -e '/^CARCH=/s/=.*/="x86_64_x32"/' -i "${bld_dir}/etc/makepkg.conf"
 		fi
+
+		case "$(uname -m)" in
+			i?86) sed -i "s/%MARCH%/$(uname -m)/" "${bld_dir}/etc/makepkg.conf" ;;
+			x86_64) sed -i "s/%MARCH%/x86-64-v3/" "${bld_dir}/etc/makepkg.conf" ;;
+		esac
 }
 
 _pacman_db() {

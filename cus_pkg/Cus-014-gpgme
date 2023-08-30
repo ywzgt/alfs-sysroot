@@ -2,10 +2,10 @@
 # https://linuxfromscratch.org/blfs/view/systemd/postlfs/gpgme.html
 
 PKG="gpgme"
-PKG_VERSION="1.20.0"
+PKG_VERSION="1.21.0"
 PKG_FILE="${PKG}-${PKG_VERSION}.tar.bz2"
 URL="https://www.gnupg.org/ftp/gcrypt/gpgme/${PKG_FILE}"
-MD5="526949233610f46655741cafd09e66a7"
+MD5="3a83288e753a7da53a5626d29e4416fd"
 
 for i in PATCH{1..10}; do
 	unset $i
