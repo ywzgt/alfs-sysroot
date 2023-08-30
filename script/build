@@ -95,24 +95,36 @@ _fix_git_repo() {
 
 	# 防止出现编译器内部错误，创建通用库：
 	sed -i 's|./configure --prefix=/usr|cp -v config{fsf,}.guess\ncp -v config{fsf,}.sub\n&|' repo/chapter08/gmp.xml
+	if test $ML; then
+		sed -i 's;ABI="\(\|x\)32";cp -v config{fsf,}.guess\ncp -v config{fsf,}.sub\n&;g' repo/chapter08/gmp.xml
+	fi
 
 	[ ! -e repo/chapter08/pkgconfig.xml ] || cp -vf lfs/chapter08/pkgconf.xml repo/chapter08/pkgconfig.xml
 	for i in {packages,patches}.ent chapter03/{packages,patches}.xml; do
 		diff -u {lfs,repo}/$i &>/dev/null || { cp -vf lfs/$i repo/$i; }
 	done
 
+	_flags32() {
+		for i in repo/chapter0[5-8]/*.xml; do if grep -q 'CC=.*-m32' $i; then
+			sed -i.ori 's;CC=.*-m32;export CFLAGS=${CFLAGS/x86-64-v3/i686}\nexport CXXFLAGS=${CXXFLAGS/x86-64-v3/i686}\n&;' $i; fi
+		done
+		sed 's|ABI="32"|export CFLAGS=${CFLAGS/x86-64-v3/i686}\nexport CXXFLAGS=${CXXFLAGS/x86-64-v3/i686}\n&|' -i repo/chapter08/gmp.xml
+		sed 's|CFLAGS.*-m32|export CFLAGS=${CFLAGS/x86-64-v3/i686}\nexport CXXFLAGS=${CXXFLAGS/x86-64-v3/i686}\n&|' -i repo/chapter08/zlib.xml
+	}
+	_flagsx32() {
+		for i in repo/chapter0[5-8]/*.xml; do if grep -q 'CC=.*-mx32' $i; then
+			sed -i 's;CC=.*-mx32;export CFLAGS=${CFLAGS/i686/x86-64-v3}\nexport CXXFLAGS=${CXXFLAGS/i686/x86-64-v3}\n&;' $i; fi
+		done
+		sed 's|ABI="x32"|export CFLAGS=${CFLAGS/i686/x86-64-v3}\nexport CXXFLAGS=${CXXFLAGS/i686/x86-64-v3}\n&|' -i repo/chapter08/gmp.xml
+		sed 's|CFLAGS.*-mx32|export CFLAGS=${CFLAGS/i686/x86-64-v3}\nexport CXXFLAGS=${CXXFLAGS/i686/x86-64-v3}\n&|' -i repo/chapter08/zlib.xml
+	}
 	case "$ML" in
-		m32)
-			for i in repo/chapter0[5-8]/*.xml; do if grep -q 'CC=.*-m32' $i; then
-				sed -i.ori 's;CC=.*-m32;export CFLAGS=${CFLAGS/x86-64-v3/i686}\nexport CXXFLAGS=${CXXFLAGS/x86-64-v3/i686}\n&;' $i; fi
-			done
-			;;
-		all)
-			for i in repo/chapter0[5-8]/*.xml; do if grep -q 'CC=.*-mx32' $i; then
-				sed 's;CC=.*-mx32;export CFLAGS=${CFLAGS/i686/x86-64-v3}\nexport CXXFLAGS=${CXXFLAGS/i686/x86-64-v3}\n&;' $i; fi
-			done
-			;;
+		m32) _flags32 ;;
+		all) _flags32; _flagsx32 ;;
 	esac
+	for i in {bzip2,libcap,systemd,udev}; do
+		[ ! -e repo/chapter08/$i.xml.ori ] || mv -f repo/chapter08/$i.xml{.ori,}
+	done
 
 	case "$abi" in x32)
 		test ! -e repo/chapter08/sysvinit.xml || { rm -v repo/chapter08/sysvinit.xml; sed -i '/sysvinit.xml/d' repo/chapter08/chapter08.xml; }
