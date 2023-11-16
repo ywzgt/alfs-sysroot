@@ -23,6 +23,25 @@ patch -Np1 -i ../${PATCH2##*/}
 patch -Np1 -i ../${PATCH3##*/}
 patch -Np1 -i ../${PATCH4##*/}
 
+cat <<"EOF">> scripts/po/zh_CN.po
+
+msgid "Splitting %s files into separate packages..."
+msgstr "正在将 %s 文件拆分为单独的包..."
+
+msgid "Removing man pages for the specified language..."
+msgstr "正在删除指定语言的手册页..."
+
+msgid "Removing the message translation file for the specified language..."
+msgstr "正在删除指定语言的消息翻译文件..."
+
+msgid "Finding %s files..."
+msgstr "正在查找 %s 文件..."
+
+msgid "Adding dependencies by dynamic linked library..."
+msgstr "正在通过动态链接库添加依赖..."
+EOF
+
+
 mkdir -v pacman-build
 cd pacman-build
 

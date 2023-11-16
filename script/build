@@ -46,7 +46,7 @@ _get_sources() {
 	sed -e 's|WGETPARAM=""|WGETPARAM="-nv -c "|' -i alfs/common/libs/func_download_pkgs
 	sed -e '/CHROOT_wrt_RemoveBuildDirs "${PKG}"$/a\      CHROOT_wrt_LogNewFiles "${this_script}"' \
 		-e '/CHROOT_Unpack "${PKG_FILE}"$/i\      CHROOT_wrt_TouchTimestamp' \
-		-e '/CHROOT_Unpack "${PKG_FILE}"$/a\      wrt_makeflags "${PKG}" "-j$(nproc --all)" "$(nproc --all)"\n      wrt_optimize "${PKG}"' \
+		-e '/CHROOT_Unpack "${PKG_FILE}"$/a\      wrt_makeflags "${PKG}" "-j${N_PARALLEL}" "${N_PARALLEL}"\n      wrt_optimize "${PKG}"' \
 		-e '/^`cat tmp`$/a\find /usr ! -type d -name "*.la" -exec rm -f -- "{}" +' -i alfs/common/libs/func_custom_pkgs
 
 	sed -e '/^DEF_OPT_MODE=/c\DEF_OPT_MODE=O2pipe' -e 's/OTHER_CFLAGS/OTHER_CPPFLAGS &/' \
@@ -55,6 +55,7 @@ _get_sources() {
 		-e '/^LDFLAGS/s/=.*$/="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"/' \
 		-e '/^CXXFLAGS_O2pipe=/s/=.*/="$CFLAGS_O2pipe -Wp,-D_GLIBCXX_ASSERTIONS"/' -i alfs/optimize/opt_config.d/O2pipe
 	sed -e '/^gcc/s/noOpt/cusOpt/' -i alfs/optimize/opt_override
+	echo "patch     noOpt" >> alfs/optimize/opt_override  # 防止应用大补丁时报错
 	echo 'CPPFLAGS_O2pipe="-O2 -pipe -fPIC -DNDEBUG"' >>alfs/optimize/opt_config.d/O2pipe
 	echo 'OTHER_CPPFLAGS_O2pipe=$CPPFLAGS_O2pipe' >>alfs/optimize/opt_config.d/O2pipe
 	sed -e '/CFLAGS/s/-DNDEBUG//g' -e 's|O2pipe|cusOpt|g' alfs/optimize/opt_config.d/O2pipe > alfs/optimize/opt_config.d/cusOpt
@@ -62,12 +63,14 @@ _get_sources() {
 		i?86) sed -i "s/%MARCH%/$(uname -m)/" alfs/optimize/opt_config.d/{O2pipe,cusOpt} ;;
 		x86_64) sed -i "s/%MARCH%/x86-64-v3/" alfs/optimize/opt_config.d/{O2pipe,cusOpt} ;;
 	esac
+	sed -i '/wrt_makeflags "$name" "-j1" "1"/s/1/${N_PARALLEL}/g' alfs/LFS/master.sh  # 临时工具不使用 *FLAGS 时仍使用 MAKEFLAGS 和 ninja jobs
+	#sed -i '/MKF="-j1"\|NJJ="1"/s/1/${N_PARALLEL}/' alfs/optimize/optimize_functions  # 让 alfs/optimize/opt_config 中定义的 BLACK_LIST 失效
 }
 
 _install_dep() {
 	sudo apt-get update >/dev/null 2>&1
 	printf 'Install build depends...\n'
-	sudo apt-get install -y libxml2-utils xsltproc docbook-xml docbook-xsl &>/dev/null   # 504-libxcrypt 删除了, 不再需要 $DEPKG
+	sudo apt-get install -y libxml2-utils xsltproc docbook-xml docbook-xsl &>/dev/null   # 504-libxcrypt 删除了, 多库不再需要 $DEPKG
 	printf 'done.\n'
 	local bld_dir="$(grep '^BUILDDIR=' alfs/configuration|sed -e 's/^BUILDDIR=//' -e 's/"//g')"
 	local src_dir="$(grep 'SRC_ARCHIVE=' alfs/configuration|sed -e 's/^SRC_ARCHIVE=//' -e 's/"//g')"
@@ -92,6 +95,9 @@ _fix_git_repo() {
 		cp -v  "lfs-bootscripts-$boot_ver.tar$format" "$src_dir"
 		sed -i "/lfs-bootscripts-md5/s/BOOTSCRIPTS-MD5SUM/$(md5sum lfs-bootscripts-$boot_ver.tar$format|cut -d' ' -f1)/" lfs/packages.ent
 	fi
+
+	# py 3.12.0 编译报错
+	sed -i 's@./configure --prefix=/usr@unset CFLAGS CPPFLAGS CXXFLAGS LDFLAGS OTHER_CFLAGS OTHER_CPPFLAGS OTHER_CXXFLAGS OTHER_LDFLAGS\n&@' repo/chapter07/python.xml
 
 	# 防止出现编译器内部错误，创建通用库：
 	sed -i 's|./configure --prefix=/usr|cp -v config{fsf,}.guess\ncp -v config{fsf,}.sub\n&|' repo/chapter08/gmp.xml
@@ -169,7 +175,7 @@ _failed() {
 		cd ..; if [ -e "ENV" ]; then . "ENV"; fi
 		local branch="failed_${INITSYS}${ml}_$(date +%Y%m%d-%H-%M)${abi}"
 		local miss_file="${bld_dir}/sources/MISSING_FILES.DMP" mk_file="${bld_dir}/jhalfs/Makefile"
-		git rm -rf . >/dev/null; find "${bld_dir}/sources" -name "$(basename ${miss_file})" -empty -delete
+		git rm -rf . >/dev/null; find "${bld_dir}/sources" -name "$(basename ${miss_file})" -empty -delete || true
 		cp -a "${bld_dir}/jhalfs/"{logs,installed-files} . || true
 		if [ -e "${miss_file}" ]; then cp "${miss_file}" .; git add "$(basename ${miss_file})"; fi
 		if [ -e "${mk_file}" ]; then cp "${mk_file}" .; git add Makefile; fi
@@ -204,6 +210,7 @@ case "$1" in
 		;;
 	32bit|32)
 		mk32bit=1
+		patch -Np1 -i patch/final-sys-optimizationly.patch "configuration.${INITSYS}"
 		_get_sources; printf '\n'; _install_dep; printf '\n'; _fix_git_repo; _docmd
 		echo "ml=\"-32bit\"" >ENV
 		;;

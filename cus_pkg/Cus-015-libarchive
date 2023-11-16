@@ -2,10 +2,10 @@
 # https://linuxfromscratch.org/blfs/view/systemd/general/libarchive.html
 
 PKG="libarchive"
-PKG_VERSION="3.7.1"
+PKG_VERSION="3.7.2"
 PKG_FILE="${PKG}-${PKG_VERSION}.tar.xz"
 URL="https://github.com/libarchive/libarchive/releases/download/v$PKG_VERSION/${PKG_FILE}"
-MD5="11a217b523dcdd178490bdb1f83353f3"
+MD5="4f4ef6a17c7b0b484aa2c95aa6deefac"
 
 for i in PATCH{1..10}; do
 	unset $i

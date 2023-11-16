@@ -12,6 +12,7 @@ for i in PATCH{1..10}; do
 done
 
 ( cat << "xEOFx"
+sed -i "s/echo/#echo/" src/egrep.sh
 ./configure --prefix=/usr
 make
 make DESTDIR=$PWD/DES install

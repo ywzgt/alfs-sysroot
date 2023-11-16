@@ -2,10 +2,10 @@
 # http://rpm.org/download.html
 
 PKG="rpm"
-PKG_VERSION="4.18.1"
+PKG_VERSION="4.18.2"
 PKG_FILE="${PKG}-${PKG_VERSION}.tar.bz2"
 URL="https://ftp.osuosl.org/pub/rpm/releases/rpm-${PKG_VERSION%.*}.x/${PKG_FILE}"
-MD5="8acad8cd852256b152abc9fa33729f3d"
+MD5="471f5ef532e7f41ff109994cfa959b9e"
 
 
 for i in PATCH{1..10}; do

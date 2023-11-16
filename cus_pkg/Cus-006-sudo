@@ -2,10 +2,10 @@
 # https://www.linuxfromscratch.org/blfs/view/systemd/postlfs/sudo.html
 
 PKG="sudo"
-PKG_VERSION="1.9.14p3"
+PKG_VERSION="1.9.15p2"
 PKG_FILE="${PKG}-${PKG_VERSION}.tar.gz"
 URL="https://www.sudo.ws/dist/${PKG_FILE}"
-MD5="4cc21cf7c9a89290b230954aed0d1e11"
+MD5="ef31b7ef72b386618990cfef94042541"
 
 for i in PATCH{1..10}; do
 	unset $i
