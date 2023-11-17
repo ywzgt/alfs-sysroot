@@ -1,0 +1,21 @@
+#!/bin/bash
+# https://gitlab.archlinux.org/archlinux/packaging/packages/fakeroot
+# https://packages.debian.org/source/sid/fakeroot
+
+PKG="fakeroot"
+PKG_VERSION="1.32.2"
+URL="http://deb.debian.org/debian/pool/main/f/fakeroot/fakeroot_1.32.2.orig.tar.gz"
+MD5="8eea23b1a035e3e1785ea9c76ad7131f"
+PKG_FILE="fakeroot_1.32.2.orig.tar.gz"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+./configure --prefix=/usr \
+		--disable-static
+make
+make install
+xEOFx
+) > tmp

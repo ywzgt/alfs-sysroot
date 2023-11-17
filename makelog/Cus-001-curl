@@ -1,0 +1,1538 @@
+Sat Nov 18 07:28:07 CST 2023
+
+KB: 1690764	/
+
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking whether make supports nested variables... yes
+checking whether to enable debug build options... no
+checking whether to enable compiler optimizer... (assumed) yes
+checking whether to enable strict compiler warnings... no
+checking whether to enable compiler warnings as errors... no
+checking whether to enable curl debug memory tracking... no
+checking whether to enable hiding of library internal symbols... yes
+checking whether to enable c-ares for DNS lookups... no
+checking whether to disable dependency on -lrt... (assumed no)
+checking whether to enable ECH support... no
+checking for path separator... :
+checking for sed... /usr/bin/sed
+checking for grep... /usr/bin/grep
+checking that grep -E works... yes
+checking for ar... /usr/bin/ar
+configure: using CFLAGS: -march=i686 -O2 -pipe -fno-plt -fPIC -DNDEBUG
+configure: CFLAGS note: CFLAGS should only be used to specify C compiler flags, not macro definitions. Use CPPFLAGS for: -DNDEBUG
+configure: WARNING: Continuing even with errors mentioned immediately above this line.
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking how to run the C preprocessor... gcc -E
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for stdatomic.h... yes
+checking if _Atomic is available... yes
+checking for a sed that does not truncate output... (cached) /usr/bin/sed
+checking for code coverage support... no
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking curl version... 8.4.0
+checking for httpd... no
+checking for apache2... no
+checking for apachectl... no
+checking for apxs... no
+configure: httpd/apache2 not in PATH, http tests disabled
+configure: apxs not in PATH, http tests disabled
+checking for nghttpx... no
+checking for caddy... no
+checking build system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+checking for grep that handles long lines and -e... (cached) /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking if OS is AIX (to define _ALL_SOURCE)... no
+checking if _THREAD_SAFE is already defined... no
+checking if _THREAD_SAFE is actually needed... no
+checking if _THREAD_SAFE is onwards defined... no
+checking if _REENTRANT is already defined... no
+checking if _REENTRANT is actually needed... no
+checking if _REENTRANT is onwards defined... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert i686-pc-linux-gnu file names to i686-pc-linux-gnu format... func_convert_file_noop
+checking how to convert i686-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for file... file
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking whether to build shared libraries with -version-info... yes
+checking whether to build shared libraries with -no-undefined... no
+checking whether to build shared libraries with -mimpure-text... no
+checking whether to build shared libraries with PIC... yes
+checking whether to build static libraries with PIC... no
+checking whether to build shared libraries only... yes
+checking whether to build static libraries only... no
+checking for windres... no
+checking for inline... inline
+checking if cpp -P is needed... yes
+checking if cpp -P works... yes
+checking if compiler is DEC/Compaq/HP C... no
+checking if compiler is HP-UX C... no
+checking if compiler is IBM C... no
+checking if compiler is Intel C... no
+checking if compiler is clang... no
+checking if compiler is GNU C... yes
+checking if compiler is LCC... no
+checking if compiler is SGI MIPSpro C... no
+checking if compiler is SGI MIPS C... no
+checking if compiler is SunPro C... no
+checking if compiler is Tiny C... no
+checking if compiler accepts some basic options... yes
+configure: compiler options added: -Werror-implicit-function-declaration 
+checking if compiler optimizer assumed setting might be used... no
+checking if compiler accepts strict warning options... yes
+configure: compiler options added: -Wno-system-headers 
+checking if compiler halts on compilation errors... yes
+checking if compiler halts on negative sized arrays... yes
+checking if compiler halts on function prototype mismatch... yes
+checking if compiler supports hiding library internal symbols... yes
+checking for windows.h... no
+checking whether build target is a native Windows one... no
+checking whether build target supports WIN32 file API... no
+checking whether build target supports WIN32 crypto API... no
+checking for good-to-use Darwin CFLAGS... no
+checking whether to link macOS CoreFoundation, CoreServices, and SystemConfiguration frameworks... no
+checking to see if the compiler supports __builtin_available()... no
+checking whether to support http... yes
+checking whether to support ftp... yes
+checking whether to support file... yes
+checking whether to support ldap... yes
+checking whether to support ldaps... yes
+checking whether to support rtsp... yes
+checking whether to support proxies... yes
+checking whether to support dict... yes
+checking whether to support telnet... yes
+checking whether to support tftp... yes
+checking whether to support pop3... yes
+checking whether to support imap... yes
+checking whether to support smb... yes
+checking whether to support smtp... yes
+checking whether to support gopher... yes
+checking whether to support mqtt... no
+checking whether to provide built-in manual... yes
+checking whether to enable generation of C code... yes
+checking whether to use libgcc... no
+checking if X/Open network library is required... no
+checking for gethostbyname... yes
+checking for windows.h... (cached) no
+checking for winsock2.h... (cached) no
+checking for proto/bsdsocket.h... no
+checking for connect in libraries... yes
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... yes
+checking for monotonic clock_gettime... yes
+checking for clock_gettime in libraries... no additional lib required
+checking if monotonic clock_gettime works... yes
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for raw monotonic clock_gettime... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking for zlib options with pkg-config... found
+checking for zlib.h... yes
+configure: found both libz and libz.h header
+checking for BrotliDecoderDecompress in -lbrotlidec... no
+checking for brotli/decode.h... no
+checking for ZSTD_createDStream in -lzstd... yes
+checking for zstd.h... yes
+checking for lber.h... no
+checking for ldap.h... no
+checking for ldap_ssl.h... no
+checking for LDAP libraries... cannot find LDAP libraries
+configure: WARNING: Cannot find libraries for LDAP support: LDAP disabled
+checking whether to enable IPv6... yes
+checking if struct sockaddr_in6 has sin6_scope_id member... yes
+checking if argv can be written to... yes
+checking if GSS-API support is requested... no
+checking whether to enable Windows native SSL/TLS... no
+checking whether to enable Secure Transport... no
+checking whether to enable Amiga native SSL/TLS (AmiSSL v5)... no
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking for openssl options with pkg-config... found
+configure: pkg-config: SSL_LIBS: "-lssl -lcrypto"
+configure: pkg-config: SSL_LDFLAGS: ""
+configure: pkg-config: SSL_CPPFLAGS: ""
+checking for HMAC_Update in -lcrypto... yes
+checking for SSL_connect in -lssl... yes
+checking for openssl/x509.h... yes
+checking for openssl/rsa.h... yes
+checking for openssl/crypto.h... yes
+checking for openssl/pem.h... yes
+checking for openssl/ssl.h... yes
+checking for openssl/err.h... yes
+checking for BoringSSL... no
+checking for AWS-LC... no
+checking for libressl... no
+checking for OpenSSL >= v3... yes
+checking for "/dev/urandom"... yes
+checking for SRP support in OpenSSL... yes
+configure: built with one SSL backend
+checking default CA cert bundle/path... /etc/ssl/certs (capath)
+checking whether to use builtin CA store of SSL library... no
+checking for library containing psl_builtin... no
+configure: WARNING: libpsl was not found
+checking for library containing gsasl_init... no
+configure: WARNING: libgsasl was not found
+checking for RTMP_Init in -lrtmp... no
+checking whether versioned symbols are wanted... no
+checking whether to enable Windows native IDN (Windows native builds only)... no
+checking whether to build with libidn2... (assumed) yes
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking for libidn2 options with pkg-config... no
+configure: IDN_LIBS: "-lidn2"
+configure: IDN_LDFLAGS: ""
+configure: IDN_CPPFLAGS: ""
+configure: IDN_DIR: ""
+checking if idn2_lookup_ul can be linked... no
+checking for idn2.h... no
+configure: WARNING: Cannot find libraries for IDN support: IDN disabled
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking for libnghttp2 options with pkg-config... no
+checking for nghttp2_session_get_stream_local_window_size in -lnghttp2... no
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking for fish options with pkg-config... no
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for sys/select.h... yes
+checking for sys/socket.h... yes
+checking for sys/ioctl.h... yes
+checking for unistd.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for arpa/inet.h... yes
+checking for net/if.h... yes
+checking for netinet/in.h... yes
+checking for netinet/in6.h... no
+checking for sys/un.h... yes
+checking for linux/tcp.h... yes
+checking for netinet/tcp.h... yes
+checking for netinet/udp.h... yes
+checking for netdb.h... yes
+checking for sys/sockio.h... no
+checking for sys/stat.h... (cached) yes
+checking for sys/param.h... yes
+checking for termios.h... yes
+checking for termio.h... yes
+checking for fcntl.h... yes
+checking for io.h... no
+checking for pwd.h... yes
+checking for utime.h... yes
+checking for sys/utime.h... no
+checking for sys/poll.h... yes
+checking for poll.h... yes
+checking for socket.h... no
+checking for sys/resource.h... yes
+checking for libgen.h... yes
+checking for locale.h... yes
+checking for stdbool.h... yes
+checking for sys/filio.h... no
+checking for sys/wait.h... yes
+checking for setjmp.h... yes
+checking for an ANSI C-conforming const... yes
+checking for compiler support of C99 variadic macro style... yes
+checking for compiler support of old gcc variadic macro style... yes
+checking for size_t... yes
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for struct timeval... yes
+checking run-time libs availability... fine
+checking size of size_t... 4
+checking size of long... 4
+checking size of int... 4
+checking size of time_t... 4
+checking size of off_t... 8
+checking size of curl_off_t... 8
+checking size of curl_socket_t... 4
+checking for long long... yes
+checking for ssize_t... yes
+checking for bool... yes
+checking for sa_family_t... yes
+checking for suseconds_t... yes
+checking if time_t is unsigned... no
+checking for sys/types.h... (cached) yes
+checking for poll.h... (cached) yes
+checking for sys/poll.h... (cached) yes
+checking for in_addr_t... yes
+checking for struct sockaddr_storage... yes
+checking for sys/select.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for select... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for recv... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for send... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for MSG_NOSIGNAL... yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking if alarm can be linked... yes
+checking if alarm is prototyped... yes
+checking if alarm is compilable... yes
+checking if alarm usage allowed... yes
+checking if alarm might be used... yes
+checking for sys/types.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for libgen.h... (cached) yes
+checking if basename can be linked... yes
+checking if basename is prototyped... yes
+checking if basename is compilable... yes
+checking if basename usage allowed... yes
+checking if basename might be used... yes
+checking for sys/types.h... (cached) yes
+checking for socket.h... (cached) no
+checking if closesocket can be linked... no
+checking if closesocket might be used... no
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking if CloseSocket can be linked... no
+checking if CloseSocket might be used... no
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for fcntl.h... (cached) yes
+checking if fcntl can be linked... yes
+checking if fcntl is prototyped... yes
+checking if fcntl is compilable... yes
+checking if fcntl usage allowed... yes
+checking if fcntl might be used... yes
+checking if fcntl O_NONBLOCK is compilable... yes
+checking if fcntl O_NONBLOCK usage allowed... yes
+checking if fcntl O_NONBLOCK might be used... yes
+checking for windows.h... (cached) no
+checking for winsock2.h... (cached) no
+checking for ws2tcpip.h... (cached) no
+checking for sys/types.h... (cached) yes
+checking for netdb.h... (cached) yes
+checking if freeaddrinfo can be linked... yes
+checking if freeaddrinfo is prototyped... yes
+checking if freeaddrinfo is compilable... yes
+checking if freeaddrinfo usage allowed... yes
+checking if freeaddrinfo might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/xattr.h... yes
+checking if fsetxattr can be linked... yes
+checking if fsetxattr is prototyped... yes
+checking if fsetxattr takes 5 args.... yes
+checking if fsetxattr is compilable... yes
+checking if fsetxattr usage allowed... yes
+checking if fsetxattr might be used... yes
+checking if ftruncate can be linked... yes
+checking if ftruncate is prototyped... yes
+checking if ftruncate is compilable... yes
+checking if ftruncate usage allowed... yes
+checking if ftruncate might be used... yes
+checking for sys/types.h... (cached) yes
+checking if getaddrinfo can be linked... yes
+checking if getaddrinfo is prototyped... yes
+checking if getaddrinfo is compilable... yes
+checking if getaddrinfo seems to work... yes
+checking if getaddrinfo usage allowed... yes
+checking if getaddrinfo might be used... yes
+checking if getaddrinfo is threadsafe... yes
+checking if gethostbyname can be linked... yes
+checking if gethostbyname is prototyped... yes
+checking if gethostbyname is compilable... yes
+checking if gethostbyname usage allowed... yes
+checking if gethostbyname might be used... yes
+checking if gethostbyname_r can be linked... yes
+checking if gethostbyname_r is prototyped... yes
+checking if gethostbyname_r takes 3 args.... no
+checking if gethostbyname_r takes 5 args.... no
+checking if gethostbyname_r takes 6 args.... yes
+checking if gethostbyname_r is compilable... yes
+checking if gethostbyname_r usage allowed... yes
+checking if gethostbyname_r might be used... yes
+checking if gethostname can be linked... yes
+checking if gethostname is prototyped... yes
+checking if gethostname is compilable... yes
+checking for gethostname arg 2 data type... unsigned int
+checking if gethostname usage allowed... yes
+checking if gethostname might be used... yes
+checking if getpeername can be linked... yes
+checking if getpeername is prototyped... yes
+checking if getpeername is compilable... yes
+checking if getpeername usage allowed... yes
+checking if getpeername might be used... yes
+checking if getsockname can be linked... yes
+checking if getsockname is prototyped... yes
+checking if getsockname is compilable... yes
+checking if getsockname usage allowed... yes
+checking if getsockname might be used... yes
+checking for net/if.h... (cached) yes
+checking if if_nametoindex can be linked... yes
+checking if if_nametoindex is prototyped... yes
+checking if if_nametoindex is compilable... yes
+checking if if_nametoindex usage allowed... yes
+checking if if_nametoindex might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for netinet/in.h... (cached) yes
+checking for ifaddrs.h... yes
+checking if getifaddrs can be linked... yes
+checking if getifaddrs is prototyped... yes
+checking if getifaddrs is compilable... yes
+checking if getifaddrs seems to work... yes
+checking if getifaddrs usage allowed... yes
+checking if getifaddrs might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking if gmtime_r can be linked... yes
+checking if gmtime_r is prototyped... yes
+checking if gmtime_r is compilable... yes
+checking if gmtime_r seems to work... yes
+checking if gmtime_r usage allowed... yes
+checking if gmtime_r might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for netinet/in.h... (cached) yes
+checking for arpa/inet.h... (cached) yes
+checking if inet_ntop can be linked... yes
+checking if inet_ntop is prototyped... yes
+checking if inet_ntop is compilable... yes
+checking if inet_ntop seems to work... yes
+checking if inet_ntop usage allowed... yes
+checking if inet_ntop might be used... yes
+checking if inet_pton can be linked... yes
+checking if inet_pton is prototyped... yes
+checking if inet_pton is compilable... yes
+checking if inet_pton seems to work... yes
+checking if inet_pton usage allowed... yes
+checking if inet_pton might be used... yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for sys/ioctl.h... (cached) yes
+checking for stropts.h... no
+checking if ioctl can be linked... yes
+checking if ioctl is prototyped... yes
+checking if ioctl is compilable... yes
+checking if ioctl usage allowed... yes
+checking if ioctl might be used... yes
+checking if ioctl FIONBIO is compilable... yes
+checking if ioctl FIONBIO usage allowed... yes
+checking if ioctl FIONBIO might be used... yes
+checking if ioctl SIOCGIFADDR is compilable... yes
+checking if ioctl SIOCGIFADDR usage allowed... yes
+checking if ioctl SIOCGIFADDR might be used... yes
+checking if ioctlsocket can be linked... no
+checking if ioctlsocket might be used... no
+checking if IoctlSocket can be linked... no
+checking if IoctlSocket might be used... no
+checking if memrchr can be linked... yes
+checking if memrchr is prototyped... no
+checking if memrchr might be used... no
+checking if poll can be linked... yes
+checking if poll is prototyped... yes
+checking if poll is compilable... yes
+checking if poll seems to work... yes
+checking if poll usage allowed... yes
+checking if poll might be used... yes
+checking for sys/types.h... (cached) yes
+checking if sigaction can be linked... yes
+checking if sigaction is prototyped... yes
+checking if sigaction is compilable... yes
+checking if sigaction usage allowed... yes
+checking if sigaction might be used... yes
+checking if siginterrupt can be linked... yes
+checking if siginterrupt is prototyped... yes
+checking if siginterrupt is compilable... yes
+checking if siginterrupt usage allowed... yes
+checking if siginterrupt might be used... yes
+checking if signal can be linked... yes
+checking if signal is prototyped... yes
+checking if signal is compilable... yes
+checking if signal usage allowed... yes
+checking if signal might be used... yes
+checking for sys/types.h... (cached) yes
+checking if sigsetjmp can be linked... no
+checking if sigsetjmp seems a macro... yes
+checking if sigsetjmp is compilable... yes
+checking if sigsetjmp usage allowed... yes
+checking if sigsetjmp might be used... yes
+checking if socket can be linked... yes
+checking if socket is prototyped... yes
+checking if socket is compilable... yes
+checking if socket usage allowed... yes
+checking if socket might be used... yes
+checking if socketpair can be linked... yes
+checking if socketpair is prototyped... yes
+checking if socketpair is compilable... yes
+checking if socketpair usage allowed... yes
+checking if socketpair might be used... yes
+checking if strcasecmp can be linked... yes
+checking if strcasecmp is prototyped... yes
+checking if strcasecmp is compilable... yes
+checking if strcasecmp usage allowed... yes
+checking if strcasecmp might be used... yes
+checking if strcmpi can be linked... no
+checking if strcmpi might be used... no
+checking if strdup can be linked... yes
+checking if strdup is prototyped... yes
+checking if strdup is compilable... yes
+checking if strdup usage allowed... yes
+checking if strdup might be used... yes
+checking if strerror_r can be linked... yes
+checking if strerror_r is prototyped... yes
+checking if strerror_r is compilable... yes
+checking if strerror_r is glibc like... no
+checking if strerror_r is POSIX like... yes
+checking if strerror_r seems to work... yes
+checking if strerror_r usage allowed... yes
+checking if strerror_r might be used... yes
+checking if stricmp can be linked... no
+checking if stricmp might be used... no
+checking if strtok_r can be linked... yes
+checking if strtok_r is prototyped... yes
+checking if strtok_r is compilable... yes
+checking if strtok_r usage allowed... yes
+checking if strtok_r might be used... yes
+checking if strtoll can be linked... yes
+checking if strtoll is prototyped... yes
+checking if strtoll is compilable... yes
+checking if strtoll usage allowed... yes
+checking if strtoll might be used... yes
+checking for gcc options needed to detect all undeclared functions... none needed
+checking whether getpwuid_r is declared... yes
+checking for _fseeki64... no
+checking deeper for _fseeki64... but still no
+checking for arc4random... yes
+checking for fchmod... yes
+checking for fnmatch... yes
+checking for fseeko... yes
+checking for geteuid... yes
+checking for getpass_r... no
+checking deeper for getpass_r... but still no
+checking for getppid... yes
+checking for getpwuid... yes
+checking for getpwuid_r... yes
+checking for getrlimit... yes
+checking for gettimeofday... yes
+checking for if_nametoindex... yes
+checking for mach_absolute_time... no
+checking deeper for mach_absolute_time... but still no
+checking for pipe... yes
+checking for sched_yield... yes
+checking for sendmsg... yes
+checking for setlocale... yes
+checking for setmode... no
+checking deeper for setmode... but still no
+checking for setrlimit... yes
+checking for snprintf... yes
+checking for utime... yes
+checking for utimes... yes
+checking how to set a socket into non-blocking mode... fcntl O_NONBLOCK
+checking for perl... /usr/bin/perl
+checking for gnroff... no
+checking for nroff... /usr/bin/nroff
+checking how to use *nroff to get plain text from man pages... -man
+checking whether to enable the threaded resolver... yes
+checking whether to use POSIX threads for threaded resolver... auto
+checking for pthread.h... yes
+checking for pthread_create... yes
+checking convert -I options to -isystem... yes
+checking whether to enable verbose strings... yes
+checking whether to enable SSPI support (Windows native builds only)... no
+checking whether to enable basic authentication method... yes
+checking whether to enable bearer authentication method... yes
+checking whether to enable digest authentication method... yes
+checking whether to enable kerberos authentication method... yes
+checking whether to enable negotiate authentication method... yes
+checking whether to enable aws sig methods... yes
+checking whether to support NTLM... yes
+checking whether to enable NTLM delegation to winbind's helper... no
+checking whether to enable TLS-SRP authentication... yes
+checking whether to enable Unix domain sockets... auto
+checking for struct sockaddr_un.sun_path... yes
+checking whether to support cookies... yes
+checking whether to support socketpair... yes
+checking whether to support HTTP authentication... yes
+checking whether to support DoH... yes
+checking whether to support the MIME API... yes
+checking whether to support binding connections locally... yes
+checking whether to support the form API... yes
+checking whether to support date parsing... yes
+checking whether to support netrc parsing... yes
+checking whether to support progress-meter... yes
+checking whether to support DNS shuffling... yes
+checking whether to support curl_easy_option*... yes
+checking whether to support alt-svc... yes
+checking whether to support headers-api... yes
+checking whether to support HSTS... yes
+checking for SSL_set0_wbio... yes
+checking whether to support WebSockets... no
+checking whether hiding of library internal symbols will actually happen... yes
+configure: using CFLAGS: -march=i686 -O2 -pipe -fno-plt -fPIC -DNDEBUG -Werror-implicit-function-declaration -Wno-system-headers
+configure: CFLAGS note: CFLAGS should only be used to specify C compiler flags, not macro definitions. Use CPPFLAGS for: -DNDEBUG
+configure: WARNING: Continuing even with errors mentioned immediately above this line.
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating docs/Makefile
+config.status: creating docs/examples/Makefile
+config.status: creating docs/libcurl/Makefile
+config.status: creating docs/libcurl/opts/Makefile
+config.status: creating docs/cmdline-opts/Makefile
+config.status: creating include/Makefile
+config.status: creating include/curl/Makefile
+config.status: creating src/Makefile
+config.status: creating lib/Makefile
+config.status: creating scripts/Makefile
+config.status: creating lib/libcurl.vers
+config.status: creating lib/libcurl.plist
+config.status: creating tests/Makefile
+config.status: creating tests/config
+config.status: creating tests/certs/Makefile
+config.status: creating tests/certs/scripts/Makefile
+config.status: creating tests/data/Makefile
+config.status: creating tests/server/Makefile
+config.status: creating tests/libtest/Makefile
+config.status: creating tests/unit/Makefile
+config.status: creating tests/http/config.ini
+config.status: creating tests/http/Makefile
+config.status: creating tests/http/clients/Makefile
+config.status: creating packages/Makefile
+config.status: creating packages/vms/Makefile
+config.status: creating curl-config
+config.status: creating libcurl.pc
+config.status: creating lib/curl_config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: Configured to build curl/libcurl:
+
+  Host setup:       i686-pc-linux-gnu
+  Install prefix:   /usr
+  Compiler:         gcc
+   CFLAGS:          -march=i686 -O2 -pipe -fno-plt -fPIC -DNDEBUG -Werror-implicit-function-declaration -Wno-system-headers
+   CPPFLAGS:        -O2 -pipe -fPIC -DNDEBUG
+   LDFLAGS:         -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now
+   LIBS:            -lssl -lcrypto -lssl -lcrypto -lzstd -lz
+
+  curl version:     8.4.0
+  SSL:              enabled (OpenSSL v3+)
+  SSH:              no      (--with-{libssh,libssh2})
+  zlib:             enabled
+  brotli:           no      (--with-brotli)
+  zstd:             enabled (libzstd)
+  GSS-API:          no      (--with-gssapi)
+  GSASL:            no      (libgsasl not found)
+  TLS-SRP:          enabled
+  resolver:         POSIX threaded
+  IPv6:             enabled
+  Unix sockets:     enabled
+  IDN:              no      (--with-{libidn2,winidn})
+  Build libcurl:    Shared=yes, Static=no
+  Built-in manual:  enabled
+  --libcurl option: enabled (--disable-libcurl-option)
+  Verbose errors:   enabled (--disable-verbose)
+  Code coverage:    disabled
+  SSPI:             no      (--enable-sspi)
+  ca cert bundle:   no
+  ca cert path:     /etc/ssl/certs   (warning: certs not found)
+  ca fallback:      no
+  LDAP:             no      (--enable-ldap / --with-ldap-lib / --with-lber-lib)
+  LDAPS:            no      (--enable-ldaps)
+  RTSP:             enabled
+  RTMP:             no      (--with-librtmp)
+  PSL:              no      (libpsl not found)
+  Alt-svc:          enabled (--disable-alt-svc)
+  Headers API:      enabled (--disable-headers-api)
+  HSTS:             enabled (--disable-hsts)
+  HTTP1:            enabled (internal)
+  HTTP2:            no      (--with-nghttp2, --with-hyper)
+  HTTP3:            no      (--with-ngtcp2 --with-nghttp3, --with-quiche, --with-msh3)
+  ECH:              no      (--enable-ech)
+  WebSockets:       no      (--enable-websockets)
+  Protocols:        DICT FILE FTP FTPS GOPHER GOPHERS HTTP HTTPS IMAP IMAPS MQTT POP3 POP3S RTSP SMB SMBS SMTP SMTPS TELNET TFTP
+  Features:         AsynchDNS HSTS HTTPS-proxy IPv6 Largefile NTLM SSL TLS-SRP UnixSockets alt-svc libz threadsafe zstd
+
+make[1]: Entering directory '/sources/curl-8.4.0'
+Making all in lib
+make[2]: Entering directory '/sources/curl-8.4.0/lib'
+make  all-am
+make[3]: Entering directory '/sources/curl-8.4.0/lib'
+  CC       libcurl_la-altsvc.lo
+  CC       libcurl_la-amigaos.lo
+  CC       libcurl_la-asyn-ares.lo
+  CC       libcurl_la-asyn-thread.lo
+  CC       libcurl_la-base64.lo
+  CC       libcurl_la-bufq.lo
+  CC       libcurl_la-bufref.lo
+  CC       libcurl_la-c-hyper.lo
+  CC       libcurl_la-cf-h1-proxy.lo
+  CC       libcurl_la-cf-h2-proxy.lo
+  CC       libcurl_la-cf-haproxy.lo
+  CC       libcurl_la-cf-https-connect.lo
+  CC       libcurl_la-cf-socket.lo
+  CC       libcurl_la-cfilters.lo
+  CC       libcurl_la-conncache.lo
+  CC       libcurl_la-connect.lo
+  CC       libcurl_la-content_encoding.lo
+  CC       libcurl_la-cookie.lo
+  CC       libcurl_la-curl_addrinfo.lo
+  CC       libcurl_la-curl_des.lo
+  CC       libcurl_la-curl_endian.lo
+  CC       libcurl_la-curl_fnmatch.lo
+  CC       libcurl_la-curl_get_line.lo
+  CC       libcurl_la-curl_gethostname.lo
+  CC       libcurl_la-curl_gssapi.lo
+  CC       libcurl_la-curl_memrchr.lo
+  CC       libcurl_la-curl_multibyte.lo
+  CC       libcurl_la-curl_ntlm_core.lo
+  CC       libcurl_la-curl_ntlm_wb.lo
+  CC       libcurl_la-curl_path.lo
+  CC       libcurl_la-curl_range.lo
+  CC       libcurl_la-curl_rtmp.lo
+  CC       libcurl_la-curl_sasl.lo
+  CC       libcurl_la-curl_sspi.lo
+  CC       libcurl_la-curl_threads.lo
+  CC       libcurl_la-curl_trc.lo
+  CC       libcurl_la-dict.lo
+  CC       libcurl_la-doh.lo
+  CC       libcurl_la-dynbuf.lo
+  CC       libcurl_la-dynhds.lo
+  CC       libcurl_la-easy.lo
+  CC       libcurl_la-easygetopt.lo
+  CC       libcurl_la-easyoptions.lo
+  CC       libcurl_la-escape.lo
+  CC       libcurl_la-file.lo
+  CC       libcurl_la-fileinfo.lo
+  CC       libcurl_la-fopen.lo
+  CC       libcurl_la-formdata.lo
+  CC       libcurl_la-ftp.lo
+  CC       libcurl_la-ftplistparser.lo
+  CC       libcurl_la-getenv.lo
+  CC       libcurl_la-getinfo.lo
+  CC       libcurl_la-gopher.lo
+  CC       libcurl_la-hash.lo
+  CC       libcurl_la-headers.lo
+  CC       libcurl_la-hmac.lo
+  CC       libcurl_la-hostasyn.lo
+  CC       libcurl_la-hostip.lo
+  CC       libcurl_la-hostip4.lo
+  CC       libcurl_la-hostip6.lo
+  CC       libcurl_la-hostsyn.lo
+  CC       libcurl_la-hsts.lo
+  CC       libcurl_la-http.lo
+  CC       libcurl_la-http1.lo
+  CC       libcurl_la-http2.lo
+  CC       libcurl_la-http_aws_sigv4.lo
+  CC       libcurl_la-http_chunks.lo
+  CC       libcurl_la-http_digest.lo
+  CC       libcurl_la-http_negotiate.lo
+  CC       libcurl_la-http_ntlm.lo
+  CC       libcurl_la-http_proxy.lo
+  CC       libcurl_la-idn.lo
+  CC       libcurl_la-if2ip.lo
+  CC       libcurl_la-imap.lo
+  CC       libcurl_la-inet_ntop.lo
+  CC       libcurl_la-inet_pton.lo
+  CC       libcurl_la-krb5.lo
+  CC       libcurl_la-ldap.lo
+  CC       libcurl_la-llist.lo
+  CC       libcurl_la-macos.lo
+  CC       libcurl_la-md4.lo
+  CC       libcurl_la-md5.lo
+  CC       libcurl_la-memdebug.lo
+  CC       libcurl_la-mime.lo
+  CC       libcurl_la-mprintf.lo
+  CC       libcurl_la-mqtt.lo
+  CC       libcurl_la-multi.lo
+  CC       libcurl_la-netrc.lo
+  CC       libcurl_la-nonblock.lo
+  CC       libcurl_la-noproxy.lo
+  CC       libcurl_la-openldap.lo
+  CC       libcurl_la-parsedate.lo
+  CC       libcurl_la-pingpong.lo
+  CC       libcurl_la-pop3.lo
+  CC       libcurl_la-progress.lo
+  CC       libcurl_la-psl.lo
+  CC       libcurl_la-rand.lo
+  CC       libcurl_la-rename.lo
+  CC       libcurl_la-rtsp.lo
+  CC       libcurl_la-select.lo
+  CC       libcurl_la-sendf.lo
+  CC       libcurl_la-setopt.lo
+  CC       libcurl_la-sha256.lo
+  CC       libcurl_la-share.lo
+  CC       libcurl_la-slist.lo
+  CC       libcurl_la-smb.lo
+  CC       libcurl_la-smtp.lo
+  CC       libcurl_la-socketpair.lo
+  CC       libcurl_la-socks.lo
+  CC       libcurl_la-socks_gssapi.lo
+  CC       libcurl_la-socks_sspi.lo
+  CC       libcurl_la-speedcheck.lo
+  CC       libcurl_la-splay.lo
+  CC       libcurl_la-strcase.lo
+  CC       libcurl_la-strdup.lo
+  CC       libcurl_la-strerror.lo
+  CC       libcurl_la-strtok.lo
+  CC       libcurl_la-strtoofft.lo
+  CC       libcurl_la-system_win32.lo
+  CC       libcurl_la-telnet.lo
+  CC       libcurl_la-tftp.lo
+  CC       libcurl_la-timediff.lo
+  CC       libcurl_la-timeval.lo
+  CC       libcurl_la-transfer.lo
+  CC       libcurl_la-url.lo
+  CC       libcurl_la-urlapi.lo
+  CC       libcurl_la-version.lo
+  CC       libcurl_la-version_win32.lo
+  CC       libcurl_la-warnless.lo
+  CC       libcurl_la-ws.lo
+  CC       vauth/libcurl_la-cleartext.lo
+  CC       vauth/libcurl_la-cram.lo
+  CC       vauth/libcurl_la-digest.lo
+  CC       vauth/libcurl_la-digest_sspi.lo
+  CC       vauth/libcurl_la-gsasl.lo
+  CC       vauth/libcurl_la-krb5_gssapi.lo
+  CC       vauth/libcurl_la-krb5_sspi.lo
+  CC       vauth/libcurl_la-ntlm.lo
+  CC       vauth/libcurl_la-ntlm_sspi.lo
+  CC       vauth/libcurl_la-oauth2.lo
+  CC       vauth/libcurl_la-spnego_gssapi.lo
+  CC       vauth/libcurl_la-spnego_sspi.lo
+  CC       vauth/libcurl_la-vauth.lo
+  CC       vtls/libcurl_la-bearssl.lo
+  CC       vtls/libcurl_la-gtls.lo
+  CC       vtls/libcurl_la-hostcheck.lo
+  CC       vtls/libcurl_la-keylog.lo
+  CC       vtls/libcurl_la-mbedtls.lo
+  CC       vtls/libcurl_la-mbedtls_threadlock.lo
+  CC       vtls/libcurl_la-openssl.lo
+  CC       vtls/libcurl_la-rustls.lo
+  CC       vtls/libcurl_la-schannel.lo
+  CC       vtls/libcurl_la-schannel_verify.lo
+  CC       vtls/libcurl_la-sectransp.lo
+  CC       vtls/libcurl_la-vtls.lo
+  CC       vtls/libcurl_la-wolfssl.lo
+  CC       vtls/libcurl_la-x509asn1.lo
+  CC       vquic/libcurl_la-curl_msh3.lo
+  CC       vquic/libcurl_la-curl_ngtcp2.lo
+  CC       vquic/libcurl_la-curl_quiche.lo
+  CC       vquic/libcurl_la-vquic.lo
+  CC       vssh/libcurl_la-libssh.lo
+  CC       vssh/libcurl_la-libssh2.lo
+  CC       vssh/libcurl_la-wolfssh.lo
+  CCLD     libcurl.la
+make[3]: Leaving directory '/sources/curl-8.4.0/lib'
+make[2]: Leaving directory '/sources/curl-8.4.0/lib'
+Making all in src
+make[2]: Entering directory '/sources/curl-8.4.0/src'
+Making all in ../docs
+make[3]: Entering directory '/sources/curl-8.4.0/docs'
+Making all in .
+make[4]: Entering directory '/sources/curl-8.4.0/docs'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/sources/curl-8.4.0/docs'
+Making all in cmdline-opts
+make[4]: Entering directory '/sources/curl-8.4.0/docs/cmdline-opts'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/sources/curl-8.4.0/docs/cmdline-opts'
+make[3]: Leaving directory '/sources/curl-8.4.0/docs'
+make[3]: Entering directory '/sources/curl-8.4.0/src'
+  CC       slist_wc.o
+  CC       tool_binmode.o
+  CC       tool_bname.o
+  CC       tool_cb_dbg.o
+  CC       tool_cb_hdr.o
+  CC       tool_cb_prg.o
+  CC       tool_cb_rea.o
+  CC       tool_cb_see.o
+  CC       tool_cb_wrt.o
+  CC       tool_cfgable.o
+  CC       tool_dirhie.o
+  CC       tool_doswin.o
+  CC       tool_easysrc.o
+  CC       tool_filetime.o
+  CC       tool_findfile.o
+  CC       tool_formparse.o
+  CC       tool_getparam.o
+  CC       tool_getpass.o
+  CC       tool_help.o
+  CC       tool_helpers.o
+  CC       tool_hugehelp.o
+  CC       tool_libinfo.o
+  CC       tool_listhelp.o
+  CC       tool_main.o
+  CC       tool_msgs.o
+  CC       tool_operate.o
+  CC       tool_operhlp.o
+  CC       tool_paramhlp.o
+  CC       tool_parsecfg.o
+  CC       tool_progress.o
+  CC       tool_setopt.o
+  CC       tool_sleep.o
+  CC       tool_stderr.o
+  CC       tool_strdup.o
+  CC       tool_urlglob.o
+  CC       tool_util.o
+  CC       tool_vms.o
+  CC       tool_writeout.o
+  CC       tool_writeout_json.o
+  CC       tool_xattr.o
+  CC       var.o
+  CC       ../lib/base64.o
+  CC       ../lib/curl_multibyte.o
+  CC       ../lib/dynbuf.o
+  CC       ../lib/nonblock.o
+  CC       ../lib/strtoofft.o
+  CC       ../lib/timediff.o
+  CC       ../lib/version_win32.o
+  CC       ../lib/warnless.o
+  CCLD     curl
+make[3]: Leaving directory '/sources/curl-8.4.0/src'
+make[2]: Leaving directory '/sources/curl-8.4.0/src'
+make[2]: Entering directory '/sources/curl-8.4.0'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/sources/curl-8.4.0'
+make[1]: Leaving directory '/sources/curl-8.4.0'
+make[1]: Entering directory '/sources/curl-8.4.0'
+Making install in lib
+make[2]: Entering directory '/sources/curl-8.4.0/lib'
+make[3]: Entering directory '/sources/curl-8.4.0/lib'
+make[3]: Nothing to be done for 'install-data-am'.
+ /usr/bin/mkdir -p '/usr/lib'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libcurl.la '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/libcurl.so.4.8.0 /usr/lib/libcurl.so.4.8.0
+libtool: install: (cd /usr/lib && { ln -s -f libcurl.so.4.8.0 libcurl.so.4 || { rm -f libcurl.so.4 && ln -s libcurl.so.4.8.0 libcurl.so.4; }; })
+libtool: install: (cd /usr/lib && { ln -s -f libcurl.so.4.8.0 libcurl.so || { rm -f libcurl.so && ln -s libcurl.so.4.8.0 libcurl.so; }; })
+libtool: install: /usr/bin/install -c .libs/libcurl.lai /usr/lib/libcurl.la
+libtool: finish: PATH="/usr/bin:/usr/sbin:/usr/sbin:/sbin" ldconfig -n /usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[3]: Leaving directory '/sources/curl-8.4.0/lib'
+make[2]: Leaving directory '/sources/curl-8.4.0/lib'
+Making install in src
+make[2]: Entering directory '/sources/curl-8.4.0/src'
+Making install in ../docs
+make[3]: Entering directory '/sources/curl-8.4.0/docs'
+Making install in .
+make[4]: Entering directory '/sources/curl-8.4.0/docs'
+make[5]: Entering directory '/sources/curl-8.4.0/docs'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/man/man1'
+ /usr/bin/install -c -m 644 curl-config.1 /sources/curl-8.4.0/docs/curl.1 '/usr/share/man/man1'
+make[5]: Leaving directory '/sources/curl-8.4.0/docs'
+make[4]: Leaving directory '/sources/curl-8.4.0/docs'
+Making install in cmdline-opts
+make[4]: Entering directory '/sources/curl-8.4.0/docs/cmdline-opts'
+make[5]: Entering directory '/sources/curl-8.4.0/docs/cmdline-opts'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/sources/curl-8.4.0/docs/cmdline-opts'
+make[4]: Leaving directory '/sources/curl-8.4.0/docs/cmdline-opts'
+make[3]: Leaving directory '/sources/curl-8.4.0/docs'
+make[3]: Entering directory '/sources/curl-8.4.0/src'
+make[4]: Entering directory '/sources/curl-8.4.0/src'
+make[4]: Nothing to be done for 'install-data-am'.
+ /usr/bin/mkdir -p '/usr/bin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c curl '/usr/bin'
+libtool: install: /usr/bin/install -c .libs/curl /usr/bin/curl
+make[4]: Leaving directory '/sources/curl-8.4.0/src'
+make[3]: Leaving directory '/sources/curl-8.4.0/src'
+make[2]: Leaving directory '/sources/curl-8.4.0/src'
+make[2]: Entering directory '/sources/curl-8.4.0'
+make[3]: Entering directory '/sources/curl-8.4.0'
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libcurl.pc '/usr/lib/pkgconfig'
+ /usr/bin/install -c curl-config '/usr/bin'
+make  install-data-hook
+make[4]: Entering directory '/sources/curl-8.4.0'
+(cd include && make install)
+make[5]: Entering directory '/sources/curl-8.4.0/include'
+Making install in curl
+make[6]: Entering directory '/sources/curl-8.4.0/include/curl'
+make[7]: Entering directory '/sources/curl-8.4.0/include/curl'
+make[7]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/include/curl'
+ /usr/bin/install -c -m 644 curl.h curlver.h easy.h mprintf.h stdcheaders.h multi.h typecheck-gcc.h system.h urlapi.h options.h header.h websockets.h '/usr/include/curl'
+make[7]: Leaving directory '/sources/curl-8.4.0/include/curl'
+make[6]: Leaving directory '/sources/curl-8.4.0/include/curl'
+make[6]: Entering directory '/sources/curl-8.4.0/include'
+make[7]: Entering directory '/sources/curl-8.4.0/include'
+make[7]: Nothing to be done for 'install-exec-am'.
+make[7]: Nothing to be done for 'install-data-am'.
+make[7]: Leaving directory '/sources/curl-8.4.0/include'
+make[6]: Leaving directory '/sources/curl-8.4.0/include'
+make[5]: Leaving directory '/sources/curl-8.4.0/include'
+(cd docs && make install)
+make[5]: Entering directory '/sources/curl-8.4.0/docs'
+Making install in .
+make[6]: Entering directory '/sources/curl-8.4.0/docs'
+make[7]: Entering directory '/sources/curl-8.4.0/docs'
+make[7]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/man/man1'
+ /usr/bin/install -c -m 644 curl-config.1 /sources/curl-8.4.0/docs/curl.1 '/usr/share/man/man1'
+make[7]: Leaving directory '/sources/curl-8.4.0/docs'
+make[6]: Leaving directory '/sources/curl-8.4.0/docs'
+Making install in cmdline-opts
+make[6]: Entering directory '/sources/curl-8.4.0/docs/cmdline-opts'
+make[7]: Entering directory '/sources/curl-8.4.0/docs/cmdline-opts'
+make[7]: Nothing to be done for 'install-exec-am'.
+make[7]: Nothing to be done for 'install-data-am'.
+make[7]: Leaving directory '/sources/curl-8.4.0/docs/cmdline-opts'
+make[6]: Leaving directory '/sources/curl-8.4.0/docs/cmdline-opts'
+make[5]: Leaving directory '/sources/curl-8.4.0/docs'
+(cd docs/libcurl && make install)
+make[5]: Entering directory '/sources/curl-8.4.0/docs/libcurl'
+Making install in opts
+make[6]: Entering directory '/sources/curl-8.4.0/docs/libcurl/opts'
+make[7]: Entering directory '/sources/curl-8.4.0/docs/libcurl/opts'
+make[7]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/man/man3'
+ /usr/bin/install -c -m 644 CURLINFO_ACTIVESOCKET.3 CURLINFO_APPCONNECT_TIME.3 CURLINFO_APPCONNECT_TIME_T.3 CURLINFO_CAINFO.3 CURLINFO_CAPATH.3 CURLINFO_CERTINFO.3 CURLINFO_CONDITION_UNMET.3 CURLINFO_CONNECT_TIME.3 CURLINFO_CONNECT_TIME_T.3 CURLINFO_CONN_ID.3 CURLINFO_CONTENT_LENGTH_DOWNLOAD.3 CURLINFO_CONTENT_LENGTH_DOWNLOAD_T.3 CURLINFO_CONTENT_LENGTH_UPLOAD.3 CURLINFO_CONTENT_LENGTH_UPLOAD_T.3 CURLINFO_CONTENT_TYPE.3 CURLINFO_COOKIELIST.3 CURLINFO_EFFECTIVE_METHOD.3 CURLINFO_EFFECTIVE_URL.3 CURLINFO_FILETIME.3 CURLINFO_FILETIME_T.3 CURLINFO_FTP_ENTRY_PATH.3 CURLINFO_HEADER_SIZE.3 CURLINFO_HTTP_CONNECTCODE.3 CURLINFO_HTTP_VERSION.3 CURLINFO_HTTPAUTH_AVAIL.3 CURLINFO_LASTSOCKET.3 CURLINFO_LOCAL_IP.3 CURLINFO_LOCAL_PORT.3 CURLINFO_NAMELOOKUP_TIME.3 CURLINFO_NAMELOOKUP_TIME_T.3 CURLINFO_NUM_CONNECTS.3 CURLINFO_OS_ERRNO.3 CURLINFO_PRETRANSFER_TIME.3 CURLINFO_PRETRANSFER_TIME_T.3 CURLINFO_PRIMARY_IP.3 CURLINFO_PRIMARY_PORT.3 CURLINFO_PRIVATE.3 CURLINFO_PROTOCOL.3 CURLINFO_PROXY_ERROR.3 CURLINFO_PROXY_SSL_VERIFYRESULT.3 '/usr/share/man/man3'
+ /usr/bin/install -c -m 644 CURLINFO_PROXYAUTH_AVAIL.3 CURLINFO_REDIRECT_COUNT.3 CURLINFO_REDIRECT_TIME.3 CURLINFO_REDIRECT_TIME_T.3 CURLINFO_REDIRECT_URL.3 CURLINFO_REFERER.3 CURLINFO_REQUEST_SIZE.3 CURLINFO_RESPONSE_CODE.3 CURLINFO_RETRY_AFTER.3 CURLINFO_RTSP_CLIENT_CSEQ.3 CURLINFO_RTSP_CSEQ_RECV.3 CURLINFO_RTSP_SERVER_CSEQ.3 CURLINFO_RTSP_SESSION_ID.3 CURLINFO_SCHEME.3 CURLINFO_SIZE_DOWNLOAD.3 CURLINFO_SIZE_DOWNLOAD_T.3 CURLINFO_SIZE_UPLOAD.3 CURLINFO_SIZE_UPLOAD_T.3 CURLINFO_SPEED_DOWNLOAD.3 CURLINFO_SPEED_DOWNLOAD_T.3 CURLINFO_SPEED_UPLOAD.3 CURLINFO_SPEED_UPLOAD_T.3 CURLINFO_SSL_ENGINES.3 CURLINFO_SSL_VERIFYRESULT.3 CURLINFO_STARTTRANSFER_TIME.3 CURLINFO_STARTTRANSFER_TIME_T.3 CURLINFO_TLS_SESSION.3 CURLINFO_TLS_SSL_PTR.3 CURLINFO_TOTAL_TIME.3 CURLINFO_TOTAL_TIME_T.3 CURLINFO_XFER_ID.3 CURLMOPT_CHUNK_LENGTH_PENALTY_SIZE.3 CURLMOPT_CONTENT_LENGTH_PENALTY_SIZE.3 CURLMOPT_MAX_CONCURRENT_STREAMS.3 CURLMOPT_MAX_HOST_CONNECTIONS.3 CURLMOPT_MAX_PIPELINE_LENGTH.3 CURLMOPT_MAX_TOTAL_CONNECTIONS.3 CURLMOPT_MAXCONNECTS.3 CURLMOPT_PIPELINING.3 CURLMOPT_PIPELINING_SERVER_BL.3 '/usr/share/man/man3'
+ /usr/bin/install -c -m 644 CURLMOPT_PIPELINING_SITE_BL.3 CURLMOPT_PUSHDATA.3 CURLMOPT_PUSHFUNCTION.3 CURLMOPT_SOCKETDATA.3 CURLMOPT_SOCKETFUNCTION.3 CURLMOPT_TIMERDATA.3 CURLMOPT_TIMERFUNCTION.3 CURLOPT_ABSTRACT_UNIX_SOCKET.3 CURLOPT_ACCEPT_ENCODING.3 CURLOPT_ACCEPTTIMEOUT_MS.3 CURLOPT_ADDRESS_SCOPE.3 CURLOPT_ALTSVC.3 CURLOPT_ALTSVC_CTRL.3 CURLOPT_APPEND.3 CURLOPT_AUTOREFERER.3 CURLOPT_AWS_SIGV4.3 CURLOPT_BUFFERSIZE.3 CURLOPT_CAINFO.3 CURLOPT_CAINFO_BLOB.3 CURLOPT_CAPATH.3 CURLOPT_CA_CACHE_TIMEOUT.3 CURLOPT_CERTINFO.3 CURLOPT_CHUNK_BGN_FUNCTION.3 CURLOPT_CHUNK_DATA.3 CURLOPT_CHUNK_END_FUNCTION.3 CURLOPT_CLOSESOCKETDATA.3 CURLOPT_CLOSESOCKETFUNCTION.3 CURLOPT_CONNECT_ONLY.3 CURLOPT_CONNECT_TO.3 CURLOPT_CONNECTTIMEOUT.3 CURLOPT_CONNECTTIMEOUT_MS.3 CURLOPT_CONV_FROM_NETWORK_FUNCTION.3 CURLOPT_CONV_FROM_UTF8_FUNCTION.3 CURLOPT_CONV_TO_NETWORK_FUNCTION.3 CURLOPT_COOKIE.3 CURLOPT_COOKIEFILE.3 CURLOPT_COOKIEJAR.3 CURLOPT_COOKIELIST.3 CURLOPT_COOKIESESSION.3 CURLOPT_COPYPOSTFIELDS.3 '/usr/share/man/man3'
+ /usr/bin/install -c -m 644 CURLOPT_CRLF.3 CURLOPT_CRLFILE.3 CURLOPT_CURLU.3 CURLOPT_CUSTOMREQUEST.3 CURLOPT_DEBUGDATA.3 CURLOPT_DEBUGFUNCTION.3 CURLOPT_DEFAULT_PROTOCOL.3 CURLOPT_DIRLISTONLY.3 CURLOPT_DISALLOW_USERNAME_IN_URL.3 CURLOPT_DNS_CACHE_TIMEOUT.3 CURLOPT_DNS_INTERFACE.3 CURLOPT_DNS_LOCAL_IP4.3 CURLOPT_DNS_LOCAL_IP6.3 CURLOPT_DNS_SERVERS.3 CURLOPT_DNS_SHUFFLE_ADDRESSES.3 CURLOPT_DNS_USE_GLOBAL_CACHE.3 CURLOPT_DOH_SSL_VERIFYHOST.3 CURLOPT_DOH_SSL_VERIFYPEER.3 CURLOPT_DOH_SSL_VERIFYSTATUS.3 CURLOPT_DOH_URL.3 CURLOPT_EGDSOCKET.3 CURLOPT_ERRORBUFFER.3 CURLOPT_EXPECT_100_TIMEOUT_MS.3 CURLOPT_FAILONERROR.3 CURLOPT_FILETIME.3 CURLOPT_FNMATCH_DATA.3 CURLOPT_FNMATCH_FUNCTION.3 CURLOPT_FOLLOWLOCATION.3 CURLOPT_FORBID_REUSE.3 CURLOPT_FRESH_CONNECT.3 CURLOPT_FTP_ACCOUNT.3 CURLOPT_FTP_ALTERNATIVE_TO_USER.3 CURLOPT_FTP_CREATE_MISSING_DIRS.3 CURLOPT_FTP_FILEMETHOD.3 CURLOPT_FTP_SKIP_PASV_IP.3 CURLOPT_FTP_SSL_CCC.3 CURLOPT_FTP_USE_EPRT.3 CURLOPT_FTP_USE_EPSV.3 CURLOPT_FTP_USE_PRET.3 CURLOPT_FTPPORT.3 '/usr/share/man/man3'
+ /usr/bin/install -c -m 644 CURLOPT_FTPSSLAUTH.3 CURLOPT_GSSAPI_DELEGATION.3 CURLOPT_HAPPY_EYEBALLS_TIMEOUT_MS.3 CURLOPT_HAPROXYPROTOCOL.3 CURLOPT_HAPROXY_CLIENT_IP.3 CURLOPT_HEADER.3 CURLOPT_HEADERDATA.3 CURLOPT_HEADERFUNCTION.3 CURLOPT_HEADEROPT.3 CURLOPT_HSTS.3 CURLOPT_HSTS_CTRL.3 CURLOPT_HSTSREADDATA.3 CURLOPT_HSTSREADFUNCTION.3 CURLOPT_HSTSWRITEDATA.3 CURLOPT_HSTSWRITEFUNCTION.3 CURLOPT_HTTP09_ALLOWED.3 CURLOPT_HTTP200ALIASES.3 CURLOPT_HTTP_CONTENT_DECODING.3 CURLOPT_HTTP_TRANSFER_DECODING.3 CURLOPT_HTTP_VERSION.3 CURLOPT_HTTPAUTH.3 CURLOPT_HTTPGET.3 CURLOPT_HTTPHEADER.3 CURLOPT_HTTPPOST.3 CURLOPT_HTTPPROXYTUNNEL.3 CURLOPT_IGNORE_CONTENT_LENGTH.3 CURLOPT_INFILESIZE.3 CURLOPT_INFILESIZE_LARGE.3 CURLOPT_INTERFACE.3 CURLOPT_INTERLEAVEDATA.3 CURLOPT_INTERLEAVEFUNCTION.3 CURLOPT_IOCTLDATA.3 CURLOPT_IOCTLFUNCTION.3 CURLOPT_IPRESOLVE.3 CURLOPT_ISSUERCERT.3 CURLOPT_ISSUERCERT_BLOB.3 CURLOPT_KEEP_SENDING_ON_ERROR.3 CURLOPT_KEYPASSWD.3 CURLOPT_KRBLEVEL.3 CURLOPT_LOCALPORT.3 '/usr/share/man/man3'
+ /usr/bin/install -c -m 644 CURLOPT_LOCALPORTRANGE.3 CURLOPT_LOGIN_OPTIONS.3 CURLOPT_LOW_SPEED_LIMIT.3 CURLOPT_LOW_SPEED_TIME.3 CURLOPT_MAIL_AUTH.3 CURLOPT_MAIL_FROM.3 CURLOPT_MAIL_RCPT.3 CURLOPT_MAIL_RCPT_ALLOWFAILS.3 CURLOPT_MAX_RECV_SPEED_LARGE.3 CURLOPT_MAX_SEND_SPEED_LARGE.3 CURLOPT_MAXAGE_CONN.3 CURLOPT_MAXCONNECTS.3 CURLOPT_MAXFILESIZE.3 CURLOPT_MAXFILESIZE_LARGE.3 CURLOPT_MAXLIFETIME_CONN.3 CURLOPT_MAXREDIRS.3 CURLOPT_MIME_OPTIONS.3 CURLOPT_MIMEPOST.3 CURLOPT_NETRC.3 CURLOPT_NETRC_FILE.3 CURLOPT_NEW_DIRECTORY_PERMS.3 CURLOPT_NEW_FILE_PERMS.3 CURLOPT_NOBODY.3 CURLOPT_NOPROGRESS.3 CURLOPT_NOPROXY.3 CURLOPT_NOSIGNAL.3 CURLOPT_OPENSOCKETDATA.3 CURLOPT_OPENSOCKETFUNCTION.3 CURLOPT_PASSWORD.3 CURLOPT_PATH_AS_IS.3 CURLOPT_PINNEDPUBLICKEY.3 CURLOPT_PIPEWAIT.3 CURLOPT_PORT.3 CURLOPT_POST.3 CURLOPT_POSTFIELDS.3 CURLOPT_POSTFIELDSIZE.3 CURLOPT_POSTFIELDSIZE_LARGE.3 CURLOPT_POSTQUOTE.3 CURLOPT_POSTREDIR.3 CURLOPT_PRE_PROXY.3 '/usr/share/man/man3'
+ /usr/bin/install -c -m 644 CURLOPT_PREQUOTE.3 CURLOPT_PREREQDATA.3 CURLOPT_PREREQFUNCTION.3 CURLOPT_PRIVATE.3 CURLOPT_PROGRESSDATA.3 CURLOPT_PROGRESSFUNCTION.3 CURLOPT_PROTOCOLS.3 CURLOPT_PROTOCOLS_STR.3 CURLOPT_PROXY.3 CURLOPT_PROXY_CAINFO.3 CURLOPT_PROXY_CAINFO_BLOB.3 CURLOPT_PROXY_CAPATH.3 CURLOPT_PROXY_CRLFILE.3 CURLOPT_PROXY_ISSUERCERT.3 CURLOPT_PROXY_ISSUERCERT_BLOB.3 CURLOPT_PROXY_KEYPASSWD.3 CURLOPT_PROXY_PINNEDPUBLICKEY.3 CURLOPT_PROXY_SERVICE_NAME.3 CURLOPT_PROXY_SSL_CIPHER_LIST.3 CURLOPT_PROXY_SSL_OPTIONS.3 CURLOPT_PROXY_SSL_VERIFYHOST.3 CURLOPT_PROXY_SSL_VERIFYPEER.3 CURLOPT_PROXY_SSLCERT.3 CURLOPT_PROXY_SSLCERT_BLOB.3 CURLOPT_PROXY_SSLCERTTYPE.3 CURLOPT_PROXY_SSLKEY.3 CURLOPT_PROXY_SSLKEY_BLOB.3 CURLOPT_PROXY_SSLKEYTYPE.3 CURLOPT_PROXY_SSLVERSION.3 CURLOPT_PROXY_TLS13_CIPHERS.3 CURLOPT_PROXY_TLSAUTH_PASSWORD.3 CURLOPT_PROXY_TLSAUTH_TYPE.3 CURLOPT_PROXY_TLSAUTH_USERNAME.3 CURLOPT_PROXY_TRANSFER_MODE.3 CURLOPT_PROXYAUTH.3 CURLOPT_PROXYHEADER.3 CURLOPT_PROXYPASSWORD.3 CURLOPT_PROXYPORT.3 CURLOPT_PROXYTYPE.3 CURLOPT_PROXYUSERNAME.3 '/usr/share/man/man3'
+ /usr/bin/install -c -m 644 CURLOPT_PROXYUSERPWD.3 CURLOPT_PUT.3 CURLOPT_QUICK_EXIT.3 CURLOPT_QUOTE.3 CURLOPT_RANDOM_FILE.3 CURLOPT_RANGE.3 CURLOPT_READDATA.3 CURLOPT_READFUNCTION.3 CURLOPT_REDIR_PROTOCOLS.3 CURLOPT_REDIR_PROTOCOLS_STR.3 CURLOPT_REFERER.3 CURLOPT_REQUEST_TARGET.3 CURLOPT_RESOLVE.3 CURLOPT_RESOLVER_START_DATA.3 CURLOPT_RESOLVER_START_FUNCTION.3 CURLOPT_RESUME_FROM.3 CURLOPT_RESUME_FROM_LARGE.3 CURLOPT_RTSP_CLIENT_CSEQ.3 CURLOPT_RTSP_REQUEST.3 CURLOPT_RTSP_SERVER_CSEQ.3 CURLOPT_RTSP_SESSION_ID.3 CURLOPT_RTSP_STREAM_URI.3 CURLOPT_RTSP_TRANSPORT.3 CURLOPT_SASL_AUTHZID.3 CURLOPT_SASL_IR.3 CURLOPT_SEEKDATA.3 CURLOPT_SEEKFUNCTION.3 CURLOPT_SERVER_RESPONSE_TIMEOUT.3 CURLOPT_SERVICE_NAME.3 CURLOPT_SHARE.3 CURLOPT_SOCKOPTDATA.3 CURLOPT_SOCKOPTFUNCTION.3 CURLOPT_SOCKS5_AUTH.3 CURLOPT_SOCKS5_GSSAPI_NEC.3 CURLOPT_SOCKS5_GSSAPI_SERVICE.3 CURLOPT_SSH_AUTH_TYPES.3 CURLOPT_SSH_COMPRESSION.3 CURLOPT_SSH_HOSTKEYDATA.3 CURLOPT_SSH_HOSTKEYFUNCTION.3 CURLOPT_SSH_HOST_PUBLIC_KEY_MD5.3 '/usr/share/man/man3'
+ /usr/bin/install -c -m 644 CURLOPT_SSH_HOST_PUBLIC_KEY_SHA256.3 CURLOPT_SSH_KEYDATA.3 CURLOPT_SSH_KEYFUNCTION.3 CURLOPT_SSH_KNOWNHOSTS.3 CURLOPT_SSH_PRIVATE_KEYFILE.3 CURLOPT_SSH_PUBLIC_KEYFILE.3 CURLOPT_SSL_CIPHER_LIST.3 CURLOPT_SSL_CTX_DATA.3 CURLOPT_SSL_CTX_FUNCTION.3 CURLOPT_SSL_EC_CURVES.3 CURLOPT_SSL_ENABLE_ALPN.3 CURLOPT_SSL_ENABLE_NPN.3 CURLOPT_SSL_FALSESTART.3 CURLOPT_SSL_OPTIONS.3 CURLOPT_SSL_SESSIONID_CACHE.3 CURLOPT_SSL_VERIFYHOST.3 CURLOPT_SSL_VERIFYPEER.3 CURLOPT_SSL_VERIFYSTATUS.3 CURLOPT_SSLCERT.3 CURLOPT_SSLCERT_BLOB.3 CURLOPT_SSLCERTTYPE.3 CURLOPT_SSLENGINE.3 CURLOPT_SSLENGINE_DEFAULT.3 CURLOPT_SSLKEY.3 CURLOPT_SSLKEY_BLOB.3 CURLOPT_SSLKEYTYPE.3 CURLOPT_SSLVERSION.3 CURLOPT_STDERR.3 CURLOPT_STREAM_DEPENDS.3 CURLOPT_STREAM_DEPENDS_E.3 CURLOPT_STREAM_WEIGHT.3 CURLOPT_SUPPRESS_CONNECT_HEADERS.3 CURLOPT_TCP_FASTOPEN.3 CURLOPT_TCP_KEEPALIVE.3 CURLOPT_TCP_KEEPIDLE.3 CURLOPT_TCP_KEEPINTVL.3 CURLOPT_TCP_NODELAY.3 CURLOPT_TELNETOPTIONS.3 CURLOPT_TFTP_BLKSIZE.3 CURLOPT_TFTP_NO_OPTIONS.3 '/usr/share/man/man3'
+ /usr/bin/install -c -m 644 CURLOPT_TIMECONDITION.3 CURLOPT_TIMEOUT.3 CURLOPT_TIMEOUT_MS.3 CURLOPT_TIMEVALUE.3 CURLOPT_TIMEVALUE_LARGE.3 CURLOPT_TLS13_CIPHERS.3 CURLOPT_TLSAUTH_PASSWORD.3 CURLOPT_TLSAUTH_TYPE.3 CURLOPT_TLSAUTH_USERNAME.3 CURLOPT_TRAILERDATA.3 CURLOPT_TRAILERFUNCTION.3 CURLOPT_TRANSFER_ENCODING.3 CURLOPT_TRANSFERTEXT.3 CURLOPT_UNIX_SOCKET_PATH.3 CURLOPT_UNRESTRICTED_AUTH.3 CURLOPT_UPKEEP_INTERVAL_MS.3 CURLOPT_UPLOAD.3 CURLOPT_UPLOAD_BUFFERSIZE.3 CURLOPT_URL.3 CURLOPT_USE_SSL.3 CURLOPT_USERAGENT.3 CURLOPT_USERNAME.3 CURLOPT_USERPWD.3 CURLOPT_VERBOSE.3 CURLOPT_WILDCARDMATCH.3 CURLOPT_WRITEDATA.3 CURLOPT_WRITEFUNCTION.3 CURLOPT_WS_OPTIONS.3 CURLOPT_XFERINFODATA.3 CURLOPT_XFERINFOFUNCTION.3 CURLOPT_XOAUTH2_BEARER.3 CURLSHOPT_LOCKFUNC.3 CURLSHOPT_SHARE.3 CURLSHOPT_UNLOCKFUNC.3 CURLSHOPT_UNSHARE.3 CURLSHOPT_USERDATA.3 '/usr/share/man/man3'
+make[7]: Leaving directory '/sources/curl-8.4.0/docs/libcurl/opts'
+make[6]: Leaving directory '/sources/curl-8.4.0/docs/libcurl/opts'
+make[6]: Entering directory '/sources/curl-8.4.0/docs/libcurl'
+make[7]: Entering directory '/sources/curl-8.4.0/docs/libcurl'
+make[7]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/aclocal'
+ /usr/bin/mkdir -p '/usr/share/man/man3'
+ /usr/bin/install -c -m 644 libcurl.m4 '/usr/share/aclocal'
+ /usr/bin/install -c -m 644 curl_easy_cleanup.3 curl_easy_duphandle.3 curl_easy_escape.3 curl_easy_getinfo.3 curl_easy_header.3 curl_easy_init.3 curl_easy_nextheader.3 curl_easy_option_by_id.3 curl_easy_option_by_name.3 curl_easy_option_next.3 curl_easy_pause.3 curl_easy_perform.3 curl_easy_recv.3 curl_easy_reset.3 curl_easy_send.3 curl_easy_setopt.3 curl_easy_strerror.3 curl_easy_unescape.3 curl_easy_upkeep.3 curl_escape.3 curl_formadd.3 curl_formfree.3 curl_formget.3 curl_free.3 curl_getdate.3 curl_getenv.3 curl_global_cleanup.3 curl_global_init.3 curl_global_init_mem.3 curl_global_trace.3 curl_global_sslset.3 curl_mime_addpart.3 curl_mime_data.3 curl_mime_data_cb.3 curl_mime_encoder.3 curl_mime_filedata.3 curl_mime_filename.3 curl_mime_free.3 curl_mime_headers.3 curl_mime_init.3 '/usr/share/man/man3'
+ /usr/bin/install -c -m 644 curl_mime_name.3 curl_mime_subparts.3 curl_mime_type.3 curl_mprintf.3 curl_multi_add_handle.3 curl_multi_assign.3 curl_multi_cleanup.3 curl_multi_fdset.3 curl_multi_get_handles.3 curl_multi_info_read.3 curl_multi_init.3 curl_multi_perform.3 curl_multi_poll.3 curl_multi_remove_handle.3 curl_multi_setopt.3 curl_multi_socket.3 curl_multi_socket_action.3 curl_multi_socket_all.3 curl_multi_strerror.3 curl_multi_timeout.3 curl_multi_wakeup.3 curl_multi_wait.3 curl_pushheader_bynum.3 curl_pushheader_byname.3 curl_share_cleanup.3 curl_share_init.3 curl_share_setopt.3 curl_share_strerror.3 curl_slist_append.3 curl_slist_free_all.3 curl_strequal.3 curl_strnequal.3 curl_unescape.3 curl_url.3 curl_url_cleanup.3 curl_url_dup.3 curl_url_get.3 curl_url_set.3 curl_url_strerror.3 curl_version.3 '/usr/share/man/man3'
+ /usr/bin/install -c -m 644 curl_version_info.3 curl_ws_meta.3 curl_ws_recv.3 curl_ws_send.3 libcurl-easy.3 libcurl-env.3 libcurl-env-dbg.3 libcurl-errors.3 libcurl-multi.3 libcurl-security.3 libcurl-share.3 libcurl-symbols.3 libcurl-thread.3 libcurl-tutorial.3 libcurl-url.3 libcurl-ws.3 libcurl.3 '/usr/share/man/man3'
+make[7]: Leaving directory '/sources/curl-8.4.0/docs/libcurl'
+make[6]: Leaving directory '/sources/curl-8.4.0/docs/libcurl'
+make[5]: Leaving directory '/sources/curl-8.4.0/docs/libcurl'
+make[4]: Leaving directory '/sources/curl-8.4.0'
+make[3]: Leaving directory '/sources/curl-8.4.0'
+make[2]: Leaving directory '/sources/curl-8.4.0'
+make[1]: Leaving directory '/sources/curl-8.4.0'
+'docs' -> '/usr/share/doc/curl-8.2.1'
+'docs/DYNBUF.md' -> '/usr/share/doc/curl-8.2.1/DYNBUF.md'
+'docs/INSTALL.cmake' -> '/usr/share/doc/curl-8.2.1/INSTALL.cmake'
+'docs/WEBSOCKET.md' -> '/usr/share/doc/curl-8.2.1/WEBSOCKET.md'
+'docs/CURL-DISABLE.md' -> '/usr/share/doc/curl-8.2.1/CURL-DISABLE.md'
+'docs/HISTORY.md' -> '/usr/share/doc/curl-8.2.1/HISTORY.md'
+'docs/HSTS.md' -> '/usr/share/doc/curl-8.2.1/HSTS.md'
+'docs/options-in-versions' -> '/usr/share/doc/curl-8.2.1/options-in-versions'
+'docs/TheArtOfHttpScripting.md' -> '/usr/share/doc/curl-8.2.1/TheArtOfHttpScripting.md'
+'docs/SECURITY-ADVISORY.md' -> '/usr/share/doc/curl-8.2.1/SECURITY-ADVISORY.md'
+'docs/GOVERNANCE.md' -> '/usr/share/doc/curl-8.2.1/GOVERNANCE.md'
+'docs/FEATURES.md' -> '/usr/share/doc/curl-8.2.1/FEATURES.md'
+'docs/HELP-US.md' -> '/usr/share/doc/curl-8.2.1/HELP-US.md'
+'docs/HTTP2.md' -> '/usr/share/doc/curl-8.2.1/HTTP2.md'
+'docs/INTERNALS.md' -> '/usr/share/doc/curl-8.2.1/INTERNALS.md'
+'docs/DEPRECATE.md' -> '/usr/share/doc/curl-8.2.1/DEPRECATE.md'
+'docs/CODE_STYLE.md' -> '/usr/share/doc/curl-8.2.1/CODE_STYLE.md'
+'docs/CODE_OF_CONDUCT.md' -> '/usr/share/doc/curl-8.2.1/CODE_OF_CONDUCT.md'
+'docs/THANKS' -> '/usr/share/doc/curl-8.2.1/THANKS'
+'docs/URL-SYNTAX.md' -> '/usr/share/doc/curl-8.2.1/URL-SYNTAX.md'
+'docs/TODO' -> '/usr/share/doc/curl-8.2.1/TODO'
+'docs/RELEASE-PROCEDURE.md' -> '/usr/share/doc/curl-8.2.1/RELEASE-PROCEDURE.md'
+'docs/MAIL-ETIQUETTE' -> '/usr/share/doc/curl-8.2.1/MAIL-ETIQUETTE'
+'docs/CODE_REVIEW.md' -> '/usr/share/doc/curl-8.2.1/CODE_REVIEW.md'
+'docs/BUGS.md' -> '/usr/share/doc/curl-8.2.1/BUGS.md'
+'docs/PARALLEL-TRANSFERS.md' -> '/usr/share/doc/curl-8.2.1/PARALLEL-TRANSFERS.md'
+'docs/BUFREF.md' -> '/usr/share/doc/curl-8.2.1/BUFREF.md'
+'docs/CIPHERS.md' -> '/usr/share/doc/curl-8.2.1/CIPHERS.md'
+'docs/RUSTLS.md' -> '/usr/share/doc/curl-8.2.1/RUSTLS.md'
+'docs/README.md' -> '/usr/share/doc/curl-8.2.1/README.md'
+'docs/MQTT.md' -> '/usr/share/doc/curl-8.2.1/MQTT.md'
+'docs/HTTP-COOKIES.md' -> '/usr/share/doc/curl-8.2.1/HTTP-COOKIES.md'
+'docs/HYPER.md' -> '/usr/share/doc/curl-8.2.1/HYPER.md'
+'docs/INSTALL' -> '/usr/share/doc/curl-8.2.1/INSTALL'
+'docs/CONTRIBUTE.md' -> '/usr/share/doc/curl-8.2.1/CONTRIBUTE.md'
+'docs/SSLCERTS.md' -> '/usr/share/doc/curl-8.2.1/SSLCERTS.md'
+'docs/EARLY-RELEASE.md' -> '/usr/share/doc/curl-8.2.1/EARLY-RELEASE.md'
+'docs/SSL-PROBLEMS.md' -> '/usr/share/doc/curl-8.2.1/SSL-PROBLEMS.md'
+'docs/BUG-BOUNTY.md' -> '/usr/share/doc/curl-8.2.1/BUG-BOUNTY.md'
+'docs/ROADMAP.md' -> '/usr/share/doc/curl-8.2.1/ROADMAP.md'
+'docs/BINDINGS.md' -> '/usr/share/doc/curl-8.2.1/BINDINGS.md'
+'docs/HTTP3.md' -> '/usr/share/doc/curl-8.2.1/HTTP3.md'
+'docs/CHECKSRC.md' -> '/usr/share/doc/curl-8.2.1/CHECKSRC.md'
+'docs/VULN-DISCLOSURE-POLICY.md' -> '/usr/share/doc/curl-8.2.1/VULN-DISCLOSURE-POLICY.md'
+'docs/NEW-PROTOCOL.md' -> '/usr/share/doc/curl-8.2.1/NEW-PROTOCOL.md'
+'docs/EXPERIMENTAL.md' -> '/usr/share/doc/curl-8.2.1/EXPERIMENTAL.md'
+'docs/INSTALL.md' -> '/usr/share/doc/curl-8.2.1/INSTALL.md'
+'docs/VERSIONS.md' -> '/usr/share/doc/curl-8.2.1/VERSIONS.md'
+'docs/CONNECTION-FILTERS.md' -> '/usr/share/doc/curl-8.2.1/CONNECTION-FILTERS.md'
+'docs/ALTSVC.md' -> '/usr/share/doc/curl-8.2.1/ALTSVC.md'
+'docs/FAQ' -> '/usr/share/doc/curl-8.2.1/FAQ'
+'docs/KNOWN_BUGS' -> '/usr/share/doc/curl-8.2.1/KNOWN_BUGS'
+'docs/examples' -> '/usr/share/doc/curl-8.2.1/examples'
+'docs/examples/multi-double.c' -> '/usr/share/doc/curl-8.2.1/examples/multi-double.c'
+'docs/examples/ftpupload.c' -> '/usr/share/doc/curl-8.2.1/examples/ftpupload.c'
+'docs/examples/shared-connection-cache.c' -> '/usr/share/doc/curl-8.2.1/examples/shared-connection-cache.c'
+'docs/examples/sslbackend.c' -> '/usr/share/doc/curl-8.2.1/examples/sslbackend.c'
+'docs/examples/pop3-list.c' -> '/usr/share/doc/curl-8.2.1/examples/pop3-list.c'
+'docs/examples/ftpget.c' -> '/usr/share/doc/curl-8.2.1/examples/ftpget.c'
+'docs/examples/maxconnects.c' -> '/usr/share/doc/curl-8.2.1/examples/maxconnects.c'
+'docs/examples/htmltitle.cpp' -> '/usr/share/doc/curl-8.2.1/examples/htmltitle.cpp'
+'docs/examples/ftpgetresp.c' -> '/usr/share/doc/curl-8.2.1/examples/ftpgetresp.c'
+'docs/examples/pop3-uidl.c' -> '/usr/share/doc/curl-8.2.1/examples/pop3-uidl.c'
+'docs/examples/postinmemory.c' -> '/usr/share/doc/curl-8.2.1/examples/postinmemory.c'
+'docs/examples/multi-event.c' -> '/usr/share/doc/curl-8.2.1/examples/multi-event.c'
+'docs/examples/xmlstream.c' -> '/usr/share/doc/curl-8.2.1/examples/xmlstream.c'
+'docs/examples/imap-copy.c' -> '/usr/share/doc/curl-8.2.1/examples/imap-copy.c'
+'docs/examples/ftpgetinfo.c' -> '/usr/share/doc/curl-8.2.1/examples/ftpgetinfo.c'
+'docs/examples/pop3-stat.c' -> '/usr/share/doc/curl-8.2.1/examples/pop3-stat.c'
+'docs/examples/resolve.c' -> '/usr/share/doc/curl-8.2.1/examples/resolve.c'
+'docs/examples/multi-uv.c' -> '/usr/share/doc/curl-8.2.1/examples/multi-uv.c'
+'docs/examples/usercertinmem.c' -> '/usr/share/doc/curl-8.2.1/examples/usercertinmem.c'
+'docs/examples/multi-app.c' -> '/usr/share/doc/curl-8.2.1/examples/multi-app.c'
+'docs/examples/evhiperfifo.c' -> '/usr/share/doc/curl-8.2.1/examples/evhiperfifo.c'
+'docs/examples/connect-to.c' -> '/usr/share/doc/curl-8.2.1/examples/connect-to.c'
+'docs/examples/multi-post.c' -> '/usr/share/doc/curl-8.2.1/examples/multi-post.c'
+'docs/examples/progressfunc.c' -> '/usr/share/doc/curl-8.2.1/examples/progressfunc.c'
+'docs/examples/https.c' -> '/usr/share/doc/curl-8.2.1/examples/https.c'
+'docs/examples/hiperfifo.c' -> '/usr/share/doc/curl-8.2.1/examples/hiperfifo.c'
+'docs/examples/pop3-ssl.c' -> '/usr/share/doc/curl-8.2.1/examples/pop3-ssl.c'
+'docs/examples/ftp-wildcard.c' -> '/usr/share/doc/curl-8.2.1/examples/ftp-wildcard.c'
+'docs/examples/postit2-formadd.c' -> '/usr/share/doc/curl-8.2.1/examples/postit2-formadd.c'
+'docs/examples/threaded-ssl.c' -> '/usr/share/doc/curl-8.2.1/examples/threaded-ssl.c'
+'docs/examples/http2-download.c' -> '/usr/share/doc/curl-8.2.1/examples/http2-download.c'
+'docs/examples/smtp-mime.c' -> '/usr/share/doc/curl-8.2.1/examples/smtp-mime.c'
+'docs/examples/crawler.c' -> '/usr/share/doc/curl-8.2.1/examples/crawler.c'
+'docs/examples/chkspeed.c' -> '/usr/share/doc/curl-8.2.1/examples/chkspeed.c'
+'docs/examples/pop3-authzid.c' -> '/usr/share/doc/curl-8.2.1/examples/pop3-authzid.c'
+'docs/examples/pop3-tls.c' -> '/usr/share/doc/curl-8.2.1/examples/pop3-tls.c'
+'docs/examples/imap-create.c' -> '/usr/share/doc/curl-8.2.1/examples/imap-create.c'
+'docs/examples/externalsocket.c' -> '/usr/share/doc/curl-8.2.1/examples/externalsocket.c'
+'docs/examples/default-scheme.c' -> '/usr/share/doc/curl-8.2.1/examples/default-scheme.c'
+'docs/examples/websocket-cb.c' -> '/usr/share/doc/curl-8.2.1/examples/websocket-cb.c'
+'docs/examples/http-options.c' -> '/usr/share/doc/curl-8.2.1/examples/http-options.c'
+'docs/examples/pop3-top.c' -> '/usr/share/doc/curl-8.2.1/examples/pop3-top.c'
+'docs/examples/multi-single.c' -> '/usr/share/doc/curl-8.2.1/examples/multi-single.c'
+'docs/examples/smooth-gtk-thread.c' -> '/usr/share/doc/curl-8.2.1/examples/smooth-gtk-thread.c'
+'docs/examples/getredirect.c' -> '/usr/share/doc/curl-8.2.1/examples/getredirect.c'
+'docs/examples/certinfo.c' -> '/usr/share/doc/curl-8.2.1/examples/certinfo.c'
+'docs/examples/cacertinmem.c' -> '/usr/share/doc/curl-8.2.1/examples/cacertinmem.c'
+'docs/examples/http2-pushinmemory.c' -> '/usr/share/doc/curl-8.2.1/examples/http2-pushinmemory.c'
+'docs/examples/smtp-mail.c' -> '/usr/share/doc/curl-8.2.1/examples/smtp-mail.c'
+'docs/examples/fileupload.c' -> '/usr/share/doc/curl-8.2.1/examples/fileupload.c'
+'docs/examples/multi-formadd.c' -> '/usr/share/doc/curl-8.2.1/examples/multi-formadd.c'
+'docs/examples/imap-fetch.c' -> '/usr/share/doc/curl-8.2.1/examples/imap-fetch.c'
+'docs/examples/getinmemory.c' -> '/usr/share/doc/curl-8.2.1/examples/getinmemory.c'
+'docs/examples/http2-upload.c' -> '/usr/share/doc/curl-8.2.1/examples/http2-upload.c'
+'docs/examples/10-at-a-time.c' -> '/usr/share/doc/curl-8.2.1/examples/10-at-a-time.c'
+'docs/examples/imap-delete.c' -> '/usr/share/doc/curl-8.2.1/examples/imap-delete.c'
+'docs/examples/ftpuploadfrommem.c' -> '/usr/share/doc/curl-8.2.1/examples/ftpuploadfrommem.c'
+'docs/examples/httpcustomheader.c' -> '/usr/share/doc/curl-8.2.1/examples/httpcustomheader.c'
+'docs/examples/getreferrer.c' -> '/usr/share/doc/curl-8.2.1/examples/getreferrer.c'
+'docs/examples/altsvc.c' -> '/usr/share/doc/curl-8.2.1/examples/altsvc.c'
+'docs/examples/smtp-ssl.c' -> '/usr/share/doc/curl-8.2.1/examples/smtp-ssl.c'
+'docs/examples/debug.c' -> '/usr/share/doc/curl-8.2.1/examples/debug.c'
+'docs/examples/httpput-postfields.c' -> '/usr/share/doc/curl-8.2.1/examples/httpput-postfields.c'
+'docs/examples/README.md' -> '/usr/share/doc/curl-8.2.1/examples/README.md'
+'docs/examples/imap-store.c' -> '/usr/share/doc/curl-8.2.1/examples/imap-store.c'
+'docs/examples/persistent.c' -> '/usr/share/doc/curl-8.2.1/examples/persistent.c'
+'docs/examples/protofeats.c' -> '/usr/share/doc/curl-8.2.1/examples/protofeats.c'
+'docs/examples/cookie_interface.c' -> '/usr/share/doc/curl-8.2.1/examples/cookie_interface.c'
+'docs/examples/simplepost.c' -> '/usr/share/doc/curl-8.2.1/examples/simplepost.c'
+'docs/examples/anyauthput.c' -> '/usr/share/doc/curl-8.2.1/examples/anyauthput.c'
+'docs/examples/imap-multi.c' -> '/usr/share/doc/curl-8.2.1/examples/imap-multi.c'
+'docs/examples/sftpuploadresume.c' -> '/usr/share/doc/curl-8.2.1/examples/sftpuploadresume.c'
+'docs/examples/href_extractor.c' -> '/usr/share/doc/curl-8.2.1/examples/href_extractor.c'
+'docs/examples/post-callback.c' -> '/usr/share/doc/curl-8.2.1/examples/post-callback.c'
+'docs/examples/imap-list.c' -> '/usr/share/doc/curl-8.2.1/examples/imap-list.c'
+'docs/examples/http3.c' -> '/usr/share/doc/curl-8.2.1/examples/http3.c'
+'docs/examples/sessioninfo.c' -> '/usr/share/doc/curl-8.2.1/examples/sessioninfo.c'
+'docs/examples/.checksrc' -> '/usr/share/doc/curl-8.2.1/examples/.checksrc'
+'docs/examples/imap-search.c' -> '/usr/share/doc/curl-8.2.1/examples/imap-search.c'
+'docs/examples/smtp-tls.c' -> '/usr/share/doc/curl-8.2.1/examples/smtp-tls.c'
+'docs/examples/imap-tls.c' -> '/usr/share/doc/curl-8.2.1/examples/imap-tls.c'
+'docs/examples/pop3-dele.c' -> '/usr/share/doc/curl-8.2.1/examples/pop3-dele.c'
+'docs/examples/ftpsget.c' -> '/usr/share/doc/curl-8.2.1/examples/ftpsget.c'
+'docs/examples/pop3-multi.c' -> '/usr/share/doc/curl-8.2.1/examples/pop3-multi.c'
+'docs/examples/http-post.c' -> '/usr/share/doc/curl-8.2.1/examples/http-post.c'
+'docs/examples/imap-ssl.c' -> '/usr/share/doc/curl-8.2.1/examples/imap-ssl.c'
+'docs/examples/imap-noop.c' -> '/usr/share/doc/curl-8.2.1/examples/imap-noop.c'
+'docs/examples/simplessl.c' -> '/usr/share/doc/curl-8.2.1/examples/simplessl.c'
+'docs/examples/url2file.c' -> '/usr/share/doc/curl-8.2.1/examples/url2file.c'
+'docs/examples/pop3-retr.c' -> '/usr/share/doc/curl-8.2.1/examples/pop3-retr.c'
+'docs/examples/unixsocket.c' -> '/usr/share/doc/curl-8.2.1/examples/unixsocket.c'
+'docs/examples/getinfo.c' -> '/usr/share/doc/curl-8.2.1/examples/getinfo.c'
+'docs/examples/http3-present.c' -> '/usr/share/doc/curl-8.2.1/examples/http3-present.c'
+'docs/examples/urlapi.c' -> '/usr/share/doc/curl-8.2.1/examples/urlapi.c'
+'docs/examples/multi-legacy.c' -> '/usr/share/doc/curl-8.2.1/examples/multi-legacy.c'
+'docs/examples/ftpuploadresume.c' -> '/usr/share/doc/curl-8.2.1/examples/ftpuploadresume.c'
+'docs/examples/htmltidy.c' -> '/usr/share/doc/curl-8.2.1/examples/htmltidy.c'
+'docs/examples/version-check.pl' -> '/usr/share/doc/curl-8.2.1/examples/version-check.pl'
+'docs/examples/headerapi.c' -> '/usr/share/doc/curl-8.2.1/examples/headerapi.c'
+'docs/examples/imap-append.c' -> '/usr/share/doc/curl-8.2.1/examples/imap-append.c'
+'docs/examples/sepheaders.c' -> '/usr/share/doc/curl-8.2.1/examples/sepheaders.c'
+'docs/examples/parseurl.c' -> '/usr/share/doc/curl-8.2.1/examples/parseurl.c'
+'docs/examples/ipv6.c' -> '/usr/share/doc/curl-8.2.1/examples/ipv6.c'
+'docs/examples/http2-serverpush.c' -> '/usr/share/doc/curl-8.2.1/examples/http2-serverpush.c'
+'docs/examples/ephiperfifo.c' -> '/usr/share/doc/curl-8.2.1/examples/ephiperfifo.c'
+'docs/examples/hsts-preload.c' -> '/usr/share/doc/curl-8.2.1/examples/hsts-preload.c'
+'docs/examples/websocket.c' -> '/usr/share/doc/curl-8.2.1/examples/websocket.c'
+'docs/examples/imap-authzid.c' -> '/usr/share/doc/curl-8.2.1/examples/imap-authzid.c'
+'docs/examples/smtp-authzid.c' -> '/usr/share/doc/curl-8.2.1/examples/smtp-authzid.c'
+'docs/examples/synctime.c' -> '/usr/share/doc/curl-8.2.1/examples/synctime.c'
+'docs/examples/multi-debugcallback.c' -> '/usr/share/doc/curl-8.2.1/examples/multi-debugcallback.c'
+'docs/examples/imap-examine.c' -> '/usr/share/doc/curl-8.2.1/examples/imap-examine.c'
+'docs/examples/httpput.c' -> '/usr/share/doc/curl-8.2.1/examples/httpput.c'
+'docs/examples/smtp-vrfy.c' -> '/usr/share/doc/curl-8.2.1/examples/smtp-vrfy.c'
+'docs/examples/multithread.c' -> '/usr/share/doc/curl-8.2.1/examples/multithread.c'
+'docs/examples/sendrecv.c' -> '/usr/share/doc/curl-8.2.1/examples/sendrecv.c'
+'docs/examples/smtp-multi.c' -> '/usr/share/doc/curl-8.2.1/examples/smtp-multi.c'
+'docs/examples/ghiper.c' -> '/usr/share/doc/curl-8.2.1/examples/ghiper.c'
+'docs/examples/smtp-expn.c' -> '/usr/share/doc/curl-8.2.1/examples/smtp-expn.c'
+'docs/examples/simple.c' -> '/usr/share/doc/curl-8.2.1/examples/simple.c'
+'docs/examples/pop3-noop.c' -> '/usr/share/doc/curl-8.2.1/examples/pop3-noop.c'
+'docs/examples/imap-lsub.c' -> '/usr/share/doc/curl-8.2.1/examples/imap-lsub.c'
+'docs/examples/postit2.c' -> '/usr/share/doc/curl-8.2.1/examples/postit2.c'
+'docs/examples/sftpget.c' -> '/usr/share/doc/curl-8.2.1/examples/sftpget.c'
+'docs/cmdline-opts' -> '/usr/share/doc/curl-8.2.1/cmdline-opts'
+'docs/cmdline-opts/proxy-cacert.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-cacert.d'
+'docs/cmdline-opts/proxy-cert-type.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-cert-type.d'
+'docs/cmdline-opts/proxy1.0.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy1.0.d'
+'docs/cmdline-opts/ignore-content-length.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ignore-content-length.d'
+'docs/cmdline-opts/page-footer' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/page-footer'
+'docs/cmdline-opts/unix-socket.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/unix-socket.d'
+'docs/cmdline-opts/local-port.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/local-port.d'
+'docs/cmdline-opts/list-only.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/list-only.d'
+'docs/cmdline-opts/http0.9.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/http0.9.d'
+'docs/cmdline-opts/dns-ipv4-addr.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/dns-ipv4-addr.d'
+'docs/cmdline-opts/pubkey.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/pubkey.d'
+'docs/cmdline-opts/compressed.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/compressed.d'
+'docs/cmdline-opts/trace-time.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/trace-time.d'
+'docs/cmdline-opts/proxy-header.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-header.d'
+'docs/cmdline-opts/mail-auth.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/mail-auth.d'
+'docs/cmdline-opts/connect-to.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/connect-to.d'
+'docs/cmdline-opts/max-time.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/max-time.d'
+'docs/cmdline-opts/retry-all-errors.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/retry-all-errors.d'
+'docs/cmdline-opts/remote-time.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/remote-time.d'
+'docs/cmdline-opts/user.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/user.d'
+'docs/cmdline-opts/remote-name.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/remote-name.d'
+'docs/cmdline-opts/haproxy-protocol.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/haproxy-protocol.d'
+'docs/cmdline-opts/proxy-key-type.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-key-type.d'
+'docs/cmdline-opts/http3.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/http3.d'
+'docs/cmdline-opts/proto-redir.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proto-redir.d'
+'docs/cmdline-opts/data.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/data.d'
+'docs/cmdline-opts/page-header' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/page-header'
+'docs/cmdline-opts/no-sessionid.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/no-sessionid.d'
+'docs/cmdline-opts/netrc-optional.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/netrc-optional.d'
+'docs/cmdline-opts/tlsauthtype.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/tlsauthtype.d'
+'docs/cmdline-opts/user-agent.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/user-agent.d'
+'docs/cmdline-opts/header.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/header.d'
+'docs/cmdline-opts/proxy-ssl-auto-client-cert.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-ssl-auto-client-cert.d'
+'docs/cmdline-opts/http2.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/http2.d'
+'docs/cmdline-opts/raw.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/raw.d'
+'docs/cmdline-opts/curves.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/curves.d'
+'docs/cmdline-opts/version.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/version.d'
+'docs/cmdline-opts/netrc-file.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/netrc-file.d'
+'docs/cmdline-opts/trace-ids.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/trace-ids.d'
+'docs/cmdline-opts/proxy-tlsuser.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-tlsuser.d'
+'docs/cmdline-opts/continue-at.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/continue-at.d'
+'docs/cmdline-opts/tr-encoding.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/tr-encoding.d'
+'docs/cmdline-opts/proxy-service-name.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-service-name.d'
+'docs/cmdline-opts/ntlm.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ntlm.d'
+'docs/cmdline-opts/proxy.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy.d'
+'docs/cmdline-opts/max-filesize.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/max-filesize.d'
+'docs/cmdline-opts/location-trusted.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/location-trusted.d'
+'docs/cmdline-opts/referer.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/referer.d'
+'docs/cmdline-opts/engine.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/engine.d'
+'docs/cmdline-opts/pinnedpubkey.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/pinnedpubkey.d'
+'docs/cmdline-opts/doh-url.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/doh-url.d'
+'docs/cmdline-opts/request.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/request.d'
+'docs/cmdline-opts/quote.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/quote.d'
+'docs/cmdline-opts/cookie.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/cookie.d'
+'docs/cmdline-opts/trace-config.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/trace-config.d'
+'docs/cmdline-opts/service-name.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/service-name.d'
+'docs/cmdline-opts/mail-rcpt-allowfails.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/mail-rcpt-allowfails.d'
+'docs/cmdline-opts/rate.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/rate.d'
+'docs/cmdline-opts/happy-eyeballs-timeout-ms.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/happy-eyeballs-timeout-ms.d'
+'docs/cmdline-opts/ftp-account.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ftp-account.d'
+'docs/cmdline-opts/hsts.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/hsts.d'
+'docs/cmdline-opts/ssl-allow-beast.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ssl-allow-beast.d'
+'docs/cmdline-opts/output-dir.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/output-dir.d'
+'docs/cmdline-opts/url-query.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/url-query.d'
+'docs/cmdline-opts/proxy-negotiate.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-negotiate.d'
+'docs/cmdline-opts/ftp-skip-pasv-ip.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ftp-skip-pasv-ip.d'
+'docs/cmdline-opts/http1.1.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/http1.1.d'
+'docs/cmdline-opts/proxy-cert.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-cert.d'
+'docs/cmdline-opts/ftp-alternative-to-user.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ftp-alternative-to-user.d'
+'docs/cmdline-opts/proxy-capath.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-capath.d'
+'docs/cmdline-opts/no-alpn.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/no-alpn.d'
+'docs/cmdline-opts/tlspassword.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/tlspassword.d'
+'docs/cmdline-opts/next.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/next.d'
+'docs/cmdline-opts/krb.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/krb.d'
+'docs/cmdline-opts/pass.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/pass.d'
+'docs/cmdline-opts/aws-sigv4.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/aws-sigv4.d'
+'docs/cmdline-opts/retry-max-time.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/retry-max-time.d'
+'docs/cmdline-opts/head.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/head.d'
+'docs/cmdline-opts/post301.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/post301.d'
+'docs/cmdline-opts/show-error.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/show-error.d'
+'docs/cmdline-opts/key-type.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/key-type.d'
+'docs/cmdline-opts/no-buffer.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/no-buffer.d'
+'docs/cmdline-opts/socks5-hostname.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/socks5-hostname.d'
+'docs/cmdline-opts/json.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/json.d'
+'docs/cmdline-opts/proto.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proto.d'
+'docs/cmdline-opts/tls-max.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/tls-max.d'
+'docs/cmdline-opts/no-clobber.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/no-clobber.d'
+'docs/cmdline-opts/random-file.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/random-file.d'
+'docs/cmdline-opts/tlsv1.2.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/tlsv1.2.d'
+'docs/cmdline-opts/use-ascii.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/use-ascii.d'
+'docs/cmdline-opts/remote-name-all.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/remote-name-all.d'
+'docs/cmdline-opts/ssl-reqd.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ssl-reqd.d'
+'docs/cmdline-opts/dns-ipv6-addr.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/dns-ipv6-addr.d'
+'docs/cmdline-opts/socks4.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/socks4.d'
+'docs/cmdline-opts/fail-early.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/fail-early.d'
+'docs/cmdline-opts/ftp-create-dirs.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ftp-create-dirs.d'
+'docs/cmdline-opts/ssl-revoke-best-effort.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ssl-revoke-best-effort.d'
+'docs/cmdline-opts/no-progress-meter.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/no-progress-meter.d'
+'docs/cmdline-opts/cacert.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/cacert.d'
+'docs/cmdline-opts/http3-only.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/http3-only.d'
+'docs/cmdline-opts/basic.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/basic.d'
+'docs/cmdline-opts/parallel.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/parallel.d'
+'docs/cmdline-opts/time-cond.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/time-cond.d'
+'docs/cmdline-opts/tlsv1.0.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/tlsv1.0.d'
+'docs/cmdline-opts/expect100-timeout.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/expect100-timeout.d'
+'docs/cmdline-opts/proxy-ciphers.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-ciphers.d'
+'docs/cmdline-opts/tcp-nodelay.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/tcp-nodelay.d'
+'docs/cmdline-opts/parallel-immediate.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/parallel-immediate.d'
+'docs/cmdline-opts/MANPAGE.md' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/MANPAGE.md'
+'docs/cmdline-opts/hostpubsha256.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/hostpubsha256.d'
+'docs/cmdline-opts/preproxy.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/preproxy.d'
+'docs/cmdline-opts/disallow-username-in-url.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/disallow-username-in-url.d'
+'docs/cmdline-opts/tlsv1.3.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/tlsv1.3.d'
+'docs/cmdline-opts/socks4a.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/socks4a.d'
+'docs/cmdline-opts/data-raw.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/data-raw.d'
+'docs/cmdline-opts/dns-interface.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/dns-interface.d'
+'docs/cmdline-opts/http1.0.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/http1.0.d'
+'docs/cmdline-opts/sslv2.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/sslv2.d'
+'docs/cmdline-opts/form-escape.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/form-escape.d'
+'docs/cmdline-opts/ftp-port.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ftp-port.d'
+'docs/cmdline-opts/no-keepalive.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/no-keepalive.d'
+'docs/cmdline-opts/proxy-pass.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-pass.d'
+'docs/cmdline-opts/mail-rcpt.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/mail-rcpt.d'
+'docs/cmdline-opts/config.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/config.d'
+'docs/cmdline-opts/proxy-tlspassword.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-tlspassword.d'
+'docs/cmdline-opts/limit-rate.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/limit-rate.d'
+'docs/cmdline-opts/tlsuser.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/tlsuser.d'
+'docs/cmdline-opts/fail.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/fail.d'
+'docs/cmdline-opts/max-redirs.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/max-redirs.d'
+'docs/cmdline-opts/cookie-jar.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/cookie-jar.d'
+'docs/cmdline-opts/dump-header.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/dump-header.d'
+'docs/cmdline-opts/ftp-ssl-ccc.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ftp-ssl-ccc.d'
+'docs/cmdline-opts/netrc.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/netrc.d'
+'docs/cmdline-opts/silent.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/silent.d'
+'docs/cmdline-opts/ssl-no-revoke.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ssl-no-revoke.d'
+'docs/cmdline-opts/proxy-digest.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-digest.d'
+'docs/cmdline-opts/noproxy.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/noproxy.d'
+'docs/cmdline-opts/create-file-mode.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/create-file-mode.d'
+'docs/cmdline-opts/crlf.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/crlf.d'
+'docs/cmdline-opts/negotiate.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/negotiate.d'
+'docs/cmdline-opts/capath.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/capath.d'
+'docs/cmdline-opts/upload-file.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/upload-file.d'
+'docs/cmdline-opts/insecure.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/insecure.d'
+'docs/cmdline-opts/no-npn.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/no-npn.d'
+'docs/cmdline-opts/proxy-tlsauthtype.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-tlsauthtype.d'
+'docs/cmdline-opts/connect-timeout.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/connect-timeout.d'
+'docs/cmdline-opts/socks5-basic.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/socks5-basic.d'
+'docs/cmdline-opts/cert.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/cert.d'
+'docs/cmdline-opts/proxy-insecure.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-insecure.d'
+'docs/cmdline-opts/post302.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/post302.d'
+'docs/cmdline-opts/styled-output.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/styled-output.d'
+'docs/cmdline-opts/path-as-is.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/path-as-is.d'
+'docs/cmdline-opts/ftp-ssl-control.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ftp-ssl-control.d'
+'docs/cmdline-opts/verbose.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/verbose.d'
+'docs/cmdline-opts/login-options.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/login-options.d'
+'docs/cmdline-opts/proxy-tlsv1.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-tlsv1.d'
+'docs/cmdline-opts/etag-save.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/etag-save.d'
+'docs/cmdline-opts/http2-prior-knowledge.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/http2-prior-knowledge.d'
+'docs/cmdline-opts/alt-svc.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/alt-svc.d'
+'docs/cmdline-opts/gen.pl' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/gen.pl'
+'docs/cmdline-opts/retry.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/retry.d'
+'docs/cmdline-opts/interface.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/interface.d'
+'docs/cmdline-opts/xattr.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/xattr.d'
+'docs/cmdline-opts/sasl-ir.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/sasl-ir.d'
+'docs/cmdline-opts/data-binary.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/data-binary.d'
+'docs/cmdline-opts/proxy-http2.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-http2.d'
+'docs/cmdline-opts/remote-header-name.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/remote-header-name.d'
+'docs/cmdline-opts/haproxy-clientip.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/haproxy-clientip.d'
+'docs/cmdline-opts/digest.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/digest.d'
+'docs/cmdline-opts/proxy-crlfile.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-crlfile.d'
+'docs/cmdline-opts/ntlm-wb.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ntlm-wb.d'
+'docs/cmdline-opts/ftp-pret.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ftp-pret.d'
+'docs/cmdline-opts/socks5.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/socks5.d'
+'docs/cmdline-opts/ftp-pasv.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ftp-pasv.d'
+'docs/cmdline-opts/proxy-basic.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-basic.d'
+'docs/cmdline-opts/proxy-ntlm.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-ntlm.d'
+'docs/cmdline-opts/variable.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/variable.d'
+'docs/cmdline-opts/help.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/help.d'
+'docs/cmdline-opts/disable.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/disable.d'
+'docs/cmdline-opts/remove-on-error.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/remove-on-error.d'
+'docs/cmdline-opts/tftp-no-options.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/tftp-no-options.d'
+'docs/cmdline-opts/ipv6.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ipv6.d'
+'docs/cmdline-opts/data-urlencode.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/data-urlencode.d'
+'docs/cmdline-opts/retry-connrefused.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/retry-connrefused.d'
+'docs/cmdline-opts/hostpubmd5.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/hostpubmd5.d'
+'docs/cmdline-opts/tftp-blksize.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/tftp-blksize.d'
+'docs/cmdline-opts/doh-insecure.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/doh-insecure.d'
+'docs/cmdline-opts/ciphers.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ciphers.d'
+'docs/cmdline-opts/proxy-key.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-key.d'
+'docs/cmdline-opts/etag-compare.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/etag-compare.d'
+'docs/cmdline-opts/anyauth.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/anyauth.d'
+'docs/cmdline-opts/delegation.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/delegation.d'
+'docs/cmdline-opts/metalink.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/metalink.d'
+'docs/cmdline-opts/proto-default.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proto-default.d'
+'docs/cmdline-opts/include.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/include.d'
+'docs/cmdline-opts/create-dirs.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/create-dirs.d'
+'docs/cmdline-opts/socks5-gssapi-service.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/socks5-gssapi-service.d'
+'docs/cmdline-opts/tls13-ciphers.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/tls13-ciphers.d'
+'docs/cmdline-opts/location.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/location.d'
+'docs/cmdline-opts/range.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/range.d'
+'docs/cmdline-opts/proxy-user.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-user.d'
+'docs/cmdline-opts/output.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/output.d'
+'docs/cmdline-opts/dns-servers.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/dns-servers.d'
+'docs/cmdline-opts/manual.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/manual.d'
+'docs/cmdline-opts/telnet-option.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/telnet-option.d'
+'docs/cmdline-opts/libcurl.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/libcurl.d'
+'docs/cmdline-opts/get.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/get.d'
+'docs/cmdline-opts/form.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/form.d'
+'docs/cmdline-opts/socks5-gssapi-nec.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/socks5-gssapi-nec.d'
+'docs/cmdline-opts/append.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/append.d'
+'docs/cmdline-opts/ipv4.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ipv4.d'
+'docs/cmdline-opts/keepalive-time.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/keepalive-time.d'
+'docs/cmdline-opts/crlfile.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/crlfile.d'
+'docs/cmdline-opts/sslv3.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/sslv3.d'
+'docs/cmdline-opts/speed-time.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/speed-time.d'
+'docs/cmdline-opts/proxy-ssl-allow-beast.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-ssl-allow-beast.d'
+'docs/cmdline-opts/proxytunnel.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxytunnel.d'
+'docs/cmdline-opts/socks5-gssapi.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/socks5-gssapi.d'
+'docs/cmdline-opts/proxy-ca-native.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-ca-native.d'
+'docs/cmdline-opts/ftp-method.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ftp-method.d'
+'docs/cmdline-opts/junk-session-cookies.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/junk-session-cookies.d'
+'docs/cmdline-opts/fail-with-body.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/fail-with-body.d'
+'docs/cmdline-opts/false-start.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/false-start.d'
+'docs/cmdline-opts/cert-type.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/cert-type.d'
+'docs/cmdline-opts/doh-cert-status.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/doh-cert-status.d'
+'docs/cmdline-opts/tcp-fastopen.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/tcp-fastopen.d'
+'docs/cmdline-opts/sasl-authzid.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/sasl-authzid.d'
+'docs/cmdline-opts/speed-limit.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/speed-limit.d'
+'docs/cmdline-opts/proxy-tls13-ciphers.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-tls13-ciphers.d'
+'docs/cmdline-opts/ssl-auto-client-cert.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ssl-auto-client-cert.d'
+'docs/cmdline-opts/request-target.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/request-target.d'
+'docs/cmdline-opts/form-string.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/form-string.d'
+'docs/cmdline-opts/url.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/url.d'
+'docs/cmdline-opts/proxy-anyauth.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-anyauth.d'
+'docs/cmdline-opts/oauth2-bearer.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/oauth2-bearer.d'
+'docs/cmdline-opts/tlsv1.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/tlsv1.d'
+'docs/cmdline-opts/globoff.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/globoff.d'
+'docs/cmdline-opts/proxy-pinnedpubkey.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/proxy-pinnedpubkey.d'
+'docs/cmdline-opts/progress-bar.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/progress-bar.d'
+'docs/cmdline-opts/abstract-unix-socket.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/abstract-unix-socket.d'
+'docs/cmdline-opts/trace.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/trace.d'
+'docs/cmdline-opts/ssl.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ssl.d'
+'docs/cmdline-opts/key.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/key.d'
+'docs/cmdline-opts/mail-from.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/mail-from.d'
+'docs/cmdline-opts/resolve.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/resolve.d'
+'docs/cmdline-opts/tlsv1.1.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/tlsv1.1.d'
+'docs/cmdline-opts/suppress-connect-headers.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/suppress-connect-headers.d'
+'docs/cmdline-opts/ftp-ssl-ccc-mode.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ftp-ssl-ccc-mode.d'
+'docs/cmdline-opts/disable-eprt.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/disable-eprt.d'
+'docs/cmdline-opts/compressed-ssh.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/compressed-ssh.d'
+'docs/cmdline-opts/disable-epsv.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/disable-epsv.d'
+'docs/cmdline-opts/ipfs-gateway.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ipfs-gateway.d'
+'docs/cmdline-opts/retry-delay.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/retry-delay.d'
+'docs/cmdline-opts/trace-ascii.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/trace-ascii.d'
+'docs/cmdline-opts/write-out.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/write-out.d'
+'docs/cmdline-opts/egd-file.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/egd-file.d'
+'docs/cmdline-opts/ca-native.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/ca-native.d'
+'docs/cmdline-opts/data-ascii.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/data-ascii.d'
+'docs/cmdline-opts/parallel-max.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/parallel-max.d'
+'docs/cmdline-opts/cert-status.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/cert-status.d'
+'docs/cmdline-opts/post303.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/post303.d'
+'docs/cmdline-opts/stderr.d' -> '/usr/share/doc/curl-8.2.1/cmdline-opts/stderr.d'
+'docs/libcurl' -> '/usr/share/doc/curl-8.2.1/libcurl'
+'docs/libcurl/mksymbolsmanpage.pl' -> '/usr/share/doc/curl-8.2.1/libcurl/mksymbolsmanpage.pl'
+'docs/libcurl/libcurl.m4' -> '/usr/share/doc/curl-8.2.1/libcurl/libcurl.m4'
+'docs/libcurl/symbols-in-versions' -> '/usr/share/doc/curl-8.2.1/libcurl/symbols-in-versions'
+'docs/libcurl/ABI.md' -> '/usr/share/doc/curl-8.2.1/libcurl/ABI.md'
+'docs/libcurl/symbols.pl' -> '/usr/share/doc/curl-8.2.1/libcurl/symbols.pl'
+'docs/libcurl/opts' -> '/usr/share/doc/curl-8.2.1/libcurl/opts'

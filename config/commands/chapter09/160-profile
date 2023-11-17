@@ -1,0 +1,23 @@
+#!/bin/bash
+
+locale -a
+
+# This block must be edited to suit your needs.
+LC_ALL=**EDITME<locale name>EDITME** locale charmap
+# End of editable block.
+
+LC_ALL=<locale name> locale language
+LC_ALL=<locale name> locale charmap
+LC_ALL=<locale name> locale int_curr_symbol
+LC_ALL=<locale name> locale int_prefix
+
+# This block must be edited to suit your needs.
+cat > /etc/profile << "EOF"
+# Begin /etc/profile
+
+export LANG=**EDITME<ll>_<CC>.<charmap><@modifiers>EDITME**
+
+# End /etc/profile
+EOF
+# End of editable block.
+

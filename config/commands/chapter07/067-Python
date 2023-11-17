@@ -1,0 +1,11 @@
+#!/bin/bash
+
+unset CFLAGS CPPFLAGS CXXFLAGS LDFLAGS OTHER_CFLAGS OTHER_CPPFLAGS OTHER_CXXFLAGS OTHER_LDFLAGS
+./configure --prefix=/usr   \
+            --enable-shared \
+            --without-ensurepip
+
+make
+
+make install
+

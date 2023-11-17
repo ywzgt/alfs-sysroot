@@ -1,0 +1,21 @@
+#!/bin/bash
+# https://www.linuxfromscratch.org/lfs/view/development/chapter08/grep.html
+
+PKG="grep"
+PKG_VERSION="3.11"
+URL="https://ftp.gnu.org/gnu/grep/grep-3.11.tar.xz"
+MD5="7c9bbd74492131245f7cdb291fa142c0"
+PKG_FILE="grep-3.11.tar.xz"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+sed -i "s/echo/#echo/" src/egrep.sh
+./configure --prefix=/usr
+make
+make DESTDIR=$PWD/DES install
+install -vm755 DES/usr/bin/grep -t /usr/bin/
+xEOFx
+) > tmp
