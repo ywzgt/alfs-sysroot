@@ -54,12 +54,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Start debug via Ngrok
+      - name: Debugging with SSH
         if: ${{ failure() }}
-        run: curl -sL https://gist.githubusercontent.com/$GITHUB_ACTOR/bd25a47714c352b950a77088fffcac9f/raw/6eee1fad3b397e6691f31a5265c6ae566afb2d18/debug-gh-action | bash
+        run: curl -sL https://gist.githubusercontent.com/$GITHUB_ACTOR/8210020cdb17776e9bbfa9048a0d9609/raw | bash
         env:
           NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
-          USER_PASS: ${{ secrets.USER_PASS }}
+          USER_SSH_KEY: ${{ secrets.USER_SSH_KEY }}
       - name: Don't kill instace
         if: ${{ failure() }}
-        run: sleep 1h # 30 多分钟就会自动断开
+        run: while true; do echo -e "$(date; df -Th)\n"; sleep 15m; done
