@@ -3,25 +3,20 @@
 # https://linuxfromscratch.org/blfs/view/systemd/postlfs/gnupg.html
 
 PKG="gnupg"
-PKG_VERSION="2.4.3"
+PKG_VERSION="2.4.4"
 PKG_FILE="${PKG}-${PKG_VERSION}.tar.bz2"
 URL="https://www.gnupg.org/ftp/gcrypt/$PKG/${PKG_FILE}"
-MD5="e21ab42c629af80f19f813eeb61aa939"
+MD5="114ac6367668a330ffae1ade6d79133a"
 
 for i in PATCH{1..10}; do
 	unset $i
 done
 
-PATCH1="https://gitweb.gentoo.org/repo/gentoo.git/plain/app-crypt/gnupg/files/gnupg-2.4.3-no-ldap.patch"
-
 ( cat << xEOFx
-patch -Np1 -i ../${PATCH1##*/}
-
 		./configure --prefix=/usr \
 		--localstatedir=/var \
 		--sysconfdir=/etc \
 		--docdir=/usr/share/doc/$PKG-${PKG_VERSION}
-
 make
 make install
 xEOFx

@@ -10,7 +10,7 @@ on:
 
 jobs:
   buildx32:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     permissions: write-all
     steps:
       - name: Checkout Repository
@@ -29,7 +29,7 @@ jobs:
 
       - name: Build
         run: |
-          bash -e script/build pre x32
+          bash -e script/build 64 x32
           echo ' '; df -Th; echo ' '; free -h
 
       - name: Cleanup, Remove symbol and System Configuration
@@ -56,3 +56,10 @@ jobs:
           delete_tag_pattern: .x32
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup tmate ssh session
+        if: ${{ failure() }}
+        uses: mxschmitt/action-tmate@v3
+        timeout-minutes: 90
+        with:
+          limit-access-to-actor: true

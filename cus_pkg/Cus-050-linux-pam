@@ -2,10 +2,10 @@
 # https://www.linuxfromscratch.org/blfs/view/systemd/postlfs/linux-pam.html
 
 PKG="linux-pam"
-PKG_VERSION="1.5.3"
+PKG_VERSION="1.6.0"
 PKG_FILE="Linux-PAM-${PKG_VERSION}.tar.xz"
 URL="https://github.com/linux-pam/linux-pam/releases/download/v${PKG_VERSION}/${PKG_FILE}"
-MD5="a913bd5fbf9edeafaacf3eb1eb86fd83"
+MD5="41a10af5fc35a7be472ae9864338e64a"
 
 for i in PATCH{1..10}; do
 	unset $i

@@ -3,9 +3,9 @@
 # curl -s https://curl.se/docs/caextract.html| awk '/\/ca\/cacert-.*.pem/{print$3}'|head -1|sed 's/^.*cacert-\|.pem.*$\|-//g'
 
 PKG="ca-certificates"
-PKG_VERSION="20230822"
+PKG_VERSION="20231212"
 PKG_FILE="make-ca-1.13.tar.xz"
-URL="https://github.com/lfs-book/make-ca/releases/download/v1.12/${PKG_FILE}"
+URL="https://github.com/lfs-book/make-ca/releases/download/v1.13/${PKG_FILE}"
 MD5="04bd86fe2eb299788439c3466782ce45"
 
 for i in PATCH{1..10}; do

@@ -21,22 +21,13 @@ case "$2" in
 esac
 
 _get_sources() {
+	patch -Np1 -i patch/final-sys-optimizationly.patch "configuration.${INITSYS}"
 	git clone 'https://git.linuxfromscratch.org/jhalfs.git' alfs
-	for i in cus_pkg/Cus*; do
-		if [[ -n "$(grep -E '^PKG_VERSION=|^URL=|^MD5=' $i | grep '$(curl')" ]]; then
-			grep -E '^PKG=|^PKG_VERSION=|^PKG_FILE=|^URL=|^MD5=' $i >tmp
-			. tmp
-			sed -i "/^PKG_VERSION/s/=.*/=\"$PKG_VERSION\"/" $i
-			sed -i "/^PKG_FILE/s/=.*/=\"${PKG_FILE}\"/" $i
-			sed -i "/^URL/s/=.*/=\"${URL//\//\\/}\"/" $i
-			sed -i "/^MD5/s/=.*/=\"$MD5\"/" $i
-		fi
-	done
 	if [ -e 'cus_pkg/Cus-005-ca-certificates' ]; then
 		PKG_VERSION="$(curl -s https://curl.se/docs/caextract.html|awk '/\/ca\/cacert-.*.pem/{print$3}'|head -1|sed 's/^.*cacert-\|.pem.*$\|-//g')"
 		sed -i "/^PKG_VERSION/s/=.*/=\"$PKG_VERSION\"/" cus_pkg/Cus-005-ca-certificates
 	fi
-	unset PKG_VERSION URL MD5
+	unset PKG_VERSION
 	install -Dm644 cus_pkg/Cus* -t alfs/custom/config #sed -i 's/(( i = 4; i < nb_chaps+4; i++ ))/i in 4/' alfs/LFS/master.sh
 	[ "$abi" != x32 ] || cp -fv cus_pkg/fakeroot_x32 alfs/custom/config/Cus*fakeroot
 	sed "/^N_PARALLEL/s/=.*/=$(nproc --all)/" configuration.${INITSYS} > alfs/configuration
@@ -51,17 +42,22 @@ _get_sources() {
 
 	sed -e '/^DEF_OPT_MODE=/c\DEF_OPT_MODE=O2pipe' -e 's/OTHER_CFLAGS/OTHER_CPPFLAGS &/' \
 		-e '/^ACTIVE_OPT_VARS=/s/CFLAGS/CPPFLAGS &/' -i alfs/optimize/opt_config
-	sed -e 's|="-O2.*$|="-march=%MARCH% -O2 -pipe -fno-plt -fPIC -DNDEBUG"|' \
-		-e '/^LDFLAGS/s/=.*$/="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"/' \
+	sed -e 's|="-O2.*$|="-march=%MARCH% -mtune=haswell -O2 -pipe -fno-plt -fPIC -ffunction-sections -fdata-sections"|' \
+		-e '/^LDFLAGS/s/=.*$/="-Wl,-O2,--sort-common,--as-needed,-z,relro,-z,now,--gc-sections"/' \
 		-e '/^CXXFLAGS_O2pipe=/s/=.*/="$CFLAGS_O2pipe -Wp,-D_GLIBCXX_ASSERTIONS"/' -i alfs/optimize/opt_config.d/O2pipe
+	sed -e '/^CFLAGS_noOpt=/a\CPPFLAGS_noOpt="unset"' \
+		-e '/^OTHER_CFLAGS_noOpt=/a\OTHER_CPPFLAGS_noOpt="unset"' -i alfs/optimize/opt_config.d/noOpt
 	sed -e '/^gcc/s/noOpt/cusOpt/' -i alfs/optimize/opt_override
-	echo "patch     noOpt" >> alfs/optimize/opt_override  # 防止应用大补丁时报错
-	echo 'CPPFLAGS_O2pipe="-O2 -pipe -fPIC -DNDEBUG"' >>alfs/optimize/opt_config.d/O2pipe
+	echo "patch		noOpt" >> alfs/optimize/opt_override  # 防止应用大补丁时报错
+	echo 'CPPFLAGS_O2pipe="-D_FORTIFY_SOURCE=2 -DNDEBUG"' >>alfs/optimize/opt_config.d/O2pipe
 	echo 'OTHER_CPPFLAGS_O2pipe=$CPPFLAGS_O2pipe' >>alfs/optimize/opt_config.d/O2pipe
-	sed -e '/CFLAGS/s/-DNDEBUG//g' -e 's|O2pipe|cusOpt|g' alfs/optimize/opt_config.d/O2pipe > alfs/optimize/opt_config.d/cusOpt
+	sed -e '/CPPFLAGS/s/-D_FORTIFY_SOURCE=2 //g' -e 's|O2pipe|cusOpt|g' alfs/optimize/opt_config.d/O2pipe > alfs/optimize/opt_config.d/cusOpt
+	sed -e 's/,--gc-sections//g' -e 's|O2pipe|NgcOpt|g' alfs/optimize/opt_config.d/O2pipe > alfs/optimize/opt_config.d/NgcOpt
+	echo "glibc		NgcOpt" >> alfs/optimize/opt_override
+	echo "binutils		cusOpt" >> alfs/optimize/opt_override
 	case "$(uname -m)" in
-		i?86) sed -i "s/%MARCH%/$(uname -m)/" alfs/optimize/opt_config.d/{O2pipe,cusOpt} ;;
-		x86_64) sed -i "s/%MARCH%/x86-64-v3/" alfs/optimize/opt_config.d/{O2pipe,cusOpt} ;;
+		i?86) sed -i "s/%MARCH%/$(uname -m)/" alfs/optimize/opt_config.d/{O2pipe,cusOpt,NgcOpt};;
+		x86_64) sed -i "s/%MARCH%/x86-64-v3/" alfs/optimize/opt_config.d/{O2pipe,cusOpt,NgcOpt};;
 	esac
 	sed -i '/wrt_makeflags "$name" "-j1" "1"/s/1/${N_PARALLEL}/g' alfs/LFS/master.sh  # 临时工具不使用 *FLAGS 时仍使用 MAKEFLAGS 和 ninja jobs
 	#sed -i '/MKF="-j1"\|NJJ="1"/s/1/${N_PARALLEL}/' alfs/optimize/optimize_functions  # 让 alfs/optimize/opt_config 中定义的 BLACK_LIST 失效
@@ -70,7 +66,7 @@ _get_sources() {
 _install_dep() {
 	sudo apt-get update >/dev/null 2>&1
 	printf 'Install build depends...\n'
-	sudo apt-get install -y libxml2-utils xsltproc docbook-xml docbook-xsl &>/dev/null   # 504-libxcrypt 删除了, 多库不再需要 $DEPKG
+	sudo apt-get install -y libxml2-utils xsltproc docbook-xml docbook-xsl &>/dev/null   # 504-libxcrypt 删除了, 多库不再需要 $DEPKG (gcc-multilib)
 	printf 'done.\n'
 	local bld_dir="$(grep '^BUILDDIR=' alfs/configuration|sed -e 's/^BUILDDIR=//' -e 's/"//g')"
 	local src_dir="$(grep 'SRC_ARCHIVE=' alfs/configuration|sed -e 's/^SRC_ARCHIVE=//' -e 's/"//g')"
@@ -96,40 +92,17 @@ _fix_git_repo() {
 		sed -i "/lfs-bootscripts-md5/s/BOOTSCRIPTS-MD5SUM/$(md5sum lfs-bootscripts-$boot_ver.tar$format|cut -d' ' -f1)/" lfs/packages.ent
 	fi
 
-	# py 3.12.0 编译报错
-	sed -i 's@./configure --prefix=/usr@unset CFLAGS CPPFLAGS CXXFLAGS LDFLAGS OTHER_CFLAGS OTHER_CPPFLAGS OTHER_CXXFLAGS OTHER_LDFLAGS\n&@' repo/chapter07/python.xml
-
 	# 防止出现编译器内部错误，创建通用库：
 	sed -i 's|./configure --prefix=/usr|cp -v config{fsf,}.guess\ncp -v config{fsf,}.sub\n&|' repo/chapter08/gmp.xml
 	if test $ML; then
 		sed -i 's;ABI="\(\|x\)32";cp -v config{fsf,}.guess\ncp -v config{fsf,}.sub\n&;g' repo/chapter08/gmp.xml
 	fi
 
+	[ ! -e repo/chapter08/systemd.xml ] || sed -i '/-Dsysusers=false\s\+\\$/d' repo/chapter08/systemd.xml
+
 	[ ! -e repo/chapter08/pkgconfig.xml ] || cp -vf lfs/chapter08/pkgconf.xml repo/chapter08/pkgconfig.xml
 	for i in {packages,patches}.ent chapter03/{packages,patches}.xml; do
 		diff -u {lfs,repo}/$i &>/dev/null || { cp -vf lfs/$i repo/$i; }
-	done
-
-	_flags32() {
-		for i in repo/chapter0[5-8]/*.xml; do if grep -q 'CC=.*-m32' $i; then
-			sed -i.ori 's;CC=.*-m32;export CFLAGS=${CFLAGS/x86-64-v3/i686}\nexport CXXFLAGS=${CXXFLAGS/x86-64-v3/i686}\n&;' $i; fi
-		done
-		sed 's|ABI="32"|export CFLAGS=${CFLAGS/x86-64-v3/i686}\nexport CXXFLAGS=${CXXFLAGS/x86-64-v3/i686}\n&|' -i repo/chapter08/gmp.xml
-		sed 's|CFLAGS.*-m32|export CFLAGS=${CFLAGS/x86-64-v3/i686}\nexport CXXFLAGS=${CXXFLAGS/x86-64-v3/i686}\n&|' -i repo/chapter08/zlib.xml
-	}
-	_flagsx32() {
-		for i in repo/chapter0[5-8]/*.xml; do if grep -q 'CC=.*-mx32' $i; then
-			sed -i 's;CC=.*-mx32;export CFLAGS=${CFLAGS/i686/x86-64-v3}\nexport CXXFLAGS=${CXXFLAGS/i686/x86-64-v3}\n&;' $i; fi
-		done
-		sed 's|ABI="x32"|export CFLAGS=${CFLAGS/i686/x86-64-v3}\nexport CXXFLAGS=${CXXFLAGS/i686/x86-64-v3}\n&|' -i repo/chapter08/gmp.xml
-		sed 's|CFLAGS.*-mx32|export CFLAGS=${CFLAGS/i686/x86-64-v3}\nexport CXXFLAGS=${CXXFLAGS/i686/x86-64-v3}\n&|' -i repo/chapter08/zlib.xml
-	}
-	case "$ML" in
-		m32) _flags32 ;;
-		all) _flags32; _flagsx32 ;;
-	esac
-	for i in {bzip2,libcap,systemd,udev}; do
-		[ ! -e repo/chapter08/$i.xml.ori ] || mv -f repo/chapter08/$i.xml{.ori,}
 	done
 
 	case "$abi" in x32)
@@ -150,6 +123,13 @@ _fix_git_repo() {
 	test ! -e repo/chapter08/grub.xml || { rm -v repo/chapter08/grub.xml; sed -i '/grub.xml/d' repo/chapter08/chapter08.xml; }
 	test ! -e repo/chapter10/grub.xml || { rm -v repo/chapter10/grub.xml; sed -i '/grub.xml/d' repo/chapter10/chapter10.xml; } # bios
 	test ! "$mk32bit" -eq 1 || sed -i 's|./configure --prefix=/usr|ABI=32 &|' repo/chapter08/gmp.xml
+
+	# temp script
+	if [ -s script/temp.sh ]; then
+		echo "::Running Temp script..."
+		bash -e script/temp.sh
+	fi
+
 	(cd repo; git add .; git commit -m 'fix git repo') >/dev/null 2>&1 || echo '::The git repo No change.'
 	sed -i "s|https://git.linuxfromscratch.org/lfs.git|file://$PWD/repo|" alfs/jhalfs
 }
@@ -173,44 +153,42 @@ _failed() {
 		local INITSYS="$(grep '^INITSYS=' configuration|sed -e 's/^INITSYS=//' -e 's/"//g')"
 		local bld_dir="$(grep '^BUILDDIR=' configuration|sed -e 's/^BUILDDIR=//' -e 's/"//g')"
 		cd ..; if [ -e "ENV" ]; then . "ENV"; fi
-		local branch="failed_${INITSYS}${ml}_$(date +%Y%m%d-%H-%M)${abi}"
+		local job="${GITHUB_JOB#build}"
+		local branch="failed_$(date +%Y%m%d-%H%M)_job-${job#-}"
 		local miss_file="${bld_dir}/sources/MISSING_FILES.DMP" mk_file="${bld_dir}/jhalfs/Makefile"
 		git rm -rf . >/dev/null; find "${bld_dir}/sources" -name "$(basename ${miss_file})" -empty -delete || true
-		cp -a "${bld_dir}/jhalfs/"{logs,installed-files} . || true
+		cp -a "${bld_dir}/jhalfs/"{logs,installed-files,lfs-commands} . || true
 		if [ -e "${miss_file}" ]; then cp "${miss_file}" .; git add "$(basename ${miss_file})"; fi
 		if [ -e "${mk_file}" ]; then cp "${mk_file}" .; git add Makefile; fi
-		git add logs installed-files || true
+		git add logs installed-files lfs-commands || true
 		git commit -m "build failed" >/dev/null
 		git checkout --orphan new_tag
-		git commit -m "build failed, $(date|sed -e 's/20[0-9][0-9]$//' -e 's/CST//')"
+		git commit -m "build failed, $(date|sed -e 's/2[0-9]\+$//' -e 's/CST//')"
 		git branch -m "$branch"
 		git push origin "$branch" || git push origin "$branch" --force
 		echo "::::Upload log completed!"; exit 123
 }
 
 case "$1" in
-	pre)
+	64bit|64)
 		_get_sources; printf '\n'; _install_dep; printf '\n'; _fix_git_repo; _docmd
 		;;
 	failed) _failed
 		;;
 	m32|i?86)
 		patch -Np1 -i patch/multilib-32.patch "configuration.${INITSYS}"
-		DEPKG=gcc-multilib
 		ML=m32
 		_get_sources; printf '\n'; _install_dep; printf '\n'; _fix_git_repo; _docmd
 		echo "ml=\"-m32\"" >ENV
 		;;
 	multilib|ml-all)
 		patch -Np1 -i patch/multilib-all.patch "configuration.${INITSYS}"
-		DEPKG=gcc-multilib
 		ML=all
 		_get_sources; printf '\n'; _install_dep; printf '\n'; _fix_git_repo; _docmd
 		echo "ml=\"-multilib\"" >ENV
 		;;
 	32bit|32)
 		mk32bit=1
-		patch -Np1 -i patch/final-sys-optimizationly.patch "configuration.${INITSYS}"
 		_get_sources; printf '\n'; _install_dep; printf '\n'; _fix_git_repo; _docmd
 		echo "ml=\"-32bit\"" >ENV
 		;;

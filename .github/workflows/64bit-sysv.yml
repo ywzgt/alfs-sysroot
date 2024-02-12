@@ -28,14 +28,12 @@ jobs:
 
       - name: Build
         run: |
-          bash -e script/build pre sysv
+          bash -e script/build 64bit sysv
           echo ' '; df -Th; echo ' '; free -h
-
       - name: Cleanup, Remove symbol and System Configuration
         run: |
           sudo bash -e script/cleanup || { cd alfs; bash -e ../script/build failed sysV; }
           echo ' '; df -Th; echo ' '; free -h
-
       - name: Push To tags
         run: bash -e script/push
 
@@ -55,3 +53,10 @@ jobs:
           delete_tag_pattern: ${{ env.GH_INIT }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup tmate ssh session
+        if: ${{ failure() }}
+        uses: mxschmitt/action-tmate@v3
+        timeout-minutes: 90
+        with:
+          limit-access-to-actor: true

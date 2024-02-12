@@ -7,6 +7,8 @@ bld_dir="$(grep '^BUILDDIR=' alfs/configuration|sed -e 's/^BUILDDIR=//' -e 's/"/
 _cleanup_dir() {
 		rm -rf "${bld_dir}/usr/"{,local/}lib/python*/{test,ctypes/test,distutils/tests,idlelib/idle_test,lib2to3/tests,sqlite3/test,tkinter/test,unittest/test}
 		rm -rf "${bld_dir}/tools"* "${bld_dir}/usr"{,local}/share/info
+		rm -rf "${bld_dir}"/root/.{cache,wget-hsts}
+		sed -i '/^\/root\/.\(wget-hsts\s\|cache\/\)/d' "${bld_dir}/jhalfs/installed-files/"*
 
 		find "${bld_dir}/usr" -type f -name '*.la' -delete
 		for i in "${bld_dir}/jhalfs/installed-files"/*; do
@@ -308,11 +310,12 @@ _pacman_db() {
 				local PV=$(grep '^PKG_VERSION=' cus_pkg/$f|sed -e 's/PKG_VERSION=//' -e 's/"//g')
 			fi
 
+			PV=${PV//-/_}
 			awk '!seen[$0]++' pkg.file | sort >files
 			sed -i '1i\%FILES%' files
 			install -Dm644 files -t "${bld_dir}/var/lib/pacman/local/${PKG}-${PV}-1"
 			local FILES="$(<files|sed '/\/$\|%FILES%/d')"
-			local FSIZE="$(cd ${bld_dir}; LC_ALL=C du -c $FILES|awk '/total$/{print$1}')"
+			local FSIZE="$(cd ${bld_dir}; LC_ALL=C du -xc $FILES|awk '/total$/{print$1}')"
 			local SIZE=$((FSIZE*1024))
 			if [ "${MKx32}" -eq 1 ]; then
 				echo -e "%NAME%\n${PKG}\n\n%VERSION%\n${PV}-1\n\n%BASE%\n${PKG}\n\n%ARCH%\nx86_64_x32\n\n%BUILDDATE%\n$(date +%s)\n\n%INSTALLDATE%\n$(date +%s)\n\n%PACKAGER%\nbuildbot <bot@$(hostname)>\n\n%SIZE%\n${SIZE}\n\n%VALIDATION%\nsha256\n\n" \
@@ -327,7 +330,7 @@ _pacman_db() {
 				sed -i '1i\%FILES%' files
 				install -Dm644 files -t "${bld_dir}/var/lib/pacman/local/${PKG}-lib32-${PV}-1"
 				local FILES="$(<files|sed '/\/$\|%FILES%/d')"
-				local FSIZE="$(cd ${bld_dir}; LC_ALL=C du -c $FILES|awk '/total$/{print$1}')"
+				local FSIZE="$(cd ${bld_dir}; LC_ALL=C du -xc $FILES|awk '/total$/{print$1}')"
 				local SIZE=$((FSIZE*1024))
 				echo -e "%NAME%\n${PKG}-lib32\n\n%VERSION%\n${PV}-1\n\n%BASE%\n${PKG}\n\n%ARCH%\n$(uname -m)\n\n%BUILDDATE%\n$(date +%s)\n\n%INSTALLDATE%\n$(date +%s)\n\n%PACKAGER%\nbuildbot <bot@$(hostname)>\n\n%SIZE%\n${SIZE}\n\n%VALIDATION%\nsha256\n\n" \
 				>"${bld_dir}/var/lib/pacman/local/${PKG}-lib32-${PV}-1/desc"
@@ -338,7 +341,7 @@ _pacman_db() {
 				sed -i '1i\%FILES%' files
 				install -Dm644 files -t "${bld_dir}/var/lib/pacman/local/${PKG}-libx32-${PV}-1"
 				local FILES="$(<files|sed '/\/$\|%FILES%/d')"
-				local FSIZE="$(cd ${bld_dir}; LC_ALL=C du -c $FILES|awk '/total$/{print$1}')"
+				local FSIZE="$(cd ${bld_dir}; LC_ALL=C du -xc $FILES|awk '/total$/{print$1}')"
 				local SIZE=$((FSIZE*1024))
 				echo -e "%NAME%\n${PKG}-libx32\n\n%VERSION%\n${PV}-1\n\n%BASE%\n${PKG}\n\n%ARCH%\n$(uname -m)\n\n%BUILDDATE%\n$(date +%s)\n\n%INSTALLDATE%\n$(date +%s)\n\n%PACKAGER%\nbuildbot <bot@$(hostname)>\n\n%SIZE%\n${SIZE}\n\n%VALIDATION%\nsha256\n\n" \
 				>"${bld_dir}/var/lib/pacman/local/${PKG}-libx32-${PV}-1/desc"
@@ -396,10 +399,42 @@ _zipman() {
 			-exec stat -c '%i %n' '{}' + 2>/dev/null)
 }
 
+_binutils() {
+	# ubuntu 20.04 的 strip 不支持 elf32_x86_64
+	local b_workdir="$(mktemp -d)"
+	if [[ $(strip --version|head -1|sed 's/GNU\s.*\s//') < 2.38 ]]; then
+		echo "Updating binutils..."
+		echo "STRIP version: < $(strip --version|head -1)>"
+		pushd "$b_workdir" > /dev/null
+		wget -nv -c "$(curl -sL https://linuxfromscratch.org/lfs/view/systemd/wget-list|grep '/binutils-[0-9].*\.tar.*'|head -1)"
+		tar -xf binutils-*.tar*
+		cd binutils-*[0-9]; mkdir build && cd build
+		unset {C{,XX,PP},LD}FLAGS
+		../configure --prefix=/usr       \
+             --sysconfdir=/etc   \
+             --enable-gold       \
+             --enable-ld=default \
+             --enable-plugins    \
+             --enable-shared     \
+             --disable-werror    \
+             --disable-multilib \
+             --enable-64-bit-bfd \
+             --with-system-zlib  \
+             --enable-default-hash-style=gnu > binutils-conf.log
+		make -j$(nproc) > binutils-mk.log 2>&1
+		sudo make install > binutils-ins.log 2>&1
+		popd > /dev/null
+		echo; echo "STRIP New version: < $(strip --version|head -1)>";	echo
+	fi
+}
+
 _docmd() {
 		printf '::Removing Python test files and Tools directory...'
 		_cleanup_dir
 		printf 'done.\n'
+
+		printf "::Checking Binutils Version...\n"
+		_binutils
 
 		printf "::Remove all symbol and relocation information from binaries and libraries, in '${bld_dir}/usr'..."
 		_strip_symbol
@@ -410,10 +445,10 @@ _docmd() {
 		esac
 
 		echo '::Seting Some System Configuration...'
-		_system_conf
-		 _pacman_conf
-		#_zipman # need to waste a lot of time
-		echo -e 'done.\n'
+		_system_conf; _pacman_conf
+
+		# need to waste a lot of time
+		#_zipman
 
 		echo "::Upgrading the local pacman database... "
 		_pacman_db
