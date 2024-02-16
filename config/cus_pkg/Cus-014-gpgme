@@ -1,0 +1,21 @@
+#!/bin/bash
+# https://linuxfromscratch.org/blfs/view/systemd/postlfs/gpgme.html
+
+PKG="gpgme"
+PKG_VERSION="1.23.2"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.bz2"
+URL="https://www.gnupg.org/ftp/gcrypt/gpgme/${PKG_FILE}"
+MD5="01a8c05b409847e87daf0543e91f8c37"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+./configure --prefix=/usr \
+		--disable-static \
+		--disable-gpg-test
+make PYTHONS=
+make install
+xEOFx
+) > tmp

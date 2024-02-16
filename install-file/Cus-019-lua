@@ -1,0 +1,13 @@
+/usr/bin/lua	377544	root:root	755	
+/usr/bin/luac	276716	root:root	755	
+/usr/include/lauxlib.h	9314	root:root	644	
+/usr/include/lua.h	15949	root:root	644	
+/usr/include/lua.hpp	191	root:root	644	
+/usr/include/luaconf.h	21488	root:root	644	
+/usr/include/lualib.h	1116	root:root	644	
+/usr/lib/liblua.so	15	root:root	777	liblua.so.5.4.6
+/usr/lib/liblua.so.5.4	15	root:root	777	liblua.so.5.4.6
+/usr/lib/liblua.so.5.4.6	368452	root:root	755	
+/usr/lib/pkgconfig/lua.pc	435	root:root	644	
+/usr/share/man/man1/lua.1	3101	root:root	644	
+/usr/share/man/man1/luac.1	3071	root:root	644	
