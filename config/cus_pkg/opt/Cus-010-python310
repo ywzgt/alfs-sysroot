@@ -1,0 +1,31 @@
+#!/bin/bash
+# https://linuxfromscratch.org/lfs/view/systemd/chapter08/Python.html
+# https://www.python.org/downloads
+
+PKG="Python"
+PKG_VERSION="3.10.12"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.xz"
+URL="https://www.python.org/ftp/python/$PKG_VERSION/${PKG_FILE}"
+MD5="49b0342476b984e106d308c25d657f12"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+./configure --prefix=/usr/local \
+		--enable-shared \
+		--with-system-expat \
+		--with-system-ffi \
+		--enable-optimizations
+make
+sed -i 's/^all:.*$/all: build_all/' Makefile
+make install
+
+ln -s python3                                   /usr/local/bin/python
+ln -s python3-config                    /usr/local/bin/python-config
+ln -s idle3                                          /usr/local/bin/idle
+ln -s pydoc3                                     /usr/local/bin/pydoc
+ln -s python${_pybasever}.1  /usr/local/share/man/man1/python.1
+xEOFx
+) > tmp

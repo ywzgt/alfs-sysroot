@@ -1,0 +1,11 @@
+Fri Feb 16 10:02:43 UTC 2024
+KB: 3495468	/
+'/etc/mtab' -> '/proc/self/mounts'
+changed group of '/var/log/lastlog' from root to utmp
+mode of '/var/log/lastlog' changed from 0644 (rw-r--r--) to 0664 (rw-rw-r--)
+mode of '/var/log/btmp' changed from 0644 (rw-r--r--) to 0600 (rw-------)
+
+
+Totalseconds: 0
+
+KB: 3495484	/

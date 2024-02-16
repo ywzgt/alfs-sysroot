@@ -1,0 +1,110 @@
+Fri Feb 16 19:32:38 CST 2024
+tar: stdout: write error
+KB: 2971836	/
+patching file src/Makefile
+make[1]: Entering directory '/sources/sysvinit-3.08'
+make VERSION=3.08 -C man all
+make[2]: Entering directory '/sources/sysvinit-3.08/man'
+sed --in-place=.orig --separate 's/\@VERSION\@/3.08/g' bootlogd.8 fstab-decode.8 halt.8 init.8 initctl.5 initscript.5 inittab.5 killall5.8 last.1 lastb.1 logsave.8 mesg.1 mountpoint.1 pidof.8 poweroff.8 readbootlog.1 reboot.8 runlevel.8 shutdown.8 sulogin.8 telinit.8 utmpdump.1 wall.1
+Install po4a to build translated manpages
+make[2]: Leaving directory '/sources/sysvinit-3.08/man'
+make VERSION=3.08 -C src all
+make[2]: Entering directory '/sources/sysvinit-3.08/src'
+cc -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -ffunction-sections -fdata-sections -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.08\"    -c -o init.o init.c
+cc -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -ffunction-sections -fdata-sections -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.08\"  -DINIT_MAIN -c -o init_utmp.o utmp.c
+cc -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -ffunction-sections -fdata-sections -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.08\"    -c -o runlevellog.o runlevellog.c
+cc -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -ffunction-sections -fdata-sections -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.08\"    -c -o halt.o halt.c
+cc -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -ffunction-sections -fdata-sections -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.08\"    -c -o ifdown.o ifdown.c
+cc -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -ffunction-sections -fdata-sections -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.08\"    -c -o hddown.o hddown.c
+cc -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -ffunction-sections -fdata-sections -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.08\"    -c -o utmp.o utmp.c
+cc -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -ffunction-sections -fdata-sections -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.08\"    -c -o shutdown.o shutdown.c
+cc -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -ffunction-sections -fdata-sections -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.08\"    -c -o dowall.o dowall.c
+cc -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -ffunction-sections -fdata-sections -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.08\"    -c -o runlevel.o runlevel.c
+cc -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -ffunction-sections -fdata-sections -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.08\"   -Wl,-O2,--sort-common,--as-needed,-z,relro,-z,now,--gc-sections  killall5.c   -o killall5
+In file included from /usr/include/string.h:548,
+                 from dowall.c:30:
+In function 'strncat',
+    inlined from 'wall' at dowall.c:227:4:
+/usr/include/bits/string_fortified.h:138:10: warning: '__builtin___strncat_chk' argument 2 declared attribute 'nonstring' [-Wstringop-overread]
+  138 |   return __builtin___strncat_chk (__dest, __src, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  139 |                                   __glibc_objsize (__dest));
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/utmp.h:29,
+                 from dowall.c:34:
+/usr/include/bits/utmp.h: In function 'wall':
+/usr/include/bits/utmp.h:62:8: note: argument 'ut_line' declared here
+   62 |   char ut_line[UT_LINESIZE]
+      |        ^~~~~~~
+cc -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -ffunction-sections -fdata-sections -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.08\"    -c -o fstab-decode.o fstab-decode.c
+init.c: In function 'read_inittab':
+init.c:1396:41: warning: '__builtin_strncpy' output may be truncated copying 8 bytes from a string of length 31 [-Wstringop-truncation]
+ 1396 |                                         strncpy(id, dev, sizeof(id));
+      |                                         ^
+init.c:1394:41: warning: '__builtin_strncpy' output may be truncated copying 8 bytes from a string of length 28 [-Wstringop-truncation]
+ 1394 |                                         strncpy(id, dev+3, sizeof(id));
+      |                                         ^
+cc -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -ffunction-sections -fdata-sections -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.08\"    -c -o bootlogd.o bootlogd.c
+killall5.c: In function 'check4nfs':
+killall5.c:442:12: warning: '__builtin_strncpy' output may be truncated copying 4096 bytes from a string of length 4096 [-Wstringop-truncation]
+  442 |            strncpy(real, curr, PATH_MAX);
+      |            ^
+cc -Wl,-O2,--sort-common,--as-needed,-z,relro,-z,now,--gc-sections  halt.o ifdown.o hddown.o utmp.o runlevellog.o   -o halt
+cc -Wl,-O2,--sort-common,--as-needed,-z,relro,-z,now,--gc-sections  shutdown.o dowall.o utmp.o   -o shutdown
+cc -Wl,-O2,--sort-common,--as-needed,-z,relro,-z,now,--gc-sections  runlevel.o runlevellog.o   -o runlevel
+cc -Wl,-O2,--sort-common,--as-needed,-z,relro,-z,now,--gc-sections  fstab-decode.o   -o fstab-decode
+cc -Wl,-O2,--sort-common,--as-needed,-z,relro,-z,now,--gc-sections  bootlogd.o  -lutil  -o bootlogd
+cc -Wl,-O2,--sort-common,--as-needed,-z,relro,-z,now,--gc-sections  init.o init_utmp.o runlevellog.o    -o init
+make[2]: Leaving directory '/sources/sysvinit-3.08/src'
+make[1]: Leaving directory '/sources/sysvinit-3.08'
+make[1]: Entering directory '/sources/sysvinit-3.08'
+make VERSION=3.08 -C man install
+make[2]: Entering directory '/sources/sysvinit-3.08/man'
+sed --in-place=.orig --separate 's/\@VERSION\@/3.08/g' bootlogd.8 fstab-decode.8 halt.8 init.8 initctl.5 initscript.5 inittab.5 killall5.8 last.1 lastb.1 logsave.8 mesg.1 mountpoint.1 pidof.8 poweroff.8 readbootlog.1 reboot.8 runlevel.8 shutdown.8 sulogin.8 telinit.8 utmpdump.1 wall.1
+Install po4a to build translated manpages
+make[2]: Leaving directory '/sources/sysvinit-3.08/man'
+make VERSION=3.08 -C src install
+make[2]: Entering directory '/sources/sysvinit-3.08/src'
+install -m 755 -d /bin/ /sbin/
+install -m 755 -d /usr/bin/
+for i in ; do \
+		install -o root -g root -m 755 $i /bin/ ; \
+	done
+for i in init halt shutdown runlevel killall5 fstab-decode bootlogd; do \
+		install -o root -g root -m 755 $i /sbin/ ; \
+	done
+for i in ; do \
+		install -o root -g root -m 755 $i /usr/bin/ ; \
+	done
+# install -m 755 -d /etc/
+install -m 755 -d /etc/inittab.d
+# install -o root -g root -m 755 ../doc/initscript.sample /etc/
+ln -sf halt /sbin/reboot
+ln -sf halt /sbin/poweroff
+ln -sf init /sbin/telinit
+#ln -sf ../sbin/killall5 /bin/pidof
+#if [ ! -f /usr/bin/lastb ]; then \
+	#	ln -sf last /usr/bin/lastb; \
+	#fi
+install -m 755 -d /usr/include/
+install -o root -g root -m 644 initreq.h /usr/include/
+for man in  initscript.5 inittab.5 initctl.5 halt.8 init.8 killall5.8         poweroff.8 reboot.8 runlevel.8 shutdown.8 telinit.8 fstab-decode.8  bootlogd.8 de/initscript.5 es/initscript.5 fr/initscript.5 pl/initscript.5 pt/initscript.5 de/inittab.5 es/inittab.5 fr/inittab.5 pl/inittab.5 pt/inittab.5 de/initctl.5 pt/initctl.5 de/halt.8 pt/halt.8 de/init.8 fr/init.8 pl/init.8 pt/init.8 de/killall5.8 fr/killall5.8 pl/killall5.8 pt/killall5.8   de/runlevel.8 pt/runlevel.8 de/shutdown.8 pt/shutdown.8  de/fstab-decode.8 fr/fstab-decode.8 pt/fstab-decode.8 de/bootlogd.8 fr/bootlogd.8 pt/bootlogd.8 ; do \
+	    targetdir=/usr/share/man/$(dirname $man)/man${man##*.}; \
+	    install -m 755 -d $targetdir; \
+	    install -o root -g root -m 644 ../man/$man $targetdir/$(basename $man); \
+	    sed -i "1{ s@^\('\\\\\"\)[^\*-]*-\*- coding: [^[:blank:]]\+ -\*-@\1@; }" $targetdir/$(basename $man); \
+	done
+#
+# This part is skipped on Debian systems, the
+# debian.preinst script takes care of it.
+#@if [ ! -p /run/initctl ]; then \
+	#echo "Creating /run/initctl"; \
+	#rm -f /run/initctl; \
+	#mknod -m 600 /run/initctl p; fi
+make[2]: Leaving directory '/sources/sysvinit-3.08/src'
+make[1]: Leaving directory '/sources/sysvinit-3.08'
+
+
+Totalseconds: 1
+
+KB: 2975328	/

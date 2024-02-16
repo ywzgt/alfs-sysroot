@@ -1,0 +1,21 @@
+#!/bin/bash
+# https://www.linuxfromscratch.org/lfs/view/development/chapter08/grep.html
+
+PKG="grep"
+PKG_VERSION="$(curl -s https://www.linuxfromscratch.org/lfs/view/development/wget-list|grep 'grep-[0-9]'|sed -e 's|^.*/grep-||' -e 's/.tar.*$//')"
+URL="$(curl -s https://www.linuxfromscratch.org/lfs/view/development/wget-list|grep -E 'grep-[0-9]')"
+MD5="$(curl -s https://www.linuxfromscratch.org/lfs/view/development/md5sums|awk '/grep-[0-9].*.tar/{print$1}')"
+PKG_FILE="$(basename $URL)"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+sed -i "s/echo/#echo/" src/egrep.sh
+./configure --prefix=/usr
+make
+make DESTDIR=$PWD/DES install
+install -vm755 DES/usr/bin/grep -t /usr/bin/
+xEOFx
+) > tmp
