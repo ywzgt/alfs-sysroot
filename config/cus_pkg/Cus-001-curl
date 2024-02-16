@@ -1,0 +1,31 @@
+#!/bin/bash
+# https://linuxfromscratch.org/blfs/view/systemd/basicnet/curl.html
+
+PKG="curl"
+PKG_VERSION="8.6.0"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.xz"
+URL="https://curl.se/download/${PKG_FILE}"
+MD5="8f28f7e08c91cc679a45fccf66184fbc"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+./configure --prefix=/usr \
+            --disable-static \
+            --with-openssl \
+            --enable-threaded-resolver \
+            --with-ca-path=/etc/ssl/certs \
+            --without-libpsl
+make
+make install
+
+rm -rf docs/examples/.deps
+find docs \( -name Makefile\* -o  \
+             -name \*.1       -o  \
+             -name \*.3       -o  \
+             -name CMakeLists.txt \) -delete
+cp -v -R docs -T /usr/share/doc/curl-8.2.1
+xEOFx
+) > tmp

@@ -1,0 +1,415 @@
+/etc/init.d/README	1152	root:root	644	
+/etc/machine-id	33	root:root	444	
+/etc/systemd/logind.conf	1664	root:root	644	
+/etc/systemd/resolved.conf	1780	root:root	644	
+/etc/systemd/system.conf	2321	root:root	644	
+/etc/systemd/system/ctrl-alt-del.target	37	root:root	777	/usr/lib/systemd/system/reboot.target
+/etc/systemd/system/dbus-org.freedesktop.network1.service	48	root:root	777	/usr/lib/systemd/system/systemd-networkd.service
+/etc/systemd/system/dbus-org.freedesktop.oom1.service	44	root:root	777	/usr/lib/systemd/system/systemd-oomd.service
+/etc/systemd/system/dbus-org.freedesktop.resolve1.service	48	root:root	777	/usr/lib/systemd/system/systemd-resolved.service
+/etc/systemd/system/dbus-org.freedesktop.timesync1.service	49	root:root	777	/usr/lib/systemd/system/systemd-timesyncd.service
+/etc/systemd/system/getty.target.wants/getty@tty1.service	38	root:root	777	/usr/lib/systemd/system/getty@.service
+/etc/systemd/system/multi-user.target.wants/machines.target	39	root:root	777	/usr/lib/systemd/system/machines.target
+/etc/systemd/system/multi-user.target.wants/remote-fs.target	40	root:root	777	/usr/lib/systemd/system/remote-fs.target
+/etc/systemd/system/multi-user.target.wants/systemd-networkd.service	48	root:root	777	/usr/lib/systemd/system/systemd-networkd.service
+/etc/systemd/system/multi-user.target.wants/systemd-oomd.service	44	root:root	777	/usr/lib/systemd/system/systemd-oomd.service
+/etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service	60	root:root	777	/usr/lib/systemd/system/systemd-networkd-wait-online.service
+/etc/systemd/system/sockets.target.wants/systemd-journald-audit.socket	53	root:root	777	/usr/lib/systemd/system/systemd-journald-audit.socket
+/etc/systemd/system/sockets.target.wants/systemd-networkd.socket	47	root:root	777	/usr/lib/systemd/system/systemd-networkd.socket
+/etc/systemd/system/sockets.target.wants/systemd-oomd.socket	43	root:root	777	/usr/lib/systemd/system/systemd-oomd.socket
+/etc/systemd/system/sockets.target.wants/systemd-sysext.socket	45	root:root	777	/usr/lib/systemd/system/systemd-sysext.socket
+/etc/systemd/system/sysinit.target.wants/systemd-confext.service	47	root:root	777	/usr/lib/systemd/system/systemd-confext.service
+/etc/systemd/system/sysinit.target.wants/systemd-network-generator.service	57	root:root	777	/usr/lib/systemd/system/systemd-network-generator.service
+/etc/systemd/system/sysinit.target.wants/systemd-pstore.service	46	root:root	777	/usr/lib/systemd/system/systemd-pstore.service
+/etc/systemd/system/sysinit.target.wants/systemd-resolved.service	48	root:root	777	/usr/lib/systemd/system/systemd-resolved.service
+/etc/systemd/system/sysinit.target.wants/systemd-sysext.service	46	root:root	777	/usr/lib/systemd/system/systemd-sysext.service
+/etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service	49	root:root	777	/usr/lib/systemd/system/systemd-timesyncd.service
+/etc/systemd/system/systemd-journald.service.wants/systemd-journald-audit.socket	53	root:root	777	/usr/lib/systemd/system/systemd-journald-audit.socket
+/etc/systemd/timesyncd.conf	1056	root:root	644	
+/etc/systemd/user.conf	1771	root:root	644	
+/etc/udev/hwdb.bin	12290802	root:root	444	
+/etc/xdg/systemd/user	18	root:root	777	../../systemd/user
+/usr/bin/bootctl	114028	root:root	755	
+/usr/bin/busctl	102580	root:root	755	
+/usr/bin/coredumpctl	60520	root:root	755	
+/usr/bin/hostnamectl	35220	root:root	755	
+/usr/bin/journalctl	78868	root:root	755	
+/usr/bin/kernel-install	55192	root:root	755	
+/usr/bin/localectl	30952	root:root	755	
+/usr/bin/loginctl	59884	root:root	755	
+/usr/bin/machinectl	109716	root:root	755	
+/usr/bin/networkctl	156552	root:root	755	
+/usr/bin/oomctl	16920	root:root	755	
+/usr/bin/portablectl	62636	root:root	755	
+/usr/bin/resolvectl	179604	root:root	755	
+/usr/bin/systemctl	334076	root:root	755	
+/usr/bin/systemd-ac-power	16016	root:root	755	
+/usr/bin/systemd-analyze	200532	root:root	755	
+/usr/bin/systemd-ask-password	17432	root:root	755	
+/usr/bin/systemd-cat	16924	root:root	755	
+/usr/bin/systemd-cgls	17700	root:root	755	
+/usr/bin/systemd-cgtop	44872	root:root	755	
+/usr/bin/systemd-confext	14	root:root	777	systemd-sysext
+/usr/bin/systemd-creds	41368	root:root	755	
+/usr/bin/systemd-delta	26404	root:root	755	
+/usr/bin/systemd-detect-virt	17036	root:root	755	
+/usr/bin/systemd-dissect	75420	root:root	755	
+/usr/bin/systemd-escape	17180	root:root	755	
+/usr/bin/systemd-hwdb	16384	root:root	755	
+/usr/bin/systemd-id128	17840	root:root	755	
+/usr/bin/systemd-inhibit	22484	root:root	755	
+/usr/bin/systemd-machine-id-setup	17476	root:root	755	
+/usr/bin/systemd-mount	61148	root:root	755	
+/usr/bin/systemd-notify	27196	root:root	755	
+/usr/bin/systemd-nspawn	370704	root:root	755	
+/usr/bin/systemd-path	16508	root:root	755	
+/usr/bin/systemd-repart	221060	root:root	755	
+/usr/bin/systemd-resolve	10	root:root	777	resolvectl
+/usr/bin/systemd-run	81184	root:root	755	
+/usr/bin/systemd-socket-activate	30832	root:root	755	
+/usr/bin/systemd-stdio-bridge	17072	root:root	755	
+/usr/bin/systemd-sysext	55916	root:root	755	
+/usr/bin/systemd-sysusers	72108	root:root	755	
+/usr/bin/systemd-tmpfiles	131964	root:root	755	
+/usr/bin/systemd-tty-ask-password-agent	36136	root:root	755	
+/usr/bin/systemd-umount	13	root:root	777	systemd-mount
+/usr/bin/timedatectl	55660	root:root	755	
+/usr/bin/udevadm	590064	root:root	755	
+/usr/bin/varlinkctl	31292	root:root	755	
+/usr/lib/environment.d/99-environment.conf	24	root:root	777	../../../etc/environment
+/usr/lib/kernel/install.d/90-loaderentry.install	7109	root:root	755	
+/usr/lib/libnss_myhostname.so.2	252916	root:root	755	
+/usr/lib/libnss_mymachines.so.2	452784	root:root	755	
+/usr/lib/libnss_resolve.so.2	232152	root:root	755	
+/usr/lib/libnss_systemd.so.2	490652	root:root	755	
+/usr/lib/libsystemd.so	15	root:root	777	libsystemd.so.0
+/usr/lib/libsystemd.so.0	20	root:root	777	libsystemd.so.0.38.0
+/usr/lib/libsystemd.so.0.38.0	1131588	root:root	755	
+/usr/lib/libudev.so	12	root:root	777	libudev.so.1
+/usr/lib/libudev.so.1	16	root:root	777	libudev.so.1.7.8
+/usr/lib/libudev.so.1.7.8	307184	root:root	755	
+/usr/lib/pkgconfig/libsystemd.pc	543	root:root	644	
+/usr/lib/pkgconfig/libudev.pc	569	root:root	644	
+/usr/lib/sysctl.d/50-coredump.conf	1816	root:root	644	
+/usr/lib/systemd/catalog/systemd.be.catalog	13725	root:root	644	
+/usr/lib/systemd/catalog/systemd.be@latin.catalog	10734	root:root	644	
+/usr/lib/systemd/catalog/systemd.bg.catalog	30141	root:root	644	
+/usr/lib/systemd/catalog/systemd.catalog	29094	root:root	644	
+/usr/lib/systemd/catalog/systemd.da.catalog	8504	root:root	644	
+/usr/lib/systemd/catalog/systemd.de.catalog	748	root:root	644	
+/usr/lib/systemd/catalog/systemd.fr.catalog	14015	root:root	644	
+/usr/lib/systemd/catalog/systemd.hr.catalog	10851	root:root	644	
+/usr/lib/systemd/catalog/systemd.hu.catalog	8903	root:root	644	
+/usr/lib/systemd/catalog/systemd.it.catalog	16802	root:root	644	
+/usr/lib/systemd/catalog/systemd.ko.catalog	11824	root:root	644	
+/usr/lib/systemd/catalog/systemd.pl.catalog	25524	root:root	644	
+/usr/lib/systemd/catalog/systemd.pt_BR.catalog	8933	root:root	644	
+/usr/lib/systemd/catalog/systemd.ru.catalog	21058	root:root	644	
+/usr/lib/systemd/catalog/systemd.sr.catalog	11251	root:root	644	
+/usr/lib/systemd/catalog/systemd.zh_CN.catalog	7917	root:root	644	
+/usr/lib/systemd/catalog/systemd.zh_TW.catalog	7876	root:root	644	
+/usr/lib/systemd/libsystemd-core-255.so	2098432	root:root	755	
+/usr/lib/systemd/libsystemd-shared-255.so	3748080	root:root	755	
+/usr/lib/systemd/system-generators/systemd-debug-generator	17424	root:root	755	
+/usr/lib/systemd/system-generators/systemd-fstab-generator	51272	root:root	755	
+/usr/lib/systemd/system-generators/systemd-getty-generator	21400	root:root	755	
+/usr/lib/systemd/system-generators/systemd-gpt-auto-generator	31764	root:root	755	
+/usr/lib/systemd/system-generators/systemd-hibernate-resume-generator	25836	root:root	755	
+/usr/lib/systemd/system-generators/systemd-rc-local-generator	16040	root:root	755	
+/usr/lib/systemd/system-generators/systemd-run-generator	17176	root:root	755	
+/usr/lib/systemd/system-generators/systemd-system-update-generator	16244	root:root	755	
+/usr/lib/systemd/system-generators/systemd-sysv-generator	35108	root:root	755	
+/usr/lib/systemd/system/autovt@.service	14	root:root	777	getty@.service
+/usr/lib/systemd/system/console-getty.service	1153	root:root	644	
+/usr/lib/systemd/system/container-getty@.service	1305	root:root	644	
+/usr/lib/systemd/system/ctrl-alt-del.target	13	root:root	777	reboot.target
+/usr/lib/systemd/system/dbus-org.freedesktop.hostname1.service	25	root:root	777	systemd-hostnamed.service
+/usr/lib/systemd/system/dbus-org.freedesktop.locale1.service	23	root:root	777	systemd-localed.service
+/usr/lib/systemd/system/dbus-org.freedesktop.login1.service	22	root:root	777	systemd-logind.service
+/usr/lib/systemd/system/dbus-org.freedesktop.machine1.service	24	root:root	777	systemd-machined.service
+/usr/lib/systemd/system/dbus-org.freedesktop.portable1.service	25	root:root	777	systemd-portabled.service
+/usr/lib/systemd/system/dbus-org.freedesktop.timedate1.service	25	root:root	777	systemd-timedated.service
+/usr/lib/systemd/system/debug-shell.service	1104	root:root	644	
+/usr/lib/systemd/system/default.target	16	root:root	777	graphical.target
+/usr/lib/systemd/system/emergency.service	813	root:root	644	
+/usr/lib/systemd/system/getty@.service	2054	root:root	644	
+/usr/lib/systemd/system/graphical.target.wants/systemd-update-utmp-runlevel.service	39	root:root	777	../systemd-update-utmp-runlevel.service
+/usr/lib/systemd/system/initrd-parse-etc.service	1283	root:root	644	
+/usr/lib/systemd/system/initrd-root-fs.target.wants/systemd-repart.service	25	root:root	777	../systemd-repart.service
+/usr/lib/systemd/system/initrd.target.wants/systemd-battery-check.service	32	root:root	777	../systemd-battery-check.service
+/usr/lib/systemd/system/kmod-static-nodes.service	711	root:root	644	
+/usr/lib/systemd/system/local-fs.target.wants/tmp.mount	12	root:root	777	../tmp.mount
+/usr/lib/systemd/system/machines.target.wants/var-lib-machines.mount	25	root:root	777	../var-lib-machines.mount
+/usr/lib/systemd/system/multi-user.target.wants/getty.target	15	root:root	777	../getty.target
+/usr/lib/systemd/system/multi-user.target.wants/systemd-ask-password-wall.path	33	root:root	777	../systemd-ask-password-wall.path
+/usr/lib/systemd/system/multi-user.target.wants/systemd-logind.service	25	root:root	777	../systemd-logind.service
+/usr/lib/systemd/system/multi-user.target.wants/systemd-update-utmp-runlevel.service	39	root:root	777	../systemd-update-utmp-runlevel.service
+/usr/lib/systemd/system/quotaon.service	634	root:root	644	
+/usr/lib/systemd/system/rc-local.service	731	root:root	644	
+/usr/lib/systemd/system/remote-fs.target.wants/var-lib-machines.mount	25	root:root	777	../var-lib-machines.mount
+/usr/lib/systemd/system/rescue.service	804	root:root	644	
+/usr/lib/systemd/system/rescue.target.wants/systemd-update-utmp-runlevel.service	39	root:root	777	../systemd-update-utmp-runlevel.service
+/usr/lib/systemd/system/runlevel0.target	15	root:root	777	poweroff.target
+/usr/lib/systemd/system/runlevel1.target	13	root:root	777	rescue.target
+/usr/lib/systemd/system/runlevel2.target	17	root:root	777	multi-user.target
+/usr/lib/systemd/system/runlevel3.target	17	root:root	777	multi-user.target
+/usr/lib/systemd/system/runlevel4.target	17	root:root	777	multi-user.target
+/usr/lib/systemd/system/runlevel5.target	16	root:root	777	graphical.target
+/usr/lib/systemd/system/runlevel6.target	13	root:root	777	reboot.target
+/usr/lib/systemd/system/serial-getty@.service	1571	root:root	644	
+/usr/lib/systemd/system/sockets.target.wants/systemd-coredump.socket	26	root:root	777	../systemd-coredump.socket
+/usr/lib/systemd/system/sockets.target.wants/systemd-initctl.socket	25	root:root	777	../systemd-initctl.socket
+/usr/lib/systemd/system/sockets.target.wants/systemd-journald-dev-log.socket	34	root:root	777	../systemd-journald-dev-log.socket
+/usr/lib/systemd/system/sockets.target.wants/systemd-journald.socket	26	root:root	777	../systemd-journald.socket
+/usr/lib/systemd/system/sockets.target.wants/systemd-sysext.socket	24	root:root	777	../systemd-sysext.socket
+/usr/lib/systemd/system/sockets.target.wants/systemd-udevd-control.socket	31	root:root	777	../systemd-udevd-control.socket
+/usr/lib/systemd/system/sockets.target.wants/systemd-udevd-kernel.socket	30	root:root	777	../systemd-udevd-kernel.socket
+/usr/lib/systemd/system/sysinit.target.wants/dev-hugepages.mount	22	root:root	777	../dev-hugepages.mount
+/usr/lib/systemd/system/sysinit.target.wants/dev-mqueue.mount	19	root:root	777	../dev-mqueue.mount
+/usr/lib/systemd/system/sysinit.target.wants/kmod-static-nodes.service	28	root:root	777	../kmod-static-nodes.service
+/usr/lib/systemd/system/sysinit.target.wants/proc-sys-fs-binfmt_misc.automount	36	root:root	777	../proc-sys-fs-binfmt_misc.automount
+/usr/lib/systemd/system/sysinit.target.wants/sys-fs-fuse-connections.mount	32	root:root	777	../sys-fs-fuse-connections.mount
+/usr/lib/systemd/system/sysinit.target.wants/sys-kernel-config.mount	26	root:root	777	../sys-kernel-config.mount
+/usr/lib/systemd/system/sysinit.target.wants/sys-kernel-debug.mount	25	root:root	777	../sys-kernel-debug.mount
+/usr/lib/systemd/system/sysinit.target.wants/sys-kernel-tracing.mount	27	root:root	777	../sys-kernel-tracing.mount
+/usr/lib/systemd/system/sysinit.target.wants/systemd-ask-password-console.path	36	root:root	777	../systemd-ask-password-console.path
+/usr/lib/systemd/system/sysinit.target.wants/systemd-binfmt.service	25	root:root	777	../systemd-binfmt.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-hwdb-update.service	30	root:root	777	../systemd-hwdb-update.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-journal-catalog-update.service	41	root:root	777	../systemd-journal-catalog-update.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-journal-flush.service	32	root:root	777	../systemd-journal-flush.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-journald.service	27	root:root	777	../systemd-journald.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-machine-id-commit.service	36	root:root	777	../systemd-machine-id-commit.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-modules-load.service	31	root:root	777	../systemd-modules-load.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-random-seed.service	30	root:root	777	../systemd-random-seed.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-repart.service	25	root:root	777	../systemd-repart.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-sysctl.service	25	root:root	777	../systemd-sysctl.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-sysusers.service	27	root:root	777	../systemd-sysusers.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-tmpfiles-setup-dev-early.service	43	root:root	777	../systemd-tmpfiles-setup-dev-early.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-tmpfiles-setup-dev.service	37	root:root	777	../systemd-tmpfiles-setup-dev.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-tmpfiles-setup.service	33	root:root	777	../systemd-tmpfiles-setup.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-udev-trigger.service	31	root:root	777	../systemd-udev-trigger.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-udevd.service	24	root:root	777	../systemd-udevd.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-update-done.service	30	root:root	777	../systemd-update-done.service
+/usr/lib/systemd/system/sysinit.target.wants/systemd-update-utmp.service	30	root:root	777	../systemd-update-utmp.service
+/usr/lib/systemd/system/systemd-backlight@.service	777	root:root	644	
+/usr/lib/systemd/system/systemd-battery-check.service	856	root:root	644	
+/usr/lib/systemd/system/systemd-binfmt.service	1213	root:root	644	
+/usr/lib/systemd/system/systemd-boot-check-no-failures.service	730	root:root	644	
+/usr/lib/systemd/system/systemd-coredump@.service	1149	root:root	644	
+/usr/lib/systemd/system/systemd-fsck-root.service	724	root:root	644	
+/usr/lib/systemd/system/systemd-fsck@.service	712	root:root	644	
+/usr/lib/systemd/system/systemd-growfs-root.service	667	root:root	644	
+/usr/lib/systemd/system/systemd-growfs@.service	664	root:root	644	
+/usr/lib/systemd/system/systemd-hibernate-resume.service	666	root:root	644	
+/usr/lib/systemd/system/systemd-hibernate.service	555	root:root	644	
+/usr/lib/systemd/system/systemd-hostnamed.service	1206	root:root	644	
+/usr/lib/systemd/system/systemd-hwdb-update.service	834	root:root	644	
+/usr/lib/systemd/system/systemd-hybrid-sleep.service	576	root:root	644	
+/usr/lib/systemd/system/systemd-initctl.service	578	root:root	644	
+/usr/lib/systemd/system/systemd-journald.service	2449	root:root	644	
+/usr/lib/systemd/system/systemd-journald@.service	1642	root:root	644	
+/usr/lib/systemd/system/systemd-localed.service	1182	root:root	644	
+/usr/lib/systemd/system/systemd-logind.service	2037	root:root	644	
+/usr/lib/systemd/system/systemd-machined.service	1326	root:root	644	
+/usr/lib/systemd/system/systemd-modules-load.service	1019	root:root	644	
+/usr/lib/systemd/system/systemd-network-generator.service	792	root:root	644	
+/usr/lib/systemd/system/systemd-networkd-wait-online.service	785	root:root	644	
+/usr/lib/systemd/system/systemd-networkd-wait-online@.service	804	root:root	644	
+/usr/lib/systemd/system/systemd-networkd.service	2428	root:root	644	
+/usr/lib/systemd/system/systemd-nspawn@.service	1619	root:root	644	
+/usr/lib/systemd/system/systemd-oomd.service	1752	root:root	644	
+/usr/lib/systemd/system/systemd-portabled.service	1074	root:root	644	
+/usr/lib/systemd/system/systemd-pstore.service	815	root:root	644	
+/usr/lib/systemd/system/systemd-quotacheck.service	687	root:root	644	
+/usr/lib/systemd/system/systemd-random-seed.service	1187	root:root	644	
+/usr/lib/systemd/system/systemd-remount-fs.service	787	root:root	644	
+/usr/lib/systemd/system/systemd-repart.service	1294	root:root	644	
+/usr/lib/systemd/system/systemd-resolved.service	1875	root:root	644	
+/usr/lib/systemd/system/systemd-rfkill.service	771	root:root	644	
+/usr/lib/systemd/system/systemd-storagetm.service	920	root:root	644	
+/usr/lib/systemd/system/systemd-suspend-then-hibernate.service	623	root:root	644	
+/usr/lib/systemd/system/systemd-suspend.service	556	root:root	644	
+/usr/lib/systemd/system/systemd-sysctl.service	731	root:root	644	
+/usr/lib/systemd/system/systemd-time-wait-sync.service	1209	root:root	644	
+/usr/lib/systemd/system/systemd-timedated.service	1162	root:root	644	
+/usr/lib/systemd/system/systemd-timesyncd.service	1768	root:root	644	
+/usr/lib/systemd/system/systemd-udevd.service	1324	root:root	644	
+/usr/lib/systemd/system/systemd-update-done.service	682	root:root	644	
+/usr/lib/systemd/system/systemd-update-utmp-runlevel.service	849	root:root	644	
+/usr/lib/systemd/system/systemd-update-utmp.service	856	root:root	644	
+/usr/lib/systemd/system/systemd-vconsole-setup.service	1196	root:root	644	
+/usr/lib/systemd/system/systemd-volatile-root.service	743	root:root	644	
+/usr/lib/systemd/system/timers.target.wants/systemd-tmpfiles-clean.timer	31	root:root	777	../systemd-tmpfiles-clean.timer
+/usr/lib/systemd/system/user-runtime-dir@.service	674	root:root	644	
+/usr/lib/systemd/system/user@.service	834	root:root	644	
+/usr/lib/systemd/systemd	110344	root:root	755	
+/usr/lib/systemd/systemd-backlight	30440	root:root	755	
+/usr/lib/systemd/systemd-battery-check	16752	root:root	755	
+/usr/lib/systemd/systemd-binfmt	17224	root:root	755	
+/usr/lib/systemd/systemd-boot-check-no-failures	16424	root:root	755	
+/usr/lib/systemd/systemd-cgroups-agent	15152	root:root	755	
+/usr/lib/systemd/systemd-coredump	64788	root:root	755	
+/usr/lib/systemd/systemd-executor	122548	root:root	755	
+/usr/lib/systemd/systemd-fsck	26240	root:root	755	
+/usr/lib/systemd/systemd-growfs	16716	root:root	755	
+/usr/lib/systemd/systemd-hibernate-resume	25656	root:root	755	
+/usr/lib/systemd/systemd-hostnamed	50368	root:root	755	
+/usr/lib/systemd/systemd-initctl	16784	root:root	755	
+/usr/lib/systemd/systemd-journald	207800	root:root	755	
+/usr/lib/systemd/systemd-localed	58492	root:root	755	
+/usr/lib/systemd/systemd-logind	296700	root:root	755	
+/usr/lib/systemd/systemd-machined	127568	root:root	755	
+/usr/lib/systemd/systemd-makefs	16056	root:root	755	
+/usr/lib/systemd/systemd-modules-load	17260	root:root	755	
+/usr/lib/systemd/systemd-network-generator	40244	root:root	755	
+/usr/lib/systemd/systemd-networkd	1670844	root:root	755	
+/usr/lib/systemd/systemd-networkd-wait-online	40968	root:root	755	
+/usr/lib/systemd/systemd-oomd	71396	root:root	755	
+/usr/lib/systemd/systemd-portabled	106464	root:root	755	
+/usr/lib/systemd/systemd-pstore	21696	root:root	755	
+/usr/lib/systemd/systemd-quotacheck	15944	root:root	755	
+/usr/lib/systemd/systemd-random-seed	21708	root:root	755	
+/usr/lib/systemd/systemd-remount-fs	16644	root:root	755	
+/usr/lib/systemd/systemd-reply-password	16328	root:root	755	
+/usr/lib/systemd/systemd-resolved	600840	root:root	755	
+/usr/lib/systemd/systemd-rfkill	21252	root:root	755	
+/usr/lib/systemd/systemd-shutdown	59640	root:root	755	
+/usr/lib/systemd/systemd-sleep	57476	root:root	755	
+/usr/lib/systemd/systemd-socket-proxyd	31412	root:root	755	
+/usr/lib/systemd/systemd-storagetm	59152	root:root	755	
+/usr/lib/systemd/systemd-sulogin-shell	16728	root:root	755	
+/usr/lib/systemd/systemd-sysctl	22296	root:root	755	
+/usr/lib/systemd/systemd-sysroot-fstab-check	41	root:root	777	system-generators/systemd-fstab-generator
+/usr/lib/systemd/systemd-time-wait-sync	16736	root:root	755	
+/usr/lib/systemd/systemd-timedated	45648	root:root	755	
+/usr/lib/systemd/systemd-timesyncd	68164	root:root	755	
+/usr/lib/systemd/systemd-udevd	17	root:root	777	../../bin/udevadm
+/usr/lib/systemd/systemd-update-done	15460	root:root	755	
+/usr/lib/systemd/systemd-update-utmp	17076	root:root	755	
+/usr/lib/systemd/systemd-user-runtime-dir	16936	root:root	755	
+/usr/lib/systemd/systemd-vconsole-setup	21424	root:root	755	
+/usr/lib/systemd/systemd-volatile-root	16680	root:root	755	
+/usr/lib/systemd/systemd-xdg-autostart-condition	15840	root:root	755	
+/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator	16276	root:root	755	
+/usr/lib/systemd/user-generators/systemd-xdg-autostart-generator	31368	root:root	755	
+/usr/lib/sysusers.d/basic.conf	1284	root:root	644	
+/usr/lib/sysusers.d/systemd-journal.conf	314	root:root	644	
+/usr/lib/sysusers.d/systemd-network.conf	341	root:root	644	
+/usr/lib/sysusers.d/systemd-resolve.conf	331	root:root	644	
+/usr/lib/sysusers.d/systemd-timesync.conf	344	root:root	644	
+/usr/lib/tmpfiles.d/etc.conf	524	root:root	644	
+/usr/lib/tmpfiles.d/legacy.conf	911	root:root	644	
+/usr/lib/tmpfiles.d/static-nodes-permissions.conf	798	root:root	644	
+/usr/lib/tmpfiles.d/systemd.conf	2289	root:root	644	
+/usr/lib/tmpfiles.d/var.conf	568	root:root	644	
+/usr/lib/udev/ata_id	24848	root:root	755	
+/usr/lib/udev/cdrom_id	34224	root:root	755	
+/usr/lib/udev/dmi_memory_id	25224	root:root	755	
+/usr/lib/udev/fido_id	16880	root:root	755	
+/usr/lib/udev/hwdb.d/60-autosuspend-chromiumos.hwdb	2786	root:root	644	
+/usr/lib/udev/iocost	25580	root:root	755	
+/usr/lib/udev/mtd_probe	16352	root:root	755	
+/usr/lib/udev/rules.d/50-udev-default.rules	5287	root:root	644	
+/usr/lib/udev/rules.d/60-persistent-storage.rules	9375	root:root	644	
+/usr/lib/udev/rules.d/64-btrfs.rules	616	root:root	644	
+/usr/lib/udev/rules.d/70-uaccess.rules	3366	root:root	644	
+/usr/lib/udev/rules.d/71-seat.rules	3818	root:root	644	
+/usr/lib/udev/rules.d/73-seat-late.rules	643	root:root	644	
+/usr/lib/udev/rules.d/90-vconsole.rules	518	root:root	644	
+/usr/lib/udev/rules.d/99-systemd.rules	5102	root:root	644	
+/usr/lib/udev/scsi_id	31596	root:root	755	
+/usr/lib/udev/v4l_id	16148	root:root	755	
+/usr/sbin/halt	16	root:root	777	../bin/systemctl
+/usr/sbin/init	22	root:root	777	../lib/systemd/systemd
+/usr/sbin/mount.ddi	22	root:root	777	../bin/systemd-dissect
+/usr/sbin/poweroff	16	root:root	777	../bin/systemctl
+/usr/sbin/reboot	16	root:root	777	../bin/systemctl
+/usr/sbin/resolvconf	17	root:root	777	../bin/resolvectl
+/usr/sbin/runlevel	16	root:root	777	../bin/systemctl
+/usr/sbin/shutdown	16	root:root	777	../bin/systemctl
+/usr/sbin/telinit	16	root:root	777	../bin/systemctl
+/usr/share/bash-completion/completions/systemctl	14708	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.LogControl1.xml	1973	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.hostname1.xml	5331	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.locale1.xml	2566	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.login1.Manager.xml	18389	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.login1.Seat.xml	2478	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.login1.Session.xml	6294	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.login1.User.xml	3442	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.machine1.Image.xml	3582	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.machine1.Machine.xml	5097	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.machine1.Manager.xml	10155	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.network1.DHCPServer.xml	3372	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.network1.DHCPv4Client.xml	3361	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.network1.DHCPv6Client.xml	3361	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.network1.Link.xml	3226	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.network1.Manager.xml	4636	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.network1.Network.xml	2441	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.oom1.Manager.xml	1549	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.portable1.Image.xml	5957	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.portable1.Manager.xml	6103	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.resolve1.DnssdService.xml	1441	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.resolve1.Link.xml	4284	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.resolve1.Manager.xml	8054	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.systemd1.Automount.xml	18080	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.systemd1.Device.xml	17455	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.systemd1.Job.xml	2256	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.systemd1.Manager.xml	37663	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.systemd1.Mount.xml	62733	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.systemd1.Path.xml	18400	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.systemd1.Scope.xml	33780	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.systemd1.Service.xml	70561	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.systemd1.Slice.xml	31824	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.systemd1.Socket.xml	69815	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.systemd1.Swap.xml	61630	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.systemd1.Target.xml	17388	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.systemd1.Timer.xml	19530	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.systemd1.Unit.xml	17322	root:root	644	
+/usr/share/dbus-1/interfaces/org.freedesktop.timedate1.xml	2930	root:root	644	
+/usr/share/dbus-1/services/org.freedesktop.systemd1.service	51	root:root	777	../system-services/org.freedesktop.systemd1.service
+/usr/share/factory/etc/locale.conf	81	root:root	644	
+/usr/share/factory/etc/vconsole.conf	79	root:root	644	
+/usr/share/locale/be/LC_MESSAGES/systemd.mo	36066	root:root	644	
+/usr/share/locale/be@latin/LC_MESSAGES/systemd.mo	16840	root:root	644	
+/usr/share/locale/bg/LC_MESSAGES/systemd.mo	37668	root:root	644	
+/usr/share/locale/ca/LC_MESSAGES/systemd.mo	18141	root:root	644	
+/usr/share/locale/cs/LC_MESSAGES/systemd.mo	31315	root:root	644	
+/usr/share/locale/da/LC_MESSAGES/systemd.mo	25394	root:root	644	
+/usr/share/locale/de/LC_MESSAGES/systemd.mo	27866	root:root	644	
+/usr/share/locale/el/LC_MESSAGES/systemd.mo	14998	root:root	644	
+/usr/share/locale/es/LC_MESSAGES/systemd.mo	22959	root:root	644	
+/usr/share/locale/et/LC_MESSAGES/systemd.mo	17200	root:root	644	
+/usr/share/locale/eu/LC_MESSAGES/systemd.mo	4532	root:root	644	
+/usr/share/locale/fi/LC_MESSAGES/systemd.mo	30774	root:root	644	
+/usr/share/locale/fr/LC_MESSAGES/systemd.mo	32311	root:root	644	
+/usr/share/locale/gl/LC_MESSAGES/systemd.mo	26884	root:root	644	
+/usr/share/locale/he/LC_MESSAGES/systemd.mo	33685	root:root	644	
+/usr/share/locale/hr/LC_MESSAGES/systemd.mo	25596	root:root	644	
+/usr/share/locale/hu/LC_MESSAGES/systemd.mo	33167	root:root	644	
+/usr/share/locale/id/LC_MESSAGES/systemd.mo	25401	root:root	644	
+/usr/share/locale/it/LC_MESSAGES/systemd.mo	30980	root:root	644	
+/usr/share/locale/ja/LC_MESSAGES/systemd.mo	33849	root:root	644	
+/usr/share/locale/ka/LC_MESSAGES/systemd.mo	51039	root:root	644	
+/usr/share/locale/kab/LC_MESSAGES/systemd.mo	710	root:root	644	
+/usr/share/locale/ko/LC_MESSAGES/systemd.mo	31874	root:root	644	
+/usr/share/locale/lt/LC_MESSAGES/systemd.mo	21760	root:root	644	
+/usr/share/locale/nl/LC_MESSAGES/systemd.mo	34681	root:root	644	
+/usr/share/locale/pa/LC_MESSAGES/systemd.mo	2304	root:root	644	
+/usr/share/locale/pl/LC_MESSAGES/systemd.mo	31855	root:root	644	
+/usr/share/locale/pt/LC_MESSAGES/systemd.mo	31682	root:root	644	
+/usr/share/locale/pt_BR/LC_MESSAGES/systemd.mo	26602	root:root	644	
+/usr/share/locale/ro/LC_MESSAGES/systemd.mo	27132	root:root	644	
+/usr/share/locale/ru/LC_MESSAGES/systemd.mo	46312	root:root	644	
+/usr/share/locale/si/LC_MESSAGES/systemd.mo	524	root:root	644	
+/usr/share/locale/sk/LC_MESSAGES/systemd.mo	7118	root:root	644	
+/usr/share/locale/sr/LC_MESSAGES/systemd.mo	25961	root:root	644	
+/usr/share/locale/sv/LC_MESSAGES/systemd.mo	30732	root:root	644	
+/usr/share/locale/tr/LC_MESSAGES/systemd.mo	28137	root:root	644	
+/usr/share/locale/uk/LC_MESSAGES/systemd.mo	43788	root:root	644	
+/usr/share/locale/zh_CN/LC_MESSAGES/systemd.mo	26314	root:root	644	
+/usr/share/locale/zh_TW/LC_MESSAGES/systemd.mo	22216	root:root	644	
+/usr/share/pkgconfig/systemd.pc	3983	root:root	644	
+/usr/share/pkgconfig/udev.pc	426	root:root	644	
+/usr/share/polkit-1/actions/org.freedesktop.systemd1.policy	4385	root:root	644	
+/usr/share/zsh/site-functions/_systemctl	21325	root:root	644	
+/var/lib/systemd/catalog/database	240528	root:root	644	

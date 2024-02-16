@@ -1,0 +1,15 @@
+/usr/bin/bc	177552	root:root	755	
+/usr/bin/dc	2	root:root	777	bc
+/usr/share/locale/de_DE.UTF-8/bc	2247	root:root	644	
+/usr/share/locale/de_DE.utf8/bc	17	root:root	777	../de_DE.UTF-8/bc
+/usr/share/locale/en_GB.utf8/bc	11	root:root	777	../en_US/bc
+/usr/share/locale/en_US.utf8/bc	11	root:root	777	../en_US/bc
+/usr/share/locale/en_US/bc	4004	root:root	644	
+/usr/share/locale/fr_FR.UTF-8/bc	1773	root:root	644	
+/usr/share/locale/fr_FR.utf8/bc	17	root:root	777	../fr_FR.UTF-8/bc
+/usr/share/locale/ja_JP.UTF-8/bc	36	root:root	644	
+/usr/share/locale/ja_JP.utf8/bc	17	root:root	777	../ja_JP.UTF-8/bc
+/usr/share/locale/ru_RU.UTF-8/bc	36	root:root	644	
+/usr/share/locale/ru_RU.utf8/bc	17	root:root	777	../ru_RU.UTF-8/bc
+/usr/share/man/man1/bc.1	105363	root:root	644	
+/usr/share/man/man1/dc.1	62422	root:root	644	
