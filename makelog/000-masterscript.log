@@ -1,0 +1,11 @@
+Cloning into '/lfs_build/jhalfs/book-source'...
+Already on 'multilib'
+Your branch is up to date with 'origin/multilib'.
+/lfs_build/jhalfs/book-source/chapter01/whatsnew.xml:302: parser error : Entity 'glibc-upstream-fixes-patch' not defined
+      <para>&glibc-upstream-fixes-patch;</para>
+                                        ^
+/lfs_build/jhalfs/book-source/chapter01/whatsnew.xml:306: parser error : Entity 'pkgconf-upstream-fix-patch' not defined
+      <para>&pkgconf-upstream-fix-patch;</para>
+                                        ^
+warning: failed to load external entity "/lfs_build/jhalfs/book-source/chapter08/isl.xml"
+/lfs_build/jhalfs/book-source/chapter08/chapter08.xml:37: element include: XInclude error : could not load /lfs_build/jhalfs/book-source/chapter08/isl.xml, and no fallback was found

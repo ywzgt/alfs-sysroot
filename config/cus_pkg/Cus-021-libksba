@@ -1,0 +1,21 @@
+#!/bin/bash
+# https://linuxfromscratch.org/blfs/view/systemd/general/libksba.html
+
+PKG="libksba"
+PKG_VERSION="1.6.5"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.bz2"
+URL="https://www.gnupg.org/ftp/gcrypt/$PKG/${PKG_FILE}"
+MD5="57b88e5d24c8705d9a3ba3832140d188"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << xEOFx
+		./configure --prefix=/usr \
+		--disable-static
+
+make
+make install
+xEOFx
+) > tmp
