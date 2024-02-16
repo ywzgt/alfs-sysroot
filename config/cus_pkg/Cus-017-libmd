@@ -1,0 +1,22 @@
+#!/bin/bash
+# https://libbsd.freedesktop.org/releases
+
+PKG="libmd"
+PKG_VERSION="1.1.0"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.xz"
+URL="https://libbsd.freedesktop.org/releases/${PKG_FILE}"
+MD5="b2a0650c78d92c7a9632a2a3cdd4f6a6"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << xEOFx
+
+./configure --prefix=/usr \
+--disable-static
+
+make
+make install
+xEOFx
+) > tmp
