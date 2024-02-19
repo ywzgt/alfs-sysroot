@@ -1,0 +1,18 @@
+#!/bin/bash
+
+cat > /etc/adjtime << "EOF"
+0.0 0 0.0
+0
+LOCAL
+EOF
+
+timedatectl set-local-rtc 1
+
+timedatectl set-time YYYY-MM-DD HH:MM:SS
+
+timedatectl set-timezone TIMEZONE
+
+timedatectl list-timezones
+
+systemctl disable systemd-timesyncd
+
