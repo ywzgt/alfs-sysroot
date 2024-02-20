@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# This block must be edited to suit your needs.
+export LFS=**EDITME/mnt/lfsEDITME**
+# End of editable block.
+
+echo $LFS
+

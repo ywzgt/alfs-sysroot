@@ -1,0 +1,21 @@
+Tue Feb 20 14:55:50 CST 2024
+tar: stdout: write error
+KB: 3008880	/
+Processing /sources/flit_core-3.9.0
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: flit_core
+  Building wheel for flit_core (pyproject.toml): started
+  Building wheel for flit_core (pyproject.toml): finished with status 'done'
+  Created wheel for flit_core: filename=flit_core-3.9.0-py3-none-any.whl size=63141 sha256=d61a541bb12e58406692ad78cb808a5fe5d746dac137e4619e4963489aef48a5
+  Stored in directory: /tmp/pip-ephem-wheel-cache-45o234y5/wheels/b6/fc/d9/1867098c7dd8bc9463aed01828eb04127f3a0565dcd57be316
+Successfully built flit_core
+Looking in links: dist
+Processing ./dist/flit_core-3.9.0-py3-none-any.whl
+Installing collected packages: flit_core
+Successfully installed flit_core-3.9.0
+
+
+Totalseconds: 1
+
+KB: 3010520	/
