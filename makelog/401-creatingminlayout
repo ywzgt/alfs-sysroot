@@ -1,0 +1,12 @@
+Tue Feb 20 04:27:54 UTC 2024
+mkdir: created directory '/lfs_build/etc'
+mkdir: created directory '/lfs_build/var'
+mkdir: created directory '/lfs_build/usr'
+mkdir: created directory '/lfs_build/usr/bin'
+mkdir: created directory '/lfs_build/usr/lib'
+mkdir: created directory '/lfs_build/usr/sbin'
+'/lfs_build/bin' -> 'usr/bin'
+'/lfs_build/lib' -> 'usr/lib'
+'/lfs_build/sbin' -> 'usr/sbin'
+mkdir: created directory '/lfs_build/libx32'
+mkdir: created directory '/lfs_build/tools'

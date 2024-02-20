@@ -1,0 +1,42 @@
+#!/bin/bash
+# http://rpm.org/download.html
+
+PKG="rpm"
+PKG_VERSION="4.18.2"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.bz2"
+URL="https://ftp.osuosl.org/pub/rpm/releases/rpm-${PKG_VERSION%.*}.x/${PKG_FILE}"
+MD5="471f5ef532e7f41ff109994cfa959b9e"
+
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << xEOFx
+		./configure --prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--enable-python \
+		--enable-zstd=yes \
+		--enable-ndb \
+		--with-cap \
+		PYTHON=python3 \
+		--disable-static \
+		--disable-sqlite
+
+make
+make install
+
+install -vm755 /dev/stdin /usr/bin/rpmextract.sh <<"EFO"
+#!/bin/sh
+if [ "\$1" = "" -o ! -e "\$1" ]; then
+    echo "no package supplied" 1>&2
+   exit 1
+fi
+bsdtar xf \$1
+EFO
+
+ln -sfv rpm /usr/bin/rpmquery
+ln -sfv rpm /usr/bin/rpmverify
+xEOFx
+) > tmp

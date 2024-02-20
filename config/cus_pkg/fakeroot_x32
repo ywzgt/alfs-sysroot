@@ -1,0 +1,29 @@
+#!/bin/bash
+# https://gitlab.archlinux.org/archlinux/packaging/packages/fakeroot
+# https://packages.debian.org/source/sid/x32/fakeroot
+# for i in {/x32,}; do curl -sL packages.debian.org/sid${i}/fakeroot|grep 'sid,'|sed 's/[A-Za-z]\|"\|,\|<\|>\|=\|\s//g'; done
+
+PKG="fakeroot"
+PV="1.30-1"
+PKG_VERSION="${PV%-*}"
+PKG_FILE="fakeroot-debian-${PV}.tar.bz2"
+URL="https://salsa.debian.org/clint/fakeroot/-/archive/debian/$PV/${PKG_FILE}"
+MD5="26a2902d75713e57a4da0f77c40f01ec"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+./bootstrap
+
+./configure --prefix=/usr \
+		--disable-static
+
+make
+
+sed -i '/^install-data-am:/s/install-man//' doc/*/Makefile
+make install
+find /usr/lib -name 'libfakeroot.la' -delete
+xEOFx
+) > tmp
