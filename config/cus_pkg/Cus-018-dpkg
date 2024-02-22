@@ -1,0 +1,38 @@
+#!/bin/bash
+# https://packages.debian.org/source/sid/dpkg
+
+PKG="dpkg"
+PKG_VERSION="1.22.4"
+PKG_FILE="${PKG}_${PKG_VERSION}.tar.xz"
+URL="https://deb.debian.org/debian/pool/main/${PKG::1}/$PKG/${PKG_FILE}"
+MD5="837b82b5cd190f7611358cc8c1f87405"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << xEOFx
+
+echo "$PKG_VERSION" > .dist-version
+./autogen
+
+./configure --prefix=/usr \
+--docdir=/usr/share/doc/$PKG-${PKG_VERSION} \
+--sysconfdir=/etc \
+--localstatedir=/var \
+--disable-start-stop-daemon
+
+make
+make install
+
+install -vd /var/dpkg/updates
+touch /var/lib/dpkg/{status,available}
+ln -s less /usr/bin/pager
+
+install -Dm644 /dev/stdin /etc/dpkg/origins/debian <<"EOF"
+Vendor: Debian
+Vendor-URL: https://www.debian.org/
+EOF
+ln -svf debian /etc/dpkg/origins/default
+xEOFx
+) > tmp
