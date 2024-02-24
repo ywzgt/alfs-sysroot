@@ -106,10 +106,10 @@ export XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR:-/tmp/xdg-$USER}
 export XDG_CONFIG_HOME=${HOME}/.config
 
 if [ -e /etc/hostname ]; then
-	HOST="$(cat /etc/hostname)"
-	[ -n "$HOST" ] || HOST='\H'
+	PHOST="$(cat /etc/hostname)"
+	[ -n "$PHOST" ] || PHOST='\H'
 else
-	HOST='\H'
+	PHOST='\H'
 fi
 
 # Setup a red prompt for root and a green one for users.
@@ -117,9 +117,9 @@ NORMAL="\[\e[0m\]"
 RED="\[\e[1;31m\]"
 GREEN="\[\e[1;32m\]"
 if [[ $EUID == 0 ]] ; then
-	PS1="$RED\u@$HOST $NORMAL\w$RED \A # $NORMAL"
+	PS1="$RED\u@${PHOST/®/.} $NORMAL\w$RED \A # $NORMAL"
 else
-	PS1="$GREEN\u@$HOST $NORMAL\w$GREEN \A \$ $NORMAL"
+	PS1="$GREEN\u@${PHOST/®/.} $NORMAL\w$GREEN \A \$ $NORMAL"
 fi
 
 for script in /etc/profile.d/*.sh ; do
@@ -128,7 +128,7 @@ for script in /etc/profile.d/*.sh ; do
         fi
 done
 
-unset script RED GREEN NORMAL HOST
+unset script RED GREEN NORMAL PHOST
 
 
 alias ls='ls --color=auto'
