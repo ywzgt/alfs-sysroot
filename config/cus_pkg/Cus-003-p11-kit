@@ -1,0 +1,35 @@
+#!/bin/bash
+# https://www.linuxfromscratch.org/blfs/view/systemd/postlfs/p11-kit.html
+
+PKG="p11-kit"
+PKG_VERSION="0.25.3"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.xz"
+URL="https://github.com/p11-glue/p11-kit/releases/download/${PKG_VERSION}/${PKG_FILE}"
+MD5="2610cef2951d83d7037577eaae1acb54"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+sed '20,$ d' -i trust/trust-extract-compat
+cat >> trust/trust-extract-compat << "EOF"
+# Copy existing anchor modifications to /etc/ssl/local
+/usr/libexec/make-ca/copy-trust-modifications
+
+# Update trust stores
+/usr/sbin/make-ca -r
+EOF
+
+mkdir p11-build
+cd p11-build
+
+meson setup .. \
+	--prefix=/usr \
+	--buildtype=release \
+	-Dtrust_paths=/etc/tls/trust-source:/tmp/p11kit_trust
+ninja
+ninja install
+ln -sfv pkcs11/p11-kit-trust.so /usr/lib/libnssckbi.so
+xEOFx
+) > tmp

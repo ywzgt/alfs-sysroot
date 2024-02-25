@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo FONT=Lat2-Terminus16 > /etc/vconsole.conf
+
+cat > /etc/vconsole.conf << "EOF"
+KEYMAP=de-latin1
+FONT=Lat2-Terminus16
+EOF
+
+localectl set-keymap MAP
+
+localectl set-x11-keymap LAYOUT [MODEL] [VARIANT] [OPTIONS]
+
