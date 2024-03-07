@@ -26,6 +26,7 @@ cd p11-build
 
 meson setup .. \
 	--prefix=/usr \
+	--libdir=/usr/lib \
 	--buildtype=release \
 	-Dtrust_paths=/etc/tls/trust-source:/tmp/p11kit_trust
 ninja

@@ -75,6 +75,7 @@ cd pacman-build
 
 meson setup --prefix=/usr \
 		--buildtype=release \
+		--libdir=/usr/lib \
 		-Ddoc=disabled \
 		-Ddoxygen=disabled \
 		-Dscriptlet-shell=/usr/bin/bash \

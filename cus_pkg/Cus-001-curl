@@ -11,7 +11,7 @@ for i in PATCH{1..10}; do
 	unset $i
 done
 
-( cat << "xEOFx"
+( cat << xEOFx
 ./configure --prefix=/usr \
             --disable-static \
             --with-openssl \
@@ -26,6 +26,6 @@ find docs \( -name Makefile\* -o  \
              -name \*.1       -o  \
              -name \*.3       -o  \
              -name CMakeLists.txt \) -delete
-cp -v -R docs -T /usr/share/doc/curl-8.2.1
+cp -v -R docs -T /usr/share/doc/curl-${PKG_VERSION}
 xEOFx
 ) > tmp

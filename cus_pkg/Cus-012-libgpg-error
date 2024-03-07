@@ -2,18 +2,17 @@
 # https://linuxfromscratch.org/blfs/view/systemd/general/libgpg-error.html
 
 PKG="libgpg-error"
-PKG_VERSION="1.47"
+PKG_VERSION="1.48"
 PKG_FILE="${PKG}-${PKG_VERSION}.tar.bz2"
 URL="https://www.gnupg.org/ftp/gcrypt/libgpg-error/${PKG_FILE}"
-MD5="58e054ca192a77226c4822bbee1b7fdb"
+MD5="eb171d62d761f49e110b77b747d8a157"
 
 for i in PATCH{1..10}; do
 	unset $i
 done
 
 ( cat << "xEOFx"
-./configure --prefix=/usr \
-		--disable-static
+./configure --prefix=/usr
 make
 make install
 xEOFx
