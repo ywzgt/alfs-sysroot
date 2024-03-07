@@ -1,0 +1,5 @@
+Cloning into '/lfs_build/jhalfs/book-source'...
+Already on 'multilib'
+Your branch is up to date with 'origin/multilib'.
+warning: failed to load external entity "/lfs_build/jhalfs/book-source/chapter08/isl.xml"
+/lfs_build/jhalfs/book-source/chapter08/chapter08.xml:34: element include: XInclude error : could not load /lfs_build/jhalfs/book-source/chapter08/isl.xml, and no fallback was found

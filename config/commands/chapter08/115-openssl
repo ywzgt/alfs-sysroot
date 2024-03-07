@@ -1,0 +1,36 @@
+#!/bin/bash
+
+./config --prefix=/usr         \
+         --openssldir=/etc/ssl \
+         --libdir=lib          \
+         shared                \
+         zlib-dynamic
+
+make
+
+# This block must be edited to suit your needs.
+HARNESS_JOBS=**EDITME$(nproc)EDITME** make test
+# End of editable block.
+
+sed -i '/INSTALL_LIBS/s/libcrypto.a libssl.a//' Makefile
+make MANSUFFIX=ssl install
+
+mv -v /usr/share/doc/openssl /usr/share/doc/openssl-3.2.1
+
+cp -vfr doc/* /usr/share/doc/openssl-3.2.1
+
+make distclean
+
+./config --prefix=/usr         \
+         --openssldir=/etc/ssl \
+         --libdir=lib32        \
+         shared                \
+         zlib-dynamic          \
+         linux-x86
+
+make
+
+make DESTDIR=$PWD/DESTDIR install
+cp -Rv DESTDIR/usr/lib32/* /usr/lib32
+rm -rf DESTDIR
+

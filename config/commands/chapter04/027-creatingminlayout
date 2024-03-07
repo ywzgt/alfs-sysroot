@@ -1,0 +1,17 @@
+#!/bin/bash
+
+mkdir -pv $LFS/{etc,var} $LFS/usr/{bin,lib,sbin}
+
+for i in bin lib sbin; do
+  ln -sv usr/$i $LFS/$i
+done
+
+case $(uname -m) in
+  x86_64) mkdir -pv $LFS/libx32 ;;
+esac
+
+mkdir -pv $LFS/usr/lib32
+ln -sv usr/lib32 $LFS/lib32
+
+mkdir -pv $LFS/tools
+

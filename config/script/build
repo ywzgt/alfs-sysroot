@@ -1,0 +1,226 @@
+#!/bin/bash
+
+git config --global user.name "github-actions"
+git config --global user.email "noreply@github.com"
+git config --global init.defaultbranch main
+git config --global advice.detachedHead false
+MISS_FILES=0
+mk32bit=0
+
+case "$2" in
+	sysv|sysV|sys)
+		INITSYS='sysv'
+		;;
+	x32)
+		INITSYS='sysv'
+		abi=x32
+		;;
+	*)
+		INITSYS='systemd'
+		;;
+esac
+
+_get_sources() {
+	patch -Np1 -i patch/final-sys-optimizationly.patch "configuration.${INITSYS}"
+	git clone 'https://git.linuxfromscratch.org/jhalfs.git' alfs
+	if [ -e 'cus_pkg/Cus-005-ca-certificates' ]; then
+		PKG_VERSION="$(curl -s https://curl.se/docs/caextract.html|awk '/\/ca\/cacert-.*.pem/{print$3}'|head -1|sed 's/^.*cacert-\|.pem.*$\|-//g')"
+		sed -i "/^PKG_VERSION/s/=.*/=\"$PKG_VERSION\"/" cus_pkg/Cus-005-ca-certificates
+	fi
+	unset PKG_VERSION
+	install -Dm644 cus_pkg/Cus* -t alfs/custom/config #sed -i 's/(( i = 4; i < nb_chaps+4; i++ ))/i in 4/' alfs/LFS/master.sh
+	if [[ $abi = x32 || $MABI = x32 ]]; then
+		cp -fv cus_pkg/fakeroot_x32 alfs/custom/config/Cus*fakeroot
+	fi
+	sed "/^N_PARALLEL/s/=.*/=$(nproc --all)/" configuration.${INITSYS} > alfs/configuration
+	sed -e 's|/no (no)||' -e 's|yes/no||' -e 's|read -r ANSWER|ANSWER=yes|' -i alfs/jhalfs
+	sed -e 's|yes/no (no)| (yes)|' -e 's|read ANSWER|ANSWER=yes|' -i alfs/optimize/optimize_functions
+	sed -e '/^all:/s/ck_terminal//' -i alfs/LFS/master.sh
+	sed -e 's|WGETPARAM=""|WGETPARAM="-nv -c "|' -i alfs/common/libs/func_download_pkgs
+	sed -e '/CHROOT_wrt_RemoveBuildDirs "${PKG}"$/a\      CHROOT_wrt_LogNewFiles "${this_script}"' \
+		-e '/CHROOT_Unpack "${PKG_FILE}"$/i\      CHROOT_wrt_TouchTimestamp' \
+		-e '/CHROOT_Unpack "${PKG_FILE}"$/a\      wrt_makeflags "${PKG}" "-j${N_PARALLEL}" "${N_PARALLEL}"\n      wrt_optimize "${PKG}"' \
+		-e '/^`cat tmp`$/a\find /usr ! -type d -name "*.la" -exec rm -f -- "{}" +' -i alfs/common/libs/func_custom_pkgs
+
+	sed -e '/^DEF_OPT_MODE=/c\DEF_OPT_MODE=O2pipe' -e 's/OTHER_CFLAGS/OTHER_CPPFLAGS &/' \
+		-e '/^ACTIVE_OPT_VARS=/s/CFLAGS/CPPFLAGS &/' -i alfs/optimize/opt_config
+	sed -e 's|="-O2.*$|="-march=%MARCH% -mtune=haswell -O2 -pipe -fno-plt -fPIC -ffunction-sections -fdata-sections"|' \
+		-e '/^LDFLAGS/s/=.*$/="-Wl,-O2,--sort-common,--as-needed,-z,relro,-z,now,--gc-sections"/' \
+		-e '/^CXXFLAGS_O2pipe=/s/=.*/="$CFLAGS_O2pipe -Wp,-D_GLIBCXX_ASSERTIONS"/' -i alfs/optimize/opt_config.d/O2pipe
+	sed -e '/^CFLAGS_noOpt=/a\CPPFLAGS_noOpt="unset"' \
+		-e '/^OTHER_CFLAGS_noOpt=/a\OTHER_CPPFLAGS_noOpt="unset"' -i alfs/optimize/opt_config.d/noOpt
+	sed -e '/^gcc/s/noOpt/cusOpt/' -i alfs/optimize/opt_override
+	echo "patch		noOpt" >> alfs/optimize/opt_override  # 防止应用大补丁时报错
+	echo 'CPPFLAGS_O2pipe="-D_FORTIFY_SOURCE=2 -DNDEBUG"' >>alfs/optimize/opt_config.d/O2pipe
+	echo 'OTHER_CPPFLAGS_O2pipe=$CPPFLAGS_O2pipe' >>alfs/optimize/opt_config.d/O2pipe
+	sed -e '/CPPFLAGS/s/-D_FORTIFY_SOURCE=2 //g' -e 's|O2pipe|cusOpt|g' alfs/optimize/opt_config.d/O2pipe > alfs/optimize/opt_config.d/cusOpt
+	sed -e 's/,--gc-sections//g' -e 's|O2pipe|NgcOpt|g' alfs/optimize/opt_config.d/O2pipe > alfs/optimize/opt_config.d/NgcOpt
+	echo "glibc		NgcOpt" >> alfs/optimize/opt_override
+	echo "binutils		cusOpt" >> alfs/optimize/opt_override
+	case "$(uname -m)" in
+		i?86) sed -i "s/%MARCH%/$(uname -m)/" alfs/optimize/opt_config.d/{O2pipe,cusOpt,NgcOpt};;
+		x86_64) sed -i "s/%MARCH%/x86-64-v3/" alfs/optimize/opt_config.d/{O2pipe,cusOpt,NgcOpt};;
+	esac
+	sed -i '/wrt_makeflags "$name" "-j1" "1"/s/1/${N_PARALLEL}/g' alfs/LFS/master.sh  # 临时工具不使用 *FLAGS 时仍使用 MAKEFLAGS 和 ninja jobs
+	#sed -i '/MKF="-j1"\|NJJ="1"/s/1/${N_PARALLEL}/' alfs/optimize/optimize_functions  # 让 alfs/optimize/opt_config 中定义的 BLACK_LIST 失效
+}
+
+_install_dep() {
+	sudo apt-get update >/dev/null 2>&1
+	printf 'Install build depends...\n'
+	sudo apt-get install -y libxml2-utils xsltproc docbook-xml docbook-xsl &>/dev/null   # 504-libxcrypt 删除了, 多库不再需要 $DEPKG (gcc-multilib)
+	printf 'done.\n'
+	local bld_dir="$(grep '^BUILDDIR=' alfs/configuration|sed -e 's/^BUILDDIR=//' -e 's/"//g')"
+	local src_dir="$(grep 'SRC_ARCHIVE=' alfs/configuration|sed -e 's/^SRC_ARCHIVE=//' -e 's/"//g')"
+	sudo mkdir -p "${bld_dir}" "${src_dir}"
+	sudo chown -R $(id -u):$(id -g) "${src_dir}"
+}
+
+_fix_git_repo() {
+	local branch="$(grep '^COMMIT=' alfs/configuration|sed -e 's/^COMMIT=//' -e 's/"//g')"
+	local src_dir="$(grep 'SRC_ARCHIVE=' alfs/configuration|sed -e 's/^SRC_ARCHIVE=//' -e 's/"//g')"
+	git clone 'https://git.linuxfromscratch.org/lfs.git' --depth=1
+	git clone 'https://git.linuxfromscratch.org/lfs.git' repo -b "$branch"
+
+	# 有时源文件版本落后于 git
+	local boot_ver="$(grep 'lfs-bootscripts-version.*[0-9]' lfs/packages.ent|sed 's/[A-Za-z]\|-\|!\|<\|>\|\s\|"//g')"
+	local generic_ver="$(grep generic-version lfs/general.ent|sed -e '/&\|%/d' -e 's/^.*\s"\|">.*$//g')"
+	local format="$(basename `curl -sL linuxfromscratch.org/lfs/view/$generic_ver/wget-list|grep lfs-bootscripts`|sed 's/^.*tar//')"
+	if ! wget -nv $(curl -sL linuxfromscratch.org/lfs/view/$generic_ver/wget-list|grep lfs-bootscripts|sed "s|[0-9].*tar|$boot_ver.tar|") -P "$src_dir" 2>/dev/null
+	then
+		cp -a lfs/bootscripts "lfs-bootscripts-$boot_ver"
+		tar cf "lfs-bootscripts-$boot_ver.tar$format"  "lfs-bootscripts-$boot_ver"
+		cp -v  "lfs-bootscripts-$boot_ver.tar$format" "$src_dir"
+		sed -i "/lfs-bootscripts-md5/s/BOOTSCRIPTS-MD5SUM/$(md5sum lfs-bootscripts-$boot_ver.tar$format|cut -d' ' -f1)/" lfs/packages.ent
+	fi
+
+	# 防止出现编译器内部错误，创建通用库：
+	sed -i 's|./configure --prefix=/usr|cp -v config{fsf,}.guess\ncp -v config{fsf,}.sub\n&|' repo/chapter08/gmp.xml
+
+	[ ! -e repo/chapter08/systemd.xml ] || sed -i '/-Dsysusers=false\s\+\\$/d' repo/chapter08/systemd.xml
+	for i in {packages,patches}.ent chapter03/{packages,patches}.xml; do
+		diff -u {lfs,repo}/$i &>/dev/null || { cp -vf lfs/$i repo/$i; }
+	done
+
+	case "$abi" in x32)
+		test ! -e repo/chapter08/sysvinit.xml || { rm -v repo/chapter08/sysvinit.xml; sed -i '/sysvinit.xml/d' repo/chapter08/chapter08.xml; }
+		for i in {bootscripts,usage}; do
+			test ! -e repo/chapter09/$i.xml || { rm -v repo/chapter09/$i.xml; sed -i "/${i}.xml/d" repo/chapter09/chapter09.xml; }
+		done
+		;;
+	esac
+
+	if [[ $MABI = x32 || $abi = x32 ]]; then
+		sed -i 's/lib64/libx32/g' 	repo/chapter0{5,8}/glibc.xml \
+			repo/chapter07/changingowner.xml \
+			repo/chapter04/{addinguser,creatingminlayout}.xml
+		sed -i 's/ld-linux-x86-64.so.2/ld-linux-x32.so.2/g' repo/chapter05/glibc.xml
+		sed -i '/LFS_TGT=/s/-lfs-linux-gnu/&x32/' repo/chapter04/settingenviron.xml
+		sed -i 's|^./configure --prefix=/usr|ABI=x32 &|' repo/chapter08/gmp.xml
+		sed -e '/--prefix=/a\    --with-abi=x32		\\' -e 's|m64=/s/lib64|mx32=/s/libx32|' -i repo/chapter0{5,6,8}/gcc*.xml
+		if [[ $SEC_ABI = 64 ]]; then
+			sed -i '/mlist=m64,m32/s/m32/mx32/' repo/chapter0{5,6,8}/gcc*.xml
+			sed -i 's/lib32/lib64/g' repo/chapter0{5,8}/glibc.xml \
+				repo/chapter07/changingowner.xml \
+				repo/chapter04/{addinguser,creatingminlayout}.xml
+			sed -i 's/ld-linux.so.2/ld-linux-x86-64.so.2/g' repo/chapter05/glibc.xml
+			sed -i '/{lib-names,stubs}-32.h/s/32/64/' repo/chapter0{5,8}/glibc.xml
+			sed -i '/LFS_TGT32=/s/i686/x86_64/' repo/chapter04/settingenviron.xml
+			sed -i -e '/ABI="32"/s/32/64/;/CFLAGS=/s/-m32/-m64/' \
+				-e 's/-mtune=generic -march=i686/$CFLAGS/' \
+				-e '/i686-pc-linux-gnu/s/i686/x86_64/;s/lib32/lib64/g' \
+				-e '/include\/m32\//s/32/64/g' repo/chapter08/gmp.xml
+			sed -i -e '/C\(C\|XX\)=/s/-m32/-m64/g;/i686-pc-linux-gnu/s/i686/x86_64/' \
+				-e '/\/usr\/lib32/s/32/64/g' -e '/C\(C\|XX\)=/s/-march=i686/$CFLAGS/g' \
+				-e '/C\(\|XX\)FLAGS\(\|+\)=/s/-m32/-m64/g' \
+				-e '/\slib=lib32\s/s/lib32/lib64/' repo/chapter0*/*.xml
+			sed -i '/=lib32/s/32/64/;s/linux-x86/&_64/' repo/chapter08/openssl.xml
+		else
+			sed -i '/mlist=m64,m32/s/64/x32/' repo/chapter0{5,6,8}/gcc*.xml
+		fi
+	fi
+
+	for i in {tcl,expect,dejagnu}; do
+		[ -e repo/chapter08/$i.xml ] || continue
+		rm repo/chapter08/$i.xml
+		sed -i "/$i\.xml/d" repo/chapter08/chapter08.xml
+	done
+	test ! -e repo/chapter08/isl.xml || rm -v repo/chapter08/isl.xml  # isl 非必需，防止gcc 链接 libisl.so.23 (/usr/libexec/gcc/x86_64-pc-linux-gnu/13.1.0/cc1等)
+	test ! -e repo/chapter08/grub.xml || { rm -v repo/chapter08/grub.xml; sed -i '/grub.xml/d' repo/chapter08/chapter08.xml; }
+	test ! -e repo/chapter10/grub.xml || { rm -v repo/chapter10/grub.xml; sed -i '/grub.xml/d' repo/chapter10/chapter10.xml; } # bios
+	test ! "$mk32bit" -eq 1 || sed -i 's|./configure --prefix=/usr|ABI=32 &|' repo/chapter08/gmp.xml
+
+	# temp script
+	if [ -s script/temp.sh ]; then
+		echo "::Running Temp script..."
+		bash -e script/temp.sh
+	fi
+
+	(cd repo; git add .; git commit -m 'fix git repo') >/dev/null 2>&1 || echo '::The git repo No change.'
+	sed -i "s|https://git.linuxfromscratch.org/lfs.git|file://$PWD/repo|" alfs/jhalfs
+}
+
+_fix_error(){
+	local src_dir="$(grep 'SRC_ARCHIVE=' alfs/configuration|sed -e 's/^SRC_ARCHIVE=//' -e 's/"//g')"
+#  	echo -e "\nDownload MISSING FILES..."; wget -cP "${src_dir}" -nv https://www.linuxfromscratch.org/patches/downloads/kbd/kbd-2.5.1-backspace-1.patch
+}
+
+_docmd() {
+	[ ! "$MISS_FILES" -eq 1 ] || _fix_error
+	pushd alfs >/dev/null
+	sed 's/\(NCURSES5\)=y/# \1 is not set/' -i configuration
+	./jhalfs run || _failed
+	popd >/dev/null
+}
+
+_failed() {
+		echo "::::Build failed!"
+		export TZ='Asia/Shanghai'
+		local bld_dir="$(grep '^BUILDDIR=' configuration|sed -e 's/^BUILDDIR=//' -e 's/"//g')"
+		cd ..; if [ -e "ENV" ]; then . "ENV"; fi
+		local job="${GITHUB_JOB#build}"
+		local branch="failed_$(date +%Y%m%d-%H%M)_job-${job#-}"
+		local miss_file="${bld_dir}/sources/MISSING_FILES.DMP" mk_file="${bld_dir}/jhalfs/Makefile"
+		git rm -rf . >/dev/null; find "${bld_dir}/sources" -name "$(basename ${miss_file})" -empty -delete || true
+		cp -a "${bld_dir}/jhalfs/"{logs,installed-files,lfs-commands} . || true
+		if [ -e "${miss_file}" ]; then cp "${miss_file}" .; git add "$(basename ${miss_file})"; fi
+		if [ -e "${mk_file}" ]; then cp "${mk_file}" .; git add Makefile; fi
+		git add logs installed-files lfs-commands || true
+		git commit -m "build failed" >/dev/null
+		git checkout --orphan new_tag
+		git commit -m "build failed, $(date|sed -e 's/2[0-9]\+$//' -e 's/CST//')"
+		git branch -m "$branch"
+		git push origin "$branch" || git push origin "$branch" --force
+		echo "::::Upload log completed!"; exit 123
+}
+
+case "$1" in
+	64bit|64)
+		_get_sources; printf '\n'; _install_dep; printf '\n'; _fix_git_repo; _docmd
+		;;
+	failed) _failed
+		;;
+	m32|i?86)
+		patch -Np1 -i patch/multilib-32.patch "configuration.${INITSYS}"
+		ML=m32
+		_get_sources; printf '\n'; _install_dep; printf '\n'; _fix_git_repo; _docmd
+		echo "ml=\"-m32\"" >ENV
+		;;
+	multilib|ml-all)
+		patch -Np1 -i patch/multilib-all.patch "configuration.${INITSYS}"
+		ML=all
+		_get_sources; printf '\n'; _install_dep; printf '\n'; _fix_git_repo; _docmd
+		echo "ml=\"-multilib\"" >ENV
+		;;
+	x32m64|x32m32)
+		patch -Np1 -i patch/multilib-32.patch "configuration.${INITSYS}"
+		ML=x MABI=x32 SEC_ABI=${1#x32m}
+		_get_sources; printf '\n'; _install_dep; printf '\n'; _fix_git_repo; _docmd
+		echo "ml=\"$1\"" >ENV
+		;;
+	32bit|32)
+		mk32bit=1
+		_get_sources; printf '\n'; _install_dep; printf '\n'; _fix_git_repo; _docmd
+		echo "ml=\"-32bit\"" >ENV
+		;;
+esac

@@ -1,0 +1,2010 @@
+Fri Mar  8 00:33:38 CST 2024
+tar: stdout: write error
+KB: 2782360	/
+The Meson build system
+Version: 1.3.2
+Source dir: /sources/systemd-255
+Build dir: /sources/systemd-255/build
+Build type: native build
+Project name: systemd
+Project version: 255
+C compiler for the host machine: cc (gcc 13.2.0 "cc (GCC) 13.2.0")
+C linker for the host machine: cc ld.bfd 2.42
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Program tools/add-git-hook.sh found: YES (/sources/systemd-255/tools/add-git-hook.sh)
+Program tools/meson-build.sh found: YES (/sources/systemd-255/tools/meson-build.sh)
+C++ compiler for the host machine: c++ (gcc 13.2.0 "c++ (GCC) 13.2.0")
+C++ linker for the host machine: c++ ld.bfd 2.42
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -Warray-bounds: YES 
+Compiler for C supports arguments -Warray-bounds=2: YES 
+Compiler for C supports arguments -Wdate-time: YES 
+Compiler for C supports arguments -Wendif-labels: YES 
+Compiler for C supports arguments -Werror=format=2: YES 
+Compiler for C supports arguments -Werror=format-signedness: YES 
+Compiler for C supports arguments -Werror=implicit-function-declaration: YES 
+Compiler for C supports arguments -Werror=implicit-int: YES 
+Compiler for C supports arguments -Werror=incompatible-pointer-types: YES 
+Compiler for C supports arguments -Werror=int-conversion: YES 
+Compiler for C supports arguments -Werror=missing-declarations: YES 
+Compiler for C supports arguments -Werror=missing-prototypes: YES 
+Compiler for C supports arguments -Werror=overflow: YES 
+Compiler for C supports arguments -Werror=override-init: YES 
+Compiler for C supports arguments -Werror=return-type: YES 
+Compiler for C supports arguments -Werror=shift-count-overflow: YES 
+Compiler for C supports arguments -Werror=shift-overflow=2: YES 
+Compiler for C supports arguments -Werror=strict-flex-arrays: YES 
+Compiler for C supports arguments -Werror=undef: YES 
+Compiler for C supports arguments -Wfloat-equal: YES 
+Compiler for C supports arguments -Wimplicit-fallthrough=5: YES 
+Compiler for C supports arguments -Winit-self: YES 
+Compiler for C supports arguments -Wlogical-op: YES 
+Compiler for C supports arguments -Wmissing-include-dirs: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wredundant-decls: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wstrict-aliasing=2: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wsuggest-attribute=noreturn: YES 
+Compiler for C supports arguments -Wunused-function: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C supports arguments -Wzero-length-bounds: YES 
+Compiler for C supports arguments -Wno-error=#warnings: NO 
+Compiler for C supports arguments -Wno-string-plus-int: NO 
+Compiler for C supports arguments -fdiagnostics-show-option: YES 
+Compiler for C supports arguments -fno-common: YES 
+Compiler for C supports arguments -fstack-protector: YES 
+Compiler for C supports arguments -fstack-protector-strong: YES 
+Compiler for C supports arguments -fstrict-flex-arrays: YES 
+Compiler for C supports arguments --param=ssp-buffer-size=4: YES 
+Compiler for C supports arguments -Wno-maybe-uninitialized: YES 
+Compiler for C supports arguments -Wno-unused-result: YES 
+Compiler for C supports arguments -ftrivial-auto-var-init=zero: YES 
+Compiler for C supports link arguments -fstack-protector: YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -fstrict-flex-arrays=1: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Compiler for C supports arguments -ffunction-sections: YES 
+Compiler for C supports arguments -fdata-sections: YES 
+Compiler for C supports link arguments -Wl,--fatal-warnings: YES 
+Compiler for C supports link arguments -Wl,-z,now: YES 
+Compiler for C supports link arguments -Wl,-z,relro: YES 
+Compiler for C supports link arguments -Wl,--warn-common: YES 
+Compiler for C supports link arguments -Wl,--gc-sections: YES 
+Compiler for C supports arguments -Wzero-length-bounds: YES (cached)
+Checking if "-Werror=shadow with local shadowing" compiles: YES 
+Compiler for C++ supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C++ supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -Wstringop-truncation: YES 
+Checking for size of "dev_t" : 8 
+Checking for size of "ino_t" : 8 
+Checking for size of "rlim_t" : 8 
+Checking for size of "time_t" : 8 
+Checking for size of "typeof(((struct timex *)0)->freq)" : 8 
+Computing int of "LONG_MAX" : 2147483647
+Checking for size of "char16_t" : 2 
+Checking for size of "char32_t" : 4 
+Checking for size of "struct mount_attr" : 32 
+Checking for size of "struct statx" : 256 
+Checking for size of "struct dirent64" : 280 
+Checking for function "secure_getenv" : YES 
+Checking for function "__secure_getenv" : NO 
+Checking for function "memfd_create" : YES 
+Checking for function "gettid" : YES 
+Checking for function "fchmodat2" : NO 
+Checking for function "pivot_root" : NO 
+Checking for function "ioprio_get" : NO 
+Checking for function "ioprio_set" : NO 
+Checking for function "name_to_handle_at" : YES 
+Checking for function "setns" : YES 
+Checking for function "renameat2" : YES 
+Checking for function "kcmp" : NO 
+Checking for function "keyctl" : NO 
+Checking for function "copy_file_range" : YES 
+Checking for function "bpf" : NO 
+Checking for function "statx" : YES 
+Checking for function "explicit_bzero" : YES 
+Checking for function "reallocarray" : YES 
+Checking for function "set_mempolicy" : NO 
+Checking for function "get_mempolicy" : NO 
+Checking for function "pidfd_send_signal" : NO 
+Checking for function "pidfd_open" : NO 
+Checking for function "rt_sigqueueinfo" : NO 
+Checking for function "rt_tgsigqueueinfo" : NO 
+Checking for function "mallinfo" : YES 
+Checking for function "mallinfo2" : YES 
+Checking for function "execveat" : YES 
+Checking for function "close_range" : YES 
+Checking for function "epoll_pwait2" : YES 
+Checking for function "mount_setattr" : YES 
+Checking for function "move_mount" : YES 
+Checking for function "open_tree" : YES 
+Checking for function "fsopen" : YES 
+Checking for function "fsconfig" : YES 
+Checking for function "fsmount" : YES 
+Checking for function "getdents64" : YES 
+Checking for function "getrandom" : YES 
+Program sh found: YES (/usr/bin/sh)
+Program echo found: YES (/usr/bin/echo)
+Program sed found: YES (/usr/bin/sed)
+Program awk found: YES (/usr/bin/awk)
+Program stat found: YES (/usr/bin/stat)
+Program ln found: YES (/usr/bin/ln)
+Program git found: NO
+Program env found: YES (/usr/bin/env)
+Program rsync found: NO
+Program diff found: YES (/usr/bin/diff)
+Program find found: YES (/usr/bin/find)
+Program quotaon /usr/sbin/quotaon /sbin/quotaon found: NO
+Program quotacheck /usr/sbin/quotacheck /sbin/quotacheck found: NO
+Program kmod found: YES (/usr/bin/kmod)
+Program kexec /usr/sbin/kexec /sbin/kexec found: NO
+Program sulogin /usr/sbin/sulogin /sbin/sulogin found: NO
+Program mount found: YES (/usr/bin/mount)
+Program umount found: YES (/usr/bin/umount)
+Program loadkeys found: YES (/usr/bin/loadkeys)
+Program setfont found: YES (/usr/bin/setfont)
+Program nologin found: YES (/usr/sbin/nologin)
+Program gperf found: YES (/usr/bin/gperf)
+Message: gperf len type is size_t
+Has header "sys/capability.h" : YES 
+Has header "crypt.h" : YES 
+Has header "linux/memfd.h" : YES 
+Has header "linux/vm_sockets.h" : YES 
+Has header "sys/auxv.h" : YES 
+Has header "threads.h" : YES 
+Has header "valgrind/memcheck.h" : NO 
+Has header "valgrind/valgrind.h" : NO 
+Has header "linux/time_types.h" : YES 
+Has header "sys/sdt.h" : NO 
+../meson.build:880: WARNING: 
+The local group with the GID 65534 does not match the configured group name "nobody" of the nobody group (its name is nogroup).
+Your build will result in an group table setup that is incompatible with the local system.
+Run-time dependency threads found: YES
+Library rt found: YES
+Library m found: YES
+Library dl found: YES
+Found pkg-config: YES (/usr/bin/pkg-config) 2.1.1
+Run-time dependency libcrypt found: YES 4.4.36
+Run-time dependency libcap found: YES 2.69
+Checking if "libatomic" : links: YES 
+Checking for function "crypt_ra" with dependency libcrypt: YES 
+Checking for function "crypt_preferred_method" with dependency libcrypt: YES 
+Checking for function "crypt_gensalt_ra" with dependency libcrypt: YES 
+Did not find CMake 'cmake'
+Found CMake: NO
+Run-time dependency libbpf found: NO (tried pkgconfig and cmake)
+Run-time dependency mount found: YES 2.39.3
+Run-time dependency fdisk found: YES 2.39.3
+Run-time dependency pwquality found: NO (tried pkgconfig and cmake)
+Run-time dependency passwdqc found: NO (tried pkgconfig and cmake)
+Run-time dependency libseccomp found: NO (tried pkgconfig and cmake)
+Run-time dependency libselinux found: NO (tried pkgconfig and cmake)
+Run-time dependency libapparmor found: NO (tried pkgconfig and cmake)
+Run-time dependency polkit-gobject-1 found: NO (tried pkgconfig and cmake)
+Run-time dependency libacl found: YES 2.3.2
+Run-time dependency audit found: NO (tried pkgconfig and cmake)
+Run-time dependency blkid found: YES 2.39.3
+Checking for function "blkid_probe_set_hint" with dependency blkid: YES 
+Run-time dependency libkmod found: YES 31
+Run-time dependency xencontrol found: NO (tried pkgconfig and cmake)
+Run-time dependency pam found: NO (tried pkgconfig and cmake)
+Library pam found: NO
+Run-time dependency pam_misc found: NO (tried pkgconfig and cmake)
+Library pam_misc found: NO
+Run-time dependency libmicrohttpd found: NO (tried pkgconfig and cmake)
+Run-time dependency libcryptsetup found: NO (tried pkgconfig and cmake)
+Checking for function "crypt_activate_by_token_pin" with dependency libcryptsetup: NO 
+Run-time dependency libcurl found: NO (tried pkgconfig and cmake)
+Run-time dependency libidn2 found: NO (tried pkgconfig and cmake)
+Run-time dependency libidn found: NO (tried pkgconfig and cmake)
+Run-time dependency libiptc found: NO (tried pkgconfig and cmake)
+Run-time dependency libqrencode found: NO (tried pkgconfig and cmake)
+libgcrypt-config found: NO
+Run-time dependency libgcrypt found: NO (tried pkgconfig and config-tool)
+Run-time dependency gpg-error found: NO (tried pkgconfig and cmake)
+Library gpg-error found: NO
+Run-time dependency gnutls found: NO (tried pkgconfig and cmake)
+Run-time dependency openssl found: YES 3.2.1
+Run-time dependency p11-kit-1 found: NO (tried pkgconfig and cmake)
+Run-time dependency libfido2 found: NO (tried pkgconfig and cmake)
+Run-time dependency tss2-esys tss2-rc tss2-mu tss2-tcti-device found: NO (tried pkgconfig and cmake)
+Run-time dependency libdw found: NO (tried pkgconfig and cmake)
+Run-time dependency zlib found: YES 1.3.1
+Run-time dependency bzip2 found: NO (tried pkgconfig and cmake)
+Library bz2 found: YES
+Run-time dependency liblzma found: YES 5.6.0
+Run-time dependency liblz4 found: NO (tried pkgconfig and cmake)
+Run-time dependency libzstd found: YES 1.5.5
+Run-time dependency xkbcommon found: NO (tried pkgconfig and cmake)
+Run-time dependency libpcre2-8 found: NO (tried pkgconfig and cmake)
+Run-time dependency glib-2.0 found: NO (tried pkgconfig and cmake)
+Run-time dependency gobject-2.0 found: NO (tried pkgconfig and cmake)
+Run-time dependency gio-2.0 found: NO (tried pkgconfig and cmake)
+Run-time dependency dbus-1 found: NO (tried pkgconfig and cmake)
+Program python3 (jinja2) found: YES (/usr/bin/python3) modules: jinja2
+Program python3 (elftools) found: NO
+Program tools/check-version-history.py found: YES (/usr/bin/python3.12 /sources/systemd-255/tools/check-version-history.py)
+Program tools/elf2efi.py found: YES (/sources/systemd-255/tools/elf2efi.py)
+Program tools/dbus_exporter.py found: YES (/sources/systemd-255/tools/dbus_exporter.py)
+Program tools/generate-gperfs.py found: YES (/sources/systemd-255/tools/generate-gperfs.py)
+Program tools/make-autosuspend-rules.py found: YES (/sources/systemd-255/tools/make-autosuspend-rules.py)
+Program tools/make-directive-index.py found: YES (/sources/systemd-255/tools/make-directive-index.py)
+Program tools/sync-docs.py found: YES (/sources/systemd-255/tools/sync-docs.py)
+Program tools/make-man-index.py found: YES (/sources/systemd-255/tools/make-man-index.py)
+Program tools/meson-render-jinja2.py found: YES (/sources/systemd-255/tools/meson-render-jinja2.py)
+Program tools/update-dbus-docs.py found: YES (/sources/systemd-255/tools/update-dbus-docs.py)
+Program tools/update-hwdb-autosuspend.sh found: YES (/sources/systemd-255/tools/update-hwdb-autosuspend.sh)
+Program tools/update-hwdb.sh found: YES (/sources/systemd-255/tools/update-hwdb.sh)
+Program tools/update-man-rules.py found: YES (/sources/systemd-255/tools/update-man-rules.py)
+Program tools/update-syscall-tables.sh found: YES (/sources/systemd-255/tools/update-syscall-tables.sh)
+Program tools/xml_helper.py found: YES (/sources/systemd-255/tools/xml_helper.py)
+Configuring config.h using configuration
+Program msgfmt found: YES (/usr/bin/msgfmt)
+Program msginit found: YES (/usr/bin/msginit)
+Program msgmerge found: YES (/usr/bin/msgmerge)
+Program xgettext found: YES (/usr/bin/xgettext)
+Program generate-af-list.sh found: YES (/sources/systemd-255/src/basic/generate-af-list.sh)
+Program generate-arphrd-list.sh found: YES (/sources/systemd-255/src/basic/generate-arphrd-list.sh)
+Program generate-cap-list.sh found: YES (/sources/systemd-255/src/basic/generate-cap-list.sh)
+Program generate-errno-list.sh found: YES (/sources/systemd-255/src/basic/generate-errno-list.sh)
+Program missing_syscalls.py found: YES (/usr/bin/python3.12 /sources/systemd-255/src/basic/missing_syscalls.py)
+Program check-filesystems.sh found: YES (/sources/systemd-255/src/basic/check-filesystems.sh)
+Program generate-filesystem-list.py found: YES (/sources/systemd-255/src/basic/generate-filesystem-list.py)
+Program generate-filesystem-switch-case.py found: YES (/sources/systemd-255/src/basic/generate-filesystem-switch-case.py)
+Program sd-journal/generate-audit_type-list.sh found: YES (/sources/systemd-255/src/libsystemd/sd-journal/generate-audit_type-list.sh)
+Program generate-syscall-list.py found: YES (/sources/systemd-255/src/shared/generate-syscall-list.py)
+Program generate-ip-protocol-list.sh found: YES (/sources/systemd-255/src/shared/generate-ip-protocol-list.sh)
+Program generate-keyboard-keys-list.sh found: YES (/sources/systemd-255/src/udev/generate-keyboard-keys-list.sh)
+Program generate-keyboard-keys-gperf.sh found: YES (/sources/systemd-255/src/udev/generate-keyboard-keys-gperf.sh)
+Program test-kernel-install.sh found: YES (/sources/systemd-255/src/kernel-install/test-kernel-install.sh)
+Program generate-dns_type-gperf.py found: YES (/sources/systemd-255/src/resolve/generate-dns_type-gperf.py)
+Compiler for C supports arguments -std=iso9899:2017: YES 
+Compiler for C supports arguments -std=c2x: YES 
+Compiler for C++ supports arguments -std=c++14: YES 
+Compiler for C++ supports arguments -std=c++17: YES 
+Compiler for C++ supports arguments -std=c++20: YES 
+Compiler for C++ supports arguments -std=c++23: YES 
+Program generate-sym-test.py found: YES (/sources/systemd-255/src/test/generate-sym-test.py)
+Program python3 (pytest_flakes) found: NO
+Program generate-directives.py found: YES (/usr/bin/python3.12 /sources/systemd-255/test/fuzz/generate-directives.py)
+Message: network/test-acd is a manual test
+Message: network/test-ipv4ll-manual is a manual test
+Message: udev/test-udev-rule-runner is a manual test
+Message: coredump/test-coredump-vacuum is a manual test
+Message: import/test-qcow2 is a manual test
+Message: login/test-inhibit is a manual test
+Message: login/test-session-properties is a manual test
+Message: nspawn/test-patch-uid is a manual test
+Message: resolve/test-dnssec-complex is a manual test
+Message: test/test-ask-password-api is a manual test
+Message: test/test-btrfs is a manual test
+Message: test/test-btrfs-physical-offset is a manual test
+Message: test/test-chase-manual is a manual test
+Message: test/test-dlopen is a manual test
+Message: test/test-ipcrm is an unsafe test
+Message: test/test-netlink-manual is a manual test
+Message: test/test-nft-set is a manual test
+Message: test/test-nscd-flush is a manual test
+Message: test/test-watchdog is an unsafe test
+Message: core/test-install is a manual test
+Message: core/test-ns is a manual test
+Message: libsystemd/test-bus-benchmark is a manual test
+Message: libsystemd/test-journal-append is a manual test
+Configuring test-sysusers.sh using configuration
+Program hwdb-test.sh found: YES (/sources/systemd-255/test/hwdb-test.sh)
+Program test-systemctl-enable.sh found: YES (/usr/bin/env bash /sources/systemd-255/test/test-systemctl-enable.sh)
+Program sysv-generator-test.py found: YES (/sources/systemd-255/test/sysv-generator-test.py)
+Program test-bootctl-json.sh found: YES (/sources/systemd-255/test/test-bootctl-json.sh)
+Program test-systemd-tmpfiles.py found: YES (/sources/systemd-255/test/test-systemd-tmpfiles.py)
+Program rule-syntax-check.py found: YES (/sources/systemd-255/test/rule-syntax-check.py)
+Program test-fstab-generator.sh found: YES (/sources/systemd-255/test/test-fstab-generator.sh)
+Program test-network-generator-conversion.sh found: YES (/sources/systemd-255/test/test-network-generator-conversion.sh)
+Program rpm found: NO
+Program rpmspec found: NO
+Program test-rpm-macros.sh found: YES (/sources/systemd-255/test/test-rpm-macros.sh)
+Message: Skipping test-rpm-macros since rpm and/or rpmspec are not available
+Program udev-dmi-memory-id-test.sh found: YES (/sources/systemd-255/test/udev-dmi-memory-id-test.sh)
+Program parse_hwdb.py found: YES (/sources/systemd-255/hwdb.d/parse_hwdb.py)
+Program xsltproc found: NO
+Message: Skipping bootctl.1 because ENABLE_BOOTLOADER is false
+Message: Skipping crypttab.5 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping homectl.1 because ENABLE_HOMED is false
+Message: Skipping homed.conf.5 because ENABLE_HOMED is false
+Message: Skipping integritytab.5 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping journal-remote.conf.5 because HAVE_MICROHTTPD is false
+Message: Skipping journal-upload.conf.5 because HAVE_MICROHTTPD is false
+Message: Skipping loader.conf.5 because ENABLE_BOOTLOADER is false
+Message: Skipping loginctl.1 because ENABLE_LOGIND is false
+Message: Skipping logind.conf.5 because ENABLE_LOGIND is false
+Message: Skipping org.freedesktop.home1.5 because ENABLE_HOMED is false
+Message: Skipping org.freedesktop.import1.5 because ENABLE_IMPORTD is false
+Message: Skipping org.freedesktop.login1.5 because ENABLE_LOGIND is false
+Message: Skipping pam_systemd.8 because HAVE_PAM is false
+Message: Skipping pam_systemd_home.8 because ENABLE_PAM_HOME is false
+Message: Skipping pam_systemd_loadkey.8 because HAVE_PAM is false
+Message: Skipping sd-login.3 because HAVE_PAM is false
+Message: Skipping sd_get_seats.3 because HAVE_PAM is false
+Message: Skipping sd_login_monitor_new.3 because HAVE_PAM is false
+Message: Skipping sd_pid_get_owner_uid.3 because HAVE_PAM is false
+Message: Skipping sd_seat_get_active.3 because HAVE_PAM is false
+Message: Skipping sd_session_is_active.3 because HAVE_PAM is false
+Message: Skipping sd_uid_get_state.3 because HAVE_PAM is false
+Message: Skipping systemd-bless-boot-generator.8 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-bless-boot.service.8 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-boot-random-seed.service.8 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-boot.7 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-bsod.service.8 because HAVE_QRENCODE is false
+Message: Skipping systemd-cryptenroll.1 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-cryptsetup-generator.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-cryptsetup.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-homed.service.8 because ENABLE_HOMED is false
+Message: Skipping systemd-importd.service.8 because ENABLE_IMPORTD is false
+Message: Skipping systemd-integritysetup-generator.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-integritysetup@.service.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-journal-gatewayd.service.8 because HAVE_MICROHTTPD is false
+Message: Skipping systemd-journal-remote.service.8 because HAVE_MICROHTTPD is false
+Message: Skipping systemd-journal-upload.service.8 because HAVE_MICROHTTPD is false
+Message: Skipping systemd-logind.service.8 because ENABLE_LOGIND is false
+Message: Skipping systemd-measure.1 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-pcrlock.8 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-pcrphase.service.8 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-stub.7 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-tpm2-setup.service.8 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-user-sessions.service.8 because HAVE_PAM is false
+Message: Skipping systemd-vconsole-setup.service.8 because ENABLE_VCONSOLE is false
+Message: Skipping systemd-veritysetup-generator.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-veritysetup@.service.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-vmspawn.1 because ENABLE_VMSPAWN is false
+Message: Skipping vconsole.conf.5 because ENABLE_VCONSOLE is false
+Message: Skipping veritytab.5 because HAVE_LIBCRYPTSETUP is false
+Message: python-lxml not available, not making man page indices
+Configuring man using configuration
+Configuring html using configuration
+Run-time dependency bash-completion found: NO (tried pkgconfig and cmake)
+Checking for size of "long" : 4 
+Message: Not installing tmpfiles.d/systemd-nologin.conf because HAVE_PAM is 0
+Program jekyll found: NO
+Program tools/check-help.sh found: YES (/sources/systemd-255/tools/check-help.sh)
+Program tools/check-version.sh found: YES (/sources/systemd-255/tools/check-version.sh)
+Compiler for C supports link arguments -fsanitize=address,undefined: YES 
+Message: Not compiling fuzz-network-parser:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-netdev-parser:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-link-parser:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-unit-file:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-bootspec:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-bus-match:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-bus-message:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-calendarspec:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-catalog:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-dhcp-client:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-dhcp-server-relay:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-dhcp-server:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-dhcp6-client:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-dns-packet:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-env-file:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-etc-hosts:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-execute-serialize:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-fido-id-desc:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-journal-remote:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-journald-audit:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-journald-kmsg:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-journald-native-fd:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-journald-stream:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-journald-syslog:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-json:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-lldp-rx:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-manager-serialize:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-ndisc-rs:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-nspawn-oci:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-nspawn-settings:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-resource-record:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-systemctl-parse-argv:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-udev-database:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-udev-rules:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-varlink-idl:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-varlink:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-xdg-desktop:address,undefined because fuzz-tests is set to false
+Program tools/check-api-docs.sh found: YES (/sources/systemd-255/tools/check-api-docs.sh)
+Build targets in project: 779
+
+systemd 255
+
+    build mode                     : release
+    split bin-sbin                 : true
+    prefix directory               : /usr
+    sysconf directory              : /etc
+    include directory              : /usr/include
+    lib directory                  : /usr/lib
+    SysV init scripts              : /etc/init.d
+    SysV rc?.d directories         : /etc/rc.d
+    PAM modules directory          : /usr/lib/security
+    PAM configuration directory    : /usr/lib/pam.d
+    libcryptsetup plugins directory: /usr/lib/cryptsetup
+    RPM macros directory           : /usr/lib/rpm/macros.d
+    modprobe.d directory           : /usr/lib/modprobe.d
+    D-Bus policy directory         : /usr/share/dbus-1/system.d
+    D-Bus session directory        : /usr/share/dbus-1/services
+    D-Bus system directory         : /usr/share/dbus-1/system-services
+    D-Bus interfaces directory     : /usr/share/dbus-1/interfaces
+    bash completions directory     : /usr/share/bash-completion/completions
+    zsh completions directory      : /usr/share/zsh/site-functions
+    private shared lib version tag : 255
+    extra start script             : /etc/rc.local
+    debug shell                    : /usr/bin/sh @ /dev/tty9
+    system UIDs                    : <=999 (alloc >=101)
+    system GIDs                    : <=999 (alloc >=101)
+    dynamic UIDs                   : 61184…65519
+    container UID bases            : 524288…1878982656
+    static UID/GID allocations     : tty-gid:5
+    /dev/kvm access mode           : 0660
+    render group access mode       : 0666
+    certificate root directory     : /etc/ssl
+    support URL                    : https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+    nobody user name               : nobody
+    nobody group name              : nobody
+    fallback hostname              : localhost
+    default compression method     : zstd
+    default DNSSEC mode            : allow-downgrade
+    default DNS-over-TLS mode      : no
+    default mDNS mode              : yes
+    default LLMNR mode             : yes
+    default DNS servers            : 1.1.1.1#cloudflare-dns.com
+                                     8.8.8.8#dns.google
+                                     1.0.0.1#cloudflare-dns.com
+                                     8.8.4.4#dns.google
+                                     2606:4700:4700::1111#cloudflare-dns.com
+                                     2001:4860:4860::8888#dns.google
+                                     2606:4700:4700::1001#cloudflare-dns.com
+                                     2001:4860:4860::8844#dns.google
+    default NTP servers            : time1.google.com
+                                     time2.google.com
+                                     time3.google.com
+                                     time4.google.com
+    default cgroup hierarchy       : unified
+    default net.naming-scheme value: latest
+    default KillUserProcesses value: true
+    default locale                 : C.UTF-8
+    default nspawn locale          : C.UTF-8
+    default status unit format     : description
+    default user $PATH             : (same as system services)
+    systemd service watchdog       : 3min
+    time epoch                     : 1701894760 (2023-12-06T20:32:40+00:00)
+
+  Features
+    enabled                        : ACL, IMA, SMACK, blkid, libfdisk, openssl, zstd, xz, zlib, bzip2, backlight, binfmt, coredump, efi, environment.d, firstboot, hibernate, hostnamed, hwdb, initrd, kernel-install, localed, machined, networkd, nss-myhostname, nss-mymachines, nss-resolve, nss-systemd, oomd, portabled, pstore, quotacheck, randomseed, repart, resolve, rfkill, sysext, systemd-analyze, sysupdate, sysusers, storagetm, timedated, timesyncd, tmpfiles, userdb, xdg-autostart, dmi, idn, polkit, nscd, kmod, tpm, SysV compat, utmp, ldconfig, adm group, wheel group, gshadow, link-systemctl-shared, link-networkd-shared, link-timesyncd-shared, link-journalctl-shared, link-boot-shared, link-portabled-shared, cryptolib(openssl), DNS-over-TLS(openssl)
+    disabled                       : AUDIT, AppArmor, PAM, SECCOMP, SELinux, elfutils, gcrypt, gnutls, libbpf, libcryptsetup, libcryptsetup-plugins, libcurl, libfido2, libidn, libidn2, libiptc, microhttpd, p11kit, passwdqc, pcre2, pwquality, qrencode, tpm2, xkbcommon, lz4, bootloader, bpf-framework, homed, importd, logind, vconsole, vmspawn, legacy-pkla, xenctrl, dbus, glib, man pages, html pages, man page indices, compat-mutable-uid-boundaries, debug hashmap, debug mmap cache, debug siphash, trace logging, slow tests, fuzz tests, install tests, link-udev-shared, first-boot-full-preset, fexecve, standalone-binaries, coverage, static-libsystemd, static-libudev
+
+  User defined options
+    buildtype                      : release
+    prefix                         : /usr
+    dev-kvm-mode                   : 0660
+    link-udev-shared               : false
+    logind                         : false
+    mode                           : release
+    vconsole                       : false
+
+Found ninja-1.11.1 at /usr/bin/ninja
+[1/475] Generating version.h with a custom command
+[2/475] Generating src/basic/cap-list.txt with a custom command (wrapped by meson to capture output)
+[3/475] Generating src/basic/af-list.txt with a custom command (wrapped by meson to capture output)
+[4/475] Generating src/basic/arphrd-list.txt with a custom command (wrapped by meson to capture output)
+[5/475] Generating src/basic/errno-list.txt with a custom command (wrapped by meson to capture output)
+[6/475] Generating src/basic/cap-from-name.gperf with a custom command (wrapped by meson to capture output)
+[7/475] Generating src/basic/af-to-name.h with a custom command (wrapped by meson to capture output)
+[8/475] Generating src/basic/af-from-name.gperf with a custom command (wrapped by meson to capture output)
+[9/475] Generating src/basic/arphrd-to-name.h with a custom command (wrapped by meson to capture output)
+[10/475] Generating src/basic/cap-from-name.h with a custom command (wrapped by meson to capture output)
+[11/475] Generating src/basic/arphrd-from-name.gperf with a custom command (wrapped by meson to capture output)
+[12/475] Generating src/basic/af-from-name.h with a custom command (wrapped by meson to capture output)
+[13/475] Generating src/basic/cap-to-name.h with a custom command (wrapped by meson to capture output)
+[14/475] Generating src/basic/filesystems-gperf.h with a custom command
+[15/475] Generating src/basic/arphrd-from-name.h with a custom command (wrapped by meson to capture output)
+[16/475] Generating src/basic/errno-to-name.h with a custom command (wrapped by meson to capture output)
+[17/475] Generating src/basic/errno-from-name.gperf with a custom command (wrapped by meson to capture output)
+[18/475] Generating src/basic/filesystem-list.h with a custom command (wrapped by meson to capture output)
+[19/475] Generating src/basic/filesystem-switch-case.h with a custom command (wrapped by meson to capture output)
+[20/475] Generating src/basic/errno-from-name.h with a custom command (wrapped by meson to capture output)
+[21/475] Compiling C object src/basic/libbasic.a.p/MurmurHash2.c.o
+[22/475] Generating src/shared/ip-protocol-list.txt with a custom command (wrapped by meson to capture output)
+[23/475] Generating src/libsystemd/audit_type-list.txt with a custom command (wrapped by meson to capture output)
+[24/475] Compiling C object src/basic/libbasic.a.p/af-list.c.o
+[25/475] Compiling C object src/basic/libbasic.a.p/architecture.c.o
+[26/475] Compiling C object src/basic/libbasic.a.p/alloc-util.c.o
+[27/475] Compiling C object src/basic/libbasic-compress.a.p/compress.c.o
+[28/475] Compiling C object src/basic/libbasic.a.p/arphrd-util.c.o
+[29/475] Compiling C object src/basic/libbasic.a.p/argv-util.c.o
+[30/475] Compiling C object src/basic/libbasic.a.p/audit-util.c.o
+[31/475] Compiling C object src/basic/libbasic.a.p/build.c.o
+[32/475] Compiling C object src/basic/libbasic.a.p/btrfs.c.o
+[33/475] Compiling C object src/basic/libbasic.a.p/bus-label.c.o
+[34/475] Compiling C object src/basic/libbasic.a.p/cap-list.c.o
+[35/475] Compiling C object src/basic/libbasic.a.p/chattr-util.c.o
+[36/475] Compiling C object src/basic/libbasic.a.p/capability-util.c.o
+[37/475] Compiling C object src/basic/libbasic.a.p/confidential-virt.c.o
+[38/475] Compiling C object src/basic/libbasic.a.p/conf-files.c.o
+[39/475] Compiling C object src/basic/libbasic.a.p/chase.c.o
+[40/475] Compiling C object src/basic/libbasic.a.p/devnum-util.c.o
+[41/475] Compiling C object src/basic/libbasic.a.p/dirent-util.c.o
+[42/475] Compiling C object src/basic/libbasic.a.p/efivars.c.o
+[43/475] Compiling C object src/basic/libbasic.a.p/cgroup-util.c.o
+[44/475] Compiling C object src/basic/libbasic.a.p/errno-list.c.o
+[45/475] Compiling C object src/basic/libbasic.a.p/env-file.c.o
+[46/475] Compiling C object src/basic/libbasic.a.p/ether-addr-util.c.o
+[47/475] Compiling C object src/basic/libbasic.a.p/extract-word.c.o
+[48/475] Compiling C object src/basic/libbasic.a.p/escape.c.o
+[49/475] Compiling C object src/basic/libbasic.a.p/env-util.c.o
+[50/475] Compiling C object src/basic/libbasic.a.p/format-util.c.o
+[51/475] Compiling C object src/basic/libbasic.a.p/filesystems.c.o
+[52/475] Compiling C object src/basic/libbasic.a.p/glob-util.c.o
+[53/475] Compiling C object src/basic/libbasic.a.p/glyph-util.c.o
+[54/475] Compiling C object src/basic/libbasic.a.p/fd-util.c.o
+[55/475] Compiling C object src/basic/libbasic.a.p/gunicode.c.o
+[56/475] Compiling C object src/basic/libbasic.a.p/hash-funcs.c.o
+[57/475] Compiling C object src/basic/libbasic.a.p/fileio.c.o
+[58/475] Compiling C object src/basic/libbasic.a.p/hmac.c.o
+[59/475] Compiling C object src/basic/libbasic.a.p/fs-util.c.o
+[60/475] Compiling C object src/basic/libbasic.a.p/hostname-util.c.o
+[61/475] Compiling C object src/basic/libbasic.a.p/initrd-util.c.o
+[62/475] Compiling C object src/basic/libbasic.a.p/hexdecoct.c.o
+[63/475] Compiling C object src/basic/libbasic.a.p/inotify-util.c.o
+[64/475] Compiling C object src/basic/libbasic.a.p/in-addr-util.c.o
+[65/475] Compiling C object src/basic/libbasic.a.p/ioprio-util.c.o
+[66/475] Compiling C object src/basic/libbasic.a.p/io-util.c.o
+[67/475] Compiling C object src/basic/libbasic.a.p/label.c.o
+[68/475] Compiling C object src/basic/libbasic.a.p/iovec-util.c.o
+[69/475] Compiling C object src/basic/libbasic.a.p/iovec-wrapper.c.o
+[70/475] Compiling C object src/basic/libbasic.a.p/hashmap.c.o
+[71/475] Compiling C object src/basic/libbasic.a.p/limits-util.c.o
+[72/475] Compiling C object src/basic/libbasic.a.p/login-util.c.o
+[73/475] Compiling C object src/basic/libbasic.a.p/locale-util.c.o
+[74/475] Compiling C object src/basic/libbasic.a.p/lock-util.c.o
+[75/475] Compiling C object src/basic/libbasic.a.p/memory-util.c.o
+[76/475] Compiling C object src/basic/libbasic.a.p/memfd-util.c.o
+[77/475] Compiling C object src/basic/libbasic.a.p/mempool.c.o
+[78/475] Compiling C object src/basic/libbasic.a.p/memstream-util.c.o
+[79/475] Compiling C object src/basic/libbasic.a.p/mkdir.c.o
+[80/475] Compiling C object src/basic/libbasic.a.p/namespace-util.c.o
+[81/475] Compiling C object src/basic/libbasic.a.p/nulstr-util.c.o
+[82/475] Compiling C object src/basic/libbasic.a.p/ordered-set.c.o
+[83/475] Compiling C object src/basic/libbasic.a.p/mountpoint-util.c.o
+[84/475] Compiling C object src/basic/libbasic.a.p/log.c.o
+[85/475] Compiling C object src/basic/libbasic.a.p/os-util.c.o
+[86/475] Compiling C object src/basic/libbasic.a.p/parse-util.c.o
+[87/475] Compiling C object src/basic/libbasic.a.p/percent-util.c.o
+[88/475] Compiling C object src/basic/libbasic.a.p/path-lookup.c.o
+[89/475] Compiling C object src/basic/libbasic.a.p/prioq.c.o
+[90/475] Compiling C object src/basic/libbasic.a.p/pidref.c.o
+[91/475] Compiling C object src/basic/libbasic.a.p/path-util.c.o
+[92/475] Compiling C object src/basic/libbasic.a.p/proc-cmdline.c.o
+[93/475] Compiling C object src/basic/libbasic.a.p/procfs-util.c.o
+[94/475] Compiling C object src/basic/libbasic.a.p/psi-util.c.o
+[95/475] Compiling C object src/basic/libbasic.a.p/ratelimit.c.o
+[96/475] Compiling C object src/basic/libbasic.a.p/random-util.c.o
+[97/475] Compiling C object src/basic/libbasic.a.p/replace-var.c.o
+[98/475] Compiling C object src/basic/libbasic.a.p/runtime-scope.c.o
+[99/475] Compiling C object src/basic/libbasic.a.p/recurse-dir.c.o
+[100/475] Compiling C object src/basic/libbasic.a.p/rlimit-util.c.o
+[101/475] Compiling C object src/basic/libbasic.a.p/sigbus.c.o
+[102/475] Compiling C object src/basic/libbasic.a.p/siphash24.c.o
+[103/475] Compiling C object src/basic/libbasic.a.p/signal-util.c.o
+[104/475] Compiling C object src/basic/libbasic.a.p/sort-util.c.o
+[105/475] Compiling C object src/basic/libbasic.a.p/process-util.c.o
+[106/475] Compiling C object src/basic/libbasic.a.p/string-table.c.o
+[107/475] Compiling C object src/basic/libbasic.a.p/strbuf.c.o
+[108/475] Compiling C object src/basic/libbasic.a.p/stat-util.c.o
+[109/475] Compiling C object src/basic/libbasic.a.p/strxcpyx.c.o
+[110/475] Compiling C object src/basic/libbasic.a.p/socket-util.c.o
+[111/475] Compiling C object src/basic/libbasic.a.p/sync-util.c.o
+[112/475] Compiling C object src/basic/libbasic.a.p/strv.c.o
+[113/475] Compiling C object src/basic/libbasic.a.p/sysctl-util.c.o
+[114/475] Compiling C object src/basic/libbasic.a.p/syslog-util.c.o
+[115/475] Compiling C object src/basic/libbasic.a.p/string-util.c.o
+[116/475] Compiling C object src/basic/libbasic.a.p/uid-alloc-range.c.o
+[117/475] Compiling C object src/basic/libbasic.a.p/tmpfile-util.c.o
+[118/475] Compiling C object src/basic/libbasic.a.p/uid-range.c.o
+[119/475] Compiling C object src/basic/libbasic.a.p/unit-def.c.o
+[120/475] Compiling C object src/basic/libbasic.a.p/terminal-util.c.o
+[121/475] Compiling C object src/basic/libbasic.a.p/time-util.c.o
+[122/475] Compiling C object src/basic/libbasic.a.p/unit-name.c.o
+[123/475] Compiling C object src/basic/libbasic.a.p/unit-file.c.o
+[124/475] Compiling C object src/basic/libbasic.a.p/utf8.c.o
+[125/475] Compiling C object src/basic/libbasic.a.p/.._fundamental_bootspec-fundamental.c.o
+[126/475] Compiling C object src/basic/libbasic.a.p/.._fundamental_efivars-fundamental.c.o
+[127/475] Compiling C object src/basic/libbasic.a.p/user-util.c.o
+[128/475] Compiling C object src/basic/libbasic.a.p/xattr-util.c.o
+[129/475] Compiling C object src/basic/libbasic.a.p/.._fundamental_sha256.c.o
+[130/475] Linking static target src/basic/libbasic-compress.a
+[131/475] Compiling C object src/basic/libbasic.a.p/.._fundamental_uki.c.o
+[132/475] Compiling C object src/basic/libbasic.a.p/.._fundamental_string-util-fundamental.c.o
+[133/475] Generating src/libsystemd/audit_type-to-name.h with a custom command (wrapped by meson to capture output)
+[134/475] Generating src/shared/ip-protocol-from-name.gperf with a custom command (wrapped by meson to capture output)
+[135/475] Compiling C object src/basic/libbasic.a.p/virt.c.o
+[136/475] Linking static target src/basic/libbasic.a
+[137/475] Generating src/shared/ip-protocol-to-name.h with a custom command (wrapped by meson to capture output)
+[138/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-common-errors.c.o
+[139/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-container.c.o
+[140/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-control.c.o
+[141/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-convenience.c.o
+[142/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-dump.c.o
+[143/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-creds.c.o
+[144/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-error.c.o
+[145/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-internal.c.o
+[146/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-kernel.c.o
+[147/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-introspect.c.o
+[148/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-signature.c.o
+[149/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-slot.c.o
+[150/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-match.c.o
+[151/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-track.c.o
+[152/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-type.c.o
+[153/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-socket.c.o
+[154/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-objects.c.o
+[155/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-device_device-filter.c.o
+[156/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-device_device-enumerator.c.o
+[157/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-message.c.o
+[158/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-device_device-util.c.o
+[159/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-device_device-monitor.c.o
+[160/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-device_device-private.c.o
+[161/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-hwdb_sd-hwdb.c.o
+[162/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-genl.c.o
+[163/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-message-nfnl.c.o
+[164/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_sd-bus.c.o
+[165/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-slot.c.o
+[166/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-message-rtnl.c.o
+[167/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-types-genl.c.o
+[168/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-socket.c.o
+[169/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-device_sd-device.c.o
+[170/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-message.c.o
+[171/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-types-nfnl.c.o
+[172/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-types-rtnl.c.o
+[173/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-types.c.o
+[174/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-network_network-util.c.o
+[175/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-util.c.o
+[176/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-network_sd-network.c.o
+[177/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_sd-netlink.c.o
+[178/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-path_sd-path.c.o
+[179/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_audit-type.c.o
+[180/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_journal-send.c.o
+[181/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_catalog.c.o
+[182/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-resolve_sd-resolve.c.o
+[183/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_journal-vacuum.c.o
+[184/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_lookup3.c.o
+[185/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_mmap-cache.c.o
+[186/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_journal-verify.c.o
+[187/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-id128_id128-util.c.o
+[188/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-id128_sd-id128.c.o
+[189/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-event_event-util.c.o
+[190/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-daemon_sd-daemon.c.o
+[191/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_journal-file.c.o
+[192/475] Generating src/shared/ip-protocol-from-name.h with a custom command (wrapped by meson to capture output)
+[193/475] Generating src/shared/ethtool-link-mode.h with a custom command (wrapped by meson to capture output)
+[194/475] Compiling C object src/shared/libsystemd-shared-255.a.p/acl-util.c.o
+[195/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-login_sd-login.c.o
+[196/475] Compiling C object src/shared/libsystemd-shared-255.a.p/apparmor-util.c.o
+[197/475] Compiling C object src/shared/libsystemd-shared-255.a.p/acpi-fpdt.c.o
+[198/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_sd-journal.c.o
+[199/475] Compiling C object src/shared/libsystemd-shared-255.a.p/async.c.o
+[200/475] Compiling C object src/shared/libsystemd-shared-255.a.p/barrier.c.o
+[201/475] Compiling C object src/shared/libsystemd-shared-255.a.p/base-filesystem.c.o
+[202/475] Compiling C object src/shared/libsystemd-shared-255.a.p/binfmt-util.c.o
+[203/475] Compiling C object src/shared/libsystemd-shared-255.a.p/battery-util.c.o
+[204/475] Compiling C object src/shared/libsystemd-shared-255.a.p/ask-password-api.c.o
+[205/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bitmap.c.o
+[206/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bond-util.c.o
+[207/475] Compiling C object src/shared/libsystemd-shared-255.a.p/boot-timestamps.c.o
+[208/475] Compiling C object src/shared/libsystemd-shared-255.a.p/boot-entry.c.o
+[209/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bpf-dlopen.c.o
+[210/475] Compiling C object src/shared/libsystemd-shared-255.a.p/blockdev-util.c.o
+[211/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bridge-util.c.o
+[212/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bpf-program.c.o
+[213/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-get-properties.c.o
+[214/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-locator.c.o
+[215/475] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-event_sd-event.c.o
+[216/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-log-control-api.c.o
+[217/475] Linking static target src/libsystemd/libsystemd_static.a
+[218/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bootspec.c.o
+[219/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-message-util.c.o
+[220/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-map-properties.c.o
+[221/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-object.c.o
+[222/475] Compiling C object src/shared/libsystemd-shared-255.a.p/btrfs-util.c.o
+[223/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-polkit.c.o
+[224/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-print-properties.c.o
+[225/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-unit-procs.c.o
+[226/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-wait-for-units.c.o
+[227/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-wait-for-jobs.c.o
+[228/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-util.c.o
+[229/475] Compiling C object src/shared/libsystemd-shared-255.a.p/cgroup-show.c.o
+[230/475] Compiling C object src/shared/libsystemd-shared-255.a.p/cgroup-setup.c.o
+[231/475] Compiling C object src/shared/libsystemd-shared-255.a.p/chown-recursive.c.o
+[232/475] Compiling C object src/shared/libsystemd-shared-255.a.p/calendarspec.c.o
+[233/475] Compiling C object src/shared/libsystemd-shared-255.a.p/clock-util.c.o
+[234/475] Compiling C object src/shared/libsystemd-shared-255.a.p/common-signal.c.o
+[235/475] Compiling C object src/shared/libsystemd-shared-255.a.p/clean-ipc.c.o
+[236/475] Compiling C object src/shared/libsystemd-shared-255.a.p/compare-operator.c.o
+[237/475] Compiling C object src/shared/libsystemd-shared-255.a.p/copy.c.o
+[238/475] Compiling C object src/shared/libsystemd-shared-255.a.p/condition.c.o
+[239/475] Compiling C object src/shared/libsystemd-shared-255.a.p/conf-parser.c.o
+[240/475] Compiling C object src/shared/libsystemd-shared-255.a.p/coredump-util.c.o
+[241/475] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-unit-util.c.o
+[242/475] Compiling C object src/shared/libsystemd-shared-255.a.p/cryptsetup-util.c.o
+[243/475] Compiling C object src/shared/libsystemd-shared-255.a.p/daemon-util.c.o
+[244/475] Compiling C object src/shared/libsystemd-shared-255.a.p/cpu-set-util.c.o
+[245/475] Compiling C object src/shared/libsystemd-shared-255.a.p/dev-setup.c.o
+[246/475] Compiling C object src/shared/libsystemd-shared-255.a.p/device-nodes.c.o
+[247/475] Compiling C object src/shared/libsystemd-shared-255.a.p/data-fd-util.c.o
+[248/475] Compiling C object src/shared/libsystemd-shared-255.a.p/dlfcn-util.c.o
+[249/475] Compiling C object src/shared/libsystemd-shared-255.a.p/dm-util.c.o
+[250/475] Compiling C object src/shared/libsystemd-shared-255.a.p/creds-util.c.o
+[251/475] Compiling C object src/shared/libsystemd-shared-255.a.p/dns-domain.c.o
+[252/475] Compiling C object src/shared/libsystemd-shared-255.a.p/discover-image.c.o
+[253/475] Compiling C object src/shared/libsystemd-shared-255.a.p/dropin.c.o
+[254/475] Compiling C object src/shared/libsystemd-shared-255.a.p/efi-loader.c.o
+[255/475] Compiling C object src/shared/libsystemd-shared-255.a.p/elf-util.c.o
+[256/475] Compiling C object src/shared/libsystemd-shared-255.a.p/efi-api.c.o
+[257/475] Compiling C object src/shared/libsystemd-shared-255.a.p/edit-util.c.o
+[258/475] Compiling C object src/shared/libsystemd-shared-255.a.p/enable-mempool.c.o
+[259/475] Compiling C object src/shared/libsystemd-shared-255.a.p/env-file-label.c.o
+[260/475] Compiling C object src/shared/libsystemd-shared-255.a.p/exit-status.c.o
+[261/475] Compiling C object src/shared/libsystemd-shared-255.a.p/extension-util.c.o
+[262/475] Compiling C object src/shared/libsystemd-shared-255.a.p/exec-util.c.o
+[263/475] Compiling C object src/shared/libsystemd-shared-255.a.p/fileio-label.c.o
+[264/475] Compiling C object src/shared/libsystemd-shared-255.a.p/fdset.c.o
+[265/475] Compiling C object src/shared/libsystemd-shared-255.a.p/ethtool-util.c.o
+[266/475] Compiling C object src/shared/libsystemd-shared-255.a.p/dissect-image.c.o
+[267/475] Compiling C object src/shared/libsystemd-shared-255.a.p/firewall-util.c.o
+[268/475] Compiling C object src/shared/libsystemd-shared-255.a.p/fstab-util.c.o
+[269/475] Compiling C object src/shared/libsystemd-shared-255.a.p/firewall-util-nft.c.o
+[270/475] Compiling C object src/shared/libsystemd-shared-255.a.p/geneve-util.c.o
+[271/475] Compiling C object src/shared/libsystemd-shared-255.a.p/find-esp.c.o
+[272/475] Compiling C object src/shared/libsystemd-shared-255.a.p/gpt.c.o
+[273/475] Compiling C object src/shared/libsystemd-shared-255.a.p/group-record.c.o
+[274/475] Compiling C object src/shared/libsystemd-shared-255.a.p/generator.c.o
+[275/475] Compiling C object src/shared/libsystemd-shared-255.a.p/hostname-setup.c.o
+[276/475] Compiling C object src/shared/libsystemd-shared-255.a.p/hibernate-util.c.o
+[277/475] Compiling C object src/shared/libsystemd-shared-255.a.p/idn-util.c.o
+[278/475] Compiling C object src/shared/libsystemd-shared-255.a.p/id128-print.c.o
+[279/475] Compiling C object src/shared/libsystemd-shared-255.a.p/ima-util.c.o
+[280/475] Compiling C object src/shared/libsystemd-shared-255.a.p/format-table.c.o
+[281/475] Compiling C object src/shared/libsystemd-shared-255.a.p/hwdb-util.c.o
+[282/475] Compiling C object src/shared/libsystemd-shared-255.a.p/import-util.c.o
+[283/475] Compiling C object src/shared/libsystemd-shared-255.a.p/in-addr-prefix-util.c.o
+[284/475] Compiling C object src/shared/libsystemd-shared-255.a.p/install-file.c.o
+[285/475] Compiling C object src/shared/libsystemd-shared-255.a.p/image-policy.c.o
+[286/475] Compiling C object src/shared/libsystemd-shared-255.a.p/install-printf.c.o
+[287/475] Compiling C object src/shared/libsystemd-shared-255.a.p/ipvlan-util.c.o
+[288/475] Compiling C object src/shared/libsystemd-shared-255.a.p/ip-protocol-list.c.o
+[289/475] Compiling C object src/shared/libsystemd-shared-255.a.p/journal-file-util.c.o
+[290/475] Compiling C object src/shared/libsystemd-shared-255.a.p/journal-util.c.o
+[291/475] Compiling C object src/shared/libsystemd-shared-255.a.p/journal-importer.c.o
+[292/475] Compiling C object src/shared/libsystemd-shared-255.a.p/kbd-util.c.o
+[293/475] Compiling C object src/shared/libsystemd-shared-255.a.p/kernel-image.c.o
+[294/475] Compiling C object src/shared/libsystemd-shared-255.a.p/keyring-util.c.o
+[295/475] Compiling C object src/shared/libsystemd-shared-255.a.p/label-util.c.o
+[296/475] Compiling C object src/shared/libsystemd-shared-255.a.p/killall.c.o
+[297/475] Compiling C object src/shared/libsystemd-shared-255.a.p/libcrypt-util.c.o
+[298/475] Compiling C object src/shared/libsystemd-shared-255.a.p/libfido2-util.c.o
+[299/475] Compiling C object src/shared/libsystemd-shared-255.a.p/libmount-util.c.o
+[300/475] Compiling C object src/shared/libsystemd-shared-255.a.p/locale-setup.c.o
+[301/475] Compiling C object src/shared/libsystemd-shared-255.a.p/local-addresses.c.o
+[302/475] Compiling C object src/shared/libsystemd-shared-255.a.p/install.c.o
+[303/475] Compiling C object src/shared/libsystemd-shared-255.a.p/loopback-setup.c.o
+[304/475] Compiling C object src/shared/libsystemd-shared-255.a.p/loop-util.c.o
+[305/475] Compiling C object src/shared/libsystemd-shared-255.a.p/lsm-util.c.o
+[306/475] Compiling C object src/shared/libsystemd-shared-255.a.p/machine-credential.c.o
+[307/475] Compiling C object src/shared/libsystemd-shared-255.a.p/machine-id-setup.c.o
+[308/475] Compiling C object src/shared/libsystemd-shared-255.a.p/machine-pool.c.o
+[309/475] Compiling C object src/shared/libsystemd-shared-255.a.p/logs-show.c.o
+[310/475] Compiling C object src/shared/libsystemd-shared-255.a.p/macvlan-util.c.o
+[311/475] Compiling C object src/shared/libsystemd-shared-255.a.p/mkdir-label.c.o
+[312/475] Compiling C object src/shared/libsystemd-shared-255.a.p/json.c.o
+[313/475] Compiling C object src/shared/libsystemd-shared-255.a.p/mount-setup.c.o
+[314/475] Compiling C object src/shared/libsystemd-shared-255.a.p/netif-naming-scheme.c.o
+[315/475] Compiling C object src/shared/libsystemd-shared-255.a.p/net-condition.c.o
+[316/475] Compiling C object src/shared/libsystemd-shared-255.a.p/mkfs-util.c.o
+[317/475] Compiling C object src/shared/libsystemd-shared-255.a.p/nsflags.c.o
+[318/475] Compiling C object src/shared/libsystemd-shared-255.a.p/netif-util.c.o
+[319/475] Compiling C object src/shared/libsystemd-shared-255.a.p/netif-sriov.c.o
+[320/475] Compiling C object src/shared/libsystemd-shared-255.a.p/numa-util.c.o
+[321/475] Compiling C object src/shared/libsystemd-shared-255.a.p/open-file.c.o
+[322/475] Compiling C object src/shared/libsystemd-shared-255.a.p/output-mode.c.o
+[323/475] Compiling C object src/shared/libsystemd-shared-255.a.p/mount-util.c.o
+[324/475] Compiling C object src/shared/libsystemd-shared-255.a.p/parse-argument.c.o
+[325/475] Compiling C object src/shared/libsystemd-shared-255.a.p/pager.c.o
+[326/475] Compiling C object src/shared/libsystemd-shared-255.a.p/password-quality-util-passwdqc.c.o
+[327/475] Compiling C object src/shared/libsystemd-shared-255.a.p/password-quality-util-pwquality.c.o
+[328/475] Compiling C object src/shared/libsystemd-shared-255.a.p/parse-helpers.c.o
+[329/475] Compiling C object src/shared/libsystemd-shared-255.a.p/pcre2-util.c.o
+[330/475] Compiling C object src/shared/libsystemd-shared-255.a.p/pcrextend-util.c.o
+[331/475] Compiling C object src/shared/libsystemd-shared-255.a.p/pe-binary.c.o
+[332/475] Compiling C object src/shared/libsystemd-shared-255.a.p/pkcs11-util.c.o
+[333/475] Compiling C object src/shared/libsystemd-shared-255.a.p/plymouth-util.c.o
+[334/475] Compiling C object src/shared/libsystemd-shared-255.a.p/qrcode-util.c.o
+[335/475] Compiling C object src/shared/libsystemd-shared-255.a.p/quota-util.c.o
+[336/475] Compiling C object src/shared/libsystemd-shared-255.a.p/pretty-print.c.o
+[337/475] Compiling C object src/shared/libsystemd-shared-255.a.p/reboot-util.c.o
+[338/475] Compiling C object src/shared/libsystemd-shared-255.a.p/ptyfwd.c.o
+[339/475] Compiling C object src/shared/libsystemd-shared-255.a.p/recovery-key.c.o
+[340/475] Compiling C object src/shared/libsystemd-shared-255.a.p/resize-fs.c.o
+[341/475] Compiling C object src/shared/libsystemd-shared-255.a.p/resolve-util.c.o
+[342/475] Compiling C object src/shared/libsystemd-shared-255.a.p/securebits-util.c.o
+[343/475] Compiling C object src/shared/libsystemd-shared-255.a.p/selinux-util.c.o
+[344/475] Compiling C object src/shared/libsystemd-shared-255.a.p/rm-rf.c.o
+[345/475] Compiling C object src/shared/libsystemd-shared-255.a.p/openssl-util.c.o
+[346/475] Compiling C object src/shared/libsystemd-shared-255.a.p/service-util.c.o
+[347/475] Compiling C object src/shared/libsystemd-shared-255.a.p/socket-label.c.o
+[348/475] Compiling C object src/shared/libsystemd-shared-255.a.p/smack-util.c.o
+[349/475] Compiling C object src/shared/libsystemd-shared-255.a.p/sleep-config.c.o
+[350/475] Compiling C object src/shared/libsystemd-shared-255.a.p/serialize.c.o
+[351/475] Compiling C object src/shared/libsystemd-shared-255.a.p/spawn-ask-password-agent.c.o
+[352/475] Compiling C object src/shared/libsystemd-shared-255.a.p/spawn-polkit-agent.c.o
+[353/475] Compiling C object src/shared/libsystemd-shared-255.a.p/socket-netlink.c.o
+[354/475] Compiling C object src/shared/libsystemd-shared-255.a.p/tmpfile-util-label.c.o
+[355/475] Compiling C object src/shared/libsystemd-shared-255.a.p/tomoyo-util.c.o
+[356/475] Compiling C object src/shared/libsystemd-shared-255.a.p/specifier.c.o
+[357/475] Compiling C object src/shared/libsystemd-shared-255.a.p/switch-root.c.o
+[358/475] Compiling C object src/shared/libsystemd-shared-255.a.p/tpm2-event-log.c.o
+[359/475] Compiling C object src/shared/libsystemd-shared-255.a.p/udev-util.c.o
+[360/475] Compiling C object src/shared/libsystemd-shared-255.a.p/user-record-nss.c.o
+[361/475] Compiling C object src/shared/libsystemd-shared-255.a.p/tpm2-util.c.o
+[362/475] Compiling C object src/shared/libsystemd-shared-255.a.p/user-record-show.c.o
+[363/475] Compiling C object src/shared/libsystemd-shared-255.a.p/userdb-dropin.c.o
+[364/475] Compiling C object src/shared/libsystemd-shared-255.a.p/userdb.c.o
+[365/475] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.c.o
+[366/475] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.Journal.c.o
+[367/475] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-idl.c.o
+[368/475] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.ManagedOOM.c.o
+[369/475] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.PCRExtend.c.o
+[370/475] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.Resolve.Monitor.c.o
+[371/475] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.Resolve.c.o
+[372/475] Compiling C object src/shared/libsystemd-shared-255.a.p/user-record.c.o
+[373/475] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.UserDatabase.c.o
+[374/475] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.oom.c.o
+[375/475] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.sysext.c.o
+[376/475] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.service.c.o
+[377/475] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-org.varlink.service.c.o
+[378/475] Compiling C object src/shared/libsystemd-shared-255.a.p/verb-log-control.c.o
+[379/475] Compiling C object src/shared/libsystemd-shared-255.a.p/vlan-util.c.o
+[380/475] Compiling C object src/shared/libsystemd-shared-255.a.p/verbs.c.o
+[381/475] Compiling C object src/shared/libsystemd-shared-255.a.p/volatile-util.c.o
+[382/475] Compiling C object src/shared/libsystemd-shared-255.a.p/web-util.c.o
+[383/475] Compiling C object src/shared/libsystemd-shared-255.a.p/wall.c.o
+[384/475] Compiling C object src/shared/libsystemd-shared-255.a.p/xml.c.o
+[385/475] Compiling C object src/shared/libsystemd-shared-255.a.p/wifi-util.c.o
+[386/475] Compiling C object src/shared/libsystemd-shared-255.a.p/watchdog.c.o
+[387/475] Compiling C object src/shared/libsystemd-shared-255.a.p/utmp-wtmp.c.o
+[388/475] Compiling C object src/shared/libsystemd-shared-255.a.p/devnode-acl.c.o
+[389/475] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink.c.o
+[390/475] Compiling C object src/shared/libsystemd-shared-255.a.p/tests.c.o
+[391/475] Compiling C object src/shared/libsystemd-shared-255.a.p/module-util.c.o
+[392/475] Compiling C object src/shared/libsystemd-shared-255.a.p/nscd-flush.c.o
+[393/475] Compiling C object src/libudev/libudev-basic.a.p/libudev-enumerate.c.o
+[394/475] Linking static target src/shared/libsystemd-shared-255.a
+[395/475] Compiling C object src/libudev/libudev-basic.a.p/libudev-hwdb.c.o
+[396/475] Compiling C object src/libudev/libudev-basic.a.p/libudev-list.c.o
+[397/475] Compiling C object src/libudev/libudev-basic.a.p/libudev-device.c.o
+[398/475] Compiling C object src/libudev/libudev-basic.a.p/libudev-monitor.c.o
+[399/475] Compiling C object src/libudev/libudev-basic.a.p/libudev-queue.c.o
+[400/475] Compiling C object src/libudev/libudev-basic.a.p/libudev-util.c.o
+[401/475] Generating src/udev/link-config-gperf.c with a custom command
+[402/475] Generating src/libudev/libudev.pc with a custom command
+[403/475] Compiling C object src/libudev/libudev-basic.a.p/libudev.c.o
+[404/475] Linking static target src/libudev/libudev-basic.a
+[405/475] Generating src/udev/keyboard-keys-list.txt with a custom command (wrapped by meson to capture output)
+[406/475] Generating src/udev/udev.pc with a custom command
+[407/475] Linking target libudev.so.1.7.8
+[408/475] Generating src/udev/keyboard-keys-from-name.gperf with a custom command (wrapped by meson to capture output)
+[409/475] Compiling C object udevadm.p/src_udev_udevadm-hwdb.c.o
+[410/475] Compiling C object udevadm.p/src_udev_udevadm-control.c.o
+[411/475] Compiling C object udevadm.p/src_udev_udevadm-monitor.c.o
+[412/475] Generating src/udev/keyboard-keys-from-name.h with a custom command (wrapped by meson to capture output)
+[413/475] Compiling C object udevadm.p/src_udev_udevadm-lock.c.o
+[414/475] Compiling C object udevadm.p/src_udev_udevadm-settle.c.o
+[415/475] Compiling C object src/udev/libudev-core.a.p/meson-generated_.._link-config-gperf.c.o
+[416/475] Compiling C object udevadm.p/src_udev_udevadm-info.c.o
+[417/475] Compiling C object src/udev/libudev-core.a.p/udev-ctrl.c.o
+[418/475] Compiling C object src/udev/libudev-core.a.p/udev-event.c.o
+[419/475] Compiling C object src/udev/libudev-core.a.p/udev-format.c.o
+[420/475] Compiling C object src/udev/libudev-core.a.p/net_link-config.c.o
+[421/475] Compiling C object src/udev/libudev-core.a.p/udev-node.c.o
+[422/475] Compiling C object src/udev/libudev-core.a.p/udev-manager.c.o
+[423/475] Compiling C object src/udev/libudev-core.a.p/udev-spawn.c.o
+[424/475] Compiling C object src/udev/libudev-core.a.p/udev-builtin-btrfs.c.o
+[425/475] Compiling C object src/udev/libudev-core.a.p/udev-watch.c.o
+[426/475] Compiling C object src/udev/libudev-core.a.p/udev-worker.c.o
+[427/475] Compiling C object src/udev/libudev-core.a.p/udev-builtin-hwdb.c.o
+[428/475] Compiling C object src/udev/libudev-core.a.p/udev-builtin-net_driver.c.o
+[429/475] Compiling C object src/udev/libudev-core.a.p/udev-builtin-input_id.c.o
+[430/475] Compiling C object src/udev/libudev-core.a.p/udev-builtin-keyboard.c.o
+[431/475] Compiling C object src/udev/libudev-core.a.p/udev-builtin-net_setup_link.c.o
+[432/475] Compiling C object src/udev/libudev-core.a.p/udev-builtin-usb_id.c.o
+[433/475] Compiling C object src/udev/libudev-core.a.p/udev-builtin-path_id.c.o
+[434/475] Compiling C object src/udev/libudev-core.a.p/udev-builtin-kmod.c.o
+[435/475] Compiling C object src/udev/libudev-core.a.p/udev-builtin.c.o
+[436/475] Compiling C object src/udev/libudev-core.a.p/udev-builtin-net_id.c.o
+[437/475] Compiling C object src/udev/libudev-core.a.p/udev-builtin-uaccess.c.o
+[438/475] Compiling C object udevadm.p/src_udev_udevadm-test-builtin.c.o
+[439/475] Compiling C object udevadm.p/src_udev_udevadm-test.c.o
+[440/475] Compiling C object src/udev/libudev-core.a.p/udev-builtin-blkid.c.o
+[441/475] Compiling C object udevadm.p/src_udev_udevadm-util.c.o
+[442/475] Compiling C object udevadm.p/src_udev_udevadm-verify.c.o
+[443/475] Compiling C object src/udev/libudev-core.a.p/udev-rules.c.o
+[444/475] Linking static target src/udev/libudev-core.a
+[445/475] Compiling C object udevadm.p/src_udev_udevadm-trigger.c.o
+[446/475] Compiling C object udevadm.p/src_udev_udevadm.c.o
+[447/475] Compiling C object udevadm.p/src_udev_udevadm-wait.c.o
+[448/475] Compiling C object udevadm.p/src_udev_udevd.c.o
+[449/475] Compiling C object ata_id.p/src_udev_ata_id_ata_id.c.o
+[450/475] Linking target ata_id
+[451/475] Linking target udevadm
+[452/475] Compiling C object dmi_memory_id.p/src_udev_dmi_memory_id_dmi_memory_id.c.o
+[453/475] Compiling C object fido_id.p/src_udev_fido_id_fido_id_desc.c.o
+[454/475] Compiling C object cdrom_id.p/src_udev_cdrom_id_cdrom_id.c.o
+[455/475] Linking target dmi_memory_id
+[456/475] Linking target cdrom_id
+[457/475] Compiling C object fido_id.p/src_udev_fido_id_fido_id.c.o
+[458/475] Compiling C object mtd_probe.p/src_udev_mtd_probe_mtd_probe.c.o
+[459/475] Compiling C object mtd_probe.p/src_udev_mtd_probe_probe_smartmedia.c.o
+[460/475] Linking target fido_id
+[461/475] Linking target mtd_probe
+[462/475] Compiling C object iocost.p/src_udev_iocost_iocost.c.o
+[463/475] Linking target iocost
+[464/475] Compiling C object v4l_id.p/src_udev_v4l_id_v4l_id.c.o
+[465/475] Compiling C object scsi_id.p/src_udev_scsi_id_scsi_id.c.o
+[466/475] Linking target v4l_id
+[467/475] Compiling C object systemd-hwdb.p/src_hwdb_hwdb.c.o
+[468/475] Generating rules.d/50-udev-default.rules with a custom command
+[469/475] Linking target systemd-hwdb
+[470/475] Compiling C object scsi_id.p/src_udev_scsi_id_scsi_serial.c.o
+[471/475] Generating rules.d/60-persistent-storage.rules with a custom command
+[472/475] Generating rules.d/64-btrfs.rules with a custom command
+[473/475] Linking target scsi_id
+[474/475] Generating rules.d/99-systemd.rules with a custom command
+[475/475] Generating hwdb.d/60-autosuspend-chromiumos.hwdb with a custom command (wrapped by meson to capture output)
+install: creating directory '/usr/lib/udev'
+install: creating directory '/usr/lib/udev/hwdb.d'
+install: creating directory '/usr/lib/udev/rules.d'
+install: creating directory '/usr/lib/udev/network'
+install: creating directory '/etc/udev'
+install: creating directory '/etc/udev/hwdb.d'
+install: creating directory '/etc/udev/rules.d'
+install: creating directory '/etc/udev/network'
+install: creating directory '/usr/share/pkgconfig'
+'udevadm' -> '/usr/bin/udevadm'
+'systemd-hwdb' -> '/usr/bin/udev-hwdb'
+'/usr/sbin/udevd' -> '../bin/udevadm'
+'libudev.so' -> '/usr/lib/libudev.so'
+'libudev.so.1' -> '/usr/lib/libudev.so.1'
+'libudev.so.1.7.8' -> '/usr/lib/libudev.so.1.7.8'
+'../src/libudev/libudev.h' -> '/usr/include/libudev.h'
+'src/libudev/libudev.pc' -> '/usr/lib/pkgconfig/libudev.pc'
+'src/udev/udev.pc' -> '/usr/share/pkgconfig/udev.pc'
+'../src/udev/udev.conf' -> '/etc/udev/udev.conf'
+'rules.d/50-udev-default.rules' -> '/usr/lib/udev/rules.d/50-udev-default.rules'
+'rules.d/60-persistent-storage.rules' -> '/usr/lib/udev/rules.d/60-persistent-storage.rules'
+'rules.d/64-btrfs.rules' -> '/usr/lib/udev/rules.d/64-btrfs.rules'
+'rules.d/99-systemd.rules' -> '/usr/lib/udev/rules.d/99-systemd.rules'
+'../rules.d/README' -> '/usr/lib/udev/rules.d/README'
+'../rules.d/60-autosuspend.rules' -> '/usr/lib/udev/rules.d/60-autosuspend.rules'
+'../rules.d/60-block.rules' -> '/usr/lib/udev/rules.d/60-block.rules'
+'../rules.d/60-cdrom_id.rules' -> '/usr/lib/udev/rules.d/60-cdrom_id.rules'
+'../rules.d/60-dmi-id.rules' -> '/usr/lib/udev/rules.d/60-dmi-id.rules'
+'../rules.d/60-drm.rules' -> '/usr/lib/udev/rules.d/60-drm.rules'
+'../rules.d/60-evdev.rules' -> '/usr/lib/udev/rules.d/60-evdev.rules'
+'../rules.d/60-fido-id.rules' -> '/usr/lib/udev/rules.d/60-fido-id.rules'
+'../rules.d/60-infiniband.rules' -> '/usr/lib/udev/rules.d/60-infiniband.rules'
+'../rules.d/60-input-id.rules' -> '/usr/lib/udev/rules.d/60-input-id.rules'
+'../rules.d/60-persistent-alsa.rules' -> '/usr/lib/udev/rules.d/60-persistent-alsa.rules'
+'../rules.d/60-persistent-input.rules' -> '/usr/lib/udev/rules.d/60-persistent-input.rules'
+'../rules.d/60-persistent-storage-mtd.rules' -> '/usr/lib/udev/rules.d/60-persistent-storage-mtd.rules'
+'../rules.d/60-persistent-storage-tape.rules' -> '/usr/lib/udev/rules.d/60-persistent-storage-tape.rules'
+'../rules.d/60-persistent-v4l.rules' -> '/usr/lib/udev/rules.d/60-persistent-v4l.rules'
+'../rules.d/60-sensor.rules' -> '/usr/lib/udev/rules.d/60-sensor.rules'
+'../rules.d/60-serial.rules' -> '/usr/lib/udev/rules.d/60-serial.rules'
+'../rules.d/70-camera.rules' -> '/usr/lib/udev/rules.d/70-camera.rules'
+'../rules.d/70-joystick.rules' -> '/usr/lib/udev/rules.d/70-joystick.rules'
+'../rules.d/70-memory.rules' -> '/usr/lib/udev/rules.d/70-memory.rules'
+'../rules.d/70-mouse.rules' -> '/usr/lib/udev/rules.d/70-mouse.rules'
+'../rules.d/70-touchpad.rules' -> '/usr/lib/udev/rules.d/70-touchpad.rules'
+'../rules.d/75-net-description.rules' -> '/usr/lib/udev/rules.d/75-net-description.rules'
+'../rules.d/75-probe_mtd.rules' -> '/usr/lib/udev/rules.d/75-probe_mtd.rules'
+'../rules.d/78-sound-card.rules' -> '/usr/lib/udev/rules.d/78-sound-card.rules'
+'../rules.d/80-drivers.rules' -> '/usr/lib/udev/rules.d/80-drivers.rules'
+'../rules.d/80-net-setup-link.rules' -> '/usr/lib/udev/rules.d/80-net-setup-link.rules'
+'../rules.d/81-net-dhcp.rules' -> '/usr/lib/udev/rules.d/81-net-dhcp.rules'
+'../rules.d/82-net-auto-link-local.rules' -> '/usr/lib/udev/rules.d/82-net-auto-link-local.rules'
+'../rules.d/90-iocost.rules' -> '/usr/lib/udev/rules.d/90-iocost.rules'
+'hwdb.d/60-autosuspend-chromiumos.hwdb' -> '/usr/lib/udev/hwdb.d/60-autosuspend-chromiumos.hwdb'
+'../hwdb.d/20-OUI.hwdb' -> '/usr/lib/udev/hwdb.d/20-OUI.hwdb'
+'../hwdb.d/20-acpi-vendor.hwdb' -> '/usr/lib/udev/hwdb.d/20-acpi-vendor.hwdb'
+'../hwdb.d/20-bluetooth-vendor-product.hwdb' -> '/usr/lib/udev/hwdb.d/20-bluetooth-vendor-product.hwdb'
+'../hwdb.d/20-dmi-id.hwdb' -> '/usr/lib/udev/hwdb.d/20-dmi-id.hwdb'
+'../hwdb.d/20-net-ifname.hwdb' -> '/usr/lib/udev/hwdb.d/20-net-ifname.hwdb'
+'../hwdb.d/20-pci-classes.hwdb' -> '/usr/lib/udev/hwdb.d/20-pci-classes.hwdb'
+'../hwdb.d/20-pci-vendor-model.hwdb' -> '/usr/lib/udev/hwdb.d/20-pci-vendor-model.hwdb'
+'../hwdb.d/20-sdio-classes.hwdb' -> '/usr/lib/udev/hwdb.d/20-sdio-classes.hwdb'
+'../hwdb.d/20-sdio-vendor-model.hwdb' -> '/usr/lib/udev/hwdb.d/20-sdio-vendor-model.hwdb'
+'../hwdb.d/20-usb-classes.hwdb' -> '/usr/lib/udev/hwdb.d/20-usb-classes.hwdb'
+'../hwdb.d/20-usb-vendor-model.hwdb' -> '/usr/lib/udev/hwdb.d/20-usb-vendor-model.hwdb'
+'../hwdb.d/20-vmbus-class.hwdb' -> '/usr/lib/udev/hwdb.d/20-vmbus-class.hwdb'
+'../hwdb.d/60-autosuspend-fingerprint-reader.hwdb' -> '/usr/lib/udev/hwdb.d/60-autosuspend-fingerprint-reader.hwdb'
+'../hwdb.d/60-autosuspend.hwdb' -> '/usr/lib/udev/hwdb.d/60-autosuspend.hwdb'
+'../hwdb.d/60-evdev.hwdb' -> '/usr/lib/udev/hwdb.d/60-evdev.hwdb'
+'../hwdb.d/60-input-id.hwdb' -> '/usr/lib/udev/hwdb.d/60-input-id.hwdb'
+'../hwdb.d/60-keyboard.hwdb' -> '/usr/lib/udev/hwdb.d/60-keyboard.hwdb'
+'../hwdb.d/60-seat.hwdb' -> '/usr/lib/udev/hwdb.d/60-seat.hwdb'
+'../hwdb.d/60-sensor.hwdb' -> '/usr/lib/udev/hwdb.d/60-sensor.hwdb'
+'../hwdb.d/70-analyzers.hwdb' -> '/usr/lib/udev/hwdb.d/70-analyzers.hwdb'
+'../hwdb.d/70-av-production.hwdb' -> '/usr/lib/udev/hwdb.d/70-av-production.hwdb'
+'../hwdb.d/70-cameras.hwdb' -> '/usr/lib/udev/hwdb.d/70-cameras.hwdb'
+'../hwdb.d/70-joystick.hwdb' -> '/usr/lib/udev/hwdb.d/70-joystick.hwdb'
+'../hwdb.d/70-mouse.hwdb' -> '/usr/lib/udev/hwdb.d/70-mouse.hwdb'
+'../hwdb.d/70-pda.hwdb' -> '/usr/lib/udev/hwdb.d/70-pda.hwdb'
+'../hwdb.d/70-pointingstick.hwdb' -> '/usr/lib/udev/hwdb.d/70-pointingstick.hwdb'
+'../hwdb.d/70-sound-card.hwdb' -> '/usr/lib/udev/hwdb.d/70-sound-card.hwdb'
+'../hwdb.d/70-touchpad.hwdb' -> '/usr/lib/udev/hwdb.d/70-touchpad.hwdb'
+'../hwdb.d/80-ieee1394-unit-function.hwdb' -> '/usr/lib/udev/hwdb.d/80-ieee1394-unit-function.hwdb'
+'../hwdb.d/82-net-auto-link-local.hwdb' -> '/usr/lib/udev/hwdb.d/82-net-auto-link-local.hwdb'
+'../hwdb.d/README' -> '/usr/lib/udev/hwdb.d/README'
+'ata_id' -> '/usr/lib/udev/ata_id'
+'cdrom_id' -> '/usr/lib/udev/cdrom_id'
+'dmi_memory_id' -> '/usr/lib/udev/dmi_memory_id'
+'fido_id' -> '/usr/lib/udev/fido_id'
+'iocost' -> '/usr/lib/udev/iocost'
+'mtd_probe' -> '/usr/lib/udev/mtd_probe'
+'scsi_id' -> '/usr/lib/udev/scsi_id'
+'v4l_id' -> '/usr/lib/udev/v4l_id'
+'../network/99-default.link' -> '/usr/lib/udev/network/99-default.link'
+udev-lfs-20230818/
+udev-lfs-20230818/init-net-rules.sh
+udev-lfs-20230818/rule_generator.functions
+udev-lfs-20230818/Makefile.lfs
+udev-lfs-20230818/write_cd_rules
+udev-lfs-20230818/55-lfs.rules
+udev-lfs-20230818/README
+udev-lfs-20230818/contrib/
+udev-lfs-20230818/contrib/debian/
+udev-lfs-20230818/contrib/debian/write_cd_aliases
+udev-lfs-20230818/contrib/debian/81-cdrom.rules
+udev-lfs-20230818/contrib/debian/83-cdrom-symlinks.rules
+udev-lfs-20230818/55-lfs.txt
+udev-lfs-20230818/ChangeLog
+udev-lfs-20230818/write_net_rules
+make[1]: Entering directory '/sources/systemd-255/build'
+mkdir: created directory '/usr/share/doc/udev-20230818'
+mkdir: created directory '/usr/share/doc/udev-20230818/lfs'
+'udev-lfs-20230818/55-lfs.rules' -> '/etc/udev/rules.d/55-lfs.rules'
+'udev-lfs-20230818/init-net-rules.sh' -> '/usr/lib/udev/init-net-rules.sh'
+'udev-lfs-20230818/write_net_rules' -> '/usr/lib/udev/write_net_rules'
+'udev-lfs-20230818/rule_generator.functions' -> '/usr/lib/udev/rule_generator.functions'
+'udev-lfs-20230818/README' -> '/usr/share/doc/udev-20230818/lfs/README'
+'udev-lfs-20230818/55-lfs.txt' -> '/usr/share/doc/udev-20230818/lfs/55-lfs.txt'
+make[1]: Leaving directory '/sources/systemd-255/build'
+The Meson build system
+Version: 1.3.2
+Source dir: /sources/systemd-255
+Build dir: /sources/systemd-255/build
+Build type: native build
+Project name: systemd
+Project version: 255
+C compiler for the host machine: gcc -m32 -march=i686 (gcc 13.2.0 "gcc (GCC) 13.2.0")
+C linker for the host machine: gcc -m32 -march=i686 ld.bfd 2.42
+Host machine cpu family: x86
+Host machine cpu: i686
+Program tools/add-git-hook.sh found: YES (/sources/systemd-255/tools/add-git-hook.sh)
+Program tools/meson-build.sh found: YES (/sources/systemd-255/tools/meson-build.sh)
+C++ compiler for the host machine: g++ -m32 -march=i686 (gcc 13.2.0 "g++ (GCC) 13.2.0")
+C++ linker for the host machine: g++ -m32 -march=i686 ld.bfd 2.42
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -Warray-bounds: YES 
+Compiler for C supports arguments -Warray-bounds=2: YES 
+Compiler for C supports arguments -Wdate-time: YES 
+Compiler for C supports arguments -Wendif-labels: YES 
+Compiler for C supports arguments -Werror=format=2: YES 
+Compiler for C supports arguments -Werror=format-signedness: YES 
+Compiler for C supports arguments -Werror=implicit-function-declaration: YES 
+Compiler for C supports arguments -Werror=implicit-int: YES 
+Compiler for C supports arguments -Werror=incompatible-pointer-types: YES 
+Compiler for C supports arguments -Werror=int-conversion: YES 
+Compiler for C supports arguments -Werror=missing-declarations: YES 
+Compiler for C supports arguments -Werror=missing-prototypes: YES 
+Compiler for C supports arguments -Werror=overflow: YES 
+Compiler for C supports arguments -Werror=override-init: YES 
+Compiler for C supports arguments -Werror=return-type: YES 
+Compiler for C supports arguments -Werror=shift-count-overflow: YES 
+Compiler for C supports arguments -Werror=shift-overflow=2: YES 
+Compiler for C supports arguments -Werror=strict-flex-arrays: YES 
+Compiler for C supports arguments -Werror=undef: YES 
+Compiler for C supports arguments -Wfloat-equal: YES 
+Compiler for C supports arguments -Wimplicit-fallthrough=5: YES 
+Compiler for C supports arguments -Winit-self: YES 
+Compiler for C supports arguments -Wlogical-op: YES 
+Compiler for C supports arguments -Wmissing-include-dirs: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wredundant-decls: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wstrict-aliasing=2: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wsuggest-attribute=noreturn: YES 
+Compiler for C supports arguments -Wunused-function: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C supports arguments -Wzero-length-bounds: YES 
+Compiler for C supports arguments -Wno-error=#warnings: NO 
+Compiler for C supports arguments -Wno-string-plus-int: NO 
+Compiler for C supports arguments -fdiagnostics-show-option: YES 
+Compiler for C supports arguments -fno-common: YES 
+Compiler for C supports arguments -fstack-protector: YES 
+Compiler for C supports arguments -fstack-protector-strong: YES 
+Compiler for C supports arguments -fstrict-flex-arrays: YES 
+Compiler for C supports arguments --param=ssp-buffer-size=4: YES 
+Compiler for C supports arguments -Wno-maybe-uninitialized: YES 
+Compiler for C supports arguments -Wno-unused-result: YES 
+Compiler for C supports arguments -ftrivial-auto-var-init=zero: YES 
+Compiler for C supports link arguments -fstack-protector: YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -fstrict-flex-arrays=1: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Compiler for C supports arguments -ffunction-sections: YES 
+Compiler for C supports arguments -fdata-sections: YES 
+Compiler for C supports link arguments -Wl,--fatal-warnings: YES 
+Compiler for C supports link arguments -Wl,-z,now: YES 
+Compiler for C supports link arguments -Wl,-z,relro: YES 
+Compiler for C supports link arguments -Wl,--warn-common: YES 
+Compiler for C supports link arguments -Wl,--gc-sections: YES 
+Compiler for C supports arguments -Wzero-length-bounds: YES (cached)
+Checking if "-Werror=shadow with local shadowing" compiles: YES 
+Compiler for C++ supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C++ supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -Wstringop-truncation: YES 
+Checking for size of "dev_t" : 8 
+Checking for size of "ino_t" : 8 
+Checking for size of "rlim_t" : 8 
+Checking for size of "time_t" : 4 
+Checking for size of "typeof(((struct timex *)0)->freq)" : 4 
+Computing int of "LONG_MAX" : 2147483647
+Checking for size of "char16_t" : 2 
+Checking for size of "char32_t" : 4 
+Checking for size of "struct mount_attr" : 32 
+Checking for size of "struct statx" : 256 
+Checking for size of "struct dirent64" : 276 
+Checking for function "secure_getenv" : YES 
+Checking for function "__secure_getenv" : NO 
+Checking for function "memfd_create" : YES 
+Checking for function "gettid" : YES 
+Checking for function "fchmodat2" : NO 
+Checking for function "pivot_root" : NO 
+Checking for function "ioprio_get" : NO 
+Checking for function "ioprio_set" : NO 
+Checking for function "name_to_handle_at" : YES 
+Checking for function "setns" : YES 
+Checking for function "renameat2" : YES 
+Checking for function "kcmp" : NO 
+Checking for function "keyctl" : NO 
+Checking for function "copy_file_range" : YES 
+Checking for function "bpf" : NO 
+Checking for function "statx" : YES 
+Checking for function "explicit_bzero" : YES 
+Checking for function "reallocarray" : YES 
+Checking for function "set_mempolicy" : NO 
+Checking for function "get_mempolicy" : NO 
+Checking for function "pidfd_send_signal" : NO 
+Checking for function "pidfd_open" : NO 
+Checking for function "rt_sigqueueinfo" : NO 
+Checking for function "rt_tgsigqueueinfo" : NO 
+Checking for function "mallinfo" : YES 
+Checking for function "mallinfo2" : YES 
+Checking for function "execveat" : YES 
+Checking for function "close_range" : YES 
+Checking for function "epoll_pwait2" : YES 
+Checking for function "mount_setattr" : YES 
+Checking for function "move_mount" : YES 
+Checking for function "open_tree" : YES 
+Checking for function "fsopen" : YES 
+Checking for function "fsconfig" : YES 
+Checking for function "fsmount" : YES 
+Checking for function "getdents64" : YES 
+Checking for function "getrandom" : YES 
+Program sh found: YES (/usr/bin/sh)
+Program echo found: YES (/usr/bin/echo)
+Program sed found: YES (/usr/bin/sed)
+Program awk found: YES (/usr/bin/awk)
+Program stat found: YES (/usr/bin/stat)
+Program ln found: YES (/usr/bin/ln)
+Program git found: NO
+Program env found: YES (/usr/bin/env)
+Program rsync found: NO
+Program diff found: YES (/usr/bin/diff)
+Program find found: YES (/usr/bin/find)
+Program quotaon /usr/sbin/quotaon /sbin/quotaon found: NO
+Program quotacheck /usr/sbin/quotacheck /sbin/quotacheck found: NO
+Program kmod found: YES (/usr/bin/kmod)
+Program kexec /usr/sbin/kexec /sbin/kexec found: NO
+Program sulogin /usr/sbin/sulogin /sbin/sulogin found: NO
+Program mount found: YES (/usr/bin/mount)
+Program umount found: YES (/usr/bin/umount)
+Program loadkeys found: YES (/usr/bin/loadkeys)
+Program setfont found: YES (/usr/bin/setfont)
+Program nologin found: YES (/usr/sbin/nologin)
+Program gperf found: YES (/usr/bin/gperf)
+Message: gperf len type is size_t
+Has header "sys/capability.h" : YES 
+Has header "crypt.h" : YES 
+Has header "linux/memfd.h" : YES 
+Has header "linux/vm_sockets.h" : YES 
+Has header "sys/auxv.h" : YES 
+Has header "threads.h" : YES 
+Has header "valgrind/memcheck.h" : NO 
+Has header "valgrind/valgrind.h" : NO 
+Has header "linux/time_types.h" : YES 
+Has header "sys/sdt.h" : NO 
+../meson.build:880: WARNING: 
+The local group with the GID 65534 does not match the configured group name "nobody" of the nobody group (its name is nogroup).
+Your build will result in an group table setup that is incompatible with the local system.
+Run-time dependency threads found: YES
+Library rt found: YES
+Library m found: YES
+Library dl found: YES
+Found pkg-config: YES (/usr/bin/pkg-config) 2.1.1
+Run-time dependency libcrypt found: YES 4.4.36
+Run-time dependency libcap found: YES 2.69
+Checking if "libatomic" : links: YES 
+Checking for function "crypt_ra" with dependency libcrypt: YES 
+Checking for function "crypt_preferred_method" with dependency libcrypt: YES 
+Checking for function "crypt_gensalt_ra" with dependency libcrypt: YES 
+Did not find CMake 'cmake'
+Found CMake: NO
+Run-time dependency libbpf found: NO (tried pkgconfig and cmake)
+Run-time dependency mount found: YES 2.39.3
+Run-time dependency fdisk found: YES 2.39.3
+Run-time dependency pwquality found: NO (tried pkgconfig and cmake)
+Run-time dependency passwdqc found: NO (tried pkgconfig and cmake)
+Run-time dependency libseccomp found: NO (tried pkgconfig and cmake)
+Run-time dependency libselinux found: NO (tried pkgconfig and cmake)
+Run-time dependency libapparmor found: NO (tried pkgconfig and cmake)
+Run-time dependency polkit-gobject-1 found: NO (tried pkgconfig and cmake)
+Run-time dependency libacl found: YES 2.3.2
+Run-time dependency audit found: NO (tried pkgconfig and cmake)
+Run-time dependency blkid found: YES 2.39.3
+Checking for function "blkid_probe_set_hint" with dependency blkid: YES 
+Run-time dependency libkmod found: YES 31
+Run-time dependency xencontrol found: NO (tried pkgconfig and cmake)
+Run-time dependency pam found: NO (tried pkgconfig and cmake)
+Library pam found: NO
+Run-time dependency pam_misc found: NO (tried pkgconfig and cmake)
+Library pam_misc found: NO
+Run-time dependency libmicrohttpd found: NO (tried pkgconfig and cmake)
+Run-time dependency libcryptsetup found: NO (tried pkgconfig and cmake)
+Checking for function "crypt_activate_by_token_pin" with dependency libcryptsetup: NO 
+Run-time dependency libcurl found: NO (tried pkgconfig and cmake)
+Run-time dependency libidn2 found: NO (tried pkgconfig and cmake)
+Run-time dependency libidn found: NO (tried pkgconfig and cmake)
+Run-time dependency libiptc found: NO (tried pkgconfig and cmake)
+Run-time dependency libqrencode found: NO (tried pkgconfig and cmake)
+libgcrypt-config found: NO
+Run-time dependency libgcrypt found: NO (tried pkgconfig and config-tool)
+Run-time dependency gpg-error found: NO (tried pkgconfig and cmake)
+Library gpg-error found: NO
+Run-time dependency gnutls found: NO (tried pkgconfig and cmake)
+Run-time dependency openssl found: YES 3.2.1
+Run-time dependency p11-kit-1 found: NO (tried pkgconfig and cmake)
+Run-time dependency libfido2 found: NO (tried pkgconfig and cmake)
+Run-time dependency tss2-esys tss2-rc tss2-mu tss2-tcti-device found: NO (tried pkgconfig and cmake)
+Run-time dependency libdw found: NO (tried pkgconfig and cmake)
+Run-time dependency zlib found: YES 1.3.1
+Run-time dependency bzip2 found: NO (tried pkgconfig and cmake)
+Library bz2 found: YES
+Run-time dependency liblzma found: YES 5.6.0
+Run-time dependency liblz4 found: NO (tried pkgconfig and cmake)
+Run-time dependency libzstd found: YES 1.5.5
+Run-time dependency xkbcommon found: NO (tried pkgconfig and cmake)
+Run-time dependency libpcre2-8 found: NO (tried pkgconfig and cmake)
+Run-time dependency glib-2.0 found: NO (tried pkgconfig and cmake)
+Run-time dependency gobject-2.0 found: NO (tried pkgconfig and cmake)
+Run-time dependency gio-2.0 found: NO (tried pkgconfig and cmake)
+Run-time dependency dbus-1 found: NO (tried pkgconfig and cmake)
+Program python3 (jinja2) found: YES (/usr/bin/python3) modules: jinja2
+Program python3 (elftools) found: NO
+Program tools/check-version-history.py found: YES (/usr/bin/python3.12 /sources/systemd-255/tools/check-version-history.py)
+Program tools/elf2efi.py found: YES (/sources/systemd-255/tools/elf2efi.py)
+Program tools/dbus_exporter.py found: YES (/sources/systemd-255/tools/dbus_exporter.py)
+Program tools/generate-gperfs.py found: YES (/sources/systemd-255/tools/generate-gperfs.py)
+Program tools/make-autosuspend-rules.py found: YES (/sources/systemd-255/tools/make-autosuspend-rules.py)
+Program tools/make-directive-index.py found: YES (/sources/systemd-255/tools/make-directive-index.py)
+Program tools/sync-docs.py found: YES (/sources/systemd-255/tools/sync-docs.py)
+Program tools/make-man-index.py found: YES (/sources/systemd-255/tools/make-man-index.py)
+Program tools/meson-render-jinja2.py found: YES (/sources/systemd-255/tools/meson-render-jinja2.py)
+Program tools/update-dbus-docs.py found: YES (/sources/systemd-255/tools/update-dbus-docs.py)
+Program tools/update-hwdb-autosuspend.sh found: YES (/sources/systemd-255/tools/update-hwdb-autosuspend.sh)
+Program tools/update-hwdb.sh found: YES (/sources/systemd-255/tools/update-hwdb.sh)
+Program tools/update-man-rules.py found: YES (/sources/systemd-255/tools/update-man-rules.py)
+Program tools/update-syscall-tables.sh found: YES (/sources/systemd-255/tools/update-syscall-tables.sh)
+Program tools/xml_helper.py found: YES (/sources/systemd-255/tools/xml_helper.py)
+Configuring config.h using configuration
+Program msgfmt found: YES (/usr/bin/msgfmt)
+Program msginit found: YES (/usr/bin/msginit)
+Program msgmerge found: YES (/usr/bin/msgmerge)
+Program xgettext found: YES (/usr/bin/xgettext)
+Program generate-af-list.sh found: YES (/sources/systemd-255/src/basic/generate-af-list.sh)
+Program generate-arphrd-list.sh found: YES (/sources/systemd-255/src/basic/generate-arphrd-list.sh)
+Program generate-cap-list.sh found: YES (/sources/systemd-255/src/basic/generate-cap-list.sh)
+Program generate-errno-list.sh found: YES (/sources/systemd-255/src/basic/generate-errno-list.sh)
+Program missing_syscalls.py found: YES (/usr/bin/python3.12 /sources/systemd-255/src/basic/missing_syscalls.py)
+Program check-filesystems.sh found: YES (/sources/systemd-255/src/basic/check-filesystems.sh)
+Program generate-filesystem-list.py found: YES (/sources/systemd-255/src/basic/generate-filesystem-list.py)
+Program generate-filesystem-switch-case.py found: YES (/sources/systemd-255/src/basic/generate-filesystem-switch-case.py)
+Program sd-journal/generate-audit_type-list.sh found: YES (/sources/systemd-255/src/libsystemd/sd-journal/generate-audit_type-list.sh)
+Program generate-syscall-list.py found: YES (/sources/systemd-255/src/shared/generate-syscall-list.py)
+Program generate-ip-protocol-list.sh found: YES (/sources/systemd-255/src/shared/generate-ip-protocol-list.sh)
+Program generate-keyboard-keys-list.sh found: YES (/sources/systemd-255/src/udev/generate-keyboard-keys-list.sh)
+Program generate-keyboard-keys-gperf.sh found: YES (/sources/systemd-255/src/udev/generate-keyboard-keys-gperf.sh)
+Program test-kernel-install.sh found: YES (/sources/systemd-255/src/kernel-install/test-kernel-install.sh)
+Program generate-dns_type-gperf.py found: YES (/sources/systemd-255/src/resolve/generate-dns_type-gperf.py)
+Compiler for C supports arguments -std=iso9899:2017: YES 
+Compiler for C supports arguments -std=c2x: YES 
+Compiler for C++ supports arguments -std=c++14: YES 
+Compiler for C++ supports arguments -std=c++17: YES 
+Compiler for C++ supports arguments -std=c++20: YES 
+Compiler for C++ supports arguments -std=c++23: YES 
+Program generate-sym-test.py found: YES (/sources/systemd-255/src/test/generate-sym-test.py)
+Program python3 (pytest_flakes) found: NO
+Program generate-directives.py found: YES (/usr/bin/python3.12 /sources/systemd-255/test/fuzz/generate-directives.py)
+Message: network/test-acd is a manual test
+Message: network/test-ipv4ll-manual is a manual test
+Message: udev/test-udev-rule-runner is a manual test
+Message: coredump/test-coredump-vacuum is a manual test
+Message: import/test-qcow2 is a manual test
+Message: login/test-inhibit is a manual test
+Message: login/test-session-properties is a manual test
+Message: nspawn/test-patch-uid is a manual test
+Message: resolve/test-dnssec-complex is a manual test
+Message: test/test-ask-password-api is a manual test
+Message: test/test-btrfs is a manual test
+Message: test/test-btrfs-physical-offset is a manual test
+Message: test/test-chase-manual is a manual test
+Message: test/test-dlopen is a manual test
+Message: test/test-ipcrm is an unsafe test
+Message: test/test-netlink-manual is a manual test
+Message: test/test-nft-set is a manual test
+Message: test/test-nscd-flush is a manual test
+Message: test/test-watchdog is an unsafe test
+Message: core/test-install is a manual test
+Message: core/test-ns is a manual test
+Message: libsystemd/test-bus-benchmark is a manual test
+Message: libsystemd/test-journal-append is a manual test
+Configuring test-sysusers.sh using configuration
+Program hwdb-test.sh found: YES (/sources/systemd-255/test/hwdb-test.sh)
+Program test-systemctl-enable.sh found: YES (/usr/bin/env bash /sources/systemd-255/test/test-systemctl-enable.sh)
+Program sysv-generator-test.py found: YES (/sources/systemd-255/test/sysv-generator-test.py)
+Program test-bootctl-json.sh found: YES (/sources/systemd-255/test/test-bootctl-json.sh)
+Program test-systemd-tmpfiles.py found: YES (/sources/systemd-255/test/test-systemd-tmpfiles.py)
+Program rule-syntax-check.py found: YES (/sources/systemd-255/test/rule-syntax-check.py)
+Program test-fstab-generator.sh found: YES (/sources/systemd-255/test/test-fstab-generator.sh)
+Program test-network-generator-conversion.sh found: YES (/sources/systemd-255/test/test-network-generator-conversion.sh)
+Program rpm found: NO
+Program rpmspec found: NO
+Program test-rpm-macros.sh found: YES (/sources/systemd-255/test/test-rpm-macros.sh)
+Message: Skipping test-rpm-macros since rpm and/or rpmspec are not available
+Program udev-dmi-memory-id-test.sh found: YES (/sources/systemd-255/test/udev-dmi-memory-id-test.sh)
+Program parse_hwdb.py found: YES (/sources/systemd-255/hwdb.d/parse_hwdb.py)
+Program xsltproc found: NO
+Message: Skipping bootctl.1 because ENABLE_BOOTLOADER is false
+Message: Skipping crypttab.5 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping homectl.1 because ENABLE_HOMED is false
+Message: Skipping homed.conf.5 because ENABLE_HOMED is false
+Message: Skipping integritytab.5 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping journal-remote.conf.5 because HAVE_MICROHTTPD is false
+Message: Skipping journal-upload.conf.5 because HAVE_MICROHTTPD is false
+Message: Skipping loader.conf.5 because ENABLE_BOOTLOADER is false
+Message: Skipping org.freedesktop.home1.5 because ENABLE_HOMED is false
+Message: Skipping org.freedesktop.import1.5 because ENABLE_IMPORTD is false
+Message: Skipping pam_systemd.8 because HAVE_PAM is false
+Message: Skipping pam_systemd_home.8 because ENABLE_PAM_HOME is false
+Message: Skipping pam_systemd_loadkey.8 because HAVE_PAM is false
+Message: Skipping sd-login.3 because HAVE_PAM is false
+Message: Skipping sd_get_seats.3 because HAVE_PAM is false
+Message: Skipping sd_login_monitor_new.3 because HAVE_PAM is false
+Message: Skipping sd_pid_get_owner_uid.3 because HAVE_PAM is false
+Message: Skipping sd_seat_get_active.3 because HAVE_PAM is false
+Message: Skipping sd_session_is_active.3 because HAVE_PAM is false
+Message: Skipping sd_uid_get_state.3 because HAVE_PAM is false
+Message: Skipping systemd-bless-boot-generator.8 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-bless-boot.service.8 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-boot-random-seed.service.8 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-boot.7 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-bsod.service.8 because HAVE_QRENCODE is false
+Message: Skipping systemd-cryptenroll.1 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-cryptsetup-generator.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-cryptsetup.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-homed.service.8 because ENABLE_HOMED is false
+Message: Skipping systemd-importd.service.8 because ENABLE_IMPORTD is false
+Message: Skipping systemd-integritysetup-generator.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-integritysetup@.service.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-journal-gatewayd.service.8 because HAVE_MICROHTTPD is false
+Message: Skipping systemd-journal-remote.service.8 because HAVE_MICROHTTPD is false
+Message: Skipping systemd-journal-upload.service.8 because HAVE_MICROHTTPD is false
+Message: Skipping systemd-measure.1 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-pcrlock.8 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-pcrphase.service.8 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-stub.7 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-tpm2-setup.service.8 because ENABLE_BOOTLOADER is false
+Message: Skipping systemd-user-sessions.service.8 because HAVE_PAM is false
+Message: Skipping systemd-veritysetup-generator.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-veritysetup@.service.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-vmspawn.1 because ENABLE_VMSPAWN is false
+Message: Skipping veritytab.5 because HAVE_LIBCRYPTSETUP is false
+Message: python-lxml not available, not making man page indices
+Configuring man using configuration
+Configuring html using configuration
+Run-time dependency bash-completion found: NO (tried pkgconfig and cmake)
+Checking for size of "long" : 4 
+Message: Not installing tmpfiles.d/systemd-nologin.conf because HAVE_PAM is 0
+Program jekyll found: NO
+Program tools/check-help.sh found: YES (/sources/systemd-255/tools/check-help.sh)
+Program tools/check-version.sh found: YES (/sources/systemd-255/tools/check-version.sh)
+Compiler for C supports link arguments -fsanitize=address,undefined: YES 
+Message: Not compiling fuzz-network-parser:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-netdev-parser:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-link-parser:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-unit-file:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-bootspec:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-bus-match:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-bus-message:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-calendarspec:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-catalog:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-dhcp6-client:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-dhcp-client:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-dhcp-server:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-dhcp-server-relay:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-dns-packet:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-env-file:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-etc-hosts:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-execute-serialize:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-fido-id-desc:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-journald-audit:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-journald-kmsg:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-journald-native-fd:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-journald-stream:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-journald-syslog:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-journal-remote:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-json:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-lldp-rx:address,undefined because fuzz-tests is set to false
+Cleaning... 0 files.
+Message: Not compiling fuzz-manager-serialize:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-ndisc-rs:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-nspawn-oci:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-nspawn-settings:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-resource-record:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-systemctl-parse-argv:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-udev-database:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-udev-rules:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-varlink:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-varlink-idl:address,undefined because fuzz-tests is set to false
+Message: Not compiling fuzz-xdg-desktop:address,undefined because fuzz-tests is set to false
+Program tools/check-api-docs.sh found: YES (/sources/systemd-255/tools/check-api-docs.sh)
+Build targets in project: 784
+
+systemd 255
+
+    build mode                     : release
+    split bin-sbin                 : true
+    prefix directory               : /usr
+    sysconf directory              : /etc
+    include directory              : /usr/include
+    lib directory                  : /usr/lib
+    SysV init scripts              : /etc/init.d
+    SysV rc?.d directories         : /etc/rc.d
+    PAM modules directory          : /usr/lib/security
+    PAM configuration directory    : /usr/lib/pam.d
+    libcryptsetup plugins directory: /usr/lib/cryptsetup
+    RPM macros directory           : /usr/lib/rpm/macros.d
+    modprobe.d directory           : /usr/lib/modprobe.d
+    D-Bus policy directory         : /usr/share/dbus-1/system.d
+    D-Bus session directory        : /usr/share/dbus-1/services
+    D-Bus system directory         : /usr/share/dbus-1/system-services
+    D-Bus interfaces directory     : /usr/share/dbus-1/interfaces
+    bash completions directory     : /usr/share/bash-completion/completions
+    zsh completions directory      : /usr/share/zsh/site-functions
+    private shared lib version tag : 255
+    extra start script             : /etc/rc.local
+    debug shell                    : /usr/bin/sh @ /dev/tty9
+    system UIDs                    : <=999 (alloc >=101)
+    system GIDs                    : <=999 (alloc >=101)
+    dynamic UIDs                   : 61184…65519
+    container UID bases            : 524288…1878982656
+    static UID/GID allocations     : tty-gid:5
+    /dev/kvm access mode           : 0660
+    render group access mode       : 0666
+    certificate root directory     : /etc/ssl
+    support URL                    : https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+    nobody user name               : nobody
+    nobody group name              : nobody
+    fallback hostname              : localhost
+    default compression method     : zstd
+    default DNSSEC mode            : allow-downgrade
+    default DNS-over-TLS mode      : no
+    default mDNS mode              : yes
+    default LLMNR mode             : yes
+    default DNS servers            : 1.1.1.1#cloudflare-dns.com
+                                     8.8.8.8#dns.google
+                                     1.0.0.1#cloudflare-dns.com
+                                     8.8.4.4#dns.google
+                                     2606:4700:4700::1111#cloudflare-dns.com
+                                     2001:4860:4860::8888#dns.google
+                                     2606:4700:4700::1001#cloudflare-dns.com
+                                     2001:4860:4860::8844#dns.google
+    default NTP servers            : time1.google.com
+                                     time2.google.com
+                                     time3.google.com
+                                     time4.google.com
+    default cgroup hierarchy       : unified
+    default net.naming-scheme value: latest
+    default KillUserProcesses value: true
+    default locale                 : C.UTF-8
+    default nspawn locale          : C.UTF-8
+    default status unit format     : description
+    default user $PATH             : (same as system services)
+    systemd service watchdog       : 3min
+    time epoch                     : 1701894760 (2023-12-06T20:32:40+00:00)
+
+  Features
+    enabled                        : ACL, IMA, SMACK, blkid, libfdisk, openssl, zstd, xz, zlib, bzip2, backlight, binfmt, coredump, efi, environment.d, firstboot, hibernate, hostnamed, hwdb, initrd, kernel-install, localed, logind, machined, networkd, nss-myhostname, nss-mymachines, nss-resolve, nss-systemd, oomd, portabled, pstore, quotacheck, randomseed, repart, resolve, rfkill, sysext, systemd-analyze, sysupdate, sysusers, storagetm, timedated, timesyncd, tmpfiles, userdb, vconsole, xdg-autostart, dmi, idn, polkit, nscd, kmod, tpm, SysV compat, utmp, ldconfig, adm group, wheel group, gshadow, link-systemctl-shared, link-networkd-shared, link-timesyncd-shared, link-journalctl-shared, link-boot-shared, link-portabled-shared, cryptolib(openssl), DNS-over-TLS(openssl)
+    disabled                       : AUDIT, AppArmor, PAM, SECCOMP, SELinux, elfutils, gcrypt, gnutls, libbpf, libcryptsetup, libcryptsetup-plugins, libcurl, libfido2, libidn, libidn2, libiptc, microhttpd, p11kit, passwdqc, pcre2, pwquality, qrencode, tpm2, xkbcommon, lz4, bootloader, bpf-framework, homed, importd, vmspawn, legacy-pkla, xenctrl, dbus, glib, man pages, html pages, man page indices, compat-mutable-uid-boundaries, debug hashmap, debug mmap cache, debug siphash, trace logging, slow tests, fuzz tests, install tests, link-udev-shared, first-boot-full-preset, fexecve, standalone-binaries, coverage, static-libsystemd, static-libudev
+
+  User defined options
+    buildtype                      : release
+    prefix                         : /usr
+    dev-kvm-mode                   : 0660
+    link-udev-shared               : false
+    mode                           : release
+
+Found ninja-1.11.1 at /usr/bin/ninja
+[1/434] Generating version.h with a custom command
+[2/434] Generating src/basic/arphrd-list.txt with a custom command (wrapped by meson to capture output)
+[3/434] Generating src/basic/cap-list.txt with a custom command (wrapped by meson to capture output)
+[4/434] Generating src/basic/af-list.txt with a custom command (wrapped by meson to capture output)
+[5/434] Generating src/basic/arphrd-to-name.h with a custom command (wrapped by meson to capture output)
+[6/434] Generating src/basic/errno-list.txt with a custom command (wrapped by meson to capture output)
+[7/434] Generating src/basic/arphrd-from-name.gperf with a custom command (wrapped by meson to capture output)
+[8/434] Generating src/basic/af-from-name.gperf with a custom command (wrapped by meson to capture output)
+[9/434] Generating src/basic/af-to-name.h with a custom command (wrapped by meson to capture output)
+[10/434] Generating src/basic/cap-from-name.gperf with a custom command (wrapped by meson to capture output)
+[11/434] Generating src/basic/af-from-name.h with a custom command (wrapped by meson to capture output)
+[12/434] Generating src/basic/arphrd-from-name.h with a custom command (wrapped by meson to capture output)
+[13/434] Generating src/basic/cap-to-name.h with a custom command (wrapped by meson to capture output)
+[14/434] Generating src/basic/filesystems-gperf.h with a custom command
+[15/434] Generating src/basic/cap-from-name.h with a custom command (wrapped by meson to capture output)
+[16/434] Generating src/basic/errno-to-name.h with a custom command (wrapped by meson to capture output)
+[17/434] Generating src/basic/errno-from-name.gperf with a custom command (wrapped by meson to capture output)
+[18/434] Generating src/basic/filesystem-list.h with a custom command (wrapped by meson to capture output)
+[19/434] Generating src/basic/filesystem-switch-case.h with a custom command (wrapped by meson to capture output)
+[20/434] Generating src/basic/errno-from-name.h with a custom command (wrapped by meson to capture output)
+[21/434] Compiling C object src/basic/libbasic.a.p/MurmurHash2.c.o
+[22/434] Generating src/libsystemd/audit_type-list.txt with a custom command (wrapped by meson to capture output)
+[23/434] Generating src/shared/ip-protocol-list.txt with a custom command (wrapped by meson to capture output)
+[24/434] Compiling C object src/basic/libbasic.a.p/af-list.c.o
+[25/434] Compiling C object src/basic/libbasic.a.p/architecture.c.o
+[26/434] Compiling C object src/basic/libbasic.a.p/alloc-util.c.o
+[27/434] Compiling C object src/basic/libbasic-compress.a.p/compress.c.o
+[28/434] Compiling C object src/basic/libbasic.a.p/arphrd-util.c.o
+[29/434] Compiling C object src/basic/libbasic.a.p/argv-util.c.o
+[30/434] Compiling C object src/basic/libbasic.a.p/audit-util.c.o
+[31/434] Compiling C object src/basic/libbasic.a.p/build.c.o
+[32/434] Compiling C object src/basic/libbasic.a.p/btrfs.c.o
+[33/434] Compiling C object src/basic/libbasic.a.p/bus-label.c.o
+[34/434] Compiling C object src/basic/libbasic.a.p/cap-list.c.o
+[35/434] Compiling C object src/basic/libbasic.a.p/chattr-util.c.o
+[36/434] Compiling C object src/basic/libbasic.a.p/capability-util.c.o
+[37/434] Compiling C object src/basic/libbasic.a.p/confidential-virt.c.o
+[38/434] Compiling C object src/basic/libbasic.a.p/conf-files.c.o
+[39/434] Compiling C object src/basic/libbasic.a.p/chase.c.o
+[40/434] Compiling C object src/basic/libbasic.a.p/devnum-util.c.o
+[41/434] Compiling C object src/basic/libbasic.a.p/dirent-util.c.o
+[42/434] Compiling C object src/basic/libbasic.a.p/efivars.c.o
+[43/434] Compiling C object src/basic/libbasic.a.p/env-file.c.o
+[44/434] Compiling C object src/basic/libbasic.a.p/errno-list.c.o
+[45/434] Compiling C object src/basic/libbasic.a.p/cgroup-util.c.o
+[46/434] Compiling C object src/basic/libbasic.a.p/ether-addr-util.c.o
+[47/434] Compiling C object src/basic/libbasic.a.p/extract-word.c.o
+[48/434] Compiling C object src/basic/libbasic.a.p/escape.c.o
+[49/434] Compiling C object src/basic/libbasic.a.p/env-util.c.o
+[50/434] Compiling C object src/basic/libbasic.a.p/format-util.c.o
+[51/434] Compiling C object src/basic/libbasic.a.p/filesystems.c.o
+[52/434] Compiling C object src/basic/libbasic.a.p/glob-util.c.o
+[53/434] Compiling C object src/basic/libbasic.a.p/glyph-util.c.o
+[54/434] Compiling C object src/basic/libbasic.a.p/fd-util.c.o
+[55/434] Compiling C object src/basic/libbasic.a.p/gunicode.c.o
+[56/434] Compiling C object src/basic/libbasic.a.p/hash-funcs.c.o
+[57/434] Compiling C object src/basic/libbasic.a.p/fileio.c.o
+[58/434] Compiling C object src/basic/libbasic.a.p/hmac.c.o
+[59/434] Compiling C object src/basic/libbasic.a.p/fs-util.c.o
+[60/434] Compiling C object src/basic/libbasic.a.p/hostname-util.c.o
+[61/434] Compiling C object src/basic/libbasic.a.p/initrd-util.c.o
+[62/434] Compiling C object src/basic/libbasic.a.p/hexdecoct.c.o
+[63/434] Compiling C object src/basic/libbasic.a.p/inotify-util.c.o
+[64/434] Compiling C object src/basic/libbasic.a.p/ioprio-util.c.o
+[65/434] Compiling C object src/basic/libbasic.a.p/in-addr-util.c.o
+[66/434] Compiling C object src/basic/libbasic.a.p/io-util.c.o
+[67/434] Compiling C object src/basic/libbasic.a.p/label.c.o
+[68/434] Compiling C object src/basic/libbasic.a.p/iovec-util.c.o
+[69/434] Compiling C object src/basic/libbasic.a.p/iovec-wrapper.c.o
+[70/434] Compiling C object src/basic/libbasic.a.p/hashmap.c.o
+[71/434] Compiling C object src/basic/libbasic.a.p/limits-util.c.o
+[72/434] Compiling C object src/basic/libbasic.a.p/login-util.c.o
+[73/434] Compiling C object src/basic/libbasic.a.p/locale-util.c.o
+[74/434] Compiling C object src/basic/libbasic.a.p/lock-util.c.o
+[75/434] Compiling C object src/basic/libbasic.a.p/memory-util.c.o
+[76/434] Compiling C object src/basic/libbasic.a.p/mempool.c.o
+[77/434] Compiling C object src/basic/libbasic.a.p/memfd-util.c.o
+[78/434] Compiling C object src/basic/libbasic.a.p/memstream-util.c.o
+[79/434] Compiling C object src/basic/libbasic.a.p/mkdir.c.o
+[80/434] Compiling C object src/basic/libbasic.a.p/namespace-util.c.o
+[81/434] Compiling C object src/basic/libbasic.a.p/nulstr-util.c.o
+[82/434] Compiling C object src/basic/libbasic.a.p/mountpoint-util.c.o
+[83/434] Compiling C object src/basic/libbasic.a.p/ordered-set.c.o
+[84/434] Compiling C object src/basic/libbasic.a.p/log.c.o
+[85/434] Compiling C object src/basic/libbasic.a.p/os-util.c.o
+[86/434] Compiling C object src/basic/libbasic.a.p/parse-util.c.o
+[87/434] Compiling C object src/basic/libbasic.a.p/percent-util.c.o
+[88/434] Compiling C object src/basic/libbasic.a.p/path-lookup.c.o
+[89/434] Compiling C object src/basic/libbasic.a.p/prioq.c.o
+[90/434] Compiling C object src/basic/libbasic.a.p/pidref.c.o
+[91/434] Compiling C object src/basic/libbasic.a.p/proc-cmdline.c.o
+[92/434] Compiling C object src/basic/libbasic.a.p/path-util.c.o
+[93/434] Compiling C object src/basic/libbasic.a.p/procfs-util.c.o
+[94/434] Compiling C object src/basic/libbasic.a.p/psi-util.c.o
+[95/434] Compiling C object src/basic/libbasic.a.p/ratelimit.c.o
+[96/434] Compiling C object src/basic/libbasic.a.p/random-util.c.o
+[97/434] Compiling C object src/basic/libbasic.a.p/replace-var.c.o
+[98/434] Compiling C object src/basic/libbasic.a.p/runtime-scope.c.o
+[99/434] Compiling C object src/basic/libbasic.a.p/recurse-dir.c.o
+[100/434] Compiling C object src/basic/libbasic.a.p/rlimit-util.c.o
+[101/434] Compiling C object src/basic/libbasic.a.p/sigbus.c.o
+[102/434] Compiling C object src/basic/libbasic.a.p/siphash24.c.o
+[103/434] Compiling C object src/basic/libbasic.a.p/signal-util.c.o
+[104/434] Compiling C object src/basic/libbasic.a.p/sort-util.c.o
+[105/434] Compiling C object src/basic/libbasic.a.p/process-util.c.o
+[106/434] Compiling C object src/basic/libbasic.a.p/strbuf.c.o
+[107/434] Compiling C object src/basic/libbasic.a.p/string-table.c.o
+[108/434] Compiling C object src/basic/libbasic.a.p/stat-util.c.o
+[109/434] Compiling C object src/basic/libbasic.a.p/strxcpyx.c.o
+[110/434] Compiling C object src/basic/libbasic.a.p/socket-util.c.o
+[111/434] Compiling C object src/basic/libbasic.a.p/sync-util.c.o
+[112/434] Compiling C object src/basic/libbasic.a.p/strv.c.o
+[113/434] Compiling C object src/basic/libbasic.a.p/syslog-util.c.o
+[114/434] Compiling C object src/basic/libbasic.a.p/sysctl-util.c.o
+[115/434] Compiling C object src/basic/libbasic.a.p/string-util.c.o
+[116/434] Compiling C object src/basic/libbasic.a.p/uid-alloc-range.c.o
+[117/434] Compiling C object src/basic/libbasic.a.p/tmpfile-util.c.o
+[118/434] Compiling C object src/basic/libbasic.a.p/uid-range.c.o
+[119/434] Compiling C object src/basic/libbasic.a.p/unit-def.c.o
+[120/434] Compiling C object src/basic/libbasic.a.p/terminal-util.c.o
+[121/434] Compiling C object src/basic/libbasic.a.p/time-util.c.o
+[122/434] Compiling C object src/basic/libbasic.a.p/unit-name.c.o
+[123/434] Compiling C object src/basic/libbasic.a.p/unit-file.c.o
+[124/434] Compiling C object src/basic/libbasic.a.p/utf8.c.o
+[125/434] Compiling C object src/basic/libbasic.a.p/.._fundamental_bootspec-fundamental.c.o
+[126/434] Compiling C object src/basic/libbasic.a.p/.._fundamental_efivars-fundamental.c.o
+[127/434] Compiling C object src/basic/libbasic.a.p/xattr-util.c.o
+[128/434] Compiling C object src/basic/libbasic.a.p/user-util.c.o
+[129/434] Compiling C object src/basic/libbasic.a.p/.._fundamental_uki.c.o
+[130/434] Linking static target src/basic/libbasic-compress.a
+[131/434] Compiling C object src/basic/libbasic.a.p/.._fundamental_sha256.c.o
+[132/434] Generating src/libsystemd/audit_type-to-name.h with a custom command (wrapped by meson to capture output)
+[133/434] Compiling C object src/basic/libbasic.a.p/.._fundamental_string-util-fundamental.c.o
+[134/434] Compiling C object src/basic/libbasic.a.p/virt.c.o
+[135/434] Generating src/shared/ip-protocol-from-name.gperf with a custom command (wrapped by meson to capture output)
+[136/434] Linking static target src/basic/libbasic.a
+[137/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-common-errors.c.o
+[138/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-container.c.o
+[139/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-control.c.o
+[140/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-convenience.c.o
+[141/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-dump.c.o
+[142/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-creds.c.o
+[143/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-internal.c.o
+[144/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-error.c.o
+[145/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-kernel.c.o
+[146/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-introspect.c.o
+[147/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-signature.c.o
+[148/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-slot.c.o
+[149/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-match.c.o
+[150/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-track.c.o
+[151/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-type.c.o
+[152/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-socket.c.o
+[153/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-objects.c.o
+[154/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-device_device-filter.c.o
+[155/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-device_device-enumerator.c.o
+[156/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_bus-message.c.o
+[157/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-device_device-util.c.o
+[158/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-device_device-monitor.c.o
+[159/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-device_device-private.c.o
+[160/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-hwdb_sd-hwdb.c.o
+[161/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-genl.c.o
+[162/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-message-nfnl.c.o
+[163/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-bus_sd-bus.c.o
+[164/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-slot.c.o
+[165/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-message-rtnl.c.o
+[166/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-types-genl.c.o
+[167/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-types-nfnl.c.o
+[168/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-socket.c.o
+[169/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-device_sd-device.c.o
+[170/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-message.c.o
+[171/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-types-rtnl.c.o
+[172/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-types.c.o
+[173/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-network_network-util.c.o
+[174/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-network_sd-network.c.o
+[175/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_netlink-util.c.o
+[176/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-netlink_sd-netlink.c.o
+[177/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-path_sd-path.c.o
+[178/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_audit-type.c.o
+[179/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_journal-send.c.o
+[180/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_catalog.c.o
+[181/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-resolve_sd-resolve.c.o
+[182/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_journal-vacuum.c.o
+[183/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_lookup3.c.o
+[184/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_mmap-cache.c.o
+[185/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-id128_id128-util.c.o
+[186/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_journal-verify.c.o
+[187/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-id128_sd-id128.c.o
+[188/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-event_event-util.c.o
+[189/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-daemon_sd-daemon.c.o
+[190/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_journal-file.c.o
+[191/434] Generating src/shared/ip-protocol-from-name.h with a custom command (wrapped by meson to capture output)
+[192/434] Generating src/shared/ip-protocol-to-name.h with a custom command (wrapped by meson to capture output)
+[193/434] Generating src/shared/ethtool-link-mode.h with a custom command (wrapped by meson to capture output)
+[194/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-login_sd-login.c.o
+[195/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-journal_sd-journal.c.o
+[196/434] Compiling C object src/shared/libsystemd-shared-255.a.p/acpi-fpdt.c.o
+[197/434] Compiling C object src/shared/libsystemd-shared-255.a.p/acl-util.c.o
+[198/434] Compiling C object src/shared/libsystemd-shared-255.a.p/apparmor-util.c.o
+[199/434] Compiling C object src/shared/libsystemd-shared-255.a.p/async.c.o
+[200/434] Compiling C object src/shared/libsystemd-shared-255.a.p/barrier.c.o
+[201/434] Compiling C object src/shared/libsystemd-shared-255.a.p/base-filesystem.c.o
+[202/434] Compiling C object src/shared/libsystemd-shared-255.a.p/binfmt-util.c.o
+[203/434] Compiling C object src/shared/libsystemd-shared-255.a.p/battery-util.c.o
+[204/434] Compiling C object src/shared/libsystemd-shared-255.a.p/ask-password-api.c.o
+[205/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bitmap.c.o
+[206/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bond-util.c.o
+[207/434] Compiling C object src/shared/libsystemd-shared-255.a.p/boot-timestamps.c.o
+[208/434] Compiling C object src/shared/libsystemd-shared-255.a.p/boot-entry.c.o
+[209/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bpf-dlopen.c.o
+[210/434] Compiling C object src/shared/libsystemd-shared-255.a.p/blockdev-util.c.o
+[211/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bridge-util.c.o
+[212/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bpf-program.c.o
+[213/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-get-properties.c.o
+[214/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-locator.c.o
+[215/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-log-control-api.c.o
+[216/434] Compiling C object src/libsystemd/libsystemd_static.a.p/sd-event_sd-event.c.o
+[217/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bootspec.c.o
+[218/434] Linking static target src/libsystemd/libsystemd_static.a
+[219/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-map-properties.c.o
+[220/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-message-util.c.o
+[221/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-object.c.o
+[222/434] Compiling C object src/shared/libsystemd-shared-255.a.p/btrfs-util.c.o
+[223/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-polkit.c.o
+[224/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-print-properties.c.o
+[225/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-unit-procs.c.o
+[226/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-wait-for-units.c.o
+[227/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-wait-for-jobs.c.o
+[228/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-util.c.o
+[229/434] Compiling C object src/shared/libsystemd-shared-255.a.p/cgroup-show.c.o
+[230/434] Compiling C object src/shared/libsystemd-shared-255.a.p/cgroup-setup.c.o
+[231/434] Compiling C object src/shared/libsystemd-shared-255.a.p/chown-recursive.c.o
+[232/434] Compiling C object src/shared/libsystemd-shared-255.a.p/calendarspec.c.o
+[233/434] Compiling C object src/shared/libsystemd-shared-255.a.p/clock-util.c.o
+[234/434] Compiling C object src/shared/libsystemd-shared-255.a.p/common-signal.c.o
+[235/434] Compiling C object src/shared/libsystemd-shared-255.a.p/clean-ipc.c.o
+[236/434] Compiling C object src/shared/libsystemd-shared-255.a.p/compare-operator.c.o
+[237/434] Compiling C object src/shared/libsystemd-shared-255.a.p/condition.c.o
+[238/434] Compiling C object src/shared/libsystemd-shared-255.a.p/copy.c.o
+[239/434] Compiling C object src/shared/libsystemd-shared-255.a.p/conf-parser.c.o
+[240/434] Compiling C object src/shared/libsystemd-shared-255.a.p/coredump-util.c.o
+[241/434] Compiling C object src/shared/libsystemd-shared-255.a.p/cpu-set-util.c.o
+[242/434] Compiling C object src/shared/libsystemd-shared-255.a.p/cryptsetup-util.c.o
+[243/434] Compiling C object src/shared/libsystemd-shared-255.a.p/bus-unit-util.c.o
+[244/434] Compiling C object src/shared/libsystemd-shared-255.a.p/daemon-util.c.o
+[245/434] Compiling C object src/shared/libsystemd-shared-255.a.p/data-fd-util.c.o
+[246/434] Compiling C object src/shared/libsystemd-shared-255.a.p/device-nodes.c.o
+[247/434] Compiling C object src/shared/libsystemd-shared-255.a.p/dev-setup.c.o
+[248/434] Compiling C object src/shared/libsystemd-shared-255.a.p/dlfcn-util.c.o
+[249/434] Compiling C object src/shared/libsystemd-shared-255.a.p/dm-util.c.o
+[250/434] Compiling C object src/shared/libsystemd-shared-255.a.p/creds-util.c.o
+[251/434] Compiling C object src/shared/libsystemd-shared-255.a.p/dropin.c.o
+[252/434] Compiling C object src/shared/libsystemd-shared-255.a.p/discover-image.c.o
+[253/434] Compiling C object src/shared/libsystemd-shared-255.a.p/dns-domain.c.o
+[254/434] Compiling C object src/shared/libsystemd-shared-255.a.p/edit-util.c.o
+[255/434] Compiling C object src/shared/libsystemd-shared-255.a.p/efi-loader.c.o
+[256/434] Compiling C object src/shared/libsystemd-shared-255.a.p/elf-util.c.o
+[257/434] Compiling C object src/shared/libsystemd-shared-255.a.p/efi-api.c.o
+[258/434] Compiling C object src/shared/libsystemd-shared-255.a.p/env-file-label.c.o
+[259/434] Compiling C object src/shared/libsystemd-shared-255.a.p/enable-mempool.c.o
+[260/434] Compiling C object src/shared/libsystemd-shared-255.a.p/exit-status.c.o
+[261/434] Compiling C object src/shared/libsystemd-shared-255.a.p/extension-util.c.o
+[262/434] Compiling C object src/shared/libsystemd-shared-255.a.p/exec-util.c.o
+[263/434] Compiling C object src/shared/libsystemd-shared-255.a.p/fileio-label.c.o
+[264/434] Compiling C object src/shared/libsystemd-shared-255.a.p/fdset.c.o
+[265/434] Compiling C object src/shared/libsystemd-shared-255.a.p/ethtool-util.c.o
+[266/434] Compiling C object src/shared/libsystemd-shared-255.a.p/dissect-image.c.o
+[267/434] Compiling C object src/shared/libsystemd-shared-255.a.p/firewall-util.c.o
+[268/434] Compiling C object src/shared/libsystemd-shared-255.a.p/fstab-util.c.o
+[269/434] Compiling C object src/shared/libsystemd-shared-255.a.p/firewall-util-nft.c.o
+[270/434] Compiling C object src/shared/libsystemd-shared-255.a.p/geneve-util.c.o
+[271/434] Compiling C object src/shared/libsystemd-shared-255.a.p/find-esp.c.o
+[272/434] Compiling C object src/shared/libsystemd-shared-255.a.p/gpt.c.o
+[273/434] Compiling C object src/shared/libsystemd-shared-255.a.p/group-record.c.o
+[274/434] Compiling C object src/shared/libsystemd-shared-255.a.p/generator.c.o
+[275/434] Compiling C object src/shared/libsystemd-shared-255.a.p/hostname-setup.c.o
+[276/434] Compiling C object src/shared/libsystemd-shared-255.a.p/hibernate-util.c.o
+[277/434] Compiling C object src/shared/libsystemd-shared-255.a.p/idn-util.c.o
+[278/434] Compiling C object src/shared/libsystemd-shared-255.a.p/id128-print.c.o
+[279/434] Compiling C object src/shared/libsystemd-shared-255.a.p/ima-util.c.o
+[280/434] Compiling C object src/shared/libsystemd-shared-255.a.p/format-table.c.o
+[281/434] Compiling C object src/shared/libsystemd-shared-255.a.p/hwdb-util.c.o
+[282/434] Compiling C object src/shared/libsystemd-shared-255.a.p/import-util.c.o
+[283/434] Compiling C object src/shared/libsystemd-shared-255.a.p/in-addr-prefix-util.c.o
+[284/434] Compiling C object src/shared/libsystemd-shared-255.a.p/install-file.c.o
+[285/434] Compiling C object src/shared/libsystemd-shared-255.a.p/image-policy.c.o
+[286/434] Compiling C object src/shared/libsystemd-shared-255.a.p/install-printf.c.o
+[287/434] Compiling C object src/shared/libsystemd-shared-255.a.p/ipvlan-util.c.o
+[288/434] Compiling C object src/shared/libsystemd-shared-255.a.p/ip-protocol-list.c.o
+[289/434] Compiling C object src/shared/libsystemd-shared-255.a.p/journal-file-util.c.o
+[290/434] Compiling C object src/shared/libsystemd-shared-255.a.p/journal-util.c.o
+[291/434] Compiling C object src/shared/libsystemd-shared-255.a.p/journal-importer.c.o
+[292/434] Compiling C object src/shared/libsystemd-shared-255.a.p/kbd-util.c.o
+[293/434] Compiling C object src/shared/libsystemd-shared-255.a.p/kernel-image.c.o
+[294/434] Compiling C object src/shared/libsystemd-shared-255.a.p/keyring-util.c.o
+[295/434] Compiling C object src/shared/libsystemd-shared-255.a.p/label-util.c.o
+[296/434] Compiling C object src/shared/libsystemd-shared-255.a.p/killall.c.o
+[297/434] Compiling C object src/shared/libsystemd-shared-255.a.p/libcrypt-util.c.o
+[298/434] Compiling C object src/shared/libsystemd-shared-255.a.p/libfido2-util.c.o
+[299/434] Compiling C object src/shared/libsystemd-shared-255.a.p/libmount-util.c.o
+[300/434] Compiling C object src/shared/libsystemd-shared-255.a.p/locale-setup.c.o
+[301/434] Compiling C object src/shared/libsystemd-shared-255.a.p/local-addresses.c.o
+[302/434] Compiling C object src/shared/libsystemd-shared-255.a.p/install.c.o
+[303/434] Compiling C object src/shared/libsystemd-shared-255.a.p/loopback-setup.c.o
+[304/434] Compiling C object src/shared/libsystemd-shared-255.a.p/lsm-util.c.o
+[305/434] Compiling C object src/shared/libsystemd-shared-255.a.p/loop-util.c.o
+[306/434] Compiling C object src/shared/libsystemd-shared-255.a.p/machine-credential.c.o
+[307/434] Compiling C object src/shared/libsystemd-shared-255.a.p/machine-id-setup.c.o
+[308/434] Compiling C object src/shared/libsystemd-shared-255.a.p/machine-pool.c.o
+[309/434] Compiling C object src/shared/libsystemd-shared-255.a.p/macvlan-util.c.o
+[310/434] Compiling C object src/shared/libsystemd-shared-255.a.p/mkdir-label.c.o
+[311/434] Compiling C object src/shared/libsystemd-shared-255.a.p/logs-show.c.o
+[312/434] Compiling C object src/shared/libsystemd-shared-255.a.p/json.c.o
+[313/434] Compiling C object src/shared/libsystemd-shared-255.a.p/mount-setup.c.o
+[314/434] Compiling C object src/shared/libsystemd-shared-255.a.p/netif-naming-scheme.c.o
+[315/434] Compiling C object src/shared/libsystemd-shared-255.a.p/net-condition.c.o
+[316/434] Compiling C object src/shared/libsystemd-shared-255.a.p/mkfs-util.c.o
+[317/434] Compiling C object src/shared/libsystemd-shared-255.a.p/nsflags.c.o
+[318/434] Compiling C object src/shared/libsystemd-shared-255.a.p/netif-util.c.o
+[319/434] Compiling C object src/shared/libsystemd-shared-255.a.p/netif-sriov.c.o
+[320/434] Compiling C object src/shared/libsystemd-shared-255.a.p/numa-util.c.o
+[321/434] Compiling C object src/shared/libsystemd-shared-255.a.p/open-file.c.o
+[322/434] Compiling C object src/shared/libsystemd-shared-255.a.p/output-mode.c.o
+[323/434] Compiling C object src/shared/libsystemd-shared-255.a.p/mount-util.c.o
+[324/434] Compiling C object src/shared/libsystemd-shared-255.a.p/parse-argument.c.o
+[325/434] Compiling C object src/shared/libsystemd-shared-255.a.p/pager.c.o
+[326/434] Compiling C object src/shared/libsystemd-shared-255.a.p/password-quality-util-passwdqc.c.o
+[327/434] Compiling C object src/shared/libsystemd-shared-255.a.p/password-quality-util-pwquality.c.o
+[328/434] Compiling C object src/shared/libsystemd-shared-255.a.p/parse-helpers.c.o
+[329/434] Compiling C object src/shared/libsystemd-shared-255.a.p/pcre2-util.c.o
+[330/434] Compiling C object src/shared/libsystemd-shared-255.a.p/pcrextend-util.c.o
+[331/434] Compiling C object src/shared/libsystemd-shared-255.a.p/pe-binary.c.o
+[332/434] Compiling C object src/shared/libsystemd-shared-255.a.p/plymouth-util.c.o
+[333/434] Compiling C object src/shared/libsystemd-shared-255.a.p/pkcs11-util.c.o
+[334/434] Compiling C object src/shared/libsystemd-shared-255.a.p/qrcode-util.c.o
+[335/434] Compiling C object src/shared/libsystemd-shared-255.a.p/quota-util.c.o
+[336/434] Compiling C object src/shared/libsystemd-shared-255.a.p/pretty-print.c.o
+[337/434] Compiling C object src/shared/libsystemd-shared-255.a.p/reboot-util.c.o
+[338/434] Compiling C object src/shared/libsystemd-shared-255.a.p/ptyfwd.c.o
+[339/434] Compiling C object src/shared/libsystemd-shared-255.a.p/recovery-key.c.o
+[340/434] Compiling C object src/shared/libsystemd-shared-255.a.p/resize-fs.c.o
+[341/434] Compiling C object src/shared/libsystemd-shared-255.a.p/resolve-util.c.o
+[342/434] Compiling C object src/shared/libsystemd-shared-255.a.p/securebits-util.c.o
+[343/434] Compiling C object src/shared/libsystemd-shared-255.a.p/selinux-util.c.o
+[344/434] Compiling C object src/shared/libsystemd-shared-255.a.p/rm-rf.c.o
+[345/434] Compiling C object src/shared/libsystemd-shared-255.a.p/openssl-util.c.o
+[346/434] Compiling C object src/shared/libsystemd-shared-255.a.p/service-util.c.o
+[347/434] Compiling C object src/shared/libsystemd-shared-255.a.p/socket-label.c.o
+[348/434] Compiling C object src/shared/libsystemd-shared-255.a.p/smack-util.c.o
+[349/434] Compiling C object src/shared/libsystemd-shared-255.a.p/sleep-config.c.o
+[350/434] Compiling C object src/shared/libsystemd-shared-255.a.p/serialize.c.o
+[351/434] Compiling C object src/shared/libsystemd-shared-255.a.p/spawn-ask-password-agent.c.o
+[352/434] Compiling C object src/shared/libsystemd-shared-255.a.p/spawn-polkit-agent.c.o
+[353/434] Compiling C object src/shared/libsystemd-shared-255.a.p/socket-netlink.c.o
+[354/434] Compiling C object src/shared/libsystemd-shared-255.a.p/tmpfile-util-label.c.o
+[355/434] Compiling C object src/shared/libsystemd-shared-255.a.p/tomoyo-util.c.o
+[356/434] Compiling C object src/shared/libsystemd-shared-255.a.p/specifier.c.o
+[357/434] Compiling C object src/shared/libsystemd-shared-255.a.p/switch-root.c.o
+[358/434] Compiling C object src/shared/libsystemd-shared-255.a.p/tpm2-event-log.c.o
+[359/434] Compiling C object src/shared/libsystemd-shared-255.a.p/udev-util.c.o
+[360/434] Compiling C object src/shared/libsystemd-shared-255.a.p/user-record-nss.c.o
+[361/434] Compiling C object src/shared/libsystemd-shared-255.a.p/tpm2-util.c.o
+[362/434] Compiling C object src/shared/libsystemd-shared-255.a.p/user-record-show.c.o
+[363/434] Compiling C object src/shared/libsystemd-shared-255.a.p/userdb-dropin.c.o
+[364/434] Compiling C object src/shared/libsystemd-shared-255.a.p/userdb.c.o
+[365/434] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.c.o
+[366/434] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.Journal.c.o
+[367/434] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-idl.c.o
+[368/434] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.ManagedOOM.c.o
+[369/434] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.PCRExtend.c.o
+[370/434] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.Resolve.Monitor.c.o
+[371/434] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.Resolve.c.o
+[372/434] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.UserDatabase.c.o
+[373/434] Compiling C object src/shared/libsystemd-shared-255.a.p/user-record.c.o
+[374/434] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.oom.c.o
+[375/434] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.sysext.c.o
+[376/434] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-org.varlink.service.c.o
+[377/434] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink-io.systemd.service.c.o
+[378/434] Compiling C object src/shared/libsystemd-shared-255.a.p/verb-log-control.c.o
+[379/434] Compiling C object src/shared/libsystemd-shared-255.a.p/vlan-util.c.o
+[380/434] Compiling C object src/shared/libsystemd-shared-255.a.p/verbs.c.o
+[381/434] Compiling C object src/shared/libsystemd-shared-255.a.p/volatile-util.c.o
+[382/434] Compiling C object src/shared/libsystemd-shared-255.a.p/wall.c.o
+[383/434] Compiling C object src/shared/libsystemd-shared-255.a.p/web-util.c.o
+[384/434] Compiling C object src/shared/libsystemd-shared-255.a.p/xml.c.o
+[385/434] Compiling C object src/shared/libsystemd-shared-255.a.p/watchdog.c.o
+[386/434] Compiling C object src/shared/libsystemd-shared-255.a.p/wifi-util.c.o
+[387/434] Compiling C object src/shared/libsystemd-shared-255.a.p/varlink.c.o
+[388/434] Compiling C object src/shared/libsystemd-shared-255.a.p/devnode-acl.c.o
+[389/434] Compiling C object src/shared/libsystemd-shared-255.a.p/utmp-wtmp.c.o
+[390/434] Compiling C object src/shared/libsystemd-shared-255.a.p/tests.c.o
+[391/434] Compiling C object src/shared/libsystemd-shared-255.a.p/module-util.c.o
+[392/434] Compiling C object src/shared/libsystemd-shared-255.a.p/nscd-flush.c.o
+[393/434] Linking static target src/shared/libsystemd-shared-255.a
+[394/434] Compiling C object src/libudev/libudev-basic.a.p/libudev-enumerate.c.o
+[395/434] Compiling C object src/libudev/libudev-basic.a.p/libudev-hwdb.c.o
+[396/434] Compiling C object src/libudev/libudev-basic.a.p/libudev-device.c.o
+[397/434] Compiling C object src/libudev/libudev-basic.a.p/libudev-list.c.o
+[398/434] Compiling C object src/libudev/libudev-basic.a.p/libudev-monitor.c.o
+[399/434] Compiling C object src/libudev/libudev-basic.a.p/libudev-queue.c.o
+[400/434] Compiling C object src/libudev/libudev-basic.a.p/libudev-util.c.o
+[401/434] Generating src/udev/link-config-gperf.c with a custom command
+[402/434] Generating src/libudev/libudev.pc with a custom command
+[403/434] Compiling C object src/libudev/libudev-basic.a.p/libudev.c.o
+[404/434] Generating src/udev/keyboard-keys-list.txt with a custom command (wrapped by meson to capture output)
+[405/434] Linking static target src/libudev/libudev-basic.a
+[406/434] Generating src/udev/udev.pc with a custom command
+[407/434] Generating src/udev/keyboard-keys-from-name.gperf with a custom command (wrapped by meson to capture output)
+[408/434] Linking target libudev.so.1.7.8
+[409/434] Generating src/udev/keyboard-keys-from-name.h with a custom command (wrapped by meson to capture output)
+[410/434] Compiling C object src/udev/libudev-core.a.p/meson-generated_.._link-config-gperf.c.o
+[411/434] Compiling C object src/udev/libudev-core.a.p/udev-ctrl.c.o
+[412/434] Compiling C object src/udev/libudev-core.a.p/udev-event.c.o
+[413/434] Compiling C object src/udev/libudev-core.a.p/udev-format.c.o
+[414/434] Compiling C object src/udev/libudev-core.a.p/net_link-config.c.o
+[415/434] Compiling C object src/udev/libudev-core.a.p/udev-node.c.o
+[416/434] Compiling C object src/udev/libudev-core.a.p/udev-manager.c.o
+[417/434] Compiling C object src/udev/libudev-core.a.p/udev-spawn.c.o
+[418/434] Compiling C object src/udev/libudev-core.a.p/udev-watch.c.o
+[419/434] Compiling C object src/udev/libudev-core.a.p/udev-builtin-btrfs.c.o
+[420/434] Compiling C object src/udev/libudev-core.a.p/udev-worker.c.o
+[421/434] Compiling C object src/udev/libudev-core.a.p/udev-builtin-hwdb.c.o
+[422/434] Compiling C object src/udev/libudev-core.a.p/udev-builtin-net_driver.c.o
+[423/434] Compiling C object src/udev/libudev-core.a.p/udev-builtin-input_id.c.o
+[424/434] Compiling C object src/udev/libudev-core.a.p/udev-builtin-keyboard.c.o
+[425/434] Compiling C object src/udev/libudev-core.a.p/udev-builtin-net_setup_link.c.o
+[426/434] Compiling C object src/udev/libudev-core.a.p/udev-builtin-path_id.c.o
+[427/434] Compiling C object src/udev/libudev-core.a.p/udev-builtin-usb_id.c.o
+[428/434] Compiling C object src/udev/libudev-core.a.p/udev-builtin-kmod.c.o
+[429/434] Compiling C object src/udev/libudev-core.a.p/udev-builtin.c.o
+[430/434] Compiling C object src/udev/libudev-core.a.p/udev-builtin-net_id.c.o
+[431/434] Compiling C object src/udev/libudev-core.a.p/udev-builtin-uaccess.c.o
+[432/434] Compiling C object src/udev/libudev-core.a.p/udev-builtin-blkid.c.o
+[433/434] Compiling C object src/udev/libudev-core.a.p/udev-rules.c.o
+[434/434] Linking static target src/udev/libudev-core.a
+'libudev.so' -> '/usr/lib32/libudev.so'
+'libudev.so.1' -> '/usr/lib32/libudev.so.1'
+'libudev.so.1.7.8' -> '/usr/lib32/libudev.so.1.7.8'
+
+
+Totalseconds: 87
+
+KB: 2923740	/
