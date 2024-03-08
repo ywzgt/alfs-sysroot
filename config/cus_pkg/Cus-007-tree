@@ -1,0 +1,58 @@
+#!/bin/bash
+# https://www.linuxfromscratch.org/blfs/view/systemd/general/tree.html
+# https://packages.gentoo.org/packages/app-text/tree
+
+PKG="tree"
+PKG_VERSION="2.1.1"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.gz"
+#URL="https://mama.indstate.edu/users/ice/tree/src/${PKG_FILE}"
+URL="https://github.com/Old-Man-Programmer/tree/archive/${PKG_VERSION}/${PKG_FILE}"
+MD5="324b0fa87d243a06e23331dd0b1715f4"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+make
+make install PREFIX=/usr MANDIR=/usr/share/man
+chmod -v 644 /usr/share/man/man1/tree.1
+
+install -Dm644 /dev/stdin /usr/share/bash-completion/completions/tree <<"EOF"
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+# bash command-line completion for tree
+# Author: Aaron Walker <ka0ttic@gentoo.org>
+
+_tree() {
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts="-a -d -l -f -i -q -N -p -u -g -s -D -F -r -t -x -L -A
+    -S -n -C -P -I -H -T -R -o --inodes --device --noreport --nolinks
+    --dirsfirst --charset --help"
+
+    if [[ ${cur} == -* ]] ; then
+        COMPREPLY=( $(compgen -W "${opts}" -- "${cur}") )
+        return 0
+    fi
+
+    case "${prev}" in
+        -L|-P|-I|-H|-T|--charset|--help)
+            ;;
+        -o)
+            _filedir
+            ;;
+        *)
+            _filedir -d
+            ;;
+    esac
+}
+complete -o filenames -F _tree tree
+
+# vim: set ft=sh tw=80 sw=4 et :
+EOF
+xEOFx
+) > tmp

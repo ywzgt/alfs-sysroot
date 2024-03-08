@@ -1,0 +1,12 @@
+#!/bin/bash
+
+./configure --prefix=/usr    \
+            --disable-static \
+            --docdir=/usr/share/doc/xz-5.6.0
+
+make
+
+make check
+
+make install
+

@@ -1,0 +1,6 @@
+/usr/bin/faked	29572	root:root	755	
+/usr/bin/fakeroot	3956	root:root	755	
+/usr/lib/libfakeroot-0.so	59668	root:root	755	
+/usr/lib/libfakeroot.so	16	root:root	777	libfakeroot-0.so
+/usr/share/man/man1/faked.1	2309	root:root	644	
+/usr/share/man/man1/fakeroot.1	9248	root:root	644	
