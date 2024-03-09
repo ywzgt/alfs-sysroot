@@ -1,0 +1,30 @@
+#!/bin/bash
+
+./configure --prefix=/usr                \
+            --disable-debuginfod         \
+            --enable-libdebuginfod=dummy
+
+make
+
+make check
+
+make -C libelf install
+install -vm644 config/libelf.pc /usr/lib/pkgconfig
+rm /usr/lib/libelf.a
+
+make distclean
+
+CC="gcc -m64" CXX="g++ -m64" ./configure \
+    --host=x86_64-pc-linux-gnu \
+    --prefix=/usr            \
+    --libdir=/usr/lib64      \
+    --disable-debuginfod     \
+    --enable-libdebuginfod=dummy
+
+make
+
+make DESTDIR=$PWD/DESTDIR -C libelf install
+install -vDm644 config/libelf.pc DESTDIR/usr/lib64/pkgconfig/libelf.pc
+cp -Rv DESTDIR/usr/lib64/* /usr/lib64
+rm -rf DESTDIR
+

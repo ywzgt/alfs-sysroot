@@ -1,0 +1,29 @@
+#!/bin/bash
+
+./configure --prefix=/usr          \
+            --disable-static       \
+            --with-gcc-arch=native
+
+make
+
+make check
+
+make install
+
+make distclean
+
+CC="gcc -m64" CXX="g++ -m64" ./configure \
+    --host=x86_64-pc-linux-gnu \
+    --prefix=/usr            \
+    --libdir=/usr/lib64      \
+    --disable-static         \
+    --with-gcc-arch=i686
+
+make
+
+make check
+
+make DESTDIR=$PWD/DESTDIR install
+cp -Rv DESTDIR/usr/lib64/* /usr/lib64
+rm -rf DESTDIR
+

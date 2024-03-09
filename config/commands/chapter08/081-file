@@ -1,0 +1,23 @@
+#!/bin/bash
+
+./configure --prefix=/usr
+
+make
+
+make check
+
+make install
+
+make distclean
+
+CC="gcc -m64" ./configure \
+    --prefix=/usr         \
+    --libdir=/usr/lib64   \
+    --host=x86_64-pc-linux-gnu
+
+make
+
+make DESTDIR=$PWD/DESTDIR install
+cp -Rv DESTDIR/usr/lib64/* /usr/lib64
+rm -rf DESTDIR
+
