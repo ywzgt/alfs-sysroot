@@ -1,0 +1,24 @@
+#!/bin/bash
+
+./configure --prefix=/usr
+
+make
+
+make check
+
+make install
+
+rm -fv /usr/lib/libz.a
+
+make distclean
+
+CFLAGS+=" -m64" CXXFLAGS+=" -m64" \
+./configure --prefix=/usr \
+    --libdir=/usr/lib64
+
+make
+
+make DESTDIR=$PWD/DESTDIR install
+cp -Rv DESTDIR/usr/lib64/* /usr/lib64
+rm -rf DESTDIR
+

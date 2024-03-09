@@ -1,0 +1,19 @@
+#!/bin/bash
+
+make prefix=/usr
+
+make check
+
+make prefix=/usr install
+
+rm -v /usr/lib/libzstd.a
+
+make clean
+
+CC="gcc -m64" make prefix=/usr
+
+make prefix=/usr DESTDIR=$PWD/DESTDIR install
+cp -Rv DESTDIR/usr/lib/* /usr/lib64/
+sed -e "/^libdir/s/lib$/lib64/" -i /usr/lib64/pkgconfig/libzstd.pc
+rm -rf DESTDIR
+

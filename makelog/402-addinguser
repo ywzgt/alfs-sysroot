@@ -1,0 +1,17 @@
+Sat Mar  9 10:38:51 UTC 2024
+changed ownership of '/lfs_build/usr' from root to lfs
+changed ownership of '/lfs_build/usr/bin' from root to lfs
+changed ownership of '/lfs_build/usr/lib' from root to lfs
+changed ownership of '/lfs_build/usr/lib64' from root to lfs
+changed ownership of '/lfs_build/usr/sbin' from root to lfs
+ownership of '/lfs_build/lib' retained as lfs
+changed ownership of '/lfs_build/var' from root to lfs
+changed ownership of '/lfs_build/etc' from root to lfs
+ownership of '/lfs_build/bin' retained as lfs
+ownership of '/lfs_build/sbin' retained as lfs
+changed ownership of '/lfs_build/tools' from root to lfs
+changed ownership of '/lfs_build/libx32' from root to lfs
+ownership of '/lfs_build/lib64' retained as lfs
+
+KB: 601316	/lfs_build
+

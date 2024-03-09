@@ -1,0 +1,75 @@
+#!/bin/bash
+
+sed -i -e 's/GROUP="render"/GROUP="video"/' \
+       -e 's/GROUP="sgx", //' rules.d/50-udev-default.rules.in
+
+patch -Np1 -i ../systemd-255-upstream_fixes-1.patch
+
+mkdir -p build
+cd       build
+
+meson setup \
+      --prefix=/usr                 \
+      --buildtype=release           \
+      -Ddefault-dnssec=no           \
+      -Dfirstboot=false             \
+      -Dinstall-tests=false         \
+      -Dldconfig=false              \
+      -Drpmmacrosdir=no             \
+      -Dhomed=disabled              \
+      -Duserdb=false                \
+      -Dman=disabled                \
+      -Dmode=release                \
+      -Dpamconfdir=no               \
+      -Ddev-kvm-mode=0660           \
+      -Dnobody-group=nogroup        \
+      -Dsysupdate=disabled          \
+      -Dukify=disabled              \
+      -Ddocdir=/usr/share/doc/systemd-255 --libdir=/usr/lib \
+      ..
+
+ninja
+
+ninja install
+
+tar -xf ../../systemd-man-pages-255.tar.xz \
+    --no-same-owner --strip-components=1   \
+    -C /usr/share/man
+
+systemd-machine-id-setup
+
+systemctl preset-all
+
+rm -rf *
+
+ln -sf /bin/true /usr/bin/xsltproc
+
+PKG_CONFIG_PATH="/usr/lib64/pkgconfig" \
+CC="gcc -m64 $CFLAGS"              \
+CXX="g++ -m64 $CFLAGS"             \
+LANG=en_US.UTF-8                       \
+meson --prefix=/usr                    \
+      --sysconfdir=/etc                \
+      --localstatedir=/var             \
+      --libdir=/usr/lib64              \
+      -Drootlibdir=/usr/lib64          \
+      -Dblkid=true                  \
+      -Ddefault-dnssec=no           \
+      -Dfirstboot=false             \
+      -Dinstall-tests=false         \
+      -Dldconfig=false              \
+      -Db_lto=false                 \
+      -Drpmmacrosdir=no             \
+      -Dhomed=false                 \
+      -Duserdb=false                \
+      -Dman=false                   \
+      -Dmode=release                \
+      ..
+
+LANG=en_US.UTF-8 ninja
+
+LANG=en_US.UTF-8 DESTDIR=$PWD/DESTDIR ninja install
+cp -Rv DESTDIR/usr/lib64/* /usr/lib64
+rm -rf DESTDIR
+rm -f /usr/bin/xsltproc
+

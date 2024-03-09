@@ -1,0 +1,25 @@
+#!/bin/bash
+
+./configure --prefix=/usr
+
+make
+
+make -k check
+
+make install
+
+rm -fv /usr/lib/libltdl.a
+
+make distclean
+
+CC="gcc -m64" ./configure \
+    --host=x86_64-pc-linux-gnu \
+    --prefix=/usr            \
+    --libdir=/usr/lib64
+
+make
+
+make DESTDIR=$PWD/DESTDIR install
+cp -Rv DESTDIR/usr/lib64/* /usr/lib64
+rm -rf DESTDIR
+

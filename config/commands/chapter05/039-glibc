@@ -1,0 +1,63 @@
+#!/bin/bash
+
+ln -sfv ../lib/ld-linux-x32.so.2 $LFS/libx32
+ln -sfv ../lib/ld-linux-x32.so.2 $LFS/libx32/ld-lsb-x86-64.so.3
+
+patch -Np1 -i ../glibc-2.39-fhs-1.patch
+
+mkdir -v build
+cd       build
+
+echo "rootsbindir=/usr/sbin" > configparms
+
+../configure                             \
+      --prefix=/usr                      \
+      --host=$LFS_TGT                    \
+      --build=$(../scripts/config.guess) \
+      --enable-kernel=4.19                \
+      --with-headers=$LFS/usr/include    \
+      --enable-multi-arch                \
+      libc_cv_slibdir=/usr/lib
+
+make
+
+make DESTDIR=$LFS install
+
+sed '/RTLDLIST=/s@/usr@@g' -i $LFS/usr/bin/ldd
+
+echo 'int main(){}' | $LFS_TGT-gcc -xc -
+readelf -l a.out | grep ld-linux
+
+rm -v a.out
+
+make clean
+find .. -name "*.a" -delete
+
+CC="$LFS_TGT-gcc -m64" \
+CXX="$LFS_TGT-g++ -m64" \
+../configure                             \
+      --prefix=/usr                      \
+      --host=$LFS_TGT32                  \
+      --build=$(../scripts/config.guess) \
+      --enable-kernel=4.19                \
+      --with-headers=$LFS/usr/include    \
+      --enable-multi-arch                \
+      --libdir=/usr/lib64                \
+      --libexecdir=/usr/lib64            \
+      libc_cv_slibdir=/usr/lib64
+
+make
+
+make DESTDIR=$PWD/DESTDIR install
+cp -a DESTDIR/usr/lib64 $LFS/usr/
+install -vm644 DESTDIR/usr/include/gnu/{lib-names,stubs}-64.h \
+               $LFS/usr/include/gnu/
+ln -svf ../lib64/ld-linux-x86-64.so.2 $LFS/lib/ld-linux-x86-64.so.2
+rm -fv  $LFS/lib/ld-linux-x86-64.so.2
+
+echo 'int main(){}' > dummy.c
+$LFS_TGT-gcc -m64 dummy.c
+readelf -l a.out | grep '/ld-linux'
+
+rm -v dummy.c a.out
+

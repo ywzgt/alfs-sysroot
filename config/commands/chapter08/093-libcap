@@ -1,0 +1,20 @@
+#!/bin/bash
+
+sed -i '/install -m.*STA/d' libcap/Makefile
+
+make prefix=/usr lib=lib
+
+make test
+
+make prefix=/usr lib=lib install
+
+make distclean
+
+make CC="gcc -m64 $CFLAGS"
+
+make CC="gcc -m64 $CFLAGS" lib=lib64 prefix=$PWD/DESTDIR/usr -C libcap install
+cp -Rv DESTDIR/usr/lib64/* /usr/lib64
+sed -e "s|^libdir=.*|libdir=/usr/lib64|" -i /usr/lib64/pkgconfig/lib{cap,psx}.pc
+chmod -v 755 /usr/lib64/libcap.so.2.69
+rm -rf DESTDIR
+

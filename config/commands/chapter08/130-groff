@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# This block must be edited to suit your needs.
+PAGE=**EDITME<paper_size>EDITME** ./configure --prefix=/usr
+# End of editable block.
+
+make
+
+make check
+
+make install
+
