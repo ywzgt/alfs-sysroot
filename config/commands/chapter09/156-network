@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# This block must be edited to suit your needs.
+cd /etc/sysconfig/
+cat > ifconfig.**EDITMEeth0EDITME** << "EOF"
+ONBOOT=**EDITMEyesEDITME**
+IFACE=**EDITMEeth0EDITME**
+SERVICE=**EDITMEipv4-staticEDITME**
+IP=**EDITME192.168.1.2EDITME**
+GATEWAY=**EDITME192.168.1.1EDITME**
+PREFIX=**EDITME24EDITME**
+BROADCAST=**EDITME192.168.1.255EDITME**
+EOF
+# End of editable block.
+
+# This block must be edited to suit your needs.
+cat > /etc/resolv.conf << "EOF"
+# Begin /etc/resolv.conf
+
+domain **EDITME<Your Domain Name>EDITME**
+nameserver **EDITME<IP address of your primary nameserver>EDITME**
+nameserver **EDITME<IP address of your secondary nameserver>EDITME**
+
+# End /etc/resolv.conf
+EOF
+# End of editable block.
+
+# This block must be edited to suit your needs.
+echo "**EDITME<lfs>EDITME**" > /etc/hostname
+# End of editable block.
+
+# This block must be edited to suit your needs.
+cat > /etc/hosts << "EOF"
+# Begin /etc/hosts
+
+127.0.0.1 localhost.localdomain localhost
+127.0.1.1 **EDITME<FQDN>EDITME** **EDITME<HOSTNAME>EDITME**
+**EDITME<192.168.1.1>EDITME** **EDITME<FQDN>EDITME** **EDITME<HOSTNAME>EDITME** **EDITME[alias1] [alias2 ...]EDITME**
+::1       localhost ip6-localhost ip6-loopback
+ff02::1   ip6-allnodes
+ff02::2   ip6-allrouters
+
+# End /etc/hosts
+EOF
+# End of editable block.
+

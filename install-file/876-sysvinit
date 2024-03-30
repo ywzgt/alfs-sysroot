@@ -1,0 +1,24 @@
+/usr/include/initreq.h	2446	root:root	644	
+/usr/sbin/bootlogd	21840	root:root	755	
+/usr/sbin/fstab-decode	15044	root:root	755	
+/usr/sbin/halt	21364	root:root	755	
+/usr/sbin/init	58616	root:root	755	
+/usr/sbin/killall5	30092	root:root	755	
+/usr/sbin/poweroff	4	root:root	777	halt
+/usr/sbin/reboot	4	root:root	777	halt
+/usr/sbin/runlevel	15296	root:root	755	
+/usr/sbin/shutdown	31144	root:root	755	
+/usr/sbin/telinit	4	root:root	777	init
+/usr/share/man/man5/initctl.5	6453	root:root	644	
+/usr/share/man/man5/initscript.5	2405	root:root	644	
+/usr/share/man/man5/inittab.5	9140	root:root	644	
+/usr/share/man/man8/bootlogd.8	3392	root:root	644	
+/usr/share/man/man8/fstab-decode.8	2435	root:root	644	
+/usr/share/man/man8/halt.8	4574	root:root	644	
+/usr/share/man/man8/init.8	13673	root:root	644	
+/usr/share/man/man8/killall5.8	1904	root:root	644	
+/usr/share/man/man8/poweroff.8	16	root:root	644	
+/usr/share/man/man8/reboot.8	16	root:root	644	
+/usr/share/man/man8/runlevel.8	1902	root:root	644	
+/usr/share/man/man8/shutdown.8	9953	root:root	644	
+/usr/share/man/man8/telinit.8	16	root:root	644	
