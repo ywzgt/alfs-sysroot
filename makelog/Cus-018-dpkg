@@ -1,0 +1,1199 @@
+Sat Mar 30 18:20:40 CST 2024
+
+KB: 1793524	/
+
+autopoint: using AM_GNU_GETTEXT_REQUIRE_VERSION instead of AM_GNU_GETTEXT_VERSION
+Copying file build-aux/config.rpath
+Copying file m4/build-to-host.m4
+Copying file m4/gettext.m4
+Copying file m4/host-cpu-c-abi.m4
+Copying file m4/iconv.m4
+Copying file m4/intlmacosx.m4
+Copying file m4/lib-ld.m4
+Copying file m4/lib-link.m4
+Copying file m4/lib-prefix.m4
+Copying file m4/po.m4
+Copying file m4/progtest.m4
+Copying file dselect/po/Makefile.in.in
+Copying file po/Makefile.in.in
+Copying file scripts/po/Makefile.in.in
+Copying file dselect/po/Makevars.template
+Copying file po/Makevars.template
+Copying file scripts/po/Makevars.template
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'build-aux'.
+libtoolize: copying file 'build-aux/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+configure.ac:20: installing 'build-aux/compile'
+configure.ac:22: installing 'build-aux/missing'
+dselect/Makefile.am: installing 'build-aux/depcomp'
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking whether UID '0' is supported by ustar format... yes
+checking whether GID '0' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking dependency style of gcc... gcc3
+checking whether make supports nested variables... (cached) yes
+checking for a sed that does not truncate output... /usr/bin/sed
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking 32-bit host C ABI... no
+checking how to run the C preprocessor... gcc -E
+checking for egrep -e... /usr/bin/grep -E
+checking for ELF binary format... yes
+checking for the common suffixes of directories in the library search path... lib,lib,lib
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyPreferredLanguages... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for file... file
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking for --as-needed linker flag... yes
+checking for --version-script linker flag... yes
+checking whether to build dselect... yes
+checking whether to build start-stop-daemon... no
+checking whether to build update-alternatives... yes
+checking for perl >= 5.32.1... /usr/bin/perl
+checking for a POSIX sh that supports -- after -c... sh
+checking for pager... no
+checking for less... less
+checking for a sed that does not truncate output... (cached) /usr/bin/sed
+checking for grep that handles long lines and -e... (cached) /usr/bin/grep
+checking for egrep... (cached) /usr/bin/grep -E
+checking for gcc... (cached) gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to enable C11 features... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking whether gcc supports C99 features... yes
+checking for g++... g++
+checking whether the compiler supports GNU C++... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to enable C++11 features... none needed
+checking dependency style of g++... gcc3
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether g++ supports C++11... yes
+checking for gpatch... no
+checking for patch... patch
+checking for doxygen... no
+checking for dot... NO
+checking for gnutar... no
+checking for gtar... no
+checking for tar... tar
+checking for po4a >= 0.59... no
+checking for perl >= 5.32.1... (cached) /usr/bin/perl
+checking for pod2man... pod2man
+checking whether to build with code coverage... no
+checking for gcc option to enable large file support... none needed
+checking for library containing clock_gettime... none required
+checking for md5.h... yes
+checking for library containing MD5Init... -lmd
+checking for gzdopen in -lz... yes
+checking for zlib.h... yes
+checking for zng_gzdopen in -lz-ng... no
+checking for BZ2_bzdopen in -lbz2... yes
+checking for bzlib.h... yes
+checking for lzma_alone_decoder in -llzma... yes
+checking for lzma.h... yes
+checking for lzma_stream_encoder_mt in -llzma... yes
+checking for lzma_stream_decoder_mt in -llzma... yes
+checking for ZSTD_compressStream2 in -lzstd... yes
+checking for zstd.h... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for libselinux >= 2.3... no
+checking whether Unicode is requested... yes
+checking for ncurses/ncurses.h... no
+checking for ncurses.h... yes
+checking for curses.h... yes
+checking for ncurses/term.h... no
+checking for term.h... yes
+checking for ncursesw/ncurses.h... no
+checking for ncursesw/term.h... no
+checking for initscr in -lncursesw... yes
+checking for library containing tigetstr... none required
+checking for stddef.h... yes
+checking for error.h... yes
+checking for err.h... yes
+checking for locale.h... yes
+checking for xlocale.h... no
+checking for libintl.h... yes
+checking for kvm.h... no
+checking for sys/sysmacros.h... yes
+checking for sys/param.h... yes
+checking for sys/syscall.h... yes
+checking for sys/user.h... yes
+checking for sys/mkdev.h... no
+checking for sys/pstat.h... no
+checking for linux/fiemap.h... yes
+checking for sys/procfs.h... yes
+checking for sys/proc.h... no
+checking for cxxabi.h... yes
+checking size of short... 2
+checking size of int... 4
+checking size of long... 8
+checking size of long long... 8
+checking size of float... 4
+checking size of double... 8
+checking size of long double... 16
+checking size of void *... 8
+checking size of off_t... 8
+checking size of time_t... 8
+checking alignment of max_align_t... 16
+checking whether char is unsigned... no
+checking whether byte ordering is bigendian... no
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for working volatile... yes
+checking for mode_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for ptrdiff_t... yes
+checking for struct psinfo... no
+checking for gcc options needed to detect all undeclared functions... none needed
+checking for unistd.h... (cached) yes
+checking whether sys_siglist is declared... no
+checking whether sys_errlist is declared... no
+checking whether sys_nerr is declared... no
+checking for va_copy... yes
+checking for C99 snprintf functions... yes
+checking whether fsync works on directories... yes
+checking whether offsetof is declared... yes
+checking whether makedev is declared... no
+checking whether WCOREDUMP is declared... yes
+checking whether TIOCNOTTY is declared... yes
+checking whether O_NOFOLLOW is declared... yes
+checking whether F_ALLOCSP64 is declared... no
+checking whether F_PREALLOCATE is declared... no
+checking whether P_tmpdir is declared... yes
+checking for program_invocation_short_name... yes
+checking for __progname... yes
+checking for getopt... yes
+checking for getopt_long... yes
+checking for obstack_free... yes
+checking for strchrnul... yes
+checking for strnlen... yes
+checking for strndup... yes
+checking for strerror... yes
+checking for strsignal... yes
+checking for asprintf... yes
+checking for scandir... yes
+checking for alphasort... yes
+checking for unsetenv... yes
+checking for memcpy... yes
+checking for lchown... yes
+checking for strtoimax... yes
+checking for isascii... yes
+checking for setsid... yes
+checking for getdtablesize... yes
+checking for getprocs64... no
+checking for getprogname... no
+checking for getexecname... no
+checking for lutimes... yes
+checking for fallocate... yes
+checking for posix_fallocate... yes
+checking for posix_fadvise... yes
+checking for uselocale... yes
+checking for __cxa_pure_virtual... yes
+checking whether gcc accepts -Wall... yes
+checking whether gcc accepts -Wextra... yes
+checking whether gcc accepts -Walloca... yes
+checking whether gcc accepts -Walloc-zero... yes
+checking whether gcc accepts -Warray-bounds-pointer-arithmetic... no
+checking whether gcc accepts -Wassign-enum... no
+checking whether gcc accepts -Wbitfield-enum-conversion... no
+checking whether gcc accepts -Wcast-align... yes
+checking whether gcc accepts -Wconditional-uninitialized... no
+checking whether gcc accepts -Wdate-time... yes
+checking whether gcc accepts -Wdocumentation... no
+checking whether gcc accepts -Wduplicate-enum... no
+checking whether gcc accepts -Wduplicated-branches... yes
+checking whether gcc accepts -Wduplicated-cond... yes
+checking whether gcc accepts -Wextra-semi... no
+checking whether gcc accepts -Wflexible-array-extensions... no
+checking whether gcc accepts -Wfloat-conversion... yes
+checking whether gcc accepts -Wfloat-equal... yes
+checking whether gcc accepts -Wformat -Wformat-security... yes
+checking whether gcc accepts -Wformat=2... yes
+checking whether gcc accepts -Winit-self... yes
+checking whether gcc accepts -Wlogical-not-parentheses... yes
+checking whether gcc accepts -Wlogical-op... yes
+checking whether gcc accepts -Wmissing-declarations... yes
+checking whether gcc accepts -Wmissing-format-attribute... yes
+checking whether gcc accepts -Wmissing-variable-declarations... no
+checking whether gcc accepts -Wnewline-eof... no
+checking whether gcc accepts -Wno-missing-field-initializers... yes
+checking whether gcc accepts -Wno-nonnull-compare... yes
+checking whether gcc accepts -Wno-tautological-constant-out-of-range-compare... no
+checking whether gcc accepts -Wno-unused-parameter... yes
+checking whether gcc accepts -Wnull-dereference... yes
+checking whether gcc accepts -Wpointer-arith... yes
+checking whether gcc accepts -Wredundant-decls... yes
+checking whether gcc accepts -Wregister... no
+checking whether gcc accepts -Wrestrict... yes
+checking whether gcc accepts -Wshadow... yes
+checking whether gcc accepts -Wshift-negative-value... yes
+checking whether gcc accepts -Wshift-overflow=2... yes
+checking whether gcc accepts -Wshift-sign-overflow... no
+checking whether gcc accepts -Wsizeof-array-argument... yes
+checking whether gcc accepts -Wstrict-overflow=2... yes
+checking whether gcc accepts -Wswitch-bool... yes
+checking whether gcc accepts -Wvla... yes
+checking whether gcc accepts -Wwrite-strings... yes
+checking whether gcc accepts -Wxor-used-as-pow... yes
+checking whether gcc accepts -Wbad-function-cast... yes
+checking whether gcc accepts -Wc99-c11-compat... yes
+checking whether gcc accepts -Wc99-compat... no
+checking whether gcc accepts -Wc11-extensions... no
+checking whether gcc accepts -Wc2x-compat... no
+checking whether gcc accepts -Wc2x-extensions... no
+checking whether gcc accepts -Wpre-c2x-compat... no
+checking whether gcc accepts -Wdeclaration-after-statement... yes
+checking whether gcc accepts -Wenum-int-mismatch... yes
+checking whether gcc accepts -Wmissing-prototypes... yes
+checking whether gcc accepts -Wnested-externs... yes
+checking whether gcc accepts -Wold-style-definition... yes
+checking whether gcc accepts -Wstrict-prototypes... yes
+checking whether g++ accepts -Wall... yes
+checking whether g++ accepts -Wextra... yes
+checking whether g++ accepts -Walloca... yes
+checking whether g++ accepts -Walloc-zero... yes
+checking whether g++ accepts -Warray-bounds-pointer-arithmetic... no
+checking whether g++ accepts -Wassign-enum... no
+checking whether g++ accepts -Wbitfield-enum-conversion... no
+checking whether g++ accepts -Wcast-align... yes
+checking whether g++ accepts -Wconditional-uninitialized... no
+checking whether g++ accepts -Wdate-time... yes
+checking whether g++ accepts -Wdocumentation... no
+checking whether g++ accepts -Wduplicate-enum... no
+checking whether g++ accepts -Wduplicated-branches... yes
+checking whether g++ accepts -Wduplicated-cond... yes
+checking whether g++ accepts -Wextra-semi... yes
+checking whether g++ accepts -Wflexible-array-extensions... no
+checking whether g++ accepts -Wfloat-conversion... yes
+checking whether g++ accepts -Wfloat-equal... yes
+checking whether g++ accepts -Wformat -Wformat-security... yes
+checking whether g++ accepts -Wformat=2... yes
+checking whether g++ accepts -Winit-self... yes
+checking whether g++ accepts -Wlogical-not-parentheses... yes
+checking whether g++ accepts -Wlogical-op... yes
+checking whether g++ accepts -Wmissing-declarations... yes
+checking whether g++ accepts -Wmissing-format-attribute... yes
+checking whether g++ accepts -Wmissing-variable-declarations... no
+checking whether g++ accepts -Wnewline-eof... no
+checking whether g++ accepts -Wno-missing-field-initializers... yes
+checking whether g++ accepts -Wno-nonnull-compare... yes
+checking whether g++ accepts -Wno-tautological-constant-out-of-range-compare... no
+checking whether g++ accepts -Wno-unused-parameter... yes
+checking whether g++ accepts -Wnull-dereference... yes
+checking whether g++ accepts -Wpointer-arith... yes
+checking whether g++ accepts -Wredundant-decls... yes
+checking whether g++ accepts -Wregister... yes
+checking whether g++ accepts -Wrestrict... yes
+checking whether g++ accepts -Wshadow... yes
+checking whether g++ accepts -Wshift-negative-value... yes
+checking whether g++ accepts -Wshift-overflow=2... yes
+checking whether g++ accepts -Wshift-sign-overflow... no
+checking whether g++ accepts -Wsizeof-array-argument... yes
+checking whether g++ accepts -Wstrict-overflow=2... yes
+checking whether g++ accepts -Wswitch-bool... yes
+checking whether g++ accepts -Wvla... yes
+checking whether g++ accepts -Wwrite-strings... yes
+checking whether g++ accepts -Wxor-used-as-pow... yes
+checking whether g++ accepts -Wc++11-compat... yes
+checking whether g++ accepts -Wc++11-compat-pedantic... no
+checking whether g++ accepts -Wc++11-extensions... yes
+checking whether g++ accepts -Wcast-qual... yes
+checking whether g++ accepts -Wold-style-cast... yes
+checking whether g++ accepts -Wzero-as-null-pointer-constant... yes
+checking dpkg cpu type... amd64
+checking dpkg operating system type... linux
+checking dpkg architecture name... amd64
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating dselect/Makefile
+config.status: creating dselect/methods/Makefile
+config.status: creating dselect/po/Makefile.in
+config.status: creating lib/Makefile
+config.status: creating lib/compat/Makefile
+config.status: creating lib/dpkg/Makefile
+config.status: creating lib/dpkg/libdpkg.pc
+config.status: creating doc/Doxyfile
+config.status: creating man/Makefile
+config.status: creating po/Makefile.in
+config.status: creating scripts/Build.PL
+config.status: creating scripts/Makefile
+config.status: creating scripts/README.cpan
+config.status: creating scripts/mk/Makefile
+config.status: creating scripts/po/Makefile.in
+config.status: creating src/Makefile
+config.status: creating src/at/atlocal
+config.status: creating utils/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing po-directories commands
+config.status: creating dselect/po/POTFILES
+config.status: creating dselect/po/Makefile
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+config.status: creating scripts/po/POTFILES
+config.status: creating scripts/po/Makefile
+config.status: executing libtool commands
+config.status: executing src/at/atconfig commands
+
+Configuration:
+  Arch attributes:
+    cpu name  . . . . . . . . . . : amd64
+    os name . . . . . . . . . . . : linux
+    arch name . . . . . . . . . . : amd64
+    arch bits . . . . . . . . . . : 64
+    arch endian . . . . . . . . . : little
+    char bits . . . . . . . . . . : 8
+    char sign . . . . . . . . . . : signed
+    sizeof(short) . . . . . . . . : 2
+    sizeof(int) . . . . . . . . . : 4
+    sizeof(long)  . . . . . . . . : 8
+    sizeof(long long) . . . . . . : 8
+    sizeof(float) . . . . . . . . : 4
+    sizeof(double)  . . . . . . . : 8
+    sizeof(long double) . . . . . : 16
+    sizeof(void *)  . . . . . . . : 8
+    sizeof(off_t) . . . . . . . . : 8
+    sizeof(time_t)  . . . . . . . : 8
+    alignof(max_align_t)  . . . . : 16
+
+  Features:
+    native language support . . . : yes
+    unicode support . . . . . . . : yes
+    development documentation . . : yes
+    code coverage . . . . . . . . : no
+    build shared libraries  . . . : no
+    mmap loaders  . . . . . . . . : no
+    disk pre-allocation . . . . . : no
+    default dpkg-deb compressor . : xz
+    default shell interpreter . . : sh
+    default pager program . . . . : less
+
+  Paths:
+    devlibdir . . . . . . . . . . : ${exec_prefix}/lib
+    pkgconfdir  . . . . . . . . . : /etc/dpkg
+    docspecdir  . . . . . . . . . : /usr/share/doc/dpkg-1.22.6/spec
+    methodsdir  . . . . . . . . . : ${exec_prefix}/libexec/dpkg/methods
+    admindir  . . . . . . . . . . : /var/lib/dpkg
+    backupsdir  . . . . . . . . . : /var/backups
+    logdir  . . . . . . . . . . . : /var/log
+    pkg-config dir  . . . . . . . : ${exec_prefix}/lib/pkgconfig
+    aclocal dir   . . . . . . . . : ${datarootdir}/aclocal
+    polkit actions dir  . . . . . : ${datarootdir}/polkit-1/actions
+    bash completions dir  . . . . : ${datarootdir}/bash-completion/completions
+    zsh completions dir . . . . . : ${datarootdir}/zsh/vendor-completions
+    perl interpreter  . . . . . . : /usr/bin/perl
+    perl libdir . . . . . . . . . : $(prefix)/lib/perl5/5.38/vendor_perl
+
+  Programs:
+    update-alternatives . . . . . : yes
+    start-stop-daemon . . . . . . : no
+    dselect . . . . . . . . . . . : yes
+
+  System Libraries:
+    librt . . . . . . . . . . . . : builtin
+    libsocket . . . . . . . . . . : no
+    libps . . . . . . . . . . . . : no
+    libkvm  . . . . . . . . . . . : no
+    libselinux  . . . . . . . . . : no
+    libmd . . . . . . . . . . . . : yes
+    libz  . . . . . . . . . . . . : yes (zlib)
+    liblzma . . . . . . . . . . . : yes
+    libzstd . . . . . . . . . . . : yes
+    libbz2  . . . . . . . . . . . : yes
+    libcurses . . . . . . . . . . : yes
+make[1]: Entering directory '/sources/dpkg-1.22.6'
+make  all-recursive
+make[2]: Entering directory '/sources/dpkg-1.22.6'
+Making all in lib
+make[3]: Entering directory '/sources/dpkg-1.22.6/lib'
+Making all in compat
+make[4]: Entering directory '/sources/dpkg-1.22.6/lib/compat'
+  CC       libcompat_test_la-strchrnul.lo
+  CC       libcompat_test_la-strnlen.lo
+  CC       libcompat_test_la-strndup.lo
+  CC       libcompat_test_la-strsignal.lo
+  CC       libcompat_test_la-snprintf.lo
+  CC       libcompat_test_la-vsnprintf.lo
+  CC       libcompat_test_la-asprintf.lo
+  CC       libcompat_test_la-vasprintf.lo
+  CC       libcompat_test_la-alphasort.lo
+  CC       libcompat_test_la-scandir.lo
+  CC       libcompat_test_la-unsetenv.lo
+  CC       empty.lo
+  CCLD     libcompat.la
+  CCLD     libcompat-test.la
+make[4]: Leaving directory '/sources/dpkg-1.22.6/lib/compat'
+Making all in dpkg
+make[4]: Entering directory '/sources/dpkg-1.22.6/lib/dpkg'
+  CC       ar.lo
+  CC       atomic-file.lo
+  CC       arch.lo
+  CC       buffer.lo
+  CC       c-ctype.lo
+  CC       cleanup.lo
+  CC       color.lo
+  CC       command.lo
+  CC       compress.lo
+  CC       dbdir.lo
+  CC       dbmodify.lo
+  CC       db-ctrl-access.lo
+  CC       db-ctrl-format.lo
+  CC       db-ctrl-upgrade.lo
+  CC       db-fsys-digest.lo
+  CC       db-fsys-divert.lo
+  CC       db-fsys-files.lo
+  CC       db-fsys-override.lo
+  CC       deb-version.lo
+  CC       debug.lo
+  CC       depcon.lo
+  CC       dir.lo
+  CC       dump.lo
+  CC       ehandle.lo
+  CC       error.lo
+  CC       fdio.lo
+  CC       file.lo
+  CC       fields.lo
+  CC       fsys-dir.lo
+  CC       fsys-iter.lo
+  CC       fsys-hash.lo
+  CC       glob.lo
+  CC       i18n.lo
+  CC       log.lo
+  CC       meminfo.lo
+  CC       mustlib.lo
+  CC       namevalue.lo
+  CC       nfmalloc.lo
+  CC       options.lo
+  CC       options-dirs.lo
+  CC       options-parsers.lo
+  CC       pager.lo
+  CC       parse.lo
+  CC       parsehelp.lo
+  CC       path.lo
+  CC       path-remove.lo
+  CC       pkg.lo
+  CC       pkg-array.lo
+  CC       pkg-files.lo
+  CC       pkg-format.lo
+  CC       pkg-hash.lo
+  CC       pkg-list.lo
+  CC       pkg-namevalue.lo
+  CC       pkg-queue.lo
+  CC       pkg-show.lo
+  CC       pkg-spec.lo
+  CC       progname.lo
+  CC       program.lo
+  CC       progress.lo
+  CC       report.lo
+  CC       string.lo
+  CC       strhash.lo
+  CC       strwide.lo
+  CC       subproc.lo
+  CC       tarfn.lo
+  CC       treewalk.lo
+  CC       trigname.lo
+  CC       trignote.lo
+  CC       triglib.lo
+  CC       trigdeferred.lo
+  CC       utils.lo
+  CC       varbuf.lo
+  CC       version.lo
+  CCLD     libdpkg.la
+make[4]: Leaving directory '/sources/dpkg-1.22.6/lib/dpkg'
+make[4]: Entering directory '/sources/dpkg-1.22.6/lib'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/sources/dpkg-1.22.6/lib'
+make[3]: Leaving directory '/sources/dpkg-1.22.6/lib'
+Making all in src
+make[3]: Entering directory '/sources/dpkg-1.22.6/src'
+  GEN      dpkg-maintscript-helper
+  GEN      dpkg-realpath
+  GEN      dpkg-db-backup
+  GEN      dpkg-db-keeper
+  CC       common/force.o
+  CC       common/selinux.o
+  CC       main/archives.o
+  CC       main/cleanup.o
+  CC       main/configure.o
+  CC       main/depcon.o
+  CC       main/enquiry.o
+  CC       main/errors.o
+  CC       main/file-match.o
+  CC       main/filters.o
+  CC       main/help.o
+  CC       main/main.o
+  CC       main/packages.o
+  CC       main/perpkgstate.o
+  CC       main/remove.o
+  CC       main/script.o
+  CC       main/select.o
+  CC       main/trigproc.o
+  CC       main/unpack.o
+  CC       main/update.o
+  CC       main/verify.o
+  CC       deb/build.o
+  CC       deb/extract.o
+  CC       deb/info.o
+  CC       deb/main.o
+  CC       divert/main.o
+  CC       query/main.o
+  CC       split/info.o
+  CC       split/join.o
+  CC       split/main.o
+  CC       split/queue.o
+  CC       split/split.o
+  CC       statoverride/main.o
+  CC       trigger/main.o
+  CCLD     dpkg
+  CCLD     dpkg-deb
+  CCLD     dpkg-divert
+  CCLD     dpkg-query
+  CCLD     dpkg-split
+  CCLD     dpkg-statoverride
+  CCLD     dpkg-trigger
+make[3]: Leaving directory '/sources/dpkg-1.22.6/src'
+Making all in utils
+make[3]: Entering directory '/sources/dpkg-1.22.6/utils'
+  CC       update_alternatives-update-alternatives.o
+  GEN      org.dpkg.pkexec.update-alternatives.policy
+  CCLD     update-alternatives
+make[3]: Leaving directory '/sources/dpkg-1.22.6/utils'
+Making all in dselect
+make[3]: Entering directory '/sources/dpkg-1.22.6/dselect'
+Making all in methods
+make[4]: Entering directory '/sources/dpkg-1.22.6/dselect/methods'
+  GEN      file/install
+  GEN      file/setup
+  GEN      file/update
+  GEN      ftp/install
+  GEN      ftp/setup
+  GEN      ftp/update
+  GEN      media/setup
+  GEN      media/install
+  GEN      media/update
+make[4]: Leaving directory '/sources/dpkg-1.22.6/dselect/methods'
+Making all in po
+make[4]: Entering directory '/sources/dpkg-1.22.6/dselect/po'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/sources/dpkg-1.22.6/dselect/po'
+make[4]: Entering directory '/sources/dpkg-1.22.6/dselect'
+  CXX      cxx-support.o
+  CXX      basecmds.o
+  CXX      baselist.o
+  CXX      basetop.o
+  CXX      bindings.o
+  GEN      curkeys.hpp
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include/stdint.h:9,
+                 from /usr/include/curses.h:95,
+                 from dselect-curses.h:33,
+                 from <stdin>:1:
+/usr/include/features.h:414:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  414 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+  CXX      helpmsgs.o
+  CXX      main.o
+  CXX      methkeys.o
+  CXX      methlist.o
+  CXX      method.o
+  CXX      methparse.o
+  CXX      pkgcmds.o
+  CXX      pkgdepcon.o
+  CXX      pkgdisplay.o
+  CXX      pkginfo.o
+  CXX      pkgkeys.o
+  CXX      pkglist.o
+  CXX      pkgsublist.o
+  CXX      pkgtop.o
+  GEN      curkeys.h
+  CXX      curkeys.o
+  CXXLD    dselect
+make[4]: Leaving directory '/sources/dpkg-1.22.6/dselect'
+make[3]: Leaving directory '/sources/dpkg-1.22.6/dselect'
+Making all in scripts
+make[3]: Entering directory '/sources/dpkg-1.22.6/scripts'
+Making all in mk
+make[4]: Entering directory '/sources/dpkg-1.22.6/scripts/mk'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/sources/dpkg-1.22.6/scripts/mk'
+Making all in po
+make[4]: Entering directory '/sources/dpkg-1.22.6/scripts/po'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/sources/dpkg-1.22.6/scripts/po'
+make[4]: Entering directory '/sources/dpkg-1.22.6/scripts'
+  GEN      dpkg-architecture
+  GEN      dpkg-buildflags
+  GEN      dpkg-buildapi
+  GEN      dpkg-buildpackage
+  GEN      dpkg-buildtree
+  GEN      dpkg-checkbuilddeps
+  GEN      dpkg-distaddfile
+  GEN      dpkg-genbuildinfo
+  GEN      dpkg-genchanges
+  GEN      dpkg-gencontrol
+  GEN      dpkg-gensymbols
+  GEN      dpkg-mergechangelogs
+  GEN      dpkg-name
+  GEN      dpkg-parsechangelog
+  GEN      dpkg-scanpackages
+  GEN      dpkg-scansources
+  GEN      dpkg-shlibdeps
+  GEN      dpkg-source
+  GEN      dpkg-vendor
+  GEN      dpkg-fsys-usrunmess
+make[4]: Leaving directory '/sources/dpkg-1.22.6/scripts'
+make[3]: Leaving directory '/sources/dpkg-1.22.6/scripts'
+Making all in po
+make[3]: Entering directory '/sources/dpkg-1.22.6/po'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/dpkg-1.22.6/po'
+Making all in man
+make[3]: Entering directory '/sources/dpkg-1.22.6/man'
+  POD2MAN deb-buildinfo.5
+  POD2MAN deb-changelog.5
+  POD2MAN deb-changes.5
+  POD2MAN deb-conffiles.5
+  POD2MAN deb-control.5
+  POD2MAN deb-extra-override.5
+  POD2MAN deb-md5sums.5
+  POD2MAN deb-old.5
+  POD2MAN deb-origin.5
+  POD2MAN deb-override.5
+  POD2MAN deb-postinst.5
+  POD2MAN deb-postrm.5
+  POD2MAN deb-preinst.5
+  POD2MAN deb-prerm.5
+  POD2MAN deb-shlibs.5
+  POD2MAN deb-split.5
+  POD2MAN deb-src-control.5
+  POD2MAN deb-src-files.5
+  POD2MAN deb-src-rules.5
+  POD2MAN deb-src-symbols.5
+  POD2MAN deb-substvars.5
+  POD2MAN deb-symbols.5
+  POD2MAN deb-triggers.5
+  POD2MAN deb-version.7
+  POD2MAN deb.5
+  POD2MAN deb822.5
+  POD2MAN dpkg-architecture.1
+  POD2MAN dpkg-build-api.7
+  POD2MAN dpkg-buildapi.1
+  POD2MAN dpkg-buildflags.1
+  POD2MAN dpkg-buildpackage.1
+  POD2MAN dpkg-buildtree.1
+  POD2MAN dpkg-checkbuilddeps.1
+  POD2MAN dpkg-deb.1
+  POD2MAN dpkg-distaddfile.1
+  POD2MAN dpkg-divert.1
+  POD2MAN dpkg-fsys-usrunmess.8
+  POD2MAN dpkg-genbuildinfo.1
+  POD2MAN dpkg-genchanges.1
+  POD2MAN dpkg-gencontrol.1
+  POD2MAN dpkg-gensymbols.1
+  POD2MAN dpkg-maintscript-helper.1
+  POD2MAN dpkg-mergechangelogs.1
+  POD2MAN dpkg-name.1
+  POD2MAN dpkg-parsechangelog.1
+  POD2MAN dpkg-query.1
+  POD2MAN dpkg-realpath.1
+  POD2MAN dpkg-scanpackages.1
+  POD2MAN dpkg-scansources.1
+  POD2MAN dpkg-shlibdeps.1
+  POD2MAN dpkg-source.1
+  POD2MAN dpkg-split.1
+  POD2MAN dpkg-statoverride.1
+  POD2MAN dpkg-trigger.1
+  POD2MAN dpkg-vendor.1
+  POD2MAN dpkg.1
+  POD2MAN dpkg.cfg.5
+  POD2MAN dsc.5
+  POD2MAN dselect.1
+  POD2MAN dselect.cfg.5
+  POD2MAN update-alternatives.1
+make[3]: Leaving directory '/sources/dpkg-1.22.6/man'
+make[3]: Entering directory '/sources/dpkg-1.22.6'
+make[3]: Leaving directory '/sources/dpkg-1.22.6'
+make[2]: Leaving directory '/sources/dpkg-1.22.6'
+make[1]: Leaving directory '/sources/dpkg-1.22.6'
+make[1]: Entering directory '/sources/dpkg-1.22.6'
+Making install in lib
+make[2]: Entering directory '/sources/dpkg-1.22.6/lib'
+Making install in compat
+make[3]: Entering directory '/sources/dpkg-1.22.6/lib/compat'
+make[4]: Entering directory '/sources/dpkg-1.22.6/lib/compat'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/dpkg-1.22.6/lib/compat'
+make[3]: Leaving directory '/sources/dpkg-1.22.6/lib/compat'
+Making install in dpkg
+make[3]: Entering directory '/sources/dpkg-1.22.6/lib/dpkg'
+make[4]: Entering directory '/sources/dpkg-1.22.6/lib/dpkg'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/lib/pkgconfig'
+ /usr/bin/mkdir -p '/usr/lib'
+ /usr/bin/mkdir -p '/usr/include/dpkg'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libdpkg.la '/usr/lib'
+ /usr/bin/install -c -m 644 libdpkg.pc '/usr/lib/pkgconfig'
+ /usr/bin/install -c -m 644 ar.h arch.h atomic-file.h buffer.h c-ctype.h color.h command.h compress.h db-ctrl.h db-fsys.h deb-version.h debug.h dir.h dpkg.h dpkg-db.h ehandle.h error.h fdio.h file.h fsys.h glob.h macros.h meminfo.h namevalue.h options.h pager.h parsedump.h path.h pkg.h pkg-array.h pkg-files.h pkg-format.h pkg-list.h pkg-queue.h pkg-show.h pkg-spec.h progname.h program.h progress.h report.h '/usr/include/dpkg'
+ /usr/bin/install -c -m 644 string.h subproc.h tarfn.h treewalk.h trigdeferred.h triglib.h varbuf.h version.h '/usr/include/dpkg'
+libtool: install: /usr/bin/install -c .libs/libdpkg.lai /usr/lib/libdpkg.la
+libtool: install: /usr/bin/install -c .libs/libdpkg.a /usr/lib/libdpkg.a
+libtool: install: chmod 644 /usr/lib/libdpkg.a
+libtool: install: ranlib /usr/lib/libdpkg.a
+libtool: finish: PATH="/usr/bin:/usr/sbin:/usr/sbin:/sbin" ldconfig -n /usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[4]: Leaving directory '/sources/dpkg-1.22.6/lib/dpkg'
+make[3]: Leaving directory '/sources/dpkg-1.22.6/lib/dpkg'
+make[3]: Entering directory '/sources/dpkg-1.22.6/lib'
+make[4]: Entering directory '/sources/dpkg-1.22.6/lib'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/dpkg-1.22.6/lib'
+make[3]: Leaving directory '/sources/dpkg-1.22.6/lib'
+make[2]: Leaving directory '/sources/dpkg-1.22.6/lib'
+Making install in src
+make[2]: Entering directory '/sources/dpkg-1.22.6/src'
+make[3]: Entering directory '/sources/dpkg-1.22.6/src'
+/usr/bin/mkdir -p /etc/dpkg/dpkg.cfg.d
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/bin'
+/usr/bin/mkdir -p /var/lib/dpkg/info
+ /usr/bin/mkdir -p '/usr/libexec/dpkg'
+/usr/bin/mkdir -p /var/lib/dpkg/parts
+/usr/bin/mkdir -p /var/lib/dpkg/updates
+ /usr/bin/install -c dpkg-maintscript-helper dpkg-realpath '/usr/bin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c dpkg dpkg-deb dpkg-divert dpkg-query dpkg-split dpkg-statoverride dpkg-trigger '/usr/bin'
+ /usr/bin/install -c dpkg-db-backup dpkg-db-keeper '/usr/libexec/dpkg'
+ /usr/bin/mkdir -p '/usr/share/dpkg'
+ /usr/bin/mkdir -p '/usr/share/dpkg/sh'
+ /usr/bin/install -c -m 644  sh/dpkg-error.sh '/usr/share/dpkg/sh'
+libtool: install: /usr/bin/install -c dpkg /usr/bin/dpkg
+libtool: install: /usr/bin/install -c dpkg-deb /usr/bin/dpkg-deb
+libtool: install: /usr/bin/install -c dpkg-divert /usr/bin/dpkg-divert
+libtool: install: /usr/bin/install -c dpkg-query /usr/bin/dpkg-query
+libtool: install: /usr/bin/install -c dpkg-split /usr/bin/dpkg-split
+libtool: install: /usr/bin/install -c dpkg-statoverride /usr/bin/dpkg-statoverride
+libtool: install: /usr/bin/install -c dpkg-trigger /usr/bin/dpkg-trigger
+make[3]: Leaving directory '/sources/dpkg-1.22.6/src'
+make[2]: Leaving directory '/sources/dpkg-1.22.6/src'
+Making install in utils
+make[2]: Entering directory '/sources/dpkg-1.22.6/utils'
+make[3]: Entering directory '/sources/dpkg-1.22.6/utils'
+/usr/bin/mkdir -p /etc/alternatives
+/usr/bin/mkdir -p /var/lib/dpkg/alternatives
+ /usr/bin/mkdir -p '/usr/bin'
+/usr/bin/install -c -m 644 ./README.alternatives /etc/alternatives/README
+ /usr/bin/mkdir -p '/usr/share/bash-completion/completions'
+ /usr/bin/mkdir -p '/usr/share/polkit-1/actions'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c update-alternatives '/usr/bin'
+ /usr/bin/install -c -m 644 org.dpkg.pkexec.update-alternatives.policy '/usr/share/polkit-1/actions'
+libtool: install: /usr/bin/install -c update-alternatives /usr/bin/update-alternatives
+make[3]: Leaving directory '/sources/dpkg-1.22.6/utils'
+make[2]: Leaving directory '/sources/dpkg-1.22.6/utils'
+Making install in dselect
+make[2]: Entering directory '/sources/dpkg-1.22.6/dselect'
+Making install in methods
+make[3]: Entering directory '/sources/dpkg-1.22.6/dselect/methods'
+make[4]: Entering directory '/sources/dpkg-1.22.6/dselect/methods'
+make[4]: Nothing to be done for 'install-exec-am'.
+/usr/bin/mkdir -p /var/lib/dpkg/methods/mnt
+/usr/bin/mkdir -p /var/lib/dpkg/methods/file
+/usr/bin/mkdir -p /var/lib/dpkg/methods/ftp
+ /usr/bin/mkdir -p '/usr/libexec/dpkg/methods'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl'
+/usr/bin/mkdir -p /var/lib/dpkg/methods/media
+ /usr/bin/mkdir -p '/usr/libexec/dpkg/methods'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dselect'
+ /usr/bin/mkdir -p '/usr/libexec/dpkg/methods/media'
+ /usr/bin/install -c -m 644  Dselect/Method.pm '/usr/lib/perl5/5.38/vendor_perl/Dselect'
+ /usr/bin/mkdir -p '/usr/libexec/dpkg/methods/file/'
+ /usr/bin/install -c -m 644  media/names media/desc.media '/usr/libexec/dpkg/methods/media'
+ /usr/bin/mkdir -p '/usr/libexec/dpkg/methods/ftp/'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dselect/Method'
+ /usr/bin/mkdir -p '/usr/libexec/dpkg/methods/media/'
+ /usr/bin/mkdir -p '/usr/libexec/dpkg/methods/file'
+ /usr/bin/install -c -m 644  Dselect/Method/Ftp.pm '/usr/lib/perl5/5.38/vendor_perl/Dselect/Method'
+ /usr/bin/install -c ftp/install ftp/setup ftp/update '/usr/libexec/dpkg/methods/ftp/'
+ /usr/bin/install -c -m 644  file/names file/desc.file '/usr/libexec/dpkg/methods/file'
+ /usr/bin/mkdir -p '/usr/libexec/dpkg/methods/ftp'
+ /usr/bin/install -c media/install media/setup media/update '/usr/libexec/dpkg/methods/media/'
+ /usr/bin/install -c -m 644  ftp/names ftp/desc.ftp '/usr/libexec/dpkg/methods/ftp'
+ /usr/bin/install -c file/install file/setup file/update '/usr/libexec/dpkg/methods/file/'
+make[4]: Leaving directory '/sources/dpkg-1.22.6/dselect/methods'
+make[3]: Leaving directory '/sources/dpkg-1.22.6/dselect/methods'
+Making install in po
+make[3]: Entering directory '/sources/dpkg-1.22.6/dselect/po'
+installing bs.gmo as /usr/share/locale/bs/LC_MESSAGES/dselect.mo
+installing ca.gmo as /usr/share/locale/ca/LC_MESSAGES/dselect.mo
+installing cs.gmo as /usr/share/locale/cs/LC_MESSAGES/dselect.mo
+installing da.gmo as /usr/share/locale/da/LC_MESSAGES/dselect.mo
+installing de.gmo as /usr/share/locale/de/LC_MESSAGES/dselect.mo
+installing el.gmo as /usr/share/locale/el/LC_MESSAGES/dselect.mo
+installing es.gmo as /usr/share/locale/es/LC_MESSAGES/dselect.mo
+installing et.gmo as /usr/share/locale/et/LC_MESSAGES/dselect.mo
+installing eu.gmo as /usr/share/locale/eu/LC_MESSAGES/dselect.mo
+installing fr.gmo as /usr/share/locale/fr/LC_MESSAGES/dselect.mo
+installing gl.gmo as /usr/share/locale/gl/LC_MESSAGES/dselect.mo
+installing hu.gmo as /usr/share/locale/hu/LC_MESSAGES/dselect.mo
+installing id.gmo as /usr/share/locale/id/LC_MESSAGES/dselect.mo
+installing it.gmo as /usr/share/locale/it/LC_MESSAGES/dselect.mo
+installing ja.gmo as /usr/share/locale/ja/LC_MESSAGES/dselect.mo
+installing ko.gmo as /usr/share/locale/ko/LC_MESSAGES/dselect.mo
+installing nb.gmo as /usr/share/locale/nb/LC_MESSAGES/dselect.mo
+installing nl.gmo as /usr/share/locale/nl/LC_MESSAGES/dselect.mo
+installing nn.gmo as /usr/share/locale/nn/LC_MESSAGES/dselect.mo
+installing pl.gmo as /usr/share/locale/pl/LC_MESSAGES/dselect.mo
+installing pt.gmo as /usr/share/locale/pt/LC_MESSAGES/dselect.mo
+installing pt_BR.gmo as /usr/share/locale/pt_BR/LC_MESSAGES/dselect.mo
+installing ro.gmo as /usr/share/locale/ro/LC_MESSAGES/dselect.mo
+installing ru.gmo as /usr/share/locale/ru/LC_MESSAGES/dselect.mo
+installing sk.gmo as /usr/share/locale/sk/LC_MESSAGES/dselect.mo
+installing sv.gmo as /usr/share/locale/sv/LC_MESSAGES/dselect.mo
+installing tl.gmo as /usr/share/locale/tl/LC_MESSAGES/dselect.mo
+installing vi.gmo as /usr/share/locale/vi/LC_MESSAGES/dselect.mo
+installing zh_CN.gmo as /usr/share/locale/zh_CN/LC_MESSAGES/dselect.mo
+installing zh_TW.gmo as /usr/share/locale/zh_TW/LC_MESSAGES/dselect.mo
+if test "dpkg" = "gettext-tools"; then \
+  /usr/bin/mkdir -p /usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /usr/bin/install -c -m 644 ./$file \
+		    /usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[3]: Leaving directory '/sources/dpkg-1.22.6/dselect/po'
+make[3]: Entering directory '/sources/dpkg-1.22.6/dselect'
+make[4]: Entering directory '/sources/dpkg-1.22.6/dselect'
+/usr/bin/mkdir -p /etc/dpkg/dselect.cfg.d
+ /usr/bin/mkdir -p '/usr/bin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c dselect '/usr/bin'
+libtool: install: /usr/bin/install -c dselect /usr/bin/dselect
+make[4]: Leaving directory '/sources/dpkg-1.22.6/dselect'
+make[3]: Leaving directory '/sources/dpkg-1.22.6/dselect'
+make[2]: Leaving directory '/sources/dpkg-1.22.6/dselect'
+Making install in scripts
+make[2]: Entering directory '/sources/dpkg-1.22.6/scripts'
+Making install in mk
+make[3]: Entering directory '/sources/dpkg-1.22.6/scripts/mk'
+make[4]: Entering directory '/sources/dpkg-1.22.6/scripts/mk'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/dpkg'
+ /usr/bin/install -c -m 644 architecture.mk buildapi.mk buildflags.mk buildopts.mk buildtools.mk default.mk pkg-info.mk vendor.mk '/usr/share/dpkg'
+make  install-data-hook
+make[5]: Entering directory '/sources/dpkg-1.22.6/scripts/mk'
+  GEN      install-data-hook
+mv /usr/share/dpkg/default.mk.new \
+   /usr/share/dpkg/default.mk
+  GEN      install-data-hook
+mv /usr/share/dpkg/buildtools.mk.new \
+   /usr/share/dpkg/buildtools.mk
+  GEN      install-data-hook
+mv /usr/share/dpkg/vendor.mk.new \
+   /usr/share/dpkg/vendor.mk
+make[5]: Leaving directory '/sources/dpkg-1.22.6/scripts/mk'
+make[4]: Leaving directory '/sources/dpkg-1.22.6/scripts/mk'
+make[3]: Leaving directory '/sources/dpkg-1.22.6/scripts/mk'
+Making install in po
+make[3]: Entering directory '/sources/dpkg-1.22.6/scripts/po'
+installing ca.gmo as /usr/share/locale/ca/LC_MESSAGES/dpkg-dev.mo
+installing de.gmo as /usr/share/locale/de/LC_MESSAGES/dpkg-dev.mo
+installing es.gmo as /usr/share/locale/es/LC_MESSAGES/dpkg-dev.mo
+installing fr.gmo as /usr/share/locale/fr/LC_MESSAGES/dpkg-dev.mo
+installing nl.gmo as /usr/share/locale/nl/LC_MESSAGES/dpkg-dev.mo
+installing pl.gmo as /usr/share/locale/pl/LC_MESSAGES/dpkg-dev.mo
+installing pt.gmo as /usr/share/locale/pt/LC_MESSAGES/dpkg-dev.mo
+installing ru.gmo as /usr/share/locale/ru/LC_MESSAGES/dpkg-dev.mo
+installing sv.gmo as /usr/share/locale/sv/LC_MESSAGES/dpkg-dev.mo
+if test "dpkg" = "gettext-tools"; then \
+  /usr/bin/mkdir -p /usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /usr/bin/install -c -m 644 ./$file \
+		    /usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[3]: Leaving directory '/sources/dpkg-1.22.6/scripts/po'
+make[3]: Entering directory '/sources/dpkg-1.22.6/scripts'
+make[4]: Entering directory '/sources/dpkg-1.22.6/scripts'
+/usr/bin/mkdir -p /usr/share/man/man3
+for module in Dpkg/Arch.pm Dpkg/BuildAPI.pm Dpkg/BuildEnv.pm Dpkg/BuildFlags.pm Dpkg/BuildInfo.pm Dpkg/BuildOptions.pm Dpkg/BuildProfiles.pm Dpkg/BuildTree.pm Dpkg/BuildTypes.pm Dpkg/Build/Info.pm Dpkg/Changelog.pm Dpkg/Changelog/Debian.pm Dpkg/Changelog/Entry.pm Dpkg/Changelog/Entry/Debian.pm Dpkg/Changelog/Parse.pm Dpkg/Checksums.pm Dpkg/Compression.pm Dpkg/Compression/FileHandle.pm Dpkg/Compression/Process.pm Dpkg/Conf.pm Dpkg/Control.pm Dpkg/Control/Changelog.pm Dpkg/Control/FieldsCore.pm Dpkg/Control/Fields.pm Dpkg/Control/Info.pm Dpkg/Control/HashCore.pm Dpkg/Control/HashCore/Tie.pm Dpkg/Control/Hash.pm Dpkg/Control/Tests.pm Dpkg/Control/Tests/Entry.pm Dpkg/Control/Types.pm Dpkg/Deps.pm Dpkg/Deps/AND.pm Dpkg/Deps/KnownFacts.pm Dpkg/Deps/Multiple.pm Dpkg/Deps/OR.pm Dpkg/Deps/Simple.pm Dpkg/Deps/Union.pm Dpkg/Dist/Files.pm Dpkg/ErrorHandling.pm Dpkg/Exit.pm Dpkg/File.pm Dpkg/Getopt.pm Dpkg/Gettext.pm Dpkg/Index.pm Dpkg/Interface/Storable.pm Dpkg/IPC.pm Dpkg/Lock.pm Dpkg/OpenPGP.pm Dpkg/OpenPGP/Backend.pm Dpkg/OpenPGP/Backend/GnuPG.pm Dpkg/OpenPGP/Backend/SOP.pm Dpkg/OpenPGP/Backend/Sequoia.pm Dpkg/OpenPGP/ErrorCodes.pm Dpkg/OpenPGP/KeyHandle.pm Dpkg/Package.pm Dpkg/Path.pm Dpkg/Shlibs.pm Dpkg/Shlibs/Objdump.pm Dpkg/Shlibs/Objdump/Object.pm Dpkg/Shlibs/Symbol.pm Dpkg/Shlibs/SymbolFile.pm Dpkg/Shlibs/Cppfilt.pm Dpkg/Source/Archive.pm Dpkg/Source/BinaryFiles.pm Dpkg/Source/Format.pm Dpkg/Source/Functions.pm Dpkg/Source/Package.pm Dpkg/Source/Package/V1.pm Dpkg/Source/Package/V2.pm Dpkg/Source/Package/V3/Bzr.pm Dpkg/Source/Package/V3/Custom.pm Dpkg/Source/Package/V3/Native.pm Dpkg/Source/Package/V3/Git.pm Dpkg/Source/Package/V3/Quilt.pm Dpkg/Source/Patch.pm Dpkg/Source/Quilt.pm Dpkg/Substvars.pm Dpkg/Vendor.pm Dpkg/Vendor/Debian.pm Dpkg/Vendor/Default.pm Dpkg/Vendor/Devuan.pm Dpkg/Vendor/Ubuntu.pm Dpkg/Version.pm Dpkg.pm ; do \
+  name=`echo $module | /usr/bin/sed -e 's|/|::|g' -e 's/\.pm$//'`; \
+  pod2man --utf8 --release=1.22.6 --date='2024-03-10'  --center=libdpkg-perl \
+    --name="$name" --section=3perl ./$module \
+    >/usr/share/man/man3/$name.3perl; \
+  if ! [ -s "/usr/share/man/man3/$name.3perl" ]; then \
+    echo "error: empty /usr/share/man/man3/$name.3perl" 2>&1; \
+    exit 1; \
+  fi; \
+done
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/sbin'
+ /usr/bin/install -c dpkg-fsys-usrunmess '/usr/sbin'
+ /usr/bin/install -c dpkg-architecture dpkg-buildflags dpkg-buildapi dpkg-buildpackage dpkg-buildtree dpkg-checkbuilddeps dpkg-distaddfile dpkg-genbuildinfo dpkg-genchanges dpkg-gencontrol dpkg-gensymbols dpkg-mergechangelogs dpkg-name dpkg-parsechangelog dpkg-scanpackages dpkg-scansources dpkg-shlibdeps dpkg-source dpkg-vendor '/usr/bin'
+ /usr/bin/mkdir -p '/usr/share/zsh/vendor-completions'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl'
+ /usr/bin/install -c -m 644 completion/zsh/_dpkg-parsechangelog '/usr/share/zsh/vendor-completions'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Shlibs/Objdump'
+ /usr/bin/install -c -m 644  Dpkg/Shlibs/Objdump/Object.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Shlibs/Objdump'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Build'
+ /usr/bin/install -c -m 644  Dpkg/Build/Info.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Build'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Source/Package'
+ /usr/bin/install -c -m 644  Dpkg/Source/Package/V1.pm Dpkg/Source/Package/V2.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Source/Package'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Shlibs'
+ /usr/bin/install -c -m 644  Dpkg/Shlibs/Objdump.pm Dpkg/Shlibs/Symbol.pm Dpkg/Shlibs/SymbolFile.pm Dpkg/Shlibs/Cppfilt.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Shlibs'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Source/Package/V3'
+ /usr/bin/install -c -m 644  Dpkg/Source/Package/V3/Bzr.pm Dpkg/Source/Package/V3/Custom.pm Dpkg/Source/Package/V3/Native.pm Dpkg/Source/Package/V3/Git.pm Dpkg/Source/Package/V3/Quilt.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Source/Package/V3'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/OpenPGP'
+ /usr/bin/install -c -m 644  Dpkg/OpenPGP/Backend.pm Dpkg/OpenPGP/ErrorCodes.pm Dpkg/OpenPGP/KeyHandle.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/OpenPGP'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Changelog'
+ /usr/bin/install -c -m 644  Dpkg/Changelog/Debian.pm Dpkg/Changelog/Entry.pm Dpkg/Changelog/Parse.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Changelog'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Dist'
+ /usr/bin/install -c -m 644  Dpkg/Dist/Files.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Dist'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Source'
+ /usr/bin/install -c -m 644  Dpkg/Source/Archive.pm Dpkg/Source/BinaryFiles.pm Dpkg/Source/Format.pm Dpkg/Source/Functions.pm Dpkg/Source/Package.pm Dpkg/Source/Patch.pm Dpkg/Source/Quilt.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Source'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Control/HashCore'
+ /usr/bin/install -c -m 644  Dpkg/Control/HashCore/Tie.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Control/HashCore'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg'
+ /usr/bin/install -c -m 644  Dpkg/Arch.pm Dpkg/BuildAPI.pm Dpkg/BuildEnv.pm Dpkg/BuildFlags.pm Dpkg/BuildInfo.pm Dpkg/BuildOptions.pm Dpkg/BuildProfiles.pm Dpkg/BuildTree.pm Dpkg/BuildTypes.pm Dpkg/Changelog.pm Dpkg/Checksums.pm Dpkg/Compression.pm Dpkg/Conf.pm Dpkg/Control.pm Dpkg/Deps.pm Dpkg/ErrorHandling.pm Dpkg/Exit.pm Dpkg/File.pm Dpkg/Getopt.pm Dpkg/Gettext.pm Dpkg/Index.pm Dpkg/IPC.pm Dpkg/Lock.pm Dpkg/OpenPGP.pm Dpkg/Package.pm Dpkg/Path.pm Dpkg/Shlibs.pm Dpkg/Substvars.pm Dpkg/Vendor.pm Dpkg/Version.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Deps'
+ /usr/bin/install -c -m 644  Dpkg/Deps/AND.pm Dpkg/Deps/KnownFacts.pm Dpkg/Deps/Multiple.pm Dpkg/Deps/OR.pm Dpkg/Deps/Simple.pm Dpkg/Deps/Union.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Deps'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Control'
+ /usr/bin/install -c -m 644  Dpkg/Control/Changelog.pm Dpkg/Control/FieldsCore.pm Dpkg/Control/Fields.pm Dpkg/Control/Info.pm Dpkg/Control/HashCore.pm Dpkg/Control/Hash.pm Dpkg/Control/Tests.pm Dpkg/Control/Types.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Control'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Vendor'
+ /usr/bin/install -c -m 644  Dpkg/Vendor/Debian.pm Dpkg/Vendor/Default.pm Dpkg/Vendor/Devuan.pm Dpkg/Vendor/Ubuntu.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Vendor'
+ /usr/bin/install -c -m 644  Dpkg.pm '/usr/lib/perl5/5.38/vendor_perl/.'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Control/Tests'
+ /usr/bin/install -c -m 644  Dpkg/Control/Tests/Entry.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Control/Tests'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Changelog/Entry'
+ /usr/bin/install -c -m 644  Dpkg/Changelog/Entry/Debian.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Changelog/Entry'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Compression'
+ /usr/bin/install -c -m 644  Dpkg/Compression/FileHandle.pm Dpkg/Compression/Process.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Compression'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Interface'
+ /usr/bin/install -c -m 644  Dpkg/Interface/Storable.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/Interface'
+ /usr/bin/mkdir -p '/usr/lib/perl5/5.38/vendor_perl/Dpkg/OpenPGP/Backend'
+ /usr/bin/install -c -m 644  Dpkg/OpenPGP/Backend/GnuPG.pm Dpkg/OpenPGP/Backend/SOP.pm Dpkg/OpenPGP/Backend/Sequoia.pm '/usr/lib/perl5/5.38/vendor_perl/Dpkg/OpenPGP/Backend'
+make  install-data-hook
+make[5]: Entering directory '/sources/dpkg-1.22.6/scripts'
+  GEN      install-data-hook
+mv /usr/lib/perl5/5.38/vendor_perl/Dpkg.pm.new \
+   /usr/lib/perl5/5.38/vendor_perl/Dpkg.pm
+make[5]: Leaving directory '/sources/dpkg-1.22.6/scripts'
+make[4]: Leaving directory '/sources/dpkg-1.22.6/scripts'
+make[3]: Leaving directory '/sources/dpkg-1.22.6/scripts'
+make[2]: Leaving directory '/sources/dpkg-1.22.6/scripts'
+Making install in po
+make[2]: Entering directory '/sources/dpkg-1.22.6/po'
+installing ast.gmo as /usr/share/locale/ast/LC_MESSAGES/dpkg.mo
+installing bs.gmo as /usr/share/locale/bs/LC_MESSAGES/dpkg.mo
+installing ca.gmo as /usr/share/locale/ca/LC_MESSAGES/dpkg.mo
+installing cs.gmo as /usr/share/locale/cs/LC_MESSAGES/dpkg.mo
+installing da.gmo as /usr/share/locale/da/LC_MESSAGES/dpkg.mo
+installing de.gmo as /usr/share/locale/de/LC_MESSAGES/dpkg.mo
+installing dz.gmo as /usr/share/locale/dz/LC_MESSAGES/dpkg.mo
+installing el.gmo as /usr/share/locale/el/LC_MESSAGES/dpkg.mo
+installing eo.gmo as /usr/share/locale/eo/LC_MESSAGES/dpkg.mo
+installing es.gmo as /usr/share/locale/es/LC_MESSAGES/dpkg.mo
+installing et.gmo as /usr/share/locale/et/LC_MESSAGES/dpkg.mo
+installing eu.gmo as /usr/share/locale/eu/LC_MESSAGES/dpkg.mo
+installing fr.gmo as /usr/share/locale/fr/LC_MESSAGES/dpkg.mo
+installing gl.gmo as /usr/share/locale/gl/LC_MESSAGES/dpkg.mo
+installing hu.gmo as /usr/share/locale/hu/LC_MESSAGES/dpkg.mo
+installing id.gmo as /usr/share/locale/id/LC_MESSAGES/dpkg.mo
+installing it.gmo as /usr/share/locale/it/LC_MESSAGES/dpkg.mo
+installing ja.gmo as /usr/share/locale/ja/LC_MESSAGES/dpkg.mo
+installing km.gmo as /usr/share/locale/km/LC_MESSAGES/dpkg.mo
+installing ko.gmo as /usr/share/locale/ko/LC_MESSAGES/dpkg.mo
+installing ku.gmo as /usr/share/locale/ku/LC_MESSAGES/dpkg.mo
+installing lt.gmo as /usr/share/locale/lt/LC_MESSAGES/dpkg.mo
+installing mr.gmo as /usr/share/locale/mr/LC_MESSAGES/dpkg.mo
+installing nb.gmo as /usr/share/locale/nb/LC_MESSAGES/dpkg.mo
+installing ne.gmo as /usr/share/locale/ne/LC_MESSAGES/dpkg.mo
+installing nl.gmo as /usr/share/locale/nl/LC_MESSAGES/dpkg.mo
+installing nn.gmo as /usr/share/locale/nn/LC_MESSAGES/dpkg.mo
+installing oc.gmo as /usr/share/locale/oc/LC_MESSAGES/dpkg.mo
+installing pa.gmo as /usr/share/locale/pa/LC_MESSAGES/dpkg.mo
+installing pl.gmo as /usr/share/locale/pl/LC_MESSAGES/dpkg.mo
+installing pt.gmo as /usr/share/locale/pt/LC_MESSAGES/dpkg.mo
+installing pt_BR.gmo as /usr/share/locale/pt_BR/LC_MESSAGES/dpkg.mo
+installing ro.gmo as /usr/share/locale/ro/LC_MESSAGES/dpkg.mo
+installing ru.gmo as /usr/share/locale/ru/LC_MESSAGES/dpkg.mo
+installing sk.gmo as /usr/share/locale/sk/LC_MESSAGES/dpkg.mo
+installing sv.gmo as /usr/share/locale/sv/LC_MESSAGES/dpkg.mo
+installing th.gmo as /usr/share/locale/th/LC_MESSAGES/dpkg.mo
+installing tl.gmo as /usr/share/locale/tl/LC_MESSAGES/dpkg.mo
+installing tr.gmo as /usr/share/locale/tr/LC_MESSAGES/dpkg.mo
+installing vi.gmo as /usr/share/locale/vi/LC_MESSAGES/dpkg.mo
+installing zh_CN.gmo as /usr/share/locale/zh_CN/LC_MESSAGES/dpkg.mo
+installing zh_TW.gmo as /usr/share/locale/zh_TW/LC_MESSAGES/dpkg.mo
+if test "dpkg" = "gettext-tools"; then \
+  /usr/bin/mkdir -p /usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /usr/bin/install -c -m 644 ./$file \
+		    /usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[2]: Leaving directory '/sources/dpkg-1.22.6/po'
+Making install in man
+make[2]: Entering directory '/sources/dpkg-1.22.6/man'
+make[3]: Entering directory '/sources/dpkg-1.22.6/man'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/man/man1'
+ /usr/bin/mkdir -p '/usr/share/man/man5'
+ /usr/bin/mkdir -p '/usr/share/man/man7'
+ /usr/bin/mkdir -p '/usr/share/man/man8'
+ /usr/bin/install -c -m 644 dpkg-fsys-usrunmess.8 '/usr/share/man/man8'
+ /usr/bin/install -c -m 644 deb-buildinfo.5 deb-changelog.5 deb-changes.5 deb-conffiles.5 deb-control.5 deb-extra-override.5 deb-md5sums.5 deb-old.5 deb-origin.5 deb-override.5 deb-postinst.5 deb-postrm.5 deb-preinst.5 deb-prerm.5 deb-shlibs.5 deb-split.5 deb-src-control.5 deb-src-files.5 deb-src-rules.5 deb-src-symbols.5 deb-substvars.5 deb-symbols.5 deb-triggers.5 deb.5 deb822.5 dpkg.cfg.5 dsc.5 dselect.cfg.5 '/usr/share/man/man5'
+ /usr/bin/install -c -m 644 deb-version.7 dpkg-build-api.7 '/usr/share/man/man7'
+ /usr/bin/install -c -m 644 dpkg-architecture.1 dpkg-buildapi.1 dpkg-buildflags.1 dpkg-buildpackage.1 dpkg-buildtree.1 dpkg-checkbuilddeps.1 dpkg-deb.1 dpkg-distaddfile.1 dpkg-divert.1 dpkg-genbuildinfo.1 dpkg-genchanges.1 dpkg-gencontrol.1 dpkg-gensymbols.1 dpkg-maintscript-helper.1 dpkg-mergechangelogs.1 dpkg-name.1 dpkg-parsechangelog.1 dpkg-query.1 dpkg-realpath.1 dpkg-scanpackages.1 dpkg-scansources.1 dpkg-shlibdeps.1 dpkg-source.1 dpkg-split.1 dpkg-statoverride.1 dpkg-trigger.1 dpkg-vendor.1 dpkg.1 dselect.1 update-alternatives.1 '/usr/share/man/man1'
+make[3]: Leaving directory '/sources/dpkg-1.22.6/man'
+make[2]: Leaving directory '/sources/dpkg-1.22.6/man'
+make[2]: Entering directory '/sources/dpkg-1.22.6'
+make[3]: Entering directory '/sources/dpkg-1.22.6'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/aclocal'
+ /usr/bin/mkdir -p '/usr/share/doc/dpkg-1.22.6'
+ /usr/bin/mkdir -p '/usr/share/doc/dpkg-1.22.6/spec'
+ /usr/bin/mkdir -p '/usr/share/dpkg'
+ /usr/bin/install -c -m 644 doc/README.api doc/README.feature-removal-schedule '/usr/share/doc/dpkg-1.22.6'
+ /usr/bin/install -c -m 644 doc/spec/frontend-api.txt doc/spec/protected-field.txt doc/spec/rootless-builds.txt doc/spec/triggers.txt '/usr/share/doc/dpkg-1.22.6/spec'
+ /usr/bin/install -c -m 644 data/pie-compile.specs data/pie-link.specs data/no-pie-compile.specs data/no-pie-link.specs data/cputable data/ostable data/abitable data/tupletable '/usr/share/dpkg'
+ /usr/bin/install -c -m 644 m4/dpkg-arch.m4 m4/dpkg-build.m4 m4/dpkg-compiler.m4 m4/dpkg-coverage.m4 m4/dpkg-funcs.m4 m4/dpkg-headers.m4 m4/dpkg-libs.m4 m4/dpkg-linker.m4 m4/dpkg-progs.m4 m4/dpkg-types.m4 m4/dpkg-unicode.m4 '/usr/share/aclocal'
+make[3]: Leaving directory '/sources/dpkg-1.22.6'
+make[2]: Leaving directory '/sources/dpkg-1.22.6'
+make[1]: Leaving directory '/sources/dpkg-1.22.6'
+install: creating directory '/var/dpkg'
+install: creating directory '/var/dpkg/updates'
+'/etc/dpkg/origins/default' -> 'debian'
