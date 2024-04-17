@@ -1,0 +1,18 @@
+--- a
++++ b
+@@ -101,12 +101,11 @@
+ # Parallelization and Optimization settings
+ #
+ N_PARALLEL=6
+-# OPT_1 is not set
+-OPT_2=y
+-# REALSBU is not set
++OPT_1=y
++# OPT_2 is not set
+ # end of Parallelization and Optimization settings
+
+-OPTIMIZE=2
++OPTIMIZE=1
+
+ #
+ # Internal Settings (WARNING: for jhalfs developers only)

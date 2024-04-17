@@ -1,0 +1,60 @@
+name: Build x32 multilib i686
+on:
+  workflow_dispatch:
+
+jobs:
+  buildx32-m32:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Check
+        run: |
+          if grep -q 'CONFIG_X86_X32_ABI is not set$' "/boot/config-$(uname -r)"
+          then
+            printf "\nThe kernel: $(uname -r) not supported x86_x32 ABI\n\n$(uname -a)\n"
+            exit 1
+          fi
+          echo "Processor: $(cat /proc/cpuinfo|grep processor|wc -l)"
+          cat /proc/cpuinfo|grep 'model name'|head -1
+          cat /proc/meminfo|head; echo ' '
+          sudo ln -sf bash /bin/sh
+          bash -e script/version-check
+
+      - name: Build
+        run: |
+          bash -e script/build x32m32
+          echo ' '; df -Th; echo ' '; free -h
+
+      - name: Cleanup, Remove symbol and System Configuration
+        run: |
+          sudo bash -e script/cleanup x32 || { cd alfs; bash -e ../script/build failed; }
+          echo ' '; df -Th; echo ' '; free -h
+
+      - name: Push To tags
+        run: bash -e script/push x32m64
+
+      - name: Upload to Releases
+        uses: softprops/action-gh-release@master
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          body: ${{ env.TAG_DES }}
+          files: upload/*
+          prerelease: true
+
+      - name: Remove old Releases
+        uses: dev-drprasad/delete-older-releases@master
+        with:
+          keep_latest: 3
+          delete_tags: true
+          delete_tag_pattern: ${{ env.GH_ML }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup tmate ssh session
+        if: ${{ failure() }}
+        uses: mxschmitt/action-tmate@v3
+        timeout-minutes: 90
+        with:
+          limit-access-to-actor: true

@@ -1,0 +1,63 @@
+name: Build multilib All
+on:
+  workflow_dispatch:
+  #schedule:
+    #- cron: '05 08 * * *'   #Runs at 08:05 UTC  https://docs.github.com/zh/actions/using-workflows/workflow-syntax-for-github-actions#onschedule
+    #- cron: '5 14,20 7 5 0' #Runs at 14:05 and 20:05, on day 7 of the month, and on Sunday, only in May. UTC (Two triggers: specific date, the day of the week)
+    #- cron: '5 02,08 8 5 *' #Runs at 02:05 and 08:05, on day 8 of the month, only in May. UTC (One trigger: specific date)
+    #- cron: '10 18 5 5 5'
+    #- cron: '15 0,6,12,18 6 5 6'
+
+jobs:
+  build-multilib:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Check
+        run: |
+          echo "Processor: $(cat /proc/cpuinfo|grep processor|wc -l)"
+          cat /proc/cpuinfo|grep 'model name'|head -1
+          cat /proc/meminfo|head; echo ' '
+          sudo ln -sf bash /bin/sh
+          bash -e script/version-check
+
+      - name: Build
+        run: |
+          bash -e script/build multilib
+          echo ' '; df -Th; echo ' '; free -h
+
+      - name: Cleanup, Remove symbol and System Configuration
+        run: |
+          sudo bash -e script/cleanup || { cd alfs; bash -e ../script/build failed; }
+          echo ' '; df -Th; echo ' '; free -h
+
+      - name: Push To tags
+        run: bash -e script/push
+
+      - name: Upload to Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          body: ${{ env.TAG_DES }}
+          files: upload/*
+          prerelease: true
+
+      - name: Remove old Releases
+        uses: dev-drprasad/delete-older-releases@v0.3.3
+        with:
+          keep_latest: 3
+          delete_tags: true
+          delete_tag_pattern: ${{ env.GH_ML }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup tmate ssh session
+        if: ${{ failure() }}
+        uses: mxschmitt/action-tmate@v3
+        timeout-minutes: 90
+        with:
+          limit-access-to-actor: true
