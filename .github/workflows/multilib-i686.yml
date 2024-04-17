@@ -1,7 +1,8 @@
 name: Build multilib i686
 on:
   workflow_dispatch:
-  #schedule:
+  schedule:
+    - cron: '5 7 */30 * *'
     #- cron: '5 14,20 7 5 0' #Runs at 14:05 and 20:05, on day 7 of the month, and on Sunday, only in May. UTC (Two triggers: specific date, the day of the week)
     #- cron: '5 02,08 8 5 *' #Runs at 02:05 and 08:05, on day 8 of the month, only in May. UTC (One trigger: specific date)
     #- cron: '5 10 */7 * *' #Runs at 10:05, every 7 days. UTC
