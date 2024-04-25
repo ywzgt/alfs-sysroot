@@ -1,0 +1,48 @@
+#!/bin/bash
+
+locale -a
+
+# This block must be edited to suit your needs.
+LC_ALL=**EDITME<locale name>EDITME** locale charmap
+# End of editable block.
+
+LC_ALL=<locale name> locale language
+LC_ALL=<locale name> locale charmap
+LC_ALL=<locale name> locale int_curr_symbol
+LC_ALL=<locale name> locale int_prefix
+
+# This block must be edited to suit your needs.
+cat > /etc/locale.conf << "EOF"
+LANG=**EDITME<ll>_<CC>.<charmap><@modifiers>EDITME**
+EOF
+# End of editable block.
+
+cat > /etc/profile << "EOF"
+# Begin /etc/profile
+
+for i in $(locale); do
+  unset ${i%=*}
+done
+
+if [[ "$TERM" = linux ]]; then
+  export LANG=C.UTF-8
+else
+  source /etc/locale.conf
+
+  for i in $(locale); do
+    key=${i%=*}
+    if [[ -v $key ]]; then
+      export $key
+    fi
+  done
+fi
+
+# End /etc/profile
+EOF
+
+# This block must be edited to suit your needs.
+localectl set-locale LANG="**EDITME<ll>_<CC>.<charmap><@modifiers>EDITME**"
+# End of editable block.
+
+localectl set-locale LANG="en_US.UTF-8" LC_CTYPE="en_US"
+

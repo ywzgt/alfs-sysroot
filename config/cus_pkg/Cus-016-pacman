@@ -1,0 +1,86 @@
+#!/bin/bash
+# https://gitlab.archlinux.org/archlinux/packaging/packages/pacman
+
+PKG="pacman"
+PKG_VERSION="6.0.2"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.xz"
+URL="https://sources.archlinux.org/other/pacman/${PKG_FILE}"
+MD5="f2c7e82cc5483a2c90f228a0393f5526"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+gitlab='https://gitlab.archlinux.org/pacman/pacman/-/commit'
+PATCH1="${gitlab}/efd0c24c07b86be014a4edb5a8ece021b87e3900.patch"
+PATCH2="${gitlab}/86981383a2f4380bda26311831be94cdc743649b.patch"
+PATCH3="${gitlab}/478af273dfe24ded197ec54ae977ddc3719d74a0.patch"
+PATCH4="${gitlab}/de11824527ec4e2561e161ac40a5714ec943543c.patch"
+PATCH5="${gitlab}/0e938f188692c710be36f9dd9ea7b94381aed1b4.patch"
+PATCH6="${gitlab}/05f283b5ad8f5b8f995076e93a27c8772076f872.patch"
+PATCH7="${gitlab}/aa3a1bc3b50d797fb75278f79a83cd7dde50c66e.patch"
+PATCH8="${gitlab}/843bf21e794c79c5b3bcf8a57e45ef9c62312fee.patch"
+PATCH9="${gitlab}/7a4fff3310ba2eadd3d5428cbb92e58eb2ee853b.patch"
+PATCH10="${gitlab}/00d2b1f90261bf77eaaf262d2504af016562f2ac.patch"
+PATCH11="${gitlab}/3aa096a74f717d31650e0eb3cf34e9a5ebadc313.patch"
+PATCH12="${gitlab}/86ec26b2d33372a4b3bda48f22c4a9f226c3ccce.patch"
+PATCH13="${gitlab}/16a064701a30d7e1175e1185cc6da44238302fab.patch"
+PATCH14="${gitlab}/f8c2e59ec57c86827b1f1b1c2f6760dc3e59fe40.patch"
+
+( cat << xEOFx
+for f in "${PATCH11}" "${PATCH12}" "${PATCH13}" "${PATCH14}"
+do
+	[ -f "../\${f##*/}"] || wget -P.. "\$f"
+done
+
+patch -Np1 -i ../${PATCH1##*/}
+patch -Np1 -i ../${PATCH2##*/}
+patch -Np1 -i ../${PATCH3##*/}
+patch -Np1 -i ../${PATCH4##*/}
+patch -Np1 -i ../${PATCH5##*/}
+patch -Np1 -i ../${PATCH6##*/}
+patch -Np1 -i ../${PATCH7##*/}
+patch -Np1 -i ../${PATCH8##*/}
+patch -Np1 -i ../${PATCH9##*/}
+patch -Np1 -i ../${PATCH10##*/}
+patch -Np1 -i ../${PATCH11##*/}
+patch -Np1 -i ../${PATCH12##*/}
+patch -Np1 -i ../${PATCH13##*/}
+patch -Np1 -i ../${PATCH14##*/}
+
+cat <<"EOF">> scripts/po/zh_CN.po
+
+msgid "Splitting %s files into separate packages..."
+msgstr "正在将 %s 文件拆分为单独的包..."
+
+msgid "Splitting static library files into separate packages..."
+msgstr "正在将静态库文件拆分为单独的包..."
+
+msgid "Removing unwanted man pages..."
+msgstr "正在删除不想要的手册页..."
+
+msgid "Removing unwanted message translation files..."
+msgstr "正在删除不想要的消息翻译文件..."
+
+msgid "Finding %s files..."
+msgstr "正在查找 %s 文件..."
+
+msgid "Adding dependencies by dynamic linked library..."
+msgstr "正在通过动态链接库添加依赖..."
+EOF
+
+
+mkdir -v pacman-build
+cd pacman-build
+
+meson setup --prefix=/usr \
+		--buildtype=release \
+		--libdir=/usr/lib \
+		-Ddoc=disabled \
+		-Ddoxygen=disabled \
+		-Dscriptlet-shell=/usr/bin/bash \
+		-Dldconfig=/usr/sbin/ldconfig ..
+ninja
+ninja install
+xEOFx
+) > tmp

@@ -1,0 +1,131 @@
+#!/bin/bash
+
+export TZ='Asia/Shanghai'
+INITSYS="$(grep '^INITSYS=' alfs/configuration|sed -e 's/^INITSYS=//' -e 's/"//g')"
+bld_dir="$(grep '^BUILDDIR=' alfs/configuration|sed -e 's/^BUILDDIR=//' -e 's/"//g')"
+ml_lib=0
+
+if [ -e 'ENV' ]; then . ENV; fi
+TAG="$(date -u +%Y%m%d).${INITSYS}${ml}"
+echo "GH_INIT=$INITSYS" >> $GITHUB_ENV
+echo "GH_ML=$ml" >> $GITHUB_ENV
+
+case "$1" in
+	x32)
+		TAG="$(date -u +%Y%m%d).x32"
+		ml_lib=2
+		;;
+	x32m*)
+		TAG="$(date -u +%Y%m%d).${ml}-${INITSYS}"
+		;;
+	release)
+		TAG="$(date -u +%Y%m%d).r"
+		;;
+esac
+echo "TAG_NAME=${TAG}" >> $GITHUB_ENV
+
+case "$ml" in
+	x32m*)
+		[[ ${ml#x32m} = 64 ]] && LIB="x32 abi and x64" || LIB="x32 abi and i686"
+		LFS_TYPE=Multilib; ml_lib=1; ml_arch=ml_32 ;;
+	-m32) LIB="i686"; LFS_TYPE=Multilib; ml_lib=1; ml_arch=ml_32 ;;
+	-multilib) LIB="i686 and x32"; LFS_TYPE=Multilib; ml_lib=1; ml_arch=ml_all ;;
+	-32bit|*) LFS_TYPE=Standard ;;
+esac
+if [ "$ml_lib" -eq 1 ]; then
+		echo "TAG_DES=$LFS_TYPE LFS on $(uname -m) with $LIB libraries, $INITSYS" >> $GITHUB_ENV
+elif [ "$ml_lib" -eq 2 ]; then
+		echo "TAG_DES=$LFS_TYPE LFS on $(uname -m) with x32 abi only, No init system" >> $GITHUB_ENV
+else
+		echo "TAG_DES=$LFS_TYPE LFS on $(uname -m), $INITSYS" >> $GITHUB_ENV
+fi
+
+_package() {
+		if [ -e "${bld_dir}/etc/fstab" ]; then sudo sed 's|^/|# &|' -i "${bld_dir}/etc/fstab"; fi
+		sudo rm -rf "${bld_dir}/root"/{.cache,.python_history} &>/dev/null || true
+
+		echo ":: Package the 'build logs' as tar, Using xz Compression..."
+		(cd "${bld_dir}/jhalfs/"; tar cf - logs|xz -T0) >makelog.tar.xz 2>/dev/null
+
+		echo ":: Package the 'installed-files' as tar, Using xz Compression..."
+		(cd "${bld_dir}/jhalfs/"; tar cf - installed-files|xz -T0) >install-file.tar.xz 2>/dev/null
+
+		echo ":: Package the document as tar, Using xz Compression..."
+		(cd "${bld_dir}/usr/share/doc"; sudo tar cf - .|xz -T0) >doc.tar.xz 2>/dev/null
+		sudo rm -rf "${bld_dir}/usr/share/doc/"*
+
+		echo ":: Package other language locale files..."
+		mkdir tmpdir
+		sudo cp "${bld_dir}/usr/share/locale/"{zh_,locale.alias}* -at tmpdir
+		sudo rm -rf "${bld_dir}/usr/share/locale/"{zh_,locale.alias}*
+		( cd "${bld_dir}/usr/share/locale/"; sudo tar cf - .|xz -T0) >l10n.tar.xz
+		sudo rm -rf "${bld_dir}/usr/share/locale/"*
+		sudo cp -a tmpdir/* -t "${bld_dir}/usr/share/locale/"
+		sudo rm -rf tmpdir
+
+		echo ":: Package the 'SysRoot' as tar, Using xz Compression..."
+		(cd "${bld_dir}"; sudo tar cf - --exclude=./dev/* --exclude=./proc/* --exclude=./sys/* --exclude=./run/* \
+			--exclude=./tmp/* --exclude=./jhalfs --exclude=./sources .|xz -T0) >"rootfs.tar.xz" 2>/dev/null
+		echo ":: done."
+
+		tar tf "rootfs.tar.xz"|sort >archive-list
+		tar tvf "rootfs.tar.xz"|sort -k6 >archive-list-verbose
+
+		echo 'Update Hash...'
+		for i in *.tar.xz; do sha256sum $i >$i.sha256; done
+		echo 'done.'
+
+		install -d install-file makelog upload
+		tar xf install-file.tar.xz --strip-components=1 -C install-file
+		tar xf makelog.tar.xz --strip-components=1 -C makelog
+		mv {doc,l10n,rootfs}.tar.xz* -t upload
+		rm {install-file,makelog}.tar.xz*
+}
+
+_push(){
+		git checkout --orphan=temp_tag
+		rm -rf .github patch
+		rm -fv .gitignore configuration* README.md
+		mkdir config
+		cp alfs/configuration config
+		mv cus_pkg  script -t config
+
+		sudo chown -R $(id -u):$(id -g) "${bld_dir}/jhalfs/book-source"
+		sed '/^dump-commands:/s/validate//' -i "${bld_dir}/jhalfs/book-source/Makefile"
+		make REV=$INITSYS -C "${bld_dir}/jhalfs/book-source" validate ARCH=${ml_arch} 2>/dev/null || printf "\n"
+		make REV=$INITSYS -C "${bld_dir}/jhalfs/book-source" wget-list md5sums BASEDIR=$PWD/config 2>/dev/null
+		make REV=$INITSYS -C "${bld_dir}/jhalfs/book-source" dump-commands ARCH=${ml_arch} DUMPDIR=$PWD/config/commands 2>/dev/null
+		find config/commands -type f -exec sed -i '1i\#!/bin/bash\n' {} +
+
+		local make_file="${bld_dir}/jhalfs/Makefile"
+		if [ -f "$make_file" ]; then cp "$make_file" config; fi
+		for f in $(find "${bld_dir}/jhalfs" -type f -iname '*SBU_DU*' -not \( -empty -o -name 'create*.sh' \)); do
+			if [[ -n "$f" ]]; then 	cp "$f" .; git add "$(basename $f)"; fi
+		done
+
+		git add config
+		git add install-file makelog
+		git add archive-list{,-verbose}
+		git commit -am "$TAG" >/dev/null
+		git checkout --orphan new_tag
+		git commit -m "Created tag in $(date|sed -e 's/20[0-9][0-9]$//' -e 's/CST//')"
+		echo; ls -l; echo
+		git tag "${TAG}"
+		git push origin "${TAG}"
+}
+
+_retry_push() {
+		for ((i=1;i<=5;i++)); do
+			echo; echo "Retrying push... $i"
+			git config --global http.postBuffer 2147483648
+			git push -f origin "$1" || echo "$?" >return
+		done
+		[ ! -e 'return' ] || return $(<return)
+}
+
+_docmd() {
+		_package
+		_push || _retry_push "${TAG}"
+}
+
+_docmd
