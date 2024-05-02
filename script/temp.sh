@@ -1,8 +1,5 @@
-# multilib 没有及时更新glibc版本
-sed -i.ori 's/patch -Np1 -i ..\/\&glibc-upstream-fixes-patch;//' repo/chapter08/glibc.xml
-sed -i.ori 's/patch -Np1 -i ..\/\&pkgconf-upstream-fix-patch;//' repo/chapter08/pkgconf.xml
-for i in repo/chapter08/{glibc,pkgconf}.xml; do
-	if diff -u $i{.ori,} > /dev/null; then
-		mv -f $i{.ori,}
-	fi
-done
+# patches/lfs/development/*.patch 可能没有及时更新
+p_url="https://www.linuxfromscratch.org/patches/downloads"
+src_dir=$(grep '^SRC_ARCHIVE=' alfs/configuration|sed 's/.*=\|"//g')
+wget -nv -P $src_dir \
+	$p_url/glibc/glibc-2.39-upstream_fix-2.patch
