@@ -1,0 +1,23 @@
+Thu May  2 23:51:29 CST 2024
+tar: stdout: write error
+KB: 2890184	/
+Processing /sources/meson-1.4.0
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: meson
+  Building wheel for meson (pyproject.toml): started
+  Building wheel for meson (pyproject.toml): finished with status 'done'
+  Created wheel for meson: filename=meson-1.4.0-py3-none-any.whl size=935471 sha256=15c7a5f19614460ea289e388ededc1b07b01326b2b2dbe6a2e935653620ac0f1
+  Stored in directory: /tmp/pip-ephem-wheel-cache-6y8tevbx/wheels/8f/de/1b/be6da75323536158049f8d2c1c545fd5b4ae8071d89faa0d70
+Successfully built meson
+Looking in links: dist
+Processing ./dist/meson-1.4.0-py3-none-any.whl
+Installing collected packages: meson
+Successfully installed meson-1.4.0
+'data/shell-completions/bash/meson' -> '/usr/share/bash-completion/completions/meson'
+'data/shell-completions/zsh/_meson' -> '/usr/share/zsh/site-functions/_meson'
+
+
+Totalseconds: 3
+
+KB: 2933224	/
