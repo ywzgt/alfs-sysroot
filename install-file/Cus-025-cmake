@@ -1,0 +1,6 @@
+/usr/bin/ccmake	13776088	root:root	755	
+/usr/bin/cmake	14472872	root:root	755	
+/usr/bin/cpack	14448392	root:root	755	
+/usr/bin/ctest	15924528	root:root	755	
+/usr/share/cmake/Modules/.NoDartCoverage	39	root:root	644	
+/usr/share/cmake/Modules/GNUInstallDirs.cmake	17304	root:root	644	
