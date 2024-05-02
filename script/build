@@ -63,6 +63,7 @@ _get_sources() {
 	esac
 	sed -i '/wrt_makeflags "$name" "-j1" "1"/s/1/${N_PARALLEL}/g' alfs/LFS/master.sh  # 临时工具不使用 *FLAGS 时仍使用 MAKEFLAGS 和 ninja jobs
 	#sed -i '/MKF="-j1"\|NJJ="1"/s/1/${N_PARALLEL}/' alfs/optimize/optimize_functions  # 让 alfs/optimize/opt_config 中定义的 BLACK_LIST 失效
+	sed -i '/\(user\|group\)del \\$(L/d' alfs/LFS/master.sh  # fix error: 701 chown: invalid user: 'lfs'
 }
 
 _install_dep() {
