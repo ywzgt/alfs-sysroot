@@ -1,0 +1,24 @@
+#!/bin/bash
+set -e
+
+cd $PKGDIR
+
+echo "1.22.6" > .dist-version
+./autogen
+
+./configure --prefix=/usr --docdir=/usr/share/doc/dpkg-1.22.6 --sysconfdir=/etc --localstatedir=/var --disable-start-stop-daemon
+
+make
+make install
+
+install -vd /var/dpkg/updates
+touch /var/lib/dpkg/{status,available}
+ln -s less /usr/bin/pager
+
+install -Dm644 /dev/stdin /etc/dpkg/origins/debian <<"EOF"
+Vendor: Debian
+Vendor-URL: https://www.debian.org/
+EOF
+ln -svf debian /etc/dpkg/origins/default
+find /usr ! -type d -name "*.la" -exec rm -f -- "{}" +
+exit

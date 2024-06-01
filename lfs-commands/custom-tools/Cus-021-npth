@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+cd $PKGDIR
+	./configure --prefix=/usr
+
+make
+make install
+find /usr ! -type d -name "*.la" -exec rm -f -- "{}" +
+exit

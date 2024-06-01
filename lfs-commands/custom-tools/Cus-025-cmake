@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+cd $PKGDIR
+sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake
+
+./bootstrap --prefix=/usr 	--system-libs 	--mandir=/share/man 	--no-system-jsoncpp 	--no-system-cppdap 	--no-system-librhash 	--no-system-nghttp2 	--datadir=/share/cmake 	--parallel=4
+
+make
+make install
+find /usr ! -type d -name "*.la" -exec rm -f -- "{}" +
+exit

@@ -1,0 +1,107 @@
+#!/bin/bash
+set +h
+set -e
+
+
+
+PREV_SEC=${SECONDS}
+      
+ROOT=/
+
+SCRIPT_ROOT=jhalfs
+
+SRC_DIR=${ROOT}sources
+
+VERSION=255
+PKG_DEST=${SRC_DIR}/870-systemd
+
+PACKAGE=systemd-255.tar.gz
+cd $SRC_DIR
+PKGDIR=$(tar -tf $PACKAGE | head -n1 | sed 's@^./@@;s@/.*@@')
+export PKGDIR VERSION PKG_DEST
+
+if [ -d "$PKGDIR" ]; then rm -rf $PKGDIR; fi
+if [ -d "$PKG_DEST" ]; then rm -rf $PKG_DEST; fi
+if [ -d "${PKGDIR%-*}-build" ]; then  rm -rf ${PKGDIR%-*}-build; fi
+
+echo "KB: $(du -skx --exclude=lost+found --exclude=var/lib --exclude=$SCRIPT_ROOT $ROOT)"
+
+
+tar -xf $PACKAGE
+cd $PKGDIR
+
+export MAKEFLAGS="-j4"
+SECONDS=${PREV_SEC}
+
+# Start of LFS book script
+sed -i -e 's/GROUP="render"/GROUP="video"/' \
+       -e 's/GROUP="sgx", //' rules.d/50-udev-default.rules.in
+patch -Np1 -i ../systemd-255-upstream_fixes-1.patch
+mkdir -p build
+cd       build
+
+meson setup \
+      --prefix=/usr                 \
+      --buildtype=release           \
+      -Ddefault-dnssec=no           \
+      -Dfirstboot=false             \
+      -Dinstall-tests=false         \
+      -Dldconfig=false              \
+      -Drpmmacrosdir=no             \
+      -Dhomed=disabled              \
+      -Duserdb=false                \
+      -Dman=disabled                \
+      -Dmode=release                \
+      -Dpamconfdir=no               \
+      -Ddev-kvm-mode=0660           \
+      -Dnobody-group=nogroup        \
+      -Dsysupdate=disabled          \
+      -Dukify=disabled              \
+      -Ddocdir=/usr/share/doc/systemd-255 \
+      ..
+ninja
+ninja install
+tar -xf ../../systemd-man-pages-255.tar.xz \
+    --no-same-owner --strip-components=1   \
+    -C /usr/share/man
+# echo 'NAME="Linux From Scratch"' > /etc/os-release >> $TEST_LOG 2>&1 || true
+# ninja test >> $TEST_LOG 2>&1 || true
+systemd-machine-id-setup
+systemctl preset-all
+rm -rf *
+ln -sf /bin/true /usr/bin/xsltproc
+PKG_CONFIG_PATH="/usr/lib32/pkgconfig" \
+CC="gcc -m32 -march=i686"              \
+CXX="g++ -m32 -march=i686"             \
+LANG=en_US.UTF-8                       \
+meson --prefix=/usr                    \
+      --sysconfdir=/etc                \
+      --localstatedir=/var             \
+      --libdir=/usr/lib32              \
+      -Drootlibdir=/usr/lib32          \
+      -Dblkid=true                  \
+      -Ddefault-dnssec=no           \
+      -Dfirstboot=false             \
+      -Dinstall-tests=false         \
+      -Dldconfig=false              \
+      -Db_lto=false                 \
+      -Drpmmacrosdir=no             \
+      -Dhomed=false                 \
+      -Duserdb=false                \
+      -Dman=false                   \
+      -Dmode=release                \
+      ..
+LANG=en_US.UTF-8 ninja
+LANG=en_US.UTF-8 DESTDIR=$PWD/DESTDIR ninja install
+cp -Rv DESTDIR/usr/lib32/* /usr/lib32
+rm -rf DESTDIR
+rm -f /usr/bin/xsltproc
+echo -e "\n\nTotalseconds: $SECONDS\n"
+
+# End of LFS book script
+
+echo "KB: $(du -skx --exclude=lost+found --exclude=var/lib --exclude=$SCRIPT_ROOT $ROOT)"
+cd $SRC_DIR
+rm -rf $PKGDIR
+if [ -d "${PKGDIR%-*}-build" ]; then  rm -rf ${PKGDIR%-*}-build; fi
+exit
