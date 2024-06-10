@@ -1,0 +1,77 @@
+#!/bin/bash
+set +h
+set -e
+
+
+
+PREV_SEC=${SECONDS}
+      
+ROOT=/
+
+SCRIPT_ROOT=jhalfs
+
+SRC_DIR=${ROOT}sources
+
+VERSION=6.3.0
+PKG_DEST=${SRC_DIR}/816-gmp
+
+PACKAGE=gmp-6.3.0.tar.xz
+cd $SRC_DIR
+PKGDIR=$(tar -tf $PACKAGE | head -n1 | sed 's@^./@@;s@/.*@@')
+export PKGDIR VERSION PKG_DEST
+
+if [ -d "$PKGDIR" ]; then rm -rf $PKGDIR; fi
+if [ -d "$PKG_DEST" ]; then rm -rf $PKG_DEST; fi
+if [ -d "${PKGDIR%-*}-build" ]; then  rm -rf ${PKGDIR%-*}-build; fi
+
+echo "KB: $(du -skx --exclude=lost+found --exclude=var/lib --exclude=$SCRIPT_ROOT $ROOT)"
+
+
+tar -xf $PACKAGE
+cd $PKGDIR
+
+export MAKEFLAGS="-j4"
+SECONDS=${PREV_SEC}
+
+# Start of LFS book script
+cp -v config{fsf,}.guess
+cp -v config{fsf,}.sub
+./configure --prefix=/usr    \
+            --enable-cxx     \
+            --disable-static \
+            --docdir=/usr/share/doc/gmp-6.3.0
+make
+make html
+# make -k check 2>&1 | tee gmp-check-log >> $TEST_LOG 2>&1 || true
+# awk '/# PASS:/{total+=$3} ; END{print total}' gmp-check-log >> $TEST_LOG 2>&1 || true
+make -j1 install
+make install-html
+make distclean
+ABI="32" \
+CFLAGS="-m32 -O2 -pedantic -fomit-frame-pointer -mtune=generic -march=i686" \
+CXXFLAGS="$CFLAGS" \
+PKG_CONFIG_PATH="/usr/lib32/pkgconfig" \
+./configure                      \
+    --host=i686-pc-linux-gnu     \
+    --prefix=/usr                \
+    --disable-static             \
+    --enable-cxx                 \
+    --libdir=/usr/lib32          \
+    --includedir=/usr/include/m32/gmp
+sed -i 's/$(exec_prefix)\/include/$\(includedir\)/' Makefile
+make
+# make -k check 2>&1 | tee gmp-check-log >> $TEST_LOG 2>&1 || true
+# awk '/# PASS:/{total+=$3} ; END{print total}' gmp-check-log >> $TEST_LOG 2>&1 || true
+make -j1 DESTDIR=$PWD/DESTDIR install
+cp -Rv DESTDIR/usr/lib32/* /usr/lib32
+cp -Rv DESTDIR/usr/include/m32/* /usr/include/m32/
+rm -rf DESTDIR
+echo -e "\n\nTotalseconds: $SECONDS\n"
+
+# End of LFS book script
+
+echo "KB: $(du -skx --exclude=lost+found --exclude=var/lib --exclude=$SCRIPT_ROOT $ROOT)"
+cd $SRC_DIR
+rm -rf $PKGDIR
+if [ -d "${PKGDIR%-*}-build" ]; then  rm -rf ${PKGDIR%-*}-build; fi
+exit

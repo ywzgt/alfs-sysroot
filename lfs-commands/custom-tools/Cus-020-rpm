@@ -1,0 +1,22 @@
+#!/bin/bash
+set -e
+
+cd $PKGDIR
+		./configure --prefix=/usr 		--sysconfdir=/etc 		--localstatedir=/var 		--enable-python 		--enable-zstd=yes 		--enable-ndb 		--with-cap 		PYTHON=python3 		--disable-static 		--disable-sqlite
+
+make
+make install
+
+install -vm755 /dev/stdin /usr/bin/rpmextract.sh <<"EFO"
+#!/bin/sh
+if [ "$1" = "" -o ! -e "$1" ]; then
+    echo "no package supplied" 1>&2
+   exit 1
+fi
+bsdtar xf $1
+EFO
+
+ln -sfv rpm /usr/bin/rpmquery
+ln -sfv rpm /usr/bin/rpmverify
+find /usr ! -type d -name "*.la" -exec rm -f -- "{}" +
+exit
