@@ -2,10 +2,10 @@
 # https://www.linuxfromscratch.org/blfs/view/systemd/general/pcre2.html
 
 PKG="pcre2"
-PKG_VERSION="10.43"
+PKG_VERSION="10.44"
 PKG_FILE="${PKG}-${PKG_VERSION}.tar.bz2"
 URL="https://github.com/PCRE2Project/pcre2/releases/download/${PKG}-${PKG_VERSION}/${PKG_FILE}"
-MD5="c8e2043cbc4abb80e76dba323f7c409f"
+MD5="9d1fe11e2e919c7b395e3e8f0a5c3eec"
 
 for i in PATCH{1..10}; do
 	unset $i

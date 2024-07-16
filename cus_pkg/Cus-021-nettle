@@ -2,10 +2,10 @@
 # https://linuxfromscratch.org/blfs/view/systemd/postlfs/nettle.html
 
 PKG="nettle"
-PKG_VERSION="3.9.1"
+PKG_VERSION="3.10"
 PKG_FILE="${PKG}-${PKG_VERSION}.tar.gz"
 URL="https://ftp.gnu.org/gnu/${PKG}/${PKG_FILE}"
-MD5="29fcd2dec6bf5b48e5e3ffb3cbc4779e"
+MD5="c61453139d5fb44e9cdcc5b684b26e55"
 
 for i in PATCH{1..10}; do
 	unset $i

@@ -2,10 +2,10 @@
 # https://linuxfromscratch.org/blfs/view/systemd/general/cmake.html
 
 PKG="cmake"
-PKG_VERSION="3.28.3"
+PKG_VERSION="3.29.5"
 PKG_FILE="${PKG}-${PKG_VERSION}.tar.gz"
 URL="https://cmake.org/files/v${PKG_VERSION%.*}/${PKG_FILE}"
-MD5="6b16c82b81e1fd80b63bee9696846b21"
+MD5="5aa8578d95772c48b7b33fe36a9ae7c2"
 
 for i in PATCH{1..10}; do
 	unset $i

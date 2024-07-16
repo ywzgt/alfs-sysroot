@@ -2,10 +2,10 @@
 # https://linuxfromscratch.org/blfs/view/systemd/basicnet/curl.html
 
 PKG="curl"
-PKG_VERSION="8.7.1"
+PKG_VERSION="8.8.0"
 PKG_FILE="${PKG}-${PKG_VERSION}.tar.xz"
 URL="https://curl.se/download/${PKG_FILE}"
-MD5="f4f37253c5f1ad9ee85fa6215fdfeb42"
+MD5="e1062de8a9b252a75fc42e2252746bd8"
 
 for i in PATCH{1..10}; do
 	unset $i

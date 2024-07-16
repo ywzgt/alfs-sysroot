@@ -2,10 +2,10 @@
 # https://www.linuxfromscratch.org/blfs/view/systemd/general/git.html
 
 PKG="git"
-PKG_VERSION="2.43.3"
+PKG_VERSION="2.45.2"
 PKG_FILE="${PKG}-${PKG_VERSION}.tar.xz"
 URL="https://www.kernel.org/pub/software/scm/git/${PKG_FILE}"
-MD5="d36dc769842dee53d6c8af24fbb78075"
+MD5="a6af98f948a1f07cfeac57e91a0f2abe"
 
 for i in PATCH{1..10}; do
 	unset $i

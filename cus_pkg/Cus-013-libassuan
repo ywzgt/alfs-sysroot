@@ -2,10 +2,10 @@
 # https://linuxfromscratch.org/blfs/view/systemd/general/libassuan.html
 
 PKG="libassuan"
-PKG_VERSION="2.5.6"
+PKG_VERSION="3.0.1"
 PKG_FILE="${PKG}-${PKG_VERSION}.tar.bz2"
 URL="https://www.gnupg.org/ftp/gcrypt/libassuan/${PKG_FILE}"
-MD5="9c22e76168675ec996b9d620ffbb7b27"
+MD5="6f0d239302ae3b8d4aefcb499b137530"
 
 for i in PATCH{1..10}; do
 	unset $i
