@@ -1,0 +1,23 @@
+#!/bin/bash
+# https://www.linuxfromscratch.org/blfs/view/systemd/basicnet/wget.html
+
+PKG="wget"
+PKG_VERSION="1.24.5"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.gz"
+URL="https://ftp.gnu.org/gnu/wget/${PKG_FILE}"
+MD5="271bf949384d0858c2c3d419f6311365"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+./configure --prefix=/usr \
+		--sysconfdir=/etc \
+		--disable-static \
+		--with-ssl=openssl
+
+make
+make install
+xEOFx
+) > tmp

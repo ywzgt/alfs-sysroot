@@ -1,0 +1,15 @@
+#!/bin/bash
+# https://7-zip.org
+
+PKG="7zip"
+PKG_VERSION="24.07"
+PKG_FILE="7z${PKG_VERSION//.}-src.tar.xz"
+URL="https://7-zip.org/a/${PKG_FILE}"
+MD5="eeee58ccd9f010f0ffddda0ea291e57e"
+
+( cat << xEOFx
+cd ..
+make -C CPP/7zip/Bundles/Alone2 -f makefile.gcc
+install -Dvm755 CPP/7zip/Bundles/Alone2/_o/7zz /usr/bin/7z
+xEOFx
+) > tmp
