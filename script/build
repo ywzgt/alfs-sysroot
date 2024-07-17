@@ -144,7 +144,7 @@ _fix_git_repo() {
 		fi
 	fi
 
-	for i in {tcl,expect,dejagnu,isl,grub}; do
+	for i in {tcl,expect,dejagnu,isl,grub,sysklogd}; do
 		[ -e repo/chapter08/$i.xml ] || continue
 		rm repo/chapter08/$i.xml
 		sed -i "/$i\.xml/d" repo/chapter08/chapter08.xml
