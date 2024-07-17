@@ -1,0 +1,19 @@
+#!/bin/bash
+# https://linuxfromscratch.org/blfs/view/systemd/general/libgpg-error.html
+
+PKG="libgpg-error"
+PKG_VERSION="1.50"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.bz2"
+URL="https://www.gnupg.org/ftp/gcrypt/libgpg-error/${PKG_FILE}"
+MD5="80e905ce798553c766e3384467dc55ea"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+./configure --prefix=/usr
+make
+make install
+xEOFx
+) > tmp

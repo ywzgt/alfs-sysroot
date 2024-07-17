@@ -1,0 +1,224 @@
+/usr/bin/lzcat	2	root:root	777	xz
+/usr/bin/lzcmp	6	root:root	777	xzdiff
+/usr/bin/lzdiff	6	root:root	777	xzdiff
+/usr/bin/lzegrep	6	root:root	777	xzgrep
+/usr/bin/lzfgrep	6	root:root	777	xzgrep
+/usr/bin/lzgrep	6	root:root	777	xzgrep
+/usr/bin/lzless	6	root:root	777	xzless
+/usr/bin/lzma	2	root:root	777	xz
+/usr/bin/lzmadec	17296	root:root	755	
+/usr/bin/lzmainfo	17040	root:root	755	
+/usr/bin/lzmore	6	root:root	777	xzmore
+/usr/bin/unlzma	2	root:root	777	xz
+/usr/bin/unxz	2	root:root	777	xz
+/usr/bin/xz	108856	root:root	755	
+/usr/bin/xzcat	2	root:root	777	xz
+/usr/bin/xzcmp	6	root:root	777	xzdiff
+/usr/bin/xzdec	17296	root:root	755	
+/usr/bin/xzdiff	7588	root:root	755	
+/usr/bin/xzegrep	6	root:root	777	xzgrep
+/usr/bin/xzfgrep	6	root:root	777	xzgrep
+/usr/bin/xzgrep	10413	root:root	755	
+/usr/bin/xzless	2383	root:root	755	
+/usr/bin/xzmore	2234	root:root	755	
+/usr/include/lzma.h	9790	root:root	644	
+/usr/include/lzma/base.h	28082	root:root	644	
+/usr/include/lzma/bcj.h	2827	root:root	644	
+/usr/include/lzma/block.h	25964	root:root	644	
+/usr/include/lzma/check.h	4840	root:root	644	
+/usr/include/lzma/container.h	42051	root:root	644	
+/usr/include/lzma/delta.h	2187	root:root	644	
+/usr/include/lzma/filter.h	31746	root:root	644	
+/usr/include/lzma/hardware.h	2550	root:root	644	
+/usr/include/lzma/index.h	31090	root:root	644	
+/usr/include/lzma/index_hash.h	4671	root:root	644	
+/usr/include/lzma/lzma12.h	20818	root:root	644	
+/usr/include/lzma/stream_flags.h	9239	root:root	644	
+/usr/include/lzma/version.h	3872	root:root	644	
+/usr/include/lzma/vli.h	6590	root:root	644	
+/usr/lib/liblzma.so	16	root:root	777	liblzma.so.5.6.2
+/usr/lib/liblzma.so.5	16	root:root	777	liblzma.so.5.6.2
+/usr/lib/liblzma.so.5.6.2	218216	root:root	755	
+/usr/lib/pkgconfig/liblzma.pc	354	root:root	644	
+/usr/lib32/liblzma.so	16	root:root	777	liblzma.so.5.6.2
+/usr/lib32/liblzma.so.5	16	root:root	777	liblzma.so.5.6.2
+/usr/lib32/liblzma.so.5.6.2	236016	root:root	755	
+/usr/lib32/pkgconfig/liblzma.pc	356	root:root	644	
+/usr/share/doc/xz-5.6.2/AUTHORS	2148	root:root	644	
+/usr/share/doc/xz-5.6.2/COPYING	3885	root:root	644	
+/usr/share/doc/xz-5.6.2/COPYING.0BSD	607	root:root	644	
+/usr/share/doc/xz-5.6.2/COPYING.GPLv2	18092	root:root	644	
+/usr/share/doc/xz-5.6.2/NEWS	99009	root:root	644	
+/usr/share/doc/xz-5.6.2/README	13211	root:root	644	
+/usr/share/doc/xz-5.6.2/THANKS	3589	root:root	644	
+/usr/share/doc/xz-5.6.2/examples/00_README.txt	1037	root:root	644	
+/usr/share/doc/xz-5.6.2/examples/01_compress_easy.c	9464	root:root	644	
+/usr/share/doc/xz-5.6.2/examples/02_decompress.c	8844	root:root	644	
+/usr/share/doc/xz-5.6.2/examples/03_compress_custom.c	4956	root:root	644	
+/usr/share/doc/xz-5.6.2/examples/04_compress_easy_mt.c	5145	root:root	644	
+/usr/share/doc/xz-5.6.2/examples/11_file_info.c	5314	root:root	644	
+/usr/share/doc/xz-5.6.2/examples/Makefile	283	root:root	644	
+/usr/share/doc/xz-5.6.2/faq.txt	10419	root:root	644	
+/usr/share/doc/xz-5.6.2/history.txt	7427	root:root	644	
+/usr/share/doc/xz-5.6.2/lzma-file-format.txt	6090	root:root	644	
+/usr/share/doc/xz-5.6.2/xz-file-format.txt	44512	root:root	644	
+/usr/share/locale/ca/LC_MESSAGES/xz.mo	22289	root:root	644	
+/usr/share/locale/cs/LC_MESSAGES/xz.mo	15436	root:root	644	
+/usr/share/locale/da/LC_MESSAGES/xz.mo	11042	root:root	644	
+/usr/share/locale/de/LC_MESSAGES/xz.mo	32560	root:root	644	
+/usr/share/locale/eo/LC_MESSAGES/xz.mo	29979	root:root	644	
+/usr/share/locale/es/LC_MESSAGES/xz.mo	31175	root:root	644	
+/usr/share/locale/fi/LC_MESSAGES/xz.mo	21441	root:root	644	
+/usr/share/locale/fr/LC_MESSAGES/xz.mo	19342	root:root	644	
+/usr/share/locale/hr/LC_MESSAGES/xz.mo	30343	root:root	644	
+/usr/share/locale/hu/LC_MESSAGES/xz.mo	31658	root:root	644	
+/usr/share/locale/it/LC_MESSAGES/xz.mo	19130	root:root	644	
+/usr/share/locale/ko/LC_MESSAGES/xz.mo	31480	root:root	644	
+/usr/share/locale/pl/LC_MESSAGES/xz.mo	30611	root:root	644	
+/usr/share/locale/pt/LC_MESSAGES/xz.mo	18992	root:root	644	
+/usr/share/locale/pt_BR/LC_MESSAGES/xz.mo	22302	root:root	644	
+/usr/share/locale/ro/LC_MESSAGES/xz.mo	32640	root:root	644	
+/usr/share/locale/sr/LC_MESSAGES/xz.mo	23849	root:root	644	
+/usr/share/locale/sv/LC_MESSAGES/xz.mo	30379	root:root	644	
+/usr/share/locale/tr/LC_MESSAGES/xz.mo	22029	root:root	644	
+/usr/share/locale/uk/LC_MESSAGES/xz.mo	40332	root:root	644	
+/usr/share/locale/vi/LC_MESSAGES/xz.mo	32859	root:root	644	
+/usr/share/locale/zh_CN/LC_MESSAGES/xz.mo	22476	root:root	644	
+/usr/share/locale/zh_TW/LC_MESSAGES/xz.mo	20613	root:root	644	
+/usr/share/man/de/man1/lzcat.1	4	root:root	777	xz.1
+/usr/share/man/de/man1/lzcmp.1	8	root:root	777	xzdiff.1
+/usr/share/man/de/man1/lzdiff.1	8	root:root	777	xzdiff.1
+/usr/share/man/de/man1/lzegrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/de/man1/lzfgrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/de/man1/lzgrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/de/man1/lzless.1	8	root:root	777	xzless.1
+/usr/share/man/de/man1/lzma.1	4	root:root	777	xz.1
+/usr/share/man/de/man1/lzmadec.1	7	root:root	777	xzdec.1
+/usr/share/man/de/man1/lzmainfo.1	1835	root:root	644	
+/usr/share/man/de/man1/lzmore.1	8	root:root	777	xzmore.1
+/usr/share/man/de/man1/unlzma.1	4	root:root	777	xz.1
+/usr/share/man/de/man1/unxz.1	4	root:root	777	xz.1
+/usr/share/man/de/man1/xz.1	91316	root:root	644	
+/usr/share/man/de/man1/xzcat.1	4	root:root	777	xz.1
+/usr/share/man/de/man1/xzcmp.1	8	root:root	777	xzdiff.1
+/usr/share/man/de/man1/xzdec.1	3804	root:root	644	
+/usr/share/man/de/man1/xzdiff.1	2213	root:root	644	
+/usr/share/man/de/man1/xzegrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/de/man1/xzfgrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/de/man1/xzgrep.1	2984	root:root	644	
+/usr/share/man/de/man1/xzless.1	1986	root:root	644	
+/usr/share/man/de/man1/xzmore.1	1873	root:root	644	
+/usr/share/man/fr/man1/lzcat.1	4	root:root	777	xz.1
+/usr/share/man/fr/man1/lzless.1	8	root:root	777	xzless.1
+/usr/share/man/fr/man1/lzma.1	4	root:root	777	xz.1
+/usr/share/man/fr/man1/lzmadec.1	7	root:root	777	xzdec.1
+/usr/share/man/fr/man1/lzmainfo.1	1847	root:root	644	
+/usr/share/man/fr/man1/unlzma.1	4	root:root	777	xz.1
+/usr/share/man/fr/man1/unxz.1	4	root:root	777	xz.1
+/usr/share/man/fr/man1/xz.1	85230	root:root	644	
+/usr/share/man/fr/man1/xzcat.1	4	root:root	777	xz.1
+/usr/share/man/fr/man1/xzdec.1	3670	root:root	644	
+/usr/share/man/fr/man1/xzless.1	1948	root:root	644	
+/usr/share/man/ko/man1/lzcat.1	4	root:root	777	xz.1
+/usr/share/man/ko/man1/lzcmp.1	8	root:root	777	xzdiff.1
+/usr/share/man/ko/man1/lzdiff.1	8	root:root	777	xzdiff.1
+/usr/share/man/ko/man1/lzegrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/ko/man1/lzfgrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/ko/man1/lzgrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/ko/man1/lzless.1	8	root:root	777	xzless.1
+/usr/share/man/ko/man1/lzma.1	4	root:root	777	xz.1
+/usr/share/man/ko/man1/lzmadec.1	7	root:root	777	xzdec.1
+/usr/share/man/ko/man1/lzmainfo.1	1717	root:root	644	
+/usr/share/man/ko/man1/lzmore.1	8	root:root	777	xzmore.1
+/usr/share/man/ko/man1/unlzma.1	4	root:root	777	xz.1
+/usr/share/man/ko/man1/unxz.1	4	root:root	777	xz.1
+/usr/share/man/ko/man1/xz.1	90572	root:root	644	
+/usr/share/man/ko/man1/xzcat.1	4	root:root	777	xz.1
+/usr/share/man/ko/man1/xzcmp.1	8	root:root	777	xzdiff.1
+/usr/share/man/ko/man1/xzdec.1	3970	root:root	644	
+/usr/share/man/ko/man1/xzdiff.1	2303	root:root	644	
+/usr/share/man/ko/man1/xzegrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/ko/man1/xzfgrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/ko/man1/xzgrep.1	3002	root:root	644	
+/usr/share/man/ko/man1/xzless.1	1937	root:root	644	
+/usr/share/man/ko/man1/xzmore.1	1864	root:root	644	
+/usr/share/man/man1/lzcat.1	4	root:root	777	xz.1
+/usr/share/man/man1/lzcmp.1	8	root:root	777	xzdiff.1
+/usr/share/man/man1/lzdiff.1	8	root:root	777	xzdiff.1
+/usr/share/man/man1/lzegrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/man1/lzfgrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/man1/lzgrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/man1/lzless.1	8	root:root	777	xzless.1
+/usr/share/man/man1/lzma.1	4	root:root	777	xz.1
+/usr/share/man/man1/lzmadec.1	7	root:root	777	xzdec.1
+/usr/share/man/man1/lzmainfo.1	1180	root:root	644	
+/usr/share/man/man1/lzmore.1	8	root:root	777	xzmore.1
+/usr/share/man/man1/unlzma.1	4	root:root	777	xz.1
+/usr/share/man/man1/unxz.1	4	root:root	777	xz.1
+/usr/share/man/man1/xz.1	74031	root:root	644	
+/usr/share/man/man1/xzcat.1	4	root:root	777	xz.1
+/usr/share/man/man1/xzcmp.1	8	root:root	777	xzdiff.1
+/usr/share/man/man1/xzdec.1	2768	root:root	644	
+/usr/share/man/man1/xzdiff.1	1583	root:root	644	
+/usr/share/man/man1/xzegrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/man1/xzfgrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/man1/xzgrep.1	2202	root:root	644	
+/usr/share/man/man1/xzless.1	1336	root:root	644	
+/usr/share/man/man1/xzmore.1	1206	root:root	644	
+/usr/share/man/pt_BR/man1/lzcat.1	4	root:root	777	xz.1
+/usr/share/man/pt_BR/man1/lzless.1	8	root:root	777	xzless.1
+/usr/share/man/pt_BR/man1/lzma.1	4	root:root	777	xz.1
+/usr/share/man/pt_BR/man1/lzmadec.1	7	root:root	777	xzdec.1
+/usr/share/man/pt_BR/man1/lzmainfo.1	1774	root:root	644	
+/usr/share/man/pt_BR/man1/unlzma.1	4	root:root	777	xz.1
+/usr/share/man/pt_BR/man1/unxz.1	4	root:root	777	xz.1
+/usr/share/man/pt_BR/man1/xz.1	83878	root:root	644	
+/usr/share/man/pt_BR/man1/xzcat.1	4	root:root	777	xz.1
+/usr/share/man/pt_BR/man1/xzdec.1	3525	root:root	644	
+/usr/share/man/pt_BR/man1/xzless.1	1896	root:root	644	
+/usr/share/man/ro/man1/lzcat.1	4	root:root	777	xz.1
+/usr/share/man/ro/man1/lzcmp.1	8	root:root	777	xzdiff.1
+/usr/share/man/ro/man1/lzdiff.1	8	root:root	777	xzdiff.1
+/usr/share/man/ro/man1/lzegrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/ro/man1/lzfgrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/ro/man1/lzgrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/ro/man1/lzless.1	8	root:root	777	xzless.1
+/usr/share/man/ro/man1/lzma.1	4	root:root	777	xz.1
+/usr/share/man/ro/man1/lzmadec.1	7	root:root	777	xzdec.1
+/usr/share/man/ro/man1/lzmainfo.1	2455	root:root	644	
+/usr/share/man/ro/man1/lzmore.1	8	root:root	777	xzmore.1
+/usr/share/man/ro/man1/unlzma.1	4	root:root	777	xz.1
+/usr/share/man/ro/man1/unxz.1	4	root:root	777	xz.1
+/usr/share/man/ro/man1/xz.1	92311	root:root	644	
+/usr/share/man/ro/man1/xzcat.1	4	root:root	777	xz.1
+/usr/share/man/ro/man1/xzcmp.1	8	root:root	777	xzdiff.1
+/usr/share/man/ro/man1/xzdec.1	4521	root:root	644	
+/usr/share/man/ro/man1/xzdiff.1	2929	root:root	644	
+/usr/share/man/ro/man1/xzegrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/ro/man1/xzfgrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/ro/man1/xzgrep.1	3648	root:root	644	
+/usr/share/man/ro/man1/xzless.1	2655	root:root	644	
+/usr/share/man/ro/man1/xzmore.1	2506	root:root	644	
+/usr/share/man/uk/man1/lzcat.1	4	root:root	777	xz.1
+/usr/share/man/uk/man1/lzcmp.1	8	root:root	777	xzdiff.1
+/usr/share/man/uk/man1/lzdiff.1	8	root:root	777	xzdiff.1
+/usr/share/man/uk/man1/lzegrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/uk/man1/lzfgrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/uk/man1/lzgrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/uk/man1/lzless.1	8	root:root	777	xzless.1
+/usr/share/man/uk/man1/lzma.1	4	root:root	777	xz.1
+/usr/share/man/uk/man1/lzmadec.1	7	root:root	777	xzdec.1
+/usr/share/man/uk/man1/lzmainfo.1	2416	root:root	644	
+/usr/share/man/uk/man1/lzmore.1	8	root:root	777	xzmore.1
+/usr/share/man/uk/man1/unlzma.1	4	root:root	777	xz.1
+/usr/share/man/uk/man1/unxz.1	4	root:root	777	xz.1
+/usr/share/man/uk/man1/xz.1	139081	root:root	644	
+/usr/share/man/uk/man1/xzcat.1	4	root:root	777	xz.1
+/usr/share/man/uk/man1/xzcmp.1	8	root:root	777	xzdiff.1
+/usr/share/man/uk/man1/xzdec.1	5269	root:root	644	
+/usr/share/man/uk/man1/xzdiff.1	2777	root:root	644	
+/usr/share/man/uk/man1/xzegrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/uk/man1/xzfgrep.1	8	root:root	777	xzgrep.1
+/usr/share/man/uk/man1/xzgrep.1	3902	root:root	644	
+/usr/share/man/uk/man1/xzless.1	2630	root:root	644	
+/usr/share/man/uk/man1/xzmore.1	2355	root:root	644	

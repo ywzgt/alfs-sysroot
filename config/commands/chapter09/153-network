@@ -1,0 +1,70 @@
+#!/bin/bash
+
+systemctl disable systemd-networkd-wait-online
+
+ln -s /dev/null /etc/systemd/network/99-default.link
+
+cat > /etc/systemd/network/10-ether0.link << "EOF"
+[Match]
+# Change the MAC address as appropriate for your network device
+MACAddress=12:34:45:78:90:AB
+
+[Link]
+Name=ether0
+EOF
+
+# This block must be edited to suit your needs.
+cat > /etc/systemd/network/10-eth-static.network << "EOF"
+[Match]
+Name=**EDITME<network-device-name>EDITME**
+
+[Network]
+Address=192.168.0.2/24
+Gateway=192.168.0.1
+DNS=192.168.0.1
+Domains=**EDITME<Your Domain Name>EDITME**
+EOF
+# End of editable block.
+
+cat > /etc/systemd/network/10-eth-dhcp.network << "EOF"
+[Match]
+Name=<network-device-name>
+
+[Network]
+DHCP=ipv4
+
+[DHCPv4]
+UseDomains=true
+EOF
+
+systemctl disable systemd-resolved
+
+# This block must be edited to suit your needs.
+cat > /etc/resolv.conf << "EOF"
+# Begin /etc/resolv.conf
+
+domain **EDITME<Your Domain Name>EDITME**
+nameserver **EDITME<IP address of your primary nameserver>EDITME**
+nameserver **EDITME<IP address of your secondary nameserver>EDITME**
+
+# End /etc/resolv.conf
+EOF
+# End of editable block.
+
+# This block must be edited to suit your needs.
+echo "**EDITME<lfs>EDITME**" > /etc/hostname
+# End of editable block.
+
+# This block must be edited to suit your needs.
+cat > /etc/hosts << "EOF"
+# Begin /etc/hosts
+
+**EDITME<192.168.0.2>EDITME** **EDITME<FQDN>EDITME** **EDITME[alias1] [alias2] ...EDITME**
+::1       ip6-localhost ip6-loopback
+ff02::1   ip6-allnodes
+ff02::2   ip6-allrouters
+
+# End /etc/hosts
+EOF
+# End of editable block.
+

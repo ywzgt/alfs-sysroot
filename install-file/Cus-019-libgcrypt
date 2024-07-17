@@ -1,0 +1,14 @@
+/usr/bin/dumpsexp	20856	root:root	755	
+/usr/bin/hmac256	21256	root:root	755	
+/usr/bin/mpicalc	21672	root:root	755	
+/usr/include/gcrypt.h	83204	root:root	644	
+/usr/lib/libgcrypt.so	19	root:root	777	libgcrypt.so.20.5.0
+/usr/lib/libgcrypt.so.20	19	root:root	777	libgcrypt.so.20.5.0
+/usr/lib/libgcrypt.so.20.5.0	1801056	root:root	755	
+/usr/lib/pkgconfig/libgcrypt.pc	637	root:root	644	
+/usr/share/aclocal/libgcrypt.m4	9619	root:root	644	
+/usr/share/info/dir	109419	root:root	644	
+/usr/share/info/gcrypt.info	4418	root:root	644	
+/usr/share/info/gcrypt.info-1	312909	root:root	644	
+/usr/share/info/gcrypt.info-2	37658	root:root	644	
+/usr/share/man/man1/hmac256.1	1218	root:root	644	

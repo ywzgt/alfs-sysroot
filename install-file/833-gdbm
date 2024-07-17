@@ -1,0 +1,40 @@
+/usr/bin/gdbm_dump	37728	root:root	755	
+/usr/bin/gdbm_load	42744	root:root	755	
+/usr/bin/gdbmtool	166096	root:root	755	
+/usr/include/dbm.h	1403	root:root	644	
+/usr/include/gdbm.h	12328	root:root	644	
+/usr/include/ndbm.h	2443	root:root	644	
+/usr/lib/libgdbm.so	16	root:root	777	libgdbm.so.6.0.0
+/usr/lib/libgdbm.so.6	16	root:root	777	libgdbm.so.6.0.0
+/usr/lib/libgdbm.so.6.0.0	82072	root:root	755	
+/usr/lib/libgdbm_compat.so	23	root:root	777	libgdbm_compat.so.4.0.0
+/usr/lib/libgdbm_compat.so.4	23	root:root	777	libgdbm_compat.so.4.0.0
+/usr/lib/libgdbm_compat.so.4.0.0	17192	root:root	755	
+/usr/lib32/libgdbm.so	16	root:root	777	libgdbm.so.6.0.0
+/usr/lib32/libgdbm.so.6	16	root:root	777	libgdbm.so.6.0.0
+/usr/lib32/libgdbm.so.6.0.0	92100	root:root	755	
+/usr/lib32/libgdbm_compat.so	23	root:root	777	libgdbm_compat.so.4.0.0
+/usr/lib32/libgdbm_compat.so.4	23	root:root	777	libgdbm_compat.so.4.0.0
+/usr/lib32/libgdbm_compat.so.4.0.0	16092	root:root	755	
+/usr/share/info/dir	93410	root:root	644	
+/usr/share/info/gdbm.info	199323	root:root	644	
+/usr/share/locale/da/LC_MESSAGES/gdbm.mo	11528	root:root	644	
+/usr/share/locale/de/LC_MESSAGES/gdbm.mo	23647	root:root	644	
+/usr/share/locale/eo/LC_MESSAGES/gdbm.mo	14714	root:root	644	
+/usr/share/locale/es/LC_MESSAGES/gdbm.mo	23345	root:root	644	
+/usr/share/locale/fi/LC_MESSAGES/gdbm.mo	9916	root:root	644	
+/usr/share/locale/fr/LC_MESSAGES/gdbm.mo	24363	root:root	644	
+/usr/share/locale/ja/LC_MESSAGES/gdbm.mo	4193	root:root	644	
+/usr/share/locale/ka/LC_MESSAGES/gdbm.mo	34677	root:root	644	
+/usr/share/locale/pl/LC_MESSAGES/gdbm.mo	23403	root:root	644	
+/usr/share/locale/pt_BR/LC_MESSAGES/gdbm.mo	19392	root:root	644	
+/usr/share/locale/ro/LC_MESSAGES/gdbm.mo	24482	root:root	644	
+/usr/share/locale/ru/LC_MESSAGES/gdbm.mo	28995	root:root	644	
+/usr/share/locale/sr/LC_MESSAGES/gdbm.mo	28781	root:root	644	
+/usr/share/locale/sv/LC_MESSAGES/gdbm.mo	22524	root:root	644	
+/usr/share/locale/uk/LC_MESSAGES/gdbm.mo	30517	root:root	644	
+/usr/share/locale/vi/LC_MESSAGES/gdbm.mo	14288	root:root	644	
+/usr/share/man/man1/gdbm_dump.1	2859	root:root	644	
+/usr/share/man/man1/gdbm_load.1	3684	root:root	644	
+/usr/share/man/man1/gdbmtool.1	14556	root:root	644	
+/usr/share/man/man3/gdbm.3	43329	root:root	644	

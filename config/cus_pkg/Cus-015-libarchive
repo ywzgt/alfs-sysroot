@@ -1,0 +1,20 @@
+#!/bin/bash
+# https://linuxfromscratch.org/blfs/view/systemd/general/libarchive.html
+
+PKG="libarchive"
+PKG_VERSION="3.7.4"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.xz"
+URL="https://github.com/libarchive/libarchive/releases/download/v$PKG_VERSION/${PKG_FILE}"
+MD5="1bab4c1b443ecf4f23ff9881665e680a"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+./configure --prefix=/usr \
+		--disable-static
+make
+make install
+xEOFx
+) > tmp
