@@ -1,0 +1,30 @@
+#!/bin/bash
+# https://linuxfromscratch.org/blfs/view/systemd/general/cmake.html
+
+PKG="cmake"
+PKG_VERSION="3.29.5"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.gz"
+URL="https://cmake.org/files/v${PKG_VERSION%.*}/${PKG_FILE}"
+MD5="5aa8578d95772c48b7b33fe36a9ae7c2"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << xEOFx
+sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake
+
+./bootstrap --prefix=/usr \
+	--system-libs \
+	--mandir=/share/man \
+	--no-system-jsoncpp \
+	--no-system-cppdap \
+	--no-system-librhash \
+	--no-system-nghttp2 \
+	--datadir=/share/cmake \
+	--parallel=$(nproc)
+
+make
+make install
+xEOFx
+) > tmp
