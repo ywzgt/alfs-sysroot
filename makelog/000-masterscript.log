@@ -1,0 +1,15 @@
+Cloning into '/lfs_build/jhalfs/book-source'...
+Already on 'multilib'
+Your branch is up to date with 'origin/multilib'.
+/lfs_build/jhalfs/book-source/chapter08/glibc.xml:55: parser error : Entity 'glibc-upstream-patch' not defined
+<screen><userinput remap="pre">[ x"&glibc-upstream-patch;" = x ] || patch -Np1 -
+                                                         ^
+/lfs_build/jhalfs/book-source/chapter08/glibc.xml:55: parser error : Entity 'glibc-upstream-patch' not defined
+re">[ x"&glibc-upstream-patch;" = x ] || patch -Np1 -i ../&glibc-upstream-patch;
+                                                                               ^
+/lfs_build/jhalfs/book-source/chapter08/glibc.xml:55: parser error : Entity 'glibc-upstream-patch' not defined
+<screen><userinput remap="pre">[ x"&glibc-upstream-patch;" = x ] || patch -Np1 -
+                                                         ^
+/lfs_build/jhalfs/book-source/chapter08/glibc.xml:55: parser error : Entity 'glibc-upstream-patch' not defined
+re">[ x"&glibc-upstream-patch;" = x ] || patch -Np1 -i ../&glibc-upstream-patch;
+                                                                               ^

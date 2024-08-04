@@ -1,0 +1,3613 @@
+Sun Aug  4 18:56:20 CST 2024
+tar: stdout: write error
+KB: 3013604	/
+configure: No --program-prefix given, using "eu-"
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking whether make supports nested variables... (cached) yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking for g++... g++
+checking whether the compiler supports GNU C++... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to enable C++11 features... none needed
+checking dependency style of g++... gcc3
+checking for ranlib... ranlib
+checking for bison... bison -y
+checking for flex... flex
+checking for lex output file root... lex.yy
+checking for lex library... none needed
+checking whether yytext is a pointer... yes
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking for readelf... readelf
+checking for nm... nm
+checking whether gcc supports __attribute__((visibility()))... yes
+checking whether gcc supports __attribute__((gcc_struct))... yes
+checking whether gcc supports -fPIC... yes
+checking whether gcc supports -fPIE... yes
+checking whether gcc supports -Wl,-z,defs... yes
+checking whether the compiler generates build-ids... no
+configure: WARNING: compiler doesn't generate build-id by default
+checking whether gcc supports -Wl,-z,relro... yes
+checking for __thread support... yes
+checking whether gcc provides stdatomic.h... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking whether fts.h is bad when included (with LFS)... no
+checking whether to add -D_FORTIFY_SOURCE=2 or =3 to CFLAGS... yes -D_FORTIFY_SOURCE=3
+checking for library containing gzdirect... -lz
+checking for library containing BZ2_bzdopen... -lbz2
+checking for library containing lzma_auto_decoder... -llzma
+checking for library containing ZSTD_decompress... -lzstd
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for libzstd >= 1.4.0... yes
+checking for gcc options needed to detect all undeclared functions... none needed
+checking whether memrchr is declared... yes
+checking whether rawmemchr is declared... yes
+checking whether powerof2 is declared... yes
+checking whether mempcpy is declared... yes
+checking whether reallocarray is declared... yes
+checking for process_vm_readv... yes
+checking for mremap... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for error.h... yes
+checking for err.h... yes
+checking for sched.h... yes
+checking for sched_getaffinity... yes
+checking for sys/resource.h... yes
+checking for getrlimit... yes
+checking whether strerror_r is declared... yes
+checking whether strerror_r returns char *... yes
+checking for __cxa_demangle in -lstdc++... yes
+checking whether symbol versioning is supported... yes
+checking whether gcc accepts -Wstack-usage... yes
+checking whether gcc has a sane -Wlogical-op... yes
+checking whether gcc accepts -Wduplicated-cond... yes
+checking whether gcc accepts -Wnull-dereference... yes
+checking whether gcc accepts -Wimplicit-fallthrough... yes
+checking whether the compiler accepts -Wimplicit-fallthrough=5... yes
+checking whether the compiler accepts -Wtrampolines... yes
+checking whether the compiler accepts -Wno-packed-not-aligned... yes
+checking whether the compiler accepts -Wuse-after-free=3... yes
+checking whether the compiler accepts -fno-addrsig... no
+checking for library containing argp_parse... none required
+checking for library containing fts_close... none required
+checking for library containing _obstack_free... none required
+checking for a sed that does not truncate output... /usr/bin/sed
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking 32-bit host C ABI... no
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ELF binary format... yes
+checking for the common suffixes of directories in the library search path... lib,lib,lib
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyPreferredLanguages... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking size of long... 8
+checking for struct user_regs_struct... yes
+checking gcc option for 32-bit word size... -m32
+checking for 64-bit host... yes
+checking whether gcc -m32 makes executables we can run... yes
+checking for bunzip2... yes
+checking for zstd... yes
+checking whether g++ supports C++11 features with -std=c++11... yes
+configure: building (bootstrap) dummy libdebuginfo library
+checking for pthread_setname_np in -lpthread... yes
+checking for execinfo.h... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating config/Makefile
+config.status: creating Makefile
+config.status: creating elfutils.spec
+config.status: creating debuginfod/Makefile
+config.status: creating debuginfod/debuginfod.h
+config.status: creating doc/Makefile
+config.status: creating lib/Makefile
+config.status: creating libelf/Makefile
+config.status: creating libebl/Makefile
+config.status: creating libdwelf/Makefile
+config.status: creating libdw/Makefile
+config.status: creating libdwfl/Makefile
+config.status: creating libcpu/Makefile
+config.status: creating libasm/Makefile
+config.status: creating backends/Makefile
+config.status: creating src/Makefile
+config.status: creating po/Makefile.in
+config.status: creating tests/Makefile
+config.status: creating config/libelf.pc
+config.status: creating config/libdw.pc
+config.status: creating config/libdebuginfod.pc
+config.status: creating version.h
+config.status: creating config/profile.sh
+config.status: creating config/profile.csh
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+configure:
+=====================================================================
+        elfutils: 0.191 (eu_version: 191)
+=====================================================================
+
+    Prefix                             : /usr
+    Program prefix ("eu-" recommended) : eu-
+    Source code location               : .
+    Maintainer mode                    : 
+    build arch                         : x86_64-pc-linux-gnu
+
+    CFLAGS=-D_FORTIFY_SOURCE=3 -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -fstack-clash-protection -ffunction-sections -fdata-sections
+    CXXFLAGS=-D_FORTIFY_SOURCE=3 -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -fstack-clash-protection -ffunction-sections -fdata-sections -Wp,-D_GLIBCXX_ASSERTIONS
+
+  RECOMMENDED FEATURES (should all be yes)
+    gzip support                       : yes
+    bzip2 support                      : yes
+    lzma/xz support                    : yes
+    zstd support                       : yes
+    zstd compression support           : yes
+    libstdc++ demangle support         : yes
+    File textrel check                 : yes
+    Symbol versioning                  : yes
+
+  NOT RECOMMENDED FEATURES (should all be no)
+    Experimental thread safety         : no
+    install elf.h                      : no
+
+  OTHER FEATURES
+    Deterministic archives by default  : false
+    Native language support            : yes
+    Extra Valgrind annotations         : no
+    libdebuginfod client support       : dummy
+    Debuginfod server support          : no
+    Default DEBUGINFOD_URLS            : 
+
+  EXTRA TEST FEATURES (used with make check)
+    have bunzip2 installed (required)  : yes
+    have zstd installed                : yes
+    C++11                              : yes
+    debug branch prediction            : no
+    gprof support                      : no
+    gcov support                       : no
+    run all tests under valgrind       : no
+    gcc undefined behaviour sanitizer  : no
+    gcc address sanitizer              : no
+    clang memory sanitizer             : no
+    use rpath in tests                 : no
+    test biarch                        : yes
+
+make[1]: Entering directory '/sources/elfutils-0.191'
+make --no-print-directory all-recursive
+Making all in config
+make[3]: Nothing to be done for 'all'.
+Making all in lib
+  CC       xasprintf.o
+  CC       xstrdup.o
+  CC       xstrndup.o
+  CC       xmalloc.o
+  CC       next_prime.o
+  CC       crc32.o
+  CC       crc32_file.o
+  CC       color.o
+  CC       error.o
+  CC       printversion.o
+  AR       libeu.a
+Making all in libelf
+  CC       elf_version.o
+  CC       elf_hash.o
+  CC       elf_error.o
+  CC       elf_fill.o
+  CC       elf_begin.o
+  CC       elf_next.o
+  CC       elf_rand.o
+  CC       elf_end.o
+  CC       elf_kind.o
+  CC       gelf_getclass.o
+  CC       elf_getbase.o
+  CC       elf_getident.o
+  CC       elf32_fsize.o
+  CC       elf64_fsize.o
+  CC       gelf_fsize.o
+  CC       elf32_xlatetof.o
+  CC       elf32_xlatetom.o
+  CC       elf64_xlatetof.o
+  CC       elf64_xlatetom.o
+  CC       gelf_xlate.o
+  CC       elf32_getehdr.o
+  CC       elf64_getehdr.o
+  CC       gelf_getehdr.o
+  CC       elf32_newehdr.o
+  CC       elf64_newehdr.o
+  CC       gelf_newehdr.o
+  CC       gelf_update_ehdr.o
+  CC       elf32_getphdr.o
+  CC       elf64_getphdr.o
+  CC       gelf_getphdr.o
+  CC       elf32_newphdr.o
+  CC       elf64_newphdr.o
+  CC       gelf_newphdr.o
+  CC       gelf_update_phdr.o
+  CC       elf_getarhdr.o
+  CC       elf_getarsym.o
+  CC       elf_rawfile.o
+  CC       elf_readall.o
+  CC       elf_cntl.o
+  CC       elf_getscn.o
+  CC       elf_nextscn.o
+  CC       elf_ndxscn.o
+  CC       elf_newscn.o
+  CC       elf32_getshdr.o
+  CC       elf64_getshdr.o
+  CC       gelf_getshdr.o
+  CC       gelf_update_shdr.o
+  CC       elf_strptr.o
+  CC       elf_rawdata.o
+  CC       elf_getdata.o
+  CC       elf_newdata.o
+  CC       elf_getdata_rawchunk.o
+  CC       elf_flagelf.o
+  CC       elf_flagehdr.o
+  CC       elf_flagphdr.o
+  CC       elf_flagscn.o
+  CC       elf_flagshdr.o
+  CC       elf_flagdata.o
+  CC       elf_memory.o
+  CC       elf_update.o
+  CC       elf32_updatenull.o
+  CC       elf64_updatenull.o
+  CC       elf32_updatefile.o
+  CC       elf64_updatefile.o
+  CC       gelf_getsym.o
+  CC       gelf_update_sym.o
+  CC       gelf_getversym.o
+  CC       gelf_getverneed.o
+  CC       gelf_getvernaux.o
+  CC       gelf_getverdef.o
+  CC       gelf_getverdaux.o
+  CC       gelf_getrel.o
+  CC       gelf_getrela.o
+  CC       gelf_update_rel.o
+  CC       gelf_update_rela.o
+  CC       gelf_getdyn.o
+  CC       gelf_update_dyn.o
+  CC       gelf_getmove.o
+  CC       gelf_update_move.o
+  CC       gelf_getsyminfo.o
+  CC       gelf_update_syminfo.o
+  CC       gelf_getauxv.o
+  CC       gelf_update_auxv.o
+  CC       gelf_getnote.o
+  CC       gelf_xlatetof.o
+  CC       gelf_xlatetom.o
+  CC       nlist.o
+  CC       gelf_getsymshndx.o
+  CC       gelf_update_symshndx.o
+  CC       gelf_update_versym.o
+  CC       gelf_update_verneed.o
+  CC       gelf_update_vernaux.o
+  CC       gelf_update_verdef.o
+  CC       gelf_update_verdaux.o
+  CC       elf_getphdrnum.o
+  CC       elf_getshdrnum.o
+  CC       elf_getshdrstrndx.o
+  CC       gelf_checksum.o
+  CC       elf32_checksum.o
+  CC       elf64_checksum.o
+  CC       libelf_crc32.o
+  CC       libelf_next_prime.o
+  CC       elf_clone.o
+  CC       gelf_getlib.o
+  CC       gelf_update_lib.o
+  CC       elf32_offscn.o
+  CC       elf64_offscn.o
+  CC       gelf_offscn.o
+  CC       elf_getaroff.o
+  CC       elf_gnu_hash.o
+  CC       elf_scnshndx.o
+  CC       elf32_getchdr.o
+  CC       elf64_getchdr.o
+  CC       gelf_getchdr.o
+  CC       elf_compress.o
+  CC       elf_compress_gnu.o
+  CC       elf_version.os
+  CC       elf_hash.os
+  CC       elf_error.os
+  CC       elf_fill.os
+  CC       elf_begin.os
+  CC       elf_next.os
+  CC       elf_rand.os
+  CC       elf_end.os
+  CC       elf_kind.os
+  CC       gelf_getclass.os
+  CC       elf_getbase.os
+  CC       elf_getident.os
+  CC       elf32_fsize.os
+  CC       elf64_fsize.os
+  CC       elf32_xlatetof.os
+  CC       gelf_fsize.os
+  CC       elf32_xlatetom.os
+  CC       elf64_xlatetof.os
+  CC       elf64_xlatetom.os
+  CC       gelf_xlate.os
+  CC       elf32_getehdr.os
+  CC       elf64_getehdr.os
+  CC       gelf_getehdr.os
+  CC       elf32_newehdr.os
+  CC       elf64_newehdr.os
+  CC       gelf_newehdr.os
+  CC       gelf_update_ehdr.os
+  CC       elf32_getphdr.os
+  CC       elf64_getphdr.os
+  CC       gelf_getphdr.os
+  CC       elf32_newphdr.os
+  CC       elf64_newphdr.os
+  CC       gelf_newphdr.os
+  CC       gelf_update_phdr.os
+  CC       elf_getarhdr.os
+  CC       elf_getarsym.os
+  CC       elf_rawfile.os
+  CC       elf_readall.os
+  CC       elf_cntl.os
+  CC       elf_getscn.os
+  CC       elf_nextscn.os
+  CC       elf_ndxscn.os
+  CC       elf_newscn.os
+  CC       elf32_getshdr.os
+  CC       elf64_getshdr.os
+  CC       gelf_getshdr.os
+  CC       gelf_update_shdr.os
+  CC       elf_strptr.os
+  CC       elf_rawdata.os
+  CC       elf_getdata.os
+  CC       elf_newdata.os
+  CC       elf_getdata_rawchunk.os
+  CC       elf_flagelf.os
+  CC       elf_flagehdr.os
+  CC       elf_flagphdr.os
+  CC       elf_flagscn.os
+  CC       elf_flagshdr.os
+  CC       elf_flagdata.os
+  CC       elf_memory.os
+  CC       elf_update.os
+  CC       elf32_updatenull.os
+  CC       elf64_updatenull.os
+  CC       elf32_updatefile.os
+  CC       elf64_updatefile.os
+  CC       gelf_getsym.os
+  CC       gelf_update_sym.os
+  CC       gelf_getversym.os
+  CC       gelf_getverneed.os
+  CC       gelf_getvernaux.os
+  CC       gelf_getverdef.os
+  CC       gelf_getverdaux.os
+  CC       gelf_getrel.os
+  CC       gelf_getrela.os
+  CC       gelf_update_rel.os
+  CC       gelf_update_rela.os
+  CC       gelf_getdyn.os
+  CC       gelf_update_dyn.os
+  CC       gelf_getmove.os
+  CC       gelf_update_move.os
+  CC       gelf_getsyminfo.os
+  CC       gelf_update_syminfo.os
+  CC       gelf_getauxv.os
+  CC       gelf_update_auxv.os
+  CC       gelf_getnote.os
+  CC       gelf_xlatetof.os
+  CC       gelf_xlatetom.os
+  CC       nlist.os
+  CC       gelf_getsymshndx.os
+  CC       gelf_update_symshndx.os
+  CC       gelf_update_versym.os
+  CC       gelf_update_verneed.os
+  CC       gelf_update_vernaux.os
+  CC       gelf_update_verdef.os
+  CC       gelf_update_verdaux.os
+  CC       elf_getphdrnum.os
+  CC       elf_getshdrnum.os
+  CC       elf_getshdrstrndx.os
+  CC       gelf_checksum.os
+  CC       elf32_checksum.os
+  CC       elf64_checksum.os
+  CC       libelf_crc32.os
+  CC       libelf_next_prime.os
+  CC       elf_clone.os
+  CC       gelf_getlib.os
+  CC       gelf_update_lib.os
+  CC       elf32_offscn.os
+  CC       elf64_offscn.os
+  CC       gelf_offscn.os
+  CC       elf_getaroff.os
+  CC       elf_gnu_hash.os
+  CC       elf_scnshndx.os
+  CC       elf32_getchdr.os
+  CC       elf64_getchdr.os
+  CC       gelf_getchdr.os
+  CC       elf_compress.os
+  CC       elf_compress_gnu.os
+  AR       libelf.a
+  AR       libelf_pic.a
+  CCLD     libelf.so
+Making all in libcpu
+  GEN      i386_defs
+  GEN      x86_64_defs
+  CC       bpf_disasm.o
+  CC       riscv_disasm.o
+  GEN      i386.mnemonics
+  GEN      x86_64.mnemonics
+  CC       x86_64_disasm.o
+  CC       i386_disasm.o
+  CC       bpf_disasm.os
+  CC       i386_disasm.os
+  CC       riscv_disasm.os
+  AR       libcpu.a
+  CC       x86_64_disasm.os
+  AR       libcpu_pic.a
+rm x86_64_defs i386_defs
+Making all in backends
+  CC       i386_init.o
+  CC       i386_symbol.o
+  CC       i386_corenote.o
+  CC       i386_cfi.o
+  CC       i386_retval.o
+  CC       i386_regs.o
+  CC       i386_auxv.o
+  CC       i386_initreg.o
+  CC       i386_unwind.o
+  CC       sh_init.o
+  CC       sh_symbol.o
+  CC       sh_corenote.o
+  CC       sh_regs.o
+  CC       sh_retval.o
+  CC       x86_64_init.o
+  CC       x86_64_symbol.o
+  CC       x86_64_corenote.o
+  CC       x86_64_cfi.o
+  CC       x86_64_retval.o
+  CC       x86_64_regs.o
+  CC       x86_64_initreg.o
+  CC       x86_64_unwind.o
+  CC       x32_corenote.o
+  CC       ia64_init.o
+  CC       ia64_symbol.o
+  CC       ia64_regs.o
+  CC       ia64_retval.o
+  CC       alpha_init.o
+  CC       alpha_symbol.o
+  CC       alpha_retval.o
+  CC       alpha_regs.o
+  CC       alpha_corenote.o
+  CC       alpha_auxv.o
+  CC       arm_init.o
+  CC       arm_symbol.o
+  CC       arm_regs.o
+  CC       arm_corenote.o
+  CC       arm_auxv.o
+  CC       arm_attrs.o
+  CC       arm_retval.o
+  CC       arm_cfi.o
+  CC       arm_initreg.o
+  CC       arm_machineflagname.o
+  CC       aarch64_init.o
+  CC       aarch64_regs.o
+  CC       aarch64_symbol.o
+  CC       aarch64_corenote.o
+  CC       aarch64_retval.o
+  CC       aarch64_cfi.o
+  CC       aarch64_initreg.o
+  CC       aarch64_unwind.o
+  CC       sparc_init.o
+  CC       sparc_symbol.o
+  CC       sparc_regs.o
+  CC       sparc_retval.o
+  CC       sparc_corenote.o
+  CC       sparc64_corenote.o
+  CC       sparc_auxv.o
+  CC       sparc_attrs.o
+  CC       sparc_cfi.o
+  CC       sparc_initreg.o
+  CC       ppc_init.o
+  CC       ppc_symbol.o
+  CC       ppc_retval.o
+  CC       ppc_regs.o
+  CC       ppc_corenote.o
+  CC       ppc_attrs.o
+  CC       ppc_auxv.o
+  CC       ppc_cfi.o
+  CC       ppc_initreg.o
+  CC       ppc64_init.o
+  CC       ppc64_symbol.o
+  CC       ppc64_retval.o
+  CC       ppc64_corenote.o
+  CC       ppc64_unwind.o
+  CC       ppc64_resolve_sym.o
+  CC       s390_init.o
+  CC       s390_symbol.o
+  CC       s390_regs.o
+  CC       s390_retval.o
+  CC       s390_corenote.o
+  CC       s390x_corenote.o
+  CC       s390_cfi.o
+  CC       s390_initreg.o
+  CC       s390_unwind.o
+  CC       m68k_init.o
+  CC       m68k_symbol.o
+  CC       m68k_regs.o
+  CC       m68k_retval.o
+  CC       m68k_corenote.o
+  CC       m68k_cfi.o
+  CC       m68k_initreg.o
+  CC       bpf_init.o
+  CC       bpf_regs.o
+  CC       bpf_symbol.o
+  CC       riscv_init.o
+  CC       riscv_cfi.o
+  CC       riscv_symbol.o
+  CC       riscv_regs.o
+  CC       riscv_initreg.o
+  CC       riscv64_corenote.o
+  CC       riscv_corenote.o
+  CC       riscv_retval.o
+  CC       csky_attrs.o
+  CC       csky_symbol.o
+  CC       csky_init.o
+  CC       csky_cfi.o
+  CC       csky_regs.o
+  CC       csky_initreg.o
+  CC       csky_corenote.o
+  CC       loongarch_init.o
+  CC       loongarch_symbol.o
+  CC       loongarch_cfi.o
+  CC       loongarch_regs.o
+  CC       loongarch_retval.o
+  CC       loongarch_initreg.o
+  CC       loongarch_unwind.o
+  CC       loongarch_corenote.o
+  CC       arc_init.o
+  CC       i386_init.os
+  CC       arc_symbol.o
+  CC       i386_symbol.os
+  CC       i386_corenote.os
+  CC       i386_cfi.os
+  CC       i386_retval.os
+  CC       i386_regs.os
+  CC       i386_auxv.os
+  CC       i386_unwind.os
+  CC       i386_initreg.os
+  CC       sh_init.os
+  CC       sh_symbol.os
+  CC       sh_corenote.os
+  CC       sh_regs.os
+  CC       sh_retval.os
+  CC       x86_64_init.os
+  CC       x86_64_symbol.os
+  CC       x86_64_corenote.os
+  CC       x86_64_cfi.os
+  CC       x86_64_retval.os
+  CC       x86_64_regs.os
+  CC       x86_64_initreg.os
+  CC       x86_64_unwind.os
+  CC       x32_corenote.os
+  CC       ia64_init.os
+  CC       ia64_symbol.os
+  CC       ia64_regs.os
+  CC       ia64_retval.os
+  CC       alpha_init.os
+  CC       alpha_symbol.os
+  CC       alpha_retval.os
+  CC       alpha_regs.os
+  CC       alpha_corenote.os
+  CC       alpha_auxv.os
+  CC       arm_init.os
+  CC       arm_symbol.os
+  CC       arm_regs.os
+  CC       arm_corenote.os
+  CC       arm_auxv.os
+  CC       arm_attrs.os
+  CC       arm_cfi.os
+  CC       arm_retval.os
+  CC       arm_initreg.os
+  CC       arm_machineflagname.os
+  CC       aarch64_init.os
+  CC       aarch64_regs.os
+  CC       aarch64_symbol.os
+  CC       aarch64_corenote.os
+  CC       aarch64_retval.os
+  CC       aarch64_cfi.os
+  CC       aarch64_unwind.os
+  CC       aarch64_initreg.os
+  CC       sparc_init.os
+  CC       sparc_symbol.os
+  CC       sparc_regs.os
+  CC       sparc_retval.os
+  CC       sparc_corenote.os
+  CC       sparc64_corenote.os
+  CC       sparc_auxv.os
+  CC       sparc_attrs.os
+  CC       sparc_cfi.os
+  CC       sparc_initreg.os
+  CC       ppc_init.os
+  CC       ppc_symbol.os
+  CC       ppc_retval.os
+  CC       ppc_regs.os
+  CC       ppc_corenote.os
+  CC       ppc_auxv.os
+  CC       ppc_attrs.os
+  CC       ppc_cfi.os
+  CC       ppc_initreg.os
+  CC       ppc64_init.os
+  CC       ppc64_symbol.os
+  CC       ppc64_retval.os
+  CC       ppc64_corenote.os
+  CC       ppc64_unwind.os
+  CC       ppc64_resolve_sym.os
+  CC       s390_init.os
+  CC       s390_symbol.os
+  CC       s390_regs.os
+  CC       s390_retval.os
+  CC       s390_corenote.os
+  CC       s390x_corenote.os
+  CC       s390_cfi.os
+  CC       s390_initreg.os
+  CC       s390_unwind.os
+  CC       m68k_init.os
+  CC       m68k_symbol.os
+  CC       m68k_regs.os
+  CC       m68k_retval.os
+  CC       m68k_corenote.os
+  CC       m68k_cfi.os
+  CC       m68k_initreg.os
+  CC       bpf_init.os
+  CC       bpf_regs.os
+  CC       bpf_symbol.os
+  CC       riscv_init.os
+  CC       riscv_symbol.os
+  CC       riscv_cfi.os
+  CC       riscv_regs.os
+  CC       riscv_initreg.os
+  CC       riscv_corenote.os
+  CC       riscv64_corenote.os
+  CC       riscv_retval.os
+  CC       csky_attrs.os
+  CC       csky_init.os
+  CC       csky_symbol.os
+  CC       csky_cfi.os
+  CC       csky_regs.os
+  CC       csky_initreg.os
+  CC       csky_corenote.os
+  CC       loongarch_init.os
+  CC       loongarch_symbol.os
+  CC       loongarch_cfi.os
+  CC       loongarch_regs.os
+  CC       loongarch_retval.os
+  CC       loongarch_initreg.os
+  CC       loongarch_unwind.os
+  CC       loongarch_corenote.os
+  CC       arc_init.os
+  CC       arc_symbol.os
+  AR       libebl_backends.a
+  AR       libebl_backends_pic.a
+Making all in libebl
+  CC       eblopenbackend.o
+  CC       eblclosebackend.o
+  CC       eblreloctypename.o
+  CC       eblsegmenttypename.o
+  CC       eblsectiontypename.o
+  CC       eblmachineflagname.o
+  CC       eblsymboltypename.o
+  CC       ebldynamictagname.o
+  CC       eblsectionname.o
+  CC       eblsymbolbindingname.o
+  CC       eblbackendname.o
+  CC       eblosabiname.o
+  CC       eblmachineflagcheck.o
+  CC       eblmachinesectionflagcheck.o
+  CC       eblreloctypecheck.o
+  CC       eblrelocvaliduse.o
+  CC       eblrelocsimpletype.o
+  CC       ebldynamictagcheck.o
+  CC       eblcorenotetypename.o
+  CC       eblobjnotetypename.o
+  CC       eblcorenote.o
+  CC       eblobjnote.o
+  CC       ebldebugscnp.o
+  CC       eblgotpcreloccheck.o
+  CC       eblcopyrelocp.o
+  CC       eblsectionstripp.o
+  CC       eblelfclass.o
+  CC       eblelfdata.o
+  CC       eblelfmachine.o
+  CC       eblbsspltp.o
+  CC       ebl_check_special_symbol.o
+  CC       eblretval.o
+  CC       eblnonerelocp.o
+  CC       eblreginfo.o
+  CC       eblrelativerelocp.o
+  CC       eblsysvhashentrysize.o
+  CC       eblauxvinfo.o
+  CC       eblcheckobjattr.o
+  CC       ebl_check_special_section.o
+  CC       eblabicfi.o
+  CC       eblstother.o
+  CC       eblinitreg.o
+  CC       ebldwarftoregno.o
+  CC       eblnormalizepc.o
+  CC       eblunwind.o
+  CC       eblresolvesym.o
+  CC       eblcheckreloctargettype.o
+  CC       ebl_data_marker_symbol.o
+  CC       eblopenbackend.os
+  CC       eblclosebackend.os
+  CC       eblreloctypename.os
+  CC       eblsegmenttypename.os
+  CC       eblsectiontypename.os
+  CC       eblmachineflagname.os
+  CC       eblsymboltypename.os
+  CC       ebldynamictagname.os
+  CC       eblsectionname.os
+  CC       eblsymbolbindingname.os
+  CC       eblbackendname.os
+  CC       eblosabiname.os
+  CC       eblmachinesectionflagcheck.os
+  CC       eblmachineflagcheck.os
+  CC       eblreloctypecheck.os
+  CC       eblrelocvaliduse.os
+  CC       eblrelocsimpletype.os
+  CC       ebldynamictagcheck.os
+  CC       eblcorenotetypename.os
+  CC       eblobjnotetypename.os
+  CC       eblcorenote.os
+  CC       eblobjnote.os
+  CC       ebldebugscnp.os
+  CC       eblgotpcreloccheck.os
+  CC       eblcopyrelocp.os
+  CC       eblsectionstripp.os
+  CC       eblelfclass.os
+  CC       eblelfdata.os
+  CC       eblelfmachine.os
+  CC       ebl_check_special_symbol.os
+  CC       eblbsspltp.os
+  CC       eblretval.os
+  CC       eblreginfo.os
+  CC       eblnonerelocp.os
+  CC       eblrelativerelocp.os
+  CC       eblsysvhashentrysize.os
+  CC       eblauxvinfo.os
+  CC       eblcheckobjattr.os
+  CC       ebl_check_special_section.os
+  CC       eblabicfi.os
+  CC       eblstother.os
+  CC       eblinitreg.os
+  CC       ebldwarftoregno.os
+  CC       eblnormalizepc.os
+  CC       eblunwind.os
+  CC       eblresolvesym.os
+  CC       ebl_data_marker_symbol.os
+  CC       eblcheckreloctargettype.os
+  AR       libebl.a
+  AR       libebl_pic.a
+Making all in libdwelf
+  CC       dwelf_elf_gnu_debuglink.o
+  CC       dwelf_dwarf_gnu_debugaltlink.o
+  CC       dwelf_elf_gnu_build_id.o
+  CC       dwelf_scn_gnu_compressed_size.o
+  CC       dwelf_strtab.o
+  CC       dwelf_elf_begin.o
+  CC       dwelf_elf_e_machine_string.o
+  CC       dwelf_elf_gnu_debuglink.os
+  CC       dwelf_dwarf_gnu_debugaltlink.os
+  CC       dwelf_elf_gnu_build_id.os
+  CC       dwelf_scn_gnu_compressed_size.os
+  CC       dwelf_strtab.os
+  CC       dwelf_elf_begin.os
+  CC       dwelf_elf_e_machine_string.os
+  AR       libdwelf.a
+  AR       libdwelf_pic.a
+Making all in libdwfl
+  CC       dwfl_begin.o
+  CC       dwfl_end.o
+  CC       dwfl_error.o
+  CC       dwfl_version.o
+  CC       dwfl_module.o
+  CC       dwfl_report_elf.o
+  CC       relocate.o
+  CC       dwfl_module_build_id.o
+  CC       dwfl_module_report_build_id.o
+  CC       derelocate.o
+  CC       offline.o
+  CC       segment.o
+  CC       dwfl_module_info.o
+  CC       dwfl_getmodules.o
+  CC       dwfl_getdwarf.o
+  CC       dwfl_module_getdwarf.o
+  CC       dwfl_module_getelf.o
+  CC       dwfl_validate_address.o
+  CC       argp-std.o
+  CC       find-debuginfo.o
+  CC       dwfl_build_id_find_elf.o
+  CC       dwfl_build_id_find_debuginfo.o
+  CC       linux-kernel-modules.o
+  CC       linux-proc-maps.o
+  CC       dwfl_addrmodule.o
+  CC       dwfl_addrdwarf.o
+  CC       cu.o
+  CC       dwfl_module_nextcu.o
+  CC       dwfl_nextcu.o
+  CC       dwfl_cumodule.o
+  CC       dwfl_module_addrdie.o
+  CC       dwfl_addrdie.o
+  CC       lines.o
+  CC       dwfl_lineinfo.o
+  CC       dwfl_line_comp_dir.o
+  CC       dwfl_linemodule.o
+  CC       dwfl_linecu.o
+  CC       dwfl_dwarf_line.o
+  CC       dwfl_getsrclines.o
+  CC       dwfl_onesrcline.o
+  CC       dwfl_module_getsrc.o
+  CC       dwfl_getsrc.o
+  CC       dwfl_module_getsrc_file.o
+  CC       libdwfl_crc32.o
+  CC       libdwfl_crc32_file.o
+  CC       elf-from-memory.o
+  CC       dwfl_module_dwarf_cfi.o
+  CC       dwfl_module_eh_cfi.o
+  CC       dwfl_module_getsym.o
+  CC       dwfl_module_addrname.o
+  CC       dwfl_module_addrsym.o
+  CC       dwfl_module_return_value_location.o
+  CC       dwfl_module_register_names.o
+  CC       dwfl_segment_report_module.o
+  CC       link_map.o
+  CC       core-file.o
+  CC       open.o
+  CC       image-header.o
+  CC       dwfl_frame.o
+  CC       frame_unwind.o
+  CC       dwfl_frame_pc.o
+  CC       linux-pid-attach.o
+  CC       linux-core-attach.o
+  CC       dwfl_frame_regs.o
+  CC       gzip.o
+  CC       debuginfod-client.o
+  CC       bzip2.o
+  CC       lzma.o
+  CC       zstd.o
+  CC       dwfl_begin.os
+  CC       dwfl_end.os
+  CC       dwfl_error.os
+  CC       dwfl_version.os
+  CC       dwfl_module.os
+  CC       dwfl_report_elf.os
+  CC       relocate.os
+  CC       dwfl_module_build_id.os
+  CC       dwfl_module_report_build_id.os
+  CC       derelocate.os
+  CC       offline.os
+  CC       segment.os
+  CC       dwfl_module_info.os
+  CC       dwfl_getmodules.os
+  CC       dwfl_getdwarf.os
+  CC       dwfl_module_getdwarf.os
+  CC       dwfl_module_getelf.os
+  CC       dwfl_validate_address.os
+  CC       argp-std.os
+  CC       find-debuginfo.os
+  CC       dwfl_build_id_find_elf.os
+  CC       dwfl_build_id_find_debuginfo.os
+  CC       linux-kernel-modules.os
+  CC       linux-proc-maps.os
+  CC       dwfl_addrmodule.os
+  CC       dwfl_addrdwarf.os
+  CC       cu.os
+  CC       dwfl_module_nextcu.os
+  CC       dwfl_nextcu.os
+  CC       dwfl_cumodule.os
+  CC       dwfl_module_addrdie.os
+  CC       dwfl_addrdie.os
+  CC       lines.os
+  CC       dwfl_lineinfo.os
+  CC       dwfl_line_comp_dir.os
+  CC       dwfl_linemodule.os
+  CC       dwfl_linecu.os
+  CC       dwfl_dwarf_line.os
+  CC       dwfl_getsrclines.os
+  CC       dwfl_onesrcline.os
+  CC       dwfl_module_getsrc.os
+  CC       dwfl_getsrc.os
+  CC       dwfl_module_getsrc_file.os
+  CC       libdwfl_crc32.os
+  CC       libdwfl_crc32_file.os
+  CC       elf-from-memory.os
+  CC       dwfl_module_dwarf_cfi.os
+  CC       dwfl_module_eh_cfi.os
+  CC       dwfl_module_getsym.os
+  CC       dwfl_module_addrname.os
+  CC       dwfl_module_addrsym.os
+  CC       dwfl_module_return_value_location.os
+  CC       dwfl_module_register_names.os
+  CC       dwfl_segment_report_module.os
+  CC       link_map.os
+  CC       core-file.os
+  CC       open.os
+  CC       image-header.os
+  CC       dwfl_frame.os
+  CC       frame_unwind.os
+  CC       dwfl_frame_pc.os
+  CC       linux-pid-attach.os
+  CC       linux-core-attach.os
+  CC       dwfl_frame_regs.os
+  CC       gzip.os
+  CC       debuginfod-client.os
+  CC       bzip2.os
+  CC       lzma.os
+  CC       zstd.os
+  AR       libdwfl.a
+  AR       libdwfl_pic.a
+Making all in libdw
+make  all-am
+  CC       dwarf_begin.o
+  CC       dwarf_begin_elf.o
+  CC       dwarf_end.o
+  CC       dwarf_getelf.o
+  CC       dwarf_getpubnames.o
+  CC       dwarf_getabbrev.o
+  CC       dwarf_tag.o
+  CC       dwarf_error.o
+  CC       dwarf_nextcu.o
+  CC       dwarf_diename.o
+  CC       dwarf_offdie.o
+  CC       dwarf_attr.o
+  CC       dwarf_formstring.o
+  CC       dwarf_abbrev_hash.o
+  CC       dwarf_sig8_hash.o
+  CC       dwarf_attr_integrate.o
+  CC       dwarf_hasattr_integrate.o
+  CC       dwarf_child.o
+  CC       dwarf_haschildren.o
+  CC       dwarf_formaddr.o
+  CC       dwarf_formudata.o
+  CC       dwarf_formsdata.o
+  CC       dwarf_lowpc.o
+  CC       dwarf_entrypc.o
+  CC       dwarf_haspc.o
+  CC       dwarf_highpc.o
+  CC       dwarf_ranges.o
+  CC       dwarf_formref.o
+  CC       dwarf_formref_die.o
+  CC       dwarf_siblingof.o
+  CC       dwarf_dieoffset.o
+  CC       dwarf_cuoffset.o
+  CC       dwarf_diecu.o
+  CC       dwarf_hasattr.o
+  CC       dwarf_hasform.o
+  CC       dwarf_whatform.o
+  CC       dwarf_whatattr.o
+  CC       dwarf_bytesize.o
+  CC       dwarf_arrayorder.o
+  CC       dwarf_bitsize.o
+  CC       dwarf_bitoffset.o
+  CC       dwarf_getabbrevtag.o
+  CC       dwarf_srclang.o
+  CC       dwarf_getabbrevcode.o
+  CC       dwarf_abbrevhaschildren.o
+  CC       dwarf_getattrcnt.o
+  CC       dwarf_getabbrevattr.o
+  CC       dwarf_getsrclines.o
+  CC       dwarf_getsrc_die.o
+  CC       dwarf_getscopes.o
+  CC       dwarf_getscopes_die.o
+  CC       dwarf_getscopevar.o
+  CC       dwarf_linesrc.o
+  CC       dwarf_lineno.o
+  CC       dwarf_lineaddr.o
+  CC       dwarf_linecol.o
+  CC       dwarf_linebeginstatement.o
+  CC       dwarf_lineendsequence.o
+  CC       dwarf_lineblock.o
+  CC       dwarf_linecontext.o
+  CC       dwarf_linefunctionname.o
+  CC       dwarf_lineprologueend.o
+  CC       dwarf_lineepiloguebegin.o
+  CC       dwarf_lineisa.o
+  CC       dwarf_linediscriminator.o
+  CC       dwarf_lineop_index.o
+  CC       dwarf_line_file.o
+  CC       dwarf_onesrcline.o
+  CC       dwarf_formblock.o
+  CC       dwarf_getsrcfiles.o
+  CC       dwarf_filesrc.o
+  CC       dwarf_getsrcdirs.o
+  CC       dwarf_getlocation.o
+  CC       dwarf_getstring.o
+  CC       dwarf_offabbrev.o
+  CC       dwarf_getaranges.o
+  CC       dwarf_onearange.o
+  CC       dwarf_getarangeinfo.o
+  CC       dwarf_getarange_addr.o
+  CC       dwarf_getattrs.o
+  CC       dwarf_formflag.o
+  CC       dwarf_getmacros.o
+  CC       dwarf_macro_getparamcnt.o
+  CC       dwarf_macro_opcode.o
+  CC       dwarf_macro_param.o
+  CC       dwarf_macro_param1.o
+  CC       dwarf_macro_param2.o
+  CC       dwarf_macro_getsrcfiles.o
+  CC       dwarf_addrdie.o
+  CC       dwarf_getfuncs.o
+  CC       dwarf_decl_file.o
+  CC       dwarf_decl_line.o
+  CC       dwarf_decl_column.o
+  CC       dwarf_func_inline.o
+  CC       dwarf_getsrc_file.o
+  CC       libdw_findcu.o
+  CC       libdw_form.o
+  CC       libdw_alloc.o
+  CC       libdw_visit_scopes.o
+  CC       dwarf_entry_breakpoints.o
+  CC       dwarf_next_cfi.o
+  CC       cie.o
+  CC       fde.o
+  CC       cfi.o
+  CC       frame-cache.o
+  CC       dwarf_frame_info.o
+  CC       dwarf_frame_cfa.o
+  CC       dwarf_frame_register.o
+  CC       dwarf_cfi_addrframe.o
+  CC       dwarf_getcfi.o
+  CC       dwarf_getcfi_elf.o
+  CC       dwarf_cfi_end.o
+  CC       dwarf_aggregate_size.o
+  CC       dwarf_getlocation_implicit_pointer.o
+  CC       dwarf_getlocation_die.o
+  CC       dwarf_getlocation_attr.o
+  CC       dwarf_getalt.o
+  CC       dwarf_setalt.o
+  CC       dwarf_cu_getdwarf.o
+  CC       dwarf_cu_die.o
+  CC       dwarf_peel_type.o
+  CC       dwarf_default_lower_bound.o
+  CC       dwarf_die_addr_die.o
+  CC       dwarf_get_units.o
+  CC       libdw_find_split_unit.o
+  CC       dwarf_cu_info.o
+  CC       dwarf_next_lines.o
+  CC       dwarf_cu_dwp_section_info.o
+  CC       dwarf_begin.os
+  CC       dwarf_begin_elf.os
+  CC       dwarf_end.os
+  CC       dwarf_getelf.os
+  CC       dwarf_getpubnames.os
+  CC       dwarf_getabbrev.os
+  CC       dwarf_tag.os
+  CC       dwarf_error.os
+  CC       dwarf_nextcu.os
+  CC       dwarf_diename.os
+  CC       dwarf_offdie.os
+  CC       dwarf_attr.os
+  CC       dwarf_formstring.os
+  CC       dwarf_abbrev_hash.os
+  CC       dwarf_sig8_hash.os
+  CC       dwarf_attr_integrate.os
+  CC       dwarf_hasattr_integrate.os
+  CC       dwarf_child.os
+  CC       dwarf_haschildren.os
+  CC       dwarf_formaddr.os
+  CC       dwarf_formudata.os
+  CC       dwarf_formsdata.os
+  CC       dwarf_lowpc.os
+  CC       dwarf_entrypc.os
+  CC       dwarf_haspc.os
+  CC       dwarf_highpc.os
+  CC       dwarf_ranges.os
+  CC       dwarf_formref.os
+  CC       dwarf_formref_die.os
+  CC       dwarf_siblingof.os
+  CC       dwarf_dieoffset.os
+  CC       dwarf_cuoffset.os
+  CC       dwarf_diecu.os
+  CC       dwarf_hasattr.os
+  CC       dwarf_hasform.os
+  CC       dwarf_whatform.os
+  CC       dwarf_whatattr.os
+  CC       dwarf_bytesize.os
+  CC       dwarf_arrayorder.os
+  CC       dwarf_bitsize.os
+  CC       dwarf_bitoffset.os
+  CC       dwarf_srclang.os
+  CC       dwarf_getabbrevtag.os
+  CC       dwarf_getabbrevcode.os
+  CC       dwarf_abbrevhaschildren.os
+  CC       dwarf_getattrcnt.os
+  CC       dwarf_getabbrevattr.os
+  CC       dwarf_getsrclines.os
+  CC       dwarf_getsrc_die.os
+  CC       dwarf_getscopes.os
+  CC       dwarf_getscopes_die.os
+  CC       dwarf_getscopevar.os
+  CC       dwarf_linesrc.os
+  CC       dwarf_lineno.os
+  CC       dwarf_lineaddr.os
+  CC       dwarf_linecol.os
+  CC       dwarf_linebeginstatement.os
+  CC       dwarf_lineendsequence.os
+  CC       dwarf_lineblock.os
+  CC       dwarf_linecontext.os
+  CC       dwarf_linefunctionname.os
+  CC       dwarf_lineprologueend.os
+  CC       dwarf_lineepiloguebegin.os
+  CC       dwarf_lineisa.os
+  CC       dwarf_linediscriminator.os
+  CC       dwarf_lineop_index.os
+  CC       dwarf_line_file.os
+  CC       dwarf_onesrcline.os
+  CC       dwarf_formblock.os
+  CC       dwarf_getsrcfiles.os
+  CC       dwarf_filesrc.os
+  CC       dwarf_getsrcdirs.os
+  CC       dwarf_getlocation.os
+  CC       dwarf_getstring.os
+  CC       dwarf_offabbrev.os
+  CC       dwarf_getaranges.os
+  CC       dwarf_onearange.os
+  CC       dwarf_getarangeinfo.os
+  CC       dwarf_getarange_addr.os
+  CC       dwarf_getattrs.os
+  CC       dwarf_formflag.os
+  CC       dwarf_getmacros.os
+  CC       dwarf_macro_getparamcnt.os
+  CC       dwarf_macro_opcode.os
+  CC       dwarf_macro_param.os
+  CC       dwarf_macro_param1.os
+  CC       dwarf_macro_param2.os
+  CC       dwarf_addrdie.os
+  CC       dwarf_macro_getsrcfiles.os
+  CC       dwarf_getfuncs.os
+  CC       dwarf_decl_file.os
+  CC       dwarf_decl_line.os
+  CC       dwarf_decl_column.os
+  CC       dwarf_func_inline.os
+  CC       dwarf_getsrc_file.os
+  CC       libdw_findcu.os
+  CC       libdw_form.os
+  CC       libdw_alloc.os
+  CC       libdw_visit_scopes.os
+  CC       dwarf_entry_breakpoints.os
+  CC       dwarf_next_cfi.os
+  CC       cie.os
+  CC       fde.os
+  CC       cfi.os
+  CC       frame-cache.os
+  CC       dwarf_frame_info.os
+  CC       dwarf_frame_cfa.os
+  CC       dwarf_frame_register.os
+  CC       dwarf_cfi_addrframe.os
+  CC       dwarf_getcfi.os
+  CC       dwarf_getcfi_elf.os
+  CC       dwarf_cfi_end.os
+  CC       dwarf_aggregate_size.os
+  CC       dwarf_getlocation_implicit_pointer.os
+  CC       dwarf_getlocation_die.os
+  CC       dwarf_getlocation_attr.os
+  CC       dwarf_getalt.os
+  CC       dwarf_setalt.os
+  CC       dwarf_cu_getdwarf.os
+  CC       dwarf_cu_die.os
+  CC       dwarf_peel_type.os
+  CC       dwarf_default_lower_bound.os
+  CC       dwarf_die_addr_die.os
+  CC       libdw_find_split_unit.os
+  CC       dwarf_get_units.os
+  CC       dwarf_cu_info.os
+  CC       dwarf_next_lines.os
+  CC       dwarf_cu_dwp_section_info.os
+  AR       libdw.a
+  AR       libdw_pic.a
+  CCLD     libdw.so
+Making all in libasm
+  CC       asm_begin.o
+  CC       asm_abort.o
+  CC       asm_end.o
+  CC       asm_error.o
+  CC       asm_getelf.o
+  CC       asm_newscn.o
+  CC       asm_newscn_ingrp.o
+  CC       asm_newsubscn.o
+  CC       asm_newsym.o
+  CC       asm_newcomsym.o
+  CC       asm_newabssym.o
+  CC       asm_newscngrp.o
+  CC       asm_scngrp_newsignature.o
+  CC       asm_fill.o
+  CC       asm_align.o
+  CC       asm_addstrz.o
+  CC       asm_addint8.o
+  CC       asm_adduint8.o
+  CC       asm_addint16.o
+  CC       asm_adduint16.o
+  CC       asm_addint32.o
+  CC       asm_adduint32.o
+  CC       asm_addint64.o
+  CC       asm_adduint64.o
+  CC       asm_adduleb128.o
+  CC       asm_addsleb128.o
+  CC       disasm_begin.o
+  CC       disasm_cb.o
+  CC       disasm_end.o
+  CC       disasm_str.o
+  CC       symbolhash.o
+  CC       asm_begin.os
+  CC       asm_abort.os
+  CC       asm_end.os
+  CC       asm_error.os
+  CC       asm_getelf.os
+  CC       asm_newscn.os
+  CC       asm_newscn_ingrp.os
+  CC       asm_newsubscn.os
+  CC       asm_newsym.os
+  CC       asm_newcomsym.os
+  CC       asm_newabssym.os
+  CC       asm_newscngrp.os
+  CC       asm_scngrp_newsignature.os
+  CC       asm_fill.os
+  CC       asm_align.os
+  CC       asm_addstrz.os
+  CC       asm_addint8.os
+  CC       asm_adduint8.os
+  CC       asm_addint16.os
+  CC       asm_adduint16.os
+  CC       asm_addint32.os
+  CC       asm_adduint32.os
+  CC       asm_addint64.os
+  CC       asm_adduint64.os
+  CC       asm_adduleb128.os
+  CC       asm_addsleb128.os
+  CC       disasm_begin.os
+  CC       disasm_cb.os
+  CC       disasm_end.os
+  CC       disasm_str.os
+  CC       symbolhash.os
+  AR       libasm.a
+  AR       libasm_pic.a
+  CCLD     libasm.so
+Making all in debuginfod
+  CC       debuginfod-find.o
+  CC       debuginfod-client.o
+  CC       debuginfod-client.os
+  AR       libdebuginfod.a
+  AR       libdebuginfod_pic.a
+  CCLD     libdebuginfod.so.1
+ln -fs libdebuginfod.so.1 libdebuginfod.so
+  CCLD     debuginfod-find
+Making all in src
+  CC       readelf.o
+  CC       nm.o
+  CC       size.o
+  CC       strip.o
+  CC       elflint.o
+  CC       findtextrel.o
+  CC       addr2line.o
+  CC       elfcmp.o
+  CC       objdump.o
+  CC       ranlib.o
+  CC       arlib.o
+  CC       arlib2.o
+  CC       arlib-argp.o
+  CC       strings.o
+  CC       ar.o
+  CC       unstrip.o
+  CC       stack.o
+  CC       elfcompress.o
+  CC       elfclassify.o
+  CXX      srcfiles.o
+  GEN      make-debug-archive
+  CCLD     nm
+  CCLD     size
+  CCLD     strip
+  CCLD     elflint
+  CCLD     findtextrel
+  CCLD     addr2line
+  CCLD     elfcmp
+  CCLD     objdump
+  AR       libar.a
+  CCLD     strings
+  CCLD     ar
+  CCLD     unstrip
+  CCLD     stack
+  CCLD     elfcompress
+  CCLD     elfclassify
+  CCLD     ranlib
+  CXXLD    srcfiles
+  CCLD     readelf
+Making all in po
+make[3]: Nothing to be done for 'all'.
+Making all in doc
+make[3]: Nothing to be done for 'all'.
+Making all in tests
+cp ../libelf/libelf.h libelf.h
+make  all-am
+make[4]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/sources/elfutils-0.191'
+make[1]: Entering directory '/sources/elfutils-0.191/libelf'
+make[2]: Entering directory '/sources/elfutils-0.191/libelf'
+ /usr/bin/mkdir -p '/usr/lib'
+ /usr/bin/install -c -m 644  libelf.a '/usr/lib'
+ ( cd '/usr/lib' && ranlib libelf.a )
+ /usr/bin/mkdir -p '/usr/include'
+ /usr/bin/install -c -m 644 libelf.h gelf.h nlist.h '/usr/include'
+ /usr/bin/mkdir -p '/usr/include/elfutils'
+ /usr/bin/install -c -m 644 elf-knowledge.h '/usr/include/elfutils'
+make[2]: Leaving directory '/sources/elfutils-0.191/libelf'
+/bin/sh /sources/elfutils-0.191/config/install-sh -d /usr/lib
+/usr/bin/install -c libelf.so /usr/lib/libelf-0.191.so
+ln -fs libelf-0.191.so /usr/lib/libelf.so.1
+ln -fs libelf.so.1 /usr/lib/libelf.so
+make[1]: Leaving directory '/sources/elfutils-0.191/libelf'
+'config/libelf.pc' -> '/usr/lib/pkgconfig/libelf.pc'
+make[1]: Entering directory '/sources/elfutils-0.191'
+Making distclean in config
+test -z "libelf.pc libdw.pc libdebuginfod.pc profile.sh profile.csh" || rm -f libelf.pc libdw.pc libdebuginfod.pc profile.sh profile.csh
+test . = "." || test -z "" || rm -f 
+rm -f Makefile
+Making distclean in lib
+test -z "*.gcno *.gcda" || rm -f *.gcno *.gcda
+test -z "libeu.a" || rm -f libeu.a
+rm -f *.o
+rm -f *.tab.c
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+test . = "." || test -z "" || rm -f 
+rm -f ./.deps/color.Po
+rm -f ./.deps/crc32.Po
+rm -f ./.deps/crc32_file.Po
+rm -f ./.deps/error.Po
+rm -f ./.deps/next_prime.Po
+rm -f ./.deps/printversion.Po
+rm -f ./.deps/xasprintf.Po
+rm -f ./.deps/xmalloc.Po
+rm -f ./.deps/xstrdup.Po
+rm -f ./.deps/xstrndup.Po
+rm -f Makefile
+Making distclean in libelf
+test -z "*.gcno *.gcda elf_version.os elf_hash.os elf_error.os elf_fill.os elf_begin.os elf_next.os elf_rand.os elf_end.os elf_kind.os gelf_getclass.os elf_getbase.os elf_getident.os elf32_fsize.os elf64_fsize.os gelf_fsize.os elf32_xlatetof.os elf32_xlatetom.os elf64_xlatetof.os elf64_xlatetom.os gelf_xlate.os elf32_getehdr.os elf64_getehdr.os gelf_getehdr.os elf32_newehdr.os elf64_newehdr.os gelf_newehdr.os gelf_update_ehdr.os elf32_getphdr.os elf64_getphdr.os gelf_getphdr.os elf32_newphdr.os elf64_newphdr.os gelf_newphdr.os gelf_update_phdr.os elf_getarhdr.os elf_getarsym.os elf_rawfile.os elf_readall.os elf_cntl.os elf_getscn.os elf_nextscn.os elf_ndxscn.os elf_newscn.os elf32_getshdr.os elf64_getshdr.os gelf_getshdr.os gelf_update_shdr.os elf_strptr.os elf_rawdata.os elf_getdata.os elf_newdata.os elf_getdata_rawchunk.os elf_flagelf.os elf_flagehdr.os elf_flagphdr.os elf_flagscn.os elf_flagshdr.os elf_flagdata.os elf_memory.os elf_update.os elf32_updatenull.os elf64_updatenull.os elf32_updatefile.os elf64_updatefile.os gelf_getsym.os gelf_update_sym.os gelf_getversym.os gelf_getverneed.os gelf_getvernaux.os gelf_getverdef.os gelf_getverdaux.os gelf_getrel.os gelf_getrela.os gelf_update_rel.os gelf_update_rela.os gelf_getdyn.os gelf_update_dyn.os gelf_getmove.os gelf_update_move.os gelf_getsyminfo.os gelf_update_syminfo.os gelf_getauxv.os gelf_update_auxv.os gelf_getnote.os gelf_xlatetof.os gelf_xlatetom.os nlist.os gelf_getsymshndx.os gelf_update_symshndx.os gelf_update_versym.os gelf_update_verneed.os gelf_update_vernaux.os gelf_update_verdef.os gelf_update_verdaux.os elf_getphdrnum.os elf_getshdrnum.os elf_getshdrstrndx.os gelf_checksum.os elf32_checksum.os elf64_checksum.os libelf_crc32.os libelf_next_prime.os elf_clone.os gelf_getlib.os gelf_update_lib.os elf32_offscn.os elf64_offscn.os gelf_offscn.os elf_getaroff.os elf_gnu_hash.os elf_scnshndx.os elf32_getchdr.os elf64_getchdr.os gelf_getchdr.os elf_compress.os elf_compress_gnu.os libelf.so libelf.so.1" || rm -f *.gcno *.gcda elf_version.os elf_hash.os elf_error.os elf_fill.os elf_begin.os elf_next.os elf_rand.os elf_end.os elf_kind.os gelf_getclass.os elf_getbase.os elf_getident.os elf32_fsize.os elf64_fsize.os gelf_fsize.os elf32_xlatetof.os elf32_xlatetom.os elf64_xlatetof.os elf64_xlatetom.os gelf_xlate.os elf32_getehdr.os elf64_getehdr.os gelf_getehdr.os elf32_newehdr.os elf64_newehdr.os gelf_newehdr.os gelf_update_ehdr.os elf32_getphdr.os elf64_getphdr.os gelf_getphdr.os elf32_newphdr.os elf64_newphdr.os gelf_newphdr.os gelf_update_phdr.os elf_getarhdr.os elf_getarsym.os elf_rawfile.os elf_readall.os elf_cntl.os elf_getscn.os elf_nextscn.os elf_ndxscn.os elf_newscn.os elf32_getshdr.os elf64_getshdr.os gelf_getshdr.os gelf_update_shdr.os elf_strptr.os elf_rawdata.os elf_getdata.os elf_newdata.os elf_getdata_rawchunk.os elf_flagelf.os elf_flagehdr.os elf_flagphdr.os elf_flagscn.os elf_flagshdr.os elf_flagdata.os elf_memory.os elf_update.os elf32_updatenull.os elf64_updatenull.os elf32_updatefile.os elf64_updatefile.os gelf_getsym.os gelf_update_sym.os gelf_getversym.os gelf_getverneed.os gelf_getvernaux.os gelf_getverdef.os gelf_getverdaux.os gelf_getrel.os gelf_getrela.os gelf_update_rel.os gelf_update_rela.os gelf_getdyn.os gelf_update_dyn.os gelf_getmove.os gelf_update_move.os gelf_getsyminfo.os gelf_update_syminfo.os gelf_getauxv.os gelf_update_auxv.os gelf_getnote.os gelf_xlatetof.os gelf_xlatetom.os nlist.os gelf_getsymshndx.os gelf_update_symshndx.os gelf_update_versym.os gelf_update_verneed.os gelf_update_vernaux.os gelf_update_verdef.os gelf_update_verdaux.os elf_getphdrnum.os elf_getshdrnum.os elf_getshdrstrndx.os gelf_checksum.os elf32_checksum.os elf64_checksum.os libelf_crc32.os libelf_next_prime.os elf_clone.os gelf_getlib.os gelf_update_lib.os elf32_offscn.os elf64_offscn.os gelf_offscn.os elf_getaroff.os elf_gnu_hash.os elf_scnshndx.os elf32_getchdr.os elf64_getchdr.os gelf_getchdr.os elf_compress.os elf_compress_gnu.os libelf.so libelf.so.1
+test -z "libelf.a" || rm -f libelf.a
+test -z "libelf_pic.a" || rm -f libelf_pic.a
+rm -f *.o
+rm -f *.tab.c
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -f ./.deps/elf32_checksum.Po
+rm -f ./.deps/elf32_fsize.Po
+rm -f ./.deps/elf32_getchdr.Po
+rm -f ./.deps/elf32_getehdr.Po
+rm -f ./.deps/elf32_getphdr.Po
+rm -f ./.deps/elf32_getshdr.Po
+rm -f ./.deps/elf32_newehdr.Po
+rm -f ./.deps/elf32_newphdr.Po
+rm -f ./.deps/elf32_offscn.Po
+rm -f ./.deps/elf32_updatefile.Po
+rm -f ./.deps/elf32_updatenull.Po
+rm -f ./.deps/elf32_xlatetof.Po
+rm -f ./.deps/elf32_xlatetom.Po
+rm -f ./.deps/elf64_checksum.Po
+rm -f ./.deps/elf64_fsize.Po
+rm -f ./.deps/elf64_getchdr.Po
+rm -f ./.deps/elf64_getehdr.Po
+rm -f ./.deps/elf64_getphdr.Po
+rm -f ./.deps/elf64_getshdr.Po
+rm -f ./.deps/elf64_newehdr.Po
+rm -f ./.deps/elf64_newphdr.Po
+rm -f ./.deps/elf64_offscn.Po
+rm -f ./.deps/elf64_updatefile.Po
+rm -f ./.deps/elf64_updatenull.Po
+rm -f ./.deps/elf64_xlatetof.Po
+rm -f ./.deps/elf64_xlatetom.Po
+rm -f ./.deps/elf_begin.Po
+rm -f ./.deps/elf_clone.Po
+rm -f ./.deps/elf_cntl.Po
+rm -f ./.deps/elf_compress.Po
+rm -f ./.deps/elf_compress_gnu.Po
+rm -f ./.deps/elf_end.Po
+rm -f ./.deps/elf_error.Po
+rm -f ./.deps/elf_fill.Po
+rm -f ./.deps/elf_flagdata.Po
+rm -f ./.deps/elf_flagehdr.Po
+rm -f ./.deps/elf_flagelf.Po
+rm -f ./.deps/elf_flagphdr.Po
+rm -f ./.deps/elf_flagscn.Po
+rm -f ./.deps/elf_flagshdr.Po
+rm -f ./.deps/elf_getarhdr.Po
+rm -f ./.deps/elf_getaroff.Po
+rm -f ./.deps/elf_getarsym.Po
+rm -f ./.deps/elf_getbase.Po
+rm -f ./.deps/elf_getdata.Po
+rm -f ./.deps/elf_getdata_rawchunk.Po
+rm -f ./.deps/elf_getident.Po
+rm -f ./.deps/elf_getphdrnum.Po
+rm -f ./.deps/elf_getscn.Po
+rm -f ./.deps/elf_getshdrnum.Po
+rm -f ./.deps/elf_getshdrstrndx.Po
+rm -f ./.deps/elf_gnu_hash.Po
+rm -f ./.deps/elf_hash.Po
+rm -f ./.deps/elf_kind.Po
+rm -f ./.deps/elf_memory.Po
+rm -f ./.deps/elf_ndxscn.Po
+rm -f ./.deps/elf_newdata.Po
+rm -f ./.deps/elf_newscn.Po
+rm -f ./.deps/elf_next.Po
+rm -f ./.deps/elf_nextscn.Po
+rm -f ./.deps/elf_rand.Po
+rm -f ./.deps/elf_rawdata.Po
+rm -f ./.deps/elf_rawfile.Po
+rm -f ./.deps/elf_readall.Po
+rm -f ./.deps/elf_scnshndx.Po
+rm -f ./.deps/elf_strptr.Po
+rm -f ./.deps/elf_update.Po
+rm -f ./.deps/elf_version.Po
+rm -f ./.deps/gelf_checksum.Po
+rm -f ./.deps/gelf_fsize.Po
+rm -f ./.deps/gelf_getauxv.Po
+rm -f ./.deps/gelf_getchdr.Po
+rm -f ./.deps/gelf_getclass.Po
+rm -f ./.deps/gelf_getdyn.Po
+rm -f ./.deps/gelf_getehdr.Po
+rm -f ./.deps/gelf_getlib.Po
+rm -f ./.deps/gelf_getmove.Po
+rm -f ./.deps/gelf_getnote.Po
+rm -f ./.deps/gelf_getphdr.Po
+rm -f ./.deps/gelf_getrel.Po
+rm -f ./.deps/gelf_getrela.Po
+rm -f ./.deps/gelf_getshdr.Po
+rm -f ./.deps/gelf_getsym.Po
+rm -f ./.deps/gelf_getsyminfo.Po
+rm -f ./.deps/gelf_getsymshndx.Po
+rm -f ./.deps/gelf_getverdaux.Po
+rm -f ./.deps/gelf_getverdef.Po
+rm -f ./.deps/gelf_getvernaux.Po
+rm -f ./.deps/gelf_getverneed.Po
+rm -f ./.deps/gelf_getversym.Po
+rm -f ./.deps/gelf_newehdr.Po
+rm -f ./.deps/gelf_newphdr.Po
+rm -f ./.deps/gelf_offscn.Po
+rm -f ./.deps/gelf_update_auxv.Po
+rm -f ./.deps/gelf_update_dyn.Po
+rm -f ./.deps/gelf_update_ehdr.Po
+rm -f ./.deps/gelf_update_lib.Po
+rm -f ./.deps/gelf_update_move.Po
+rm -f ./.deps/gelf_update_phdr.Po
+rm -f ./.deps/gelf_update_rel.Po
+rm -f ./.deps/gelf_update_rela.Po
+rm -f ./.deps/gelf_update_shdr.Po
+rm -f ./.deps/gelf_update_sym.Po
+rm -f ./.deps/gelf_update_syminfo.Po
+rm -f ./.deps/gelf_update_symshndx.Po
+rm -f ./.deps/gelf_update_verdaux.Po
+rm -f ./.deps/gelf_update_verdef.Po
+rm -f ./.deps/gelf_update_vernaux.Po
+rm -f ./.deps/gelf_update_verneed.Po
+rm -f ./.deps/gelf_update_versym.Po
+rm -f ./.deps/gelf_xlate.Po
+rm -f ./.deps/gelf_xlatetof.Po
+rm -f ./.deps/gelf_xlatetom.Po
+rm -f ./.deps/libelf_crc32.Po
+rm -f ./.deps/libelf_next_prime.Po
+rm -f ./.deps/nlist.Po
+rm -f Makefile
+Making distclean in libcpu
+test -z "*.gcno *.gcda i386_defs i386.mnemonics x86_64_defs x86_64.mnemonics" || rm -f *.gcno *.gcda i386_defs i386.mnemonics x86_64_defs x86_64.mnemonics
+test -z "libcpu.a libcpu_pic.a" || rm -f libcpu.a libcpu_pic.a
+test -z "" || rm -f 
+rm -f *.o
+test -z "i386_disasm.os x86_64_disasm.os bpf_disasm.os riscv_disasm.os" || rm -f i386_disasm.os x86_64_disasm.os bpf_disasm.os riscv_disasm.os
+rm -f *.tab.c
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+test . = "." || test -z "" || rm -f 
+rm -f ./.deps/bpf_disasm.Po
+rm -f ./.deps/i386_disasm.Po
+rm -f ./.deps/i386_gendis.Po
+rm -f ./.deps/i386_lex.Po
+rm -f ./.deps/i386_parse.Po
+rm -f ./.deps/riscv_disasm.Po
+rm -f ./.deps/x86_64_disasm.Po
+rm -f Makefile
+Making distclean in backends
+test -z "*.gcno *.gcda" || rm -f *.gcno *.gcda
+test -z "libebl_backends.a libebl_backends_pic.a" || rm -f libebl_backends.a libebl_backends_pic.a
+rm -f *.o
+test -z "i386_init.os i386_symbol.os i386_corenote.os i386_cfi.os i386_retval.os i386_regs.os i386_auxv.os i386_initreg.os i386_unwind.os sh_init.os sh_symbol.os sh_corenote.os sh_regs.os sh_retval.os x86_64_init.os x86_64_symbol.os x86_64_corenote.os x86_64_cfi.os x86_64_retval.os x86_64_regs.os x86_64_initreg.os x86_64_unwind.os x32_corenote.os ia64_init.os ia64_symbol.os ia64_regs.os ia64_retval.os alpha_init.os alpha_symbol.os alpha_retval.os alpha_regs.os alpha_corenote.os alpha_auxv.os arm_init.os arm_symbol.os arm_regs.os arm_corenote.os arm_auxv.os arm_attrs.os arm_retval.os arm_cfi.os arm_initreg.os arm_machineflagname.os aarch64_init.os aarch64_regs.os aarch64_symbol.os aarch64_corenote.os aarch64_retval.os aarch64_cfi.os aarch64_initreg.os aarch64_unwind.os sparc_init.os sparc_symbol.os sparc_regs.os sparc_retval.os sparc_corenote.os sparc64_corenote.os sparc_auxv.os sparc_attrs.os sparc_cfi.os sparc_initreg.os ppc_init.os ppc_symbol.os ppc_retval.os ppc_regs.os ppc_corenote.os ppc_auxv.os ppc_attrs.os ppc_cfi.os ppc_initreg.os ppc64_init.os ppc64_symbol.os ppc64_retval.os ppc64_corenote.os ppc64_unwind.os ppc64_resolve_sym.os s390_init.os s390_symbol.os s390_regs.os s390_retval.os s390_corenote.os s390x_corenote.os s390_cfi.os s390_initreg.os s390_unwind.os m68k_init.os m68k_symbol.os m68k_regs.os m68k_retval.os m68k_corenote.os m68k_cfi.os m68k_initreg.os bpf_init.os bpf_regs.os bpf_symbol.os riscv_init.os riscv_symbol.os riscv_cfi.os riscv_regs.os riscv_initreg.os riscv_corenote.os riscv64_corenote.os riscv_retval.os csky_attrs.os csky_init.os csky_symbol.os csky_cfi.os csky_regs.os csky_initreg.os csky_corenote.os loongarch_init.os loongarch_symbol.os loongarch_cfi.os loongarch_regs.os loongarch_retval.os loongarch_initreg.os loongarch_unwind.os loongarch_corenote.os arc_init.os arc_symbol.os" || rm -f i386_init.os i386_symbol.os i386_corenote.os i386_cfi.os i386_retval.os i386_regs.os i386_auxv.os i386_initreg.os i386_unwind.os sh_init.os sh_symbol.os sh_corenote.os sh_regs.os sh_retval.os x86_64_init.os x86_64_symbol.os x86_64_corenote.os x86_64_cfi.os x86_64_retval.os x86_64_regs.os x86_64_initreg.os x86_64_unwind.os x32_corenote.os ia64_init.os ia64_symbol.os ia64_regs.os ia64_retval.os alpha_init.os alpha_symbol.os alpha_retval.os alpha_regs.os alpha_corenote.os alpha_auxv.os arm_init.os arm_symbol.os arm_regs.os arm_corenote.os arm_auxv.os arm_attrs.os arm_retval.os arm_cfi.os arm_initreg.os arm_machineflagname.os aarch64_init.os aarch64_regs.os aarch64_symbol.os aarch64_corenote.os aarch64_retval.os aarch64_cfi.os aarch64_initreg.os aarch64_unwind.os sparc_init.os sparc_symbol.os sparc_regs.os sparc_retval.os sparc_corenote.os sparc64_corenote.os sparc_auxv.os sparc_attrs.os sparc_cfi.os sparc_initreg.os ppc_init.os ppc_symbol.os ppc_retval.os ppc_regs.os ppc_corenote.os ppc_auxv.os ppc_attrs.os ppc_cfi.os ppc_initreg.os ppc64_init.os ppc64_symbol.os ppc64_retval.os ppc64_corenote.os ppc64_unwind.os ppc64_resolve_sym.os s390_init.os s390_symbol.os s390_regs.os s390_retval.os s390_corenote.os s390x_corenote.os s390_cfi.os s390_initreg.os s390_unwind.os m68k_init.os m68k_symbol.os m68k_regs.os m68k_retval.os m68k_corenote.os m68k_cfi.os m68k_initreg.os bpf_init.os bpf_regs.os bpf_symbol.os riscv_init.os riscv_symbol.os riscv_cfi.os riscv_regs.os riscv_initreg.os riscv_corenote.os riscv64_corenote.os riscv_retval.os csky_attrs.os csky_init.os csky_symbol.os csky_cfi.os csky_regs.os csky_initreg.os csky_corenote.os loongarch_init.os loongarch_symbol.os loongarch_cfi.os loongarch_regs.os loongarch_retval.os loongarch_initreg.os loongarch_unwind.os loongarch_corenote.os arc_init.os arc_symbol.os
+rm -f *.tab.c
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -f ./.deps/aarch64_cfi.Po
+rm -f ./.deps/aarch64_corenote.Po
+rm -f ./.deps/aarch64_init.Po
+rm -f ./.deps/aarch64_initreg.Po
+rm -f ./.deps/aarch64_regs.Po
+rm -f ./.deps/aarch64_retval.Po
+rm -f ./.deps/aarch64_symbol.Po
+rm -f ./.deps/aarch64_unwind.Po
+rm -f ./.deps/alpha_auxv.Po
+rm -f ./.deps/alpha_corenote.Po
+rm -f ./.deps/alpha_init.Po
+rm -f ./.deps/alpha_regs.Po
+rm -f ./.deps/alpha_retval.Po
+rm -f ./.deps/alpha_symbol.Po
+rm -f ./.deps/arc_init.Po
+rm -f ./.deps/arc_symbol.Po
+rm -f ./.deps/arm_attrs.Po
+rm -f ./.deps/arm_auxv.Po
+rm -f ./.deps/arm_cfi.Po
+rm -f ./.deps/arm_corenote.Po
+rm -f ./.deps/arm_init.Po
+rm -f ./.deps/arm_initreg.Po
+rm -f ./.deps/arm_machineflagname.Po
+rm -f ./.deps/arm_regs.Po
+rm -f ./.deps/arm_retval.Po
+rm -f ./.deps/arm_symbol.Po
+rm -f ./.deps/bpf_init.Po
+rm -f ./.deps/bpf_regs.Po
+rm -f ./.deps/bpf_symbol.Po
+rm -f ./.deps/csky_attrs.Po
+rm -f ./.deps/csky_cfi.Po
+rm -f ./.deps/csky_corenote.Po
+rm -f ./.deps/csky_init.Po
+rm -f ./.deps/csky_initreg.Po
+rm -f ./.deps/csky_regs.Po
+rm -f ./.deps/csky_symbol.Po
+rm -f ./.deps/i386_auxv.Po
+rm -f ./.deps/i386_cfi.Po
+rm -f ./.deps/i386_corenote.Po
+rm -f ./.deps/i386_init.Po
+rm -f ./.deps/i386_initreg.Po
+rm -f ./.deps/i386_regs.Po
+rm -f ./.deps/i386_retval.Po
+rm -f ./.deps/i386_symbol.Po
+rm -f ./.deps/i386_unwind.Po
+rm -f ./.deps/ia64_init.Po
+rm -f ./.deps/ia64_regs.Po
+rm -f ./.deps/ia64_retval.Po
+rm -f ./.deps/ia64_symbol.Po
+rm -f ./.deps/loongarch_cfi.Po
+rm -f ./.deps/loongarch_corenote.Po
+rm -f ./.deps/loongarch_init.Po
+rm -f ./.deps/loongarch_initreg.Po
+rm -f ./.deps/loongarch_regs.Po
+rm -f ./.deps/loongarch_retval.Po
+rm -f ./.deps/loongarch_symbol.Po
+rm -f ./.deps/loongarch_unwind.Po
+rm -f ./.deps/m68k_cfi.Po
+rm -f ./.deps/m68k_corenote.Po
+rm -f ./.deps/m68k_init.Po
+rm -f ./.deps/m68k_initreg.Po
+rm -f ./.deps/m68k_regs.Po
+rm -f ./.deps/m68k_retval.Po
+rm -f ./.deps/m68k_symbol.Po
+rm -f ./.deps/ppc64_corenote.Po
+rm -f ./.deps/ppc64_init.Po
+rm -f ./.deps/ppc64_resolve_sym.Po
+rm -f ./.deps/ppc64_retval.Po
+rm -f ./.deps/ppc64_symbol.Po
+rm -f ./.deps/ppc64_unwind.Po
+rm -f ./.deps/ppc_attrs.Po
+rm -f ./.deps/ppc_auxv.Po
+rm -f ./.deps/ppc_cfi.Po
+rm -f ./.deps/ppc_corenote.Po
+rm -f ./.deps/ppc_init.Po
+rm -f ./.deps/ppc_initreg.Po
+rm -f ./.deps/ppc_regs.Po
+rm -f ./.deps/ppc_retval.Po
+rm -f ./.deps/ppc_symbol.Po
+rm -f ./.deps/riscv64_corenote.Po
+rm -f ./.deps/riscv_cfi.Po
+rm -f ./.deps/riscv_corenote.Po
+rm -f ./.deps/riscv_init.Po
+rm -f ./.deps/riscv_initreg.Po
+rm -f ./.deps/riscv_regs.Po
+rm -f ./.deps/riscv_retval.Po
+rm -f ./.deps/riscv_symbol.Po
+rm -f ./.deps/s390_cfi.Po
+rm -f ./.deps/s390_corenote.Po
+rm -f ./.deps/s390_init.Po
+rm -f ./.deps/s390_initreg.Po
+rm -f ./.deps/s390_regs.Po
+rm -f ./.deps/s390_retval.Po
+rm -f ./.deps/s390_symbol.Po
+rm -f ./.deps/s390_unwind.Po
+rm -f ./.deps/s390x_corenote.Po
+rm -f ./.deps/sh_corenote.Po
+rm -f ./.deps/sh_init.Po
+rm -f ./.deps/sh_regs.Po
+rm -f ./.deps/sh_retval.Po
+rm -f ./.deps/sh_symbol.Po
+rm -f ./.deps/sparc64_corenote.Po
+rm -f ./.deps/sparc_attrs.Po
+rm -f ./.deps/sparc_auxv.Po
+rm -f ./.deps/sparc_cfi.Po
+rm -f ./.deps/sparc_corenote.Po
+rm -f ./.deps/sparc_init.Po
+rm -f ./.deps/sparc_initreg.Po
+rm -f ./.deps/sparc_regs.Po
+rm -f ./.deps/sparc_retval.Po
+rm -f ./.deps/sparc_symbol.Po
+rm -f ./.deps/x32_corenote.Po
+rm -f ./.deps/x86_64_cfi.Po
+rm -f ./.deps/x86_64_corenote.Po
+rm -f ./.deps/x86_64_init.Po
+rm -f ./.deps/x86_64_initreg.Po
+rm -f ./.deps/x86_64_regs.Po
+rm -f ./.deps/x86_64_retval.Po
+rm -f ./.deps/x86_64_symbol.Po
+rm -f ./.deps/x86_64_unwind.Po
+rm -f Makefile
+Making distclean in libebl
+test -z "*.gcno *.gcda" || rm -f *.gcno *.gcda
+test -z "libebl.a libebl_pic.a" || rm -f libebl.a libebl_pic.a
+rm -f *.o
+test -z "eblopenbackend.os eblclosebackend.os eblreloctypename.os eblsegmenttypename.os eblsectiontypename.os eblmachineflagname.os eblsymboltypename.os ebldynamictagname.os eblsectionname.os eblsymbolbindingname.os eblbackendname.os eblosabiname.os eblmachineflagcheck.os eblmachinesectionflagcheck.os eblreloctypecheck.os eblrelocvaliduse.os eblrelocsimpletype.os ebldynamictagcheck.os eblcorenotetypename.os eblobjnotetypename.os eblcorenote.os eblobjnote.os ebldebugscnp.os eblgotpcreloccheck.os eblcopyrelocp.os eblsectionstripp.os eblelfclass.os eblelfdata.os eblelfmachine.os ebl_check_special_symbol.os eblbsspltp.os eblretval.os eblreginfo.os eblnonerelocp.os eblrelativerelocp.os eblsysvhashentrysize.os eblauxvinfo.os eblcheckobjattr.os ebl_check_special_section.os eblabicfi.os eblstother.os eblinitreg.os ebldwarftoregno.os eblnormalizepc.os eblunwind.os eblresolvesym.os eblcheckreloctargettype.os ebl_data_marker_symbol.os" || rm -f eblopenbackend.os eblclosebackend.os eblreloctypename.os eblsegmenttypename.os eblsectiontypename.os eblmachineflagname.os eblsymboltypename.os ebldynamictagname.os eblsectionname.os eblsymbolbindingname.os eblbackendname.os eblosabiname.os eblmachineflagcheck.os eblmachinesectionflagcheck.os eblreloctypecheck.os eblrelocvaliduse.os eblrelocsimpletype.os ebldynamictagcheck.os eblcorenotetypename.os eblobjnotetypename.os eblcorenote.os eblobjnote.os ebldebugscnp.os eblgotpcreloccheck.os eblcopyrelocp.os eblsectionstripp.os eblelfclass.os eblelfdata.os eblelfmachine.os ebl_check_special_symbol.os eblbsspltp.os eblretval.os eblreginfo.os eblnonerelocp.os eblrelativerelocp.os eblsysvhashentrysize.os eblauxvinfo.os eblcheckobjattr.os ebl_check_special_section.os eblabicfi.os eblstother.os eblinitreg.os ebldwarftoregno.os eblnormalizepc.os eblunwind.os eblresolvesym.os eblcheckreloctargettype.os ebl_data_marker_symbol.os
+rm -f *.tab.c
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+test . = "." || test -z "" || rm -f 
+rm -f ./.deps/ebl_check_special_section.Po
+rm -f ./.deps/ebl_check_special_symbol.Po
+rm -f ./.deps/ebl_data_marker_symbol.Po
+rm -f ./.deps/eblabicfi.Po
+rm -f ./.deps/eblauxvinfo.Po
+rm -f ./.deps/eblbackendname.Po
+rm -f ./.deps/eblbsspltp.Po
+rm -f ./.deps/eblcheckobjattr.Po
+rm -f ./.deps/eblcheckreloctargettype.Po
+rm -f ./.deps/eblclosebackend.Po
+rm -f ./.deps/eblcopyrelocp.Po
+rm -f ./.deps/eblcorenote.Po
+rm -f ./.deps/eblcorenotetypename.Po
+rm -f ./.deps/ebldebugscnp.Po
+rm -f ./.deps/ebldwarftoregno.Po
+rm -f ./.deps/ebldynamictagcheck.Po
+rm -f ./.deps/ebldynamictagname.Po
+rm -f ./.deps/eblelfclass.Po
+rm -f ./.deps/eblelfdata.Po
+rm -f ./.deps/eblelfmachine.Po
+rm -f ./.deps/eblgotpcreloccheck.Po
+rm -f ./.deps/eblinitreg.Po
+rm -f ./.deps/eblmachineflagcheck.Po
+rm -f ./.deps/eblmachineflagname.Po
+rm -f ./.deps/eblmachinesectionflagcheck.Po
+rm -f ./.deps/eblnonerelocp.Po
+rm -f ./.deps/eblnormalizepc.Po
+rm -f ./.deps/eblobjnote.Po
+rm -f ./.deps/eblobjnotetypename.Po
+rm -f ./.deps/eblopenbackend.Po
+rm -f ./.deps/eblosabiname.Po
+rm -f ./.deps/eblreginfo.Po
+rm -f ./.deps/eblrelativerelocp.Po
+rm -f ./.deps/eblrelocsimpletype.Po
+rm -f ./.deps/eblreloctypecheck.Po
+rm -f ./.deps/eblreloctypename.Po
+rm -f ./.deps/eblrelocvaliduse.Po
+rm -f ./.deps/eblresolvesym.Po
+rm -f ./.deps/eblretval.Po
+rm -f ./.deps/eblsectionname.Po
+rm -f ./.deps/eblsectionstripp.Po
+rm -f ./.deps/eblsectiontypename.Po
+rm -f ./.deps/eblsegmenttypename.Po
+rm -f ./.deps/eblstother.Po
+rm -f ./.deps/eblsymbolbindingname.Po
+rm -f ./.deps/eblsymboltypename.Po
+rm -f ./.deps/eblsysvhashentrysize.Po
+rm -f ./.deps/eblunwind.Po
+rm -f Makefile
+Making distclean in libdwelf
+test -z "*.gcno *.gcda dwelf_elf_gnu_debuglink.os dwelf_dwarf_gnu_debugaltlink.os dwelf_elf_gnu_build_id.os dwelf_scn_gnu_compressed_size.os dwelf_strtab.os dwelf_elf_begin.os dwelf_elf_e_machine_string.os" || rm -f *.gcno *.gcda dwelf_elf_gnu_debuglink.os dwelf_dwarf_gnu_debugaltlink.os dwelf_elf_gnu_build_id.os dwelf_scn_gnu_compressed_size.os dwelf_strtab.os dwelf_elf_begin.os dwelf_elf_e_machine_string.os
+test -z "libdwelf.a libdwelf_pic.a" || rm -f libdwelf.a libdwelf_pic.a
+rm -f *.o
+rm -f *.tab.c
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+test . = "." || test -z "" || rm -f 
+rm -f ./.deps/dwelf_dwarf_gnu_debugaltlink.Po
+rm -f ./.deps/dwelf_elf_begin.Po
+rm -f ./.deps/dwelf_elf_e_machine_string.Po
+rm -f ./.deps/dwelf_elf_gnu_build_id.Po
+rm -f ./.deps/dwelf_elf_gnu_debuglink.Po
+rm -f ./.deps/dwelf_scn_gnu_compressed_size.Po
+rm -f ./.deps/dwelf_strtab.Po
+rm -f Makefile
+Making distclean in libdwfl
+test -z "*.gcno *.gcda dwfl_begin.os dwfl_end.os dwfl_error.os dwfl_version.os dwfl_module.os dwfl_report_elf.os relocate.os dwfl_module_build_id.os dwfl_module_report_build_id.os derelocate.os offline.os segment.os dwfl_module_info.os dwfl_getmodules.os dwfl_getdwarf.os dwfl_module_getdwarf.os dwfl_module_getelf.os dwfl_validate_address.os argp-std.os find-debuginfo.os dwfl_build_id_find_elf.os dwfl_build_id_find_debuginfo.os linux-kernel-modules.os linux-proc-maps.os dwfl_addrmodule.os dwfl_addrdwarf.os cu.os dwfl_module_nextcu.os dwfl_nextcu.os dwfl_cumodule.os dwfl_module_addrdie.os dwfl_addrdie.os lines.os dwfl_lineinfo.os dwfl_line_comp_dir.os dwfl_linemodule.os dwfl_linecu.os dwfl_dwarf_line.os dwfl_getsrclines.os dwfl_onesrcline.os dwfl_module_getsrc.os dwfl_getsrc.os dwfl_module_getsrc_file.os libdwfl_crc32.os libdwfl_crc32_file.os elf-from-memory.os dwfl_module_dwarf_cfi.os dwfl_module_eh_cfi.os dwfl_module_getsym.os dwfl_module_addrname.os dwfl_module_addrsym.os dwfl_module_return_value_location.os dwfl_module_register_names.os dwfl_segment_report_module.os link_map.os core-file.os open.os image-header.os dwfl_frame.os frame_unwind.os dwfl_frame_pc.os linux-pid-attach.os linux-core-attach.os dwfl_frame_regs.os gzip.os debuginfod-client.os bzip2.os lzma.os zstd.os" || rm -f *.gcno *.gcda dwfl_begin.os dwfl_end.os dwfl_error.os dwfl_version.os dwfl_module.os dwfl_report_elf.os relocate.os dwfl_module_build_id.os dwfl_module_report_build_id.os derelocate.os offline.os segment.os dwfl_module_info.os dwfl_getmodules.os dwfl_getdwarf.os dwfl_module_getdwarf.os dwfl_module_getelf.os dwfl_validate_address.os argp-std.os find-debuginfo.os dwfl_build_id_find_elf.os dwfl_build_id_find_debuginfo.os linux-kernel-modules.os linux-proc-maps.os dwfl_addrmodule.os dwfl_addrdwarf.os cu.os dwfl_module_nextcu.os dwfl_nextcu.os dwfl_cumodule.os dwfl_module_addrdie.os dwfl_addrdie.os lines.os dwfl_lineinfo.os dwfl_line_comp_dir.os dwfl_linemodule.os dwfl_linecu.os dwfl_dwarf_line.os dwfl_getsrclines.os dwfl_onesrcline.os dwfl_module_getsrc.os dwfl_getsrc.os dwfl_module_getsrc_file.os libdwfl_crc32.os libdwfl_crc32_file.os elf-from-memory.os dwfl_module_dwarf_cfi.os dwfl_module_eh_cfi.os dwfl_module_getsym.os dwfl_module_addrname.os dwfl_module_addrsym.os dwfl_module_return_value_location.os dwfl_module_register_names.os dwfl_segment_report_module.os link_map.os core-file.os open.os image-header.os dwfl_frame.os frame_unwind.os dwfl_frame_pc.os linux-pid-attach.os linux-core-attach.os dwfl_frame_regs.os gzip.os debuginfod-client.os bzip2.os lzma.os zstd.os
+test -z "libdwfl.a libdwfl_pic.a" || rm -f libdwfl.a libdwfl_pic.a
+rm -f *.o
+rm -f *.tab.c
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+test . = "." || test -z "" || rm -f 
+rm -f ./.deps/argp-std.Po
+rm -f ./.deps/bzip2.Po
+rm -f ./.deps/core-file.Po
+rm -f ./.deps/cu.Po
+rm -f ./.deps/debuginfod-client.Po
+rm -f ./.deps/derelocate.Po
+rm -f ./.deps/dwfl_addrdie.Po
+rm -f ./.deps/dwfl_addrdwarf.Po
+rm -f ./.deps/dwfl_addrmodule.Po
+rm -f ./.deps/dwfl_begin.Po
+rm -f ./.deps/dwfl_build_id_find_debuginfo.Po
+rm -f ./.deps/dwfl_build_id_find_elf.Po
+rm -f ./.deps/dwfl_cumodule.Po
+rm -f ./.deps/dwfl_dwarf_line.Po
+rm -f ./.deps/dwfl_end.Po
+rm -f ./.deps/dwfl_error.Po
+rm -f ./.deps/dwfl_frame.Po
+rm -f ./.deps/dwfl_frame_pc.Po
+rm -f ./.deps/dwfl_frame_regs.Po
+rm -f ./.deps/dwfl_getdwarf.Po
+rm -f ./.deps/dwfl_getmodules.Po
+rm -f ./.deps/dwfl_getsrc.Po
+rm -f ./.deps/dwfl_getsrclines.Po
+rm -f ./.deps/dwfl_line_comp_dir.Po
+rm -f ./.deps/dwfl_linecu.Po
+rm -f ./.deps/dwfl_lineinfo.Po
+rm -f ./.deps/dwfl_linemodule.Po
+rm -f ./.deps/dwfl_module.Po
+rm -f ./.deps/dwfl_module_addrdie.Po
+rm -f ./.deps/dwfl_module_addrname.Po
+rm -f ./.deps/dwfl_module_addrsym.Po
+rm -f ./.deps/dwfl_module_build_id.Po
+rm -f ./.deps/dwfl_module_dwarf_cfi.Po
+rm -f ./.deps/dwfl_module_eh_cfi.Po
+rm -f ./.deps/dwfl_module_getdwarf.Po
+rm -f ./.deps/dwfl_module_getelf.Po
+rm -f ./.deps/dwfl_module_getsrc.Po
+rm -f ./.deps/dwfl_module_getsrc_file.Po
+rm -f ./.deps/dwfl_module_getsym.Po
+rm -f ./.deps/dwfl_module_info.Po
+rm -f ./.deps/dwfl_module_nextcu.Po
+rm -f ./.deps/dwfl_module_register_names.Po
+rm -f ./.deps/dwfl_module_report_build_id.Po
+rm -f ./.deps/dwfl_module_return_value_location.Po
+rm -f ./.deps/dwfl_nextcu.Po
+rm -f ./.deps/dwfl_onesrcline.Po
+rm -f ./.deps/dwfl_report_elf.Po
+rm -f ./.deps/dwfl_segment_report_module.Po
+rm -f ./.deps/dwfl_validate_address.Po
+rm -f ./.deps/dwfl_version.Po
+rm -f ./.deps/elf-from-memory.Po
+rm -f ./.deps/find-debuginfo.Po
+rm -f ./.deps/frame_unwind.Po
+rm -f ./.deps/gzip.Po
+rm -f ./.deps/image-header.Po
+rm -f ./.deps/libdwfl_crc32.Po
+rm -f ./.deps/libdwfl_crc32_file.Po
+rm -f ./.deps/lines.Po
+rm -f ./.deps/link_map.Po
+rm -f ./.deps/linux-core-attach.Po
+rm -f ./.deps/linux-kernel-modules.Po
+rm -f ./.deps/linux-pid-attach.Po
+rm -f ./.deps/linux-proc-maps.Po
+rm -f ./.deps/lzma.Po
+rm -f ./.deps/offline.Po
+rm -f ./.deps/open.Po
+rm -f ./.deps/relocate.Po
+rm -f ./.deps/segment.Po
+rm -f ./.deps/zstd.Po
+rm -f Makefile
+Making distclean in libdw
+ar: ../libdwfl/libdwfl.a: No such file or directory
+ar: ../libdwelf/libdwelf.a: No such file or directory
+ar: ../libebl/libebl.a: No such file or directory
+ar: ../backends/libebl_backends.a: No such file or directory
+ar: ../libcpu/libcpu.a: No such file or directory
+test -z "*.gcno *.gcda" || rm -f *.gcno *.gcda
+test -z "libdw.a" || rm -f libdw.a
+test -z "libdw_pic.a" || rm -f libdw_pic.a
+rm -f *.o
+test -z "dwarf_begin.os dwarf_begin_elf.os dwarf_end.os dwarf_getelf.os dwarf_getpubnames.os dwarf_getabbrev.os dwarf_tag.os dwarf_error.os dwarf_nextcu.os dwarf_diename.os dwarf_offdie.os dwarf_attr.os dwarf_formstring.os dwarf_abbrev_hash.os dwarf_sig8_hash.os dwarf_attr_integrate.os dwarf_hasattr_integrate.os dwarf_child.os dwarf_haschildren.os dwarf_formaddr.os dwarf_formudata.os dwarf_formsdata.os dwarf_lowpc.os dwarf_entrypc.os dwarf_haspc.os dwarf_highpc.os dwarf_ranges.os dwarf_formref.os dwarf_formref_die.os dwarf_siblingof.os dwarf_dieoffset.os dwarf_cuoffset.os dwarf_diecu.os dwarf_hasattr.os dwarf_hasform.os dwarf_whatform.os dwarf_whatattr.os dwarf_bytesize.os dwarf_arrayorder.os dwarf_bitsize.os dwarf_bitoffset.os dwarf_srclang.os dwarf_getabbrevtag.os dwarf_getabbrevcode.os dwarf_abbrevhaschildren.os dwarf_getattrcnt.os dwarf_getabbrevattr.os dwarf_getsrclines.os dwarf_getsrc_die.os dwarf_getscopes.os dwarf_getscopes_die.os dwarf_getscopevar.os dwarf_linesrc.os dwarf_lineno.os dwarf_lineaddr.os dwarf_linecol.os dwarf_linebeginstatement.os dwarf_lineendsequence.os dwarf_lineblock.os dwarf_linecontext.os dwarf_linefunctionname.os dwarf_lineprologueend.os dwarf_lineepiloguebegin.os dwarf_lineisa.os dwarf_linediscriminator.os dwarf_lineop_index.os dwarf_line_file.os dwarf_onesrcline.os dwarf_formblock.os dwarf_getsrcfiles.os dwarf_filesrc.os dwarf_getsrcdirs.os dwarf_getlocation.os dwarf_getstring.os dwarf_offabbrev.os dwarf_getaranges.os dwarf_onearange.os dwarf_getarangeinfo.os dwarf_getarange_addr.os dwarf_getattrs.os dwarf_formflag.os dwarf_getmacros.os dwarf_macro_getparamcnt.os dwarf_macro_opcode.os dwarf_macro_param.os dwarf_macro_param1.os dwarf_macro_param2.os dwarf_macro_getsrcfiles.os dwarf_addrdie.os dwarf_getfuncs.os dwarf_decl_file.os dwarf_decl_line.os dwarf_decl_column.os dwarf_func_inline.os dwarf_getsrc_file.os libdw_findcu.os libdw_form.os libdw_alloc.os libdw_visit_scopes.os dwarf_entry_breakpoints.os dwarf_next_cfi.os cie.os fde.os cfi.os frame-cache.os dwarf_frame_info.os dwarf_frame_cfa.os dwarf_frame_register.os dwarf_cfi_addrframe.os dwarf_getcfi.os dwarf_getcfi_elf.os dwarf_cfi_end.os dwarf_aggregate_size.os dwarf_getlocation_implicit_pointer.os dwarf_getlocation_die.os dwarf_getlocation_attr.os dwarf_getalt.os dwarf_setalt.os dwarf_cu_getdwarf.os dwarf_cu_die.os dwarf_peel_type.os dwarf_default_lower_bound.os dwarf_die_addr_die.os dwarf_get_units.os libdw_find_split_unit.os dwarf_cu_info.os dwarf_next_lines.os dwarf_cu_dwp_section_info.os libdw.so libdw.so.1" || rm -f dwarf_begin.os dwarf_begin_elf.os dwarf_end.os dwarf_getelf.os dwarf_getpubnames.os dwarf_getabbrev.os dwarf_tag.os dwarf_error.os dwarf_nextcu.os dwarf_diename.os dwarf_offdie.os dwarf_attr.os dwarf_formstring.os dwarf_abbrev_hash.os dwarf_sig8_hash.os dwarf_attr_integrate.os dwarf_hasattr_integrate.os dwarf_child.os dwarf_haschildren.os dwarf_formaddr.os dwarf_formudata.os dwarf_formsdata.os dwarf_lowpc.os dwarf_entrypc.os dwarf_haspc.os dwarf_highpc.os dwarf_ranges.os dwarf_formref.os dwarf_formref_die.os dwarf_siblingof.os dwarf_dieoffset.os dwarf_cuoffset.os dwarf_diecu.os dwarf_hasattr.os dwarf_hasform.os dwarf_whatform.os dwarf_whatattr.os dwarf_bytesize.os dwarf_arrayorder.os dwarf_bitsize.os dwarf_bitoffset.os dwarf_srclang.os dwarf_getabbrevtag.os dwarf_getabbrevcode.os dwarf_abbrevhaschildren.os dwarf_getattrcnt.os dwarf_getabbrevattr.os dwarf_getsrclines.os dwarf_getsrc_die.os dwarf_getscopes.os dwarf_getscopes_die.os dwarf_getscopevar.os dwarf_linesrc.os dwarf_lineno.os dwarf_lineaddr.os dwarf_linecol.os dwarf_linebeginstatement.os dwarf_lineendsequence.os dwarf_lineblock.os dwarf_linecontext.os dwarf_linefunctionname.os dwarf_lineprologueend.os dwarf_lineepiloguebegin.os dwarf_lineisa.os dwarf_linediscriminator.os dwarf_lineop_index.os dwarf_line_file.os dwarf_onesrcline.os dwarf_formblock.os dwarf_getsrcfiles.os dwarf_filesrc.os dwarf_getsrcdirs.os dwarf_getlocation.os dwarf_getstring.os dwarf_offabbrev.os dwarf_getaranges.os dwarf_onearange.os dwarf_getarangeinfo.os dwarf_getarange_addr.os dwarf_getattrs.os dwarf_formflag.os dwarf_getmacros.os dwarf_macro_getparamcnt.os dwarf_macro_opcode.os dwarf_macro_param.os dwarf_macro_param1.os dwarf_macro_param2.os dwarf_macro_getsrcfiles.os dwarf_addrdie.os dwarf_getfuncs.os dwarf_decl_file.os dwarf_decl_line.os dwarf_decl_column.os dwarf_func_inline.os dwarf_getsrc_file.os libdw_findcu.os libdw_form.os libdw_alloc.os libdw_visit_scopes.os dwarf_entry_breakpoints.os dwarf_next_cfi.os cie.os fde.os cfi.os frame-cache.os dwarf_frame_info.os dwarf_frame_cfa.os dwarf_frame_register.os dwarf_cfi_addrframe.os dwarf_getcfi.os dwarf_getcfi_elf.os dwarf_cfi_end.os dwarf_aggregate_size.os dwarf_getlocation_implicit_pointer.os dwarf_getlocation_die.os dwarf_getlocation_attr.os dwarf_getalt.os dwarf_setalt.os dwarf_cu_getdwarf.os dwarf_cu_die.os dwarf_peel_type.os dwarf_default_lower_bound.os dwarf_die_addr_die.os dwarf_get_units.os libdw_find_split_unit.os dwarf_cu_info.os dwarf_next_lines.os dwarf_cu_dwp_section_info.os libdw.so libdw.so.1
+rm -f *.tab.c
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -f ./.deps/cfi.Po
+rm -f ./.deps/cie.Po
+rm -f ./.deps/dwarf_abbrev_hash.Po
+rm -f ./.deps/dwarf_abbrevhaschildren.Po
+rm -f ./.deps/dwarf_addrdie.Po
+rm -f ./.deps/dwarf_aggregate_size.Po
+rm -f ./.deps/dwarf_arrayorder.Po
+rm -f ./.deps/dwarf_attr.Po
+rm -f ./.deps/dwarf_attr_integrate.Po
+rm -f ./.deps/dwarf_begin.Po
+rm -f ./.deps/dwarf_begin_elf.Po
+rm -f ./.deps/dwarf_bitoffset.Po
+rm -f ./.deps/dwarf_bitsize.Po
+rm -f ./.deps/dwarf_bytesize.Po
+rm -f ./.deps/dwarf_cfi_addrframe.Po
+rm -f ./.deps/dwarf_cfi_end.Po
+rm -f ./.deps/dwarf_child.Po
+rm -f ./.deps/dwarf_cu_die.Po
+rm -f ./.deps/dwarf_cu_dwp_section_info.Po
+rm -f ./.deps/dwarf_cu_getdwarf.Po
+rm -f ./.deps/dwarf_cu_info.Po
+rm -f ./.deps/dwarf_cuoffset.Po
+rm -f ./.deps/dwarf_decl_column.Po
+rm -f ./.deps/dwarf_decl_file.Po
+rm -f ./.deps/dwarf_decl_line.Po
+rm -f ./.deps/dwarf_default_lower_bound.Po
+rm -f ./.deps/dwarf_die_addr_die.Po
+rm -f ./.deps/dwarf_diecu.Po
+rm -f ./.deps/dwarf_diename.Po
+rm -f ./.deps/dwarf_dieoffset.Po
+rm -f ./.deps/dwarf_end.Po
+rm -f ./.deps/dwarf_entry_breakpoints.Po
+rm -f ./.deps/dwarf_entrypc.Po
+rm -f ./.deps/dwarf_error.Po
+rm -f ./.deps/dwarf_filesrc.Po
+rm -f ./.deps/dwarf_formaddr.Po
+rm -f ./.deps/dwarf_formblock.Po
+rm -f ./.deps/dwarf_formflag.Po
+rm -f ./.deps/dwarf_formref.Po
+rm -f ./.deps/dwarf_formref_die.Po
+rm -f ./.deps/dwarf_formsdata.Po
+rm -f ./.deps/dwarf_formstring.Po
+rm -f ./.deps/dwarf_formudata.Po
+rm -f ./.deps/dwarf_frame_cfa.Po
+rm -f ./.deps/dwarf_frame_info.Po
+rm -f ./.deps/dwarf_frame_register.Po
+rm -f ./.deps/dwarf_func_inline.Po
+rm -f ./.deps/dwarf_get_units.Po
+rm -f ./.deps/dwarf_getabbrev.Po
+rm -f ./.deps/dwarf_getabbrevattr.Po
+rm -f ./.deps/dwarf_getabbrevcode.Po
+rm -f ./.deps/dwarf_getabbrevtag.Po
+rm -f ./.deps/dwarf_getalt.Po
+rm -f ./.deps/dwarf_getarange_addr.Po
+rm -f ./.deps/dwarf_getarangeinfo.Po
+rm -f ./.deps/dwarf_getaranges.Po
+rm -f ./.deps/dwarf_getattrcnt.Po
+rm -f ./.deps/dwarf_getattrs.Po
+rm -f ./.deps/dwarf_getcfi.Po
+rm -f ./.deps/dwarf_getcfi_elf.Po
+rm -f ./.deps/dwarf_getelf.Po
+rm -f ./.deps/dwarf_getfuncs.Po
+rm -f ./.deps/dwarf_getlocation.Po
+rm -f ./.deps/dwarf_getlocation_attr.Po
+rm -f ./.deps/dwarf_getlocation_die.Po
+rm -f ./.deps/dwarf_getlocation_implicit_pointer.Po
+rm -f ./.deps/dwarf_getmacros.Po
+rm -f ./.deps/dwarf_getpubnames.Po
+rm -f ./.deps/dwarf_getscopes.Po
+rm -f ./.deps/dwarf_getscopes_die.Po
+rm -f ./.deps/dwarf_getscopevar.Po
+rm -f ./.deps/dwarf_getsrc_die.Po
+rm -f ./.deps/dwarf_getsrc_file.Po
+rm -f ./.deps/dwarf_getsrcdirs.Po
+rm -f ./.deps/dwarf_getsrcfiles.Po
+rm -f ./.deps/dwarf_getsrclines.Po
+rm -f ./.deps/dwarf_getstring.Po
+rm -f ./.deps/dwarf_hasattr.Po
+rm -f ./.deps/dwarf_hasattr_integrate.Po
+rm -f ./.deps/dwarf_haschildren.Po
+rm -f ./.deps/dwarf_hasform.Po
+rm -f ./.deps/dwarf_haspc.Po
+rm -f ./.deps/dwarf_highpc.Po
+rm -f ./.deps/dwarf_line_file.Po
+rm -f ./.deps/dwarf_lineaddr.Po
+rm -f ./.deps/dwarf_linebeginstatement.Po
+rm -f ./.deps/dwarf_lineblock.Po
+rm -f ./.deps/dwarf_linecol.Po
+rm -f ./.deps/dwarf_linecontext.Po
+rm -f ./.deps/dwarf_linediscriminator.Po
+rm -f ./.deps/dwarf_lineendsequence.Po
+rm -f ./.deps/dwarf_lineepiloguebegin.Po
+rm -f ./.deps/dwarf_linefunctionname.Po
+rm -f ./.deps/dwarf_lineisa.Po
+rm -f ./.deps/dwarf_lineno.Po
+rm -f ./.deps/dwarf_lineop_index.Po
+rm -f ./.deps/dwarf_lineprologueend.Po
+rm -f ./.deps/dwarf_linesrc.Po
+rm -f ./.deps/dwarf_lowpc.Po
+rm -f ./.deps/dwarf_macro_getparamcnt.Po
+rm -f ./.deps/dwarf_macro_getsrcfiles.Po
+rm -f ./.deps/dwarf_macro_opcode.Po
+rm -f ./.deps/dwarf_macro_param.Po
+rm -f ./.deps/dwarf_macro_param1.Po
+rm -f ./.deps/dwarf_macro_param2.Po
+rm -f ./.deps/dwarf_next_cfi.Po
+rm -f ./.deps/dwarf_next_lines.Po
+rm -f ./.deps/dwarf_nextcu.Po
+rm -f ./.deps/dwarf_offabbrev.Po
+rm -f ./.deps/dwarf_offdie.Po
+rm -f ./.deps/dwarf_onearange.Po
+rm -f ./.deps/dwarf_onesrcline.Po
+rm -f ./.deps/dwarf_peel_type.Po
+rm -f ./.deps/dwarf_ranges.Po
+rm -f ./.deps/dwarf_setalt.Po
+rm -f ./.deps/dwarf_siblingof.Po
+rm -f ./.deps/dwarf_sig8_hash.Po
+rm -f ./.deps/dwarf_srclang.Po
+rm -f ./.deps/dwarf_tag.Po
+rm -f ./.deps/dwarf_whatattr.Po
+rm -f ./.deps/dwarf_whatform.Po
+rm -f ./.deps/fde.Po
+rm -f ./.deps/frame-cache.Po
+rm -f ./.deps/libdw_alloc.Po
+rm -f ./.deps/libdw_find_split_unit.Po
+rm -f ./.deps/libdw_findcu.Po
+rm -f ./.deps/libdw_form.Po
+rm -f ./.deps/libdw_visit_scopes.Po
+rm -f Makefile
+Making distclean in libasm
+test -z "*.gcno *.gcda asm_begin.os asm_abort.os asm_end.os asm_error.os asm_getelf.os asm_newscn.os asm_newscn_ingrp.os asm_newsubscn.os asm_newsym.os asm_newcomsym.os asm_newabssym.os asm_newscngrp.os asm_scngrp_newsignature.os asm_fill.os asm_align.os asm_addstrz.os asm_addint8.os asm_adduint8.os asm_addint16.os asm_adduint16.os asm_addint32.os asm_adduint32.os asm_addint64.os asm_adduint64.os asm_adduleb128.os asm_addsleb128.os disasm_begin.os disasm_cb.os disasm_end.os disasm_str.os symbolhash.os libasm.so libasm.so.1" || rm -f *.gcno *.gcda asm_begin.os asm_abort.os asm_end.os asm_error.os asm_getelf.os asm_newscn.os asm_newscn_ingrp.os asm_newsubscn.os asm_newsym.os asm_newcomsym.os asm_newabssym.os asm_newscngrp.os asm_scngrp_newsignature.os asm_fill.os asm_align.os asm_addstrz.os asm_addint8.os asm_adduint8.os asm_addint16.os asm_adduint16.os asm_addint32.os asm_adduint32.os asm_addint64.os asm_adduint64.os asm_adduleb128.os asm_addsleb128.os disasm_begin.os disasm_cb.os disasm_end.os disasm_str.os symbolhash.os libasm.so libasm.so.1
+test -z "libasm.a" || rm -f libasm.a
+test -z "libasm_pic.a" || rm -f libasm_pic.a
+rm -f *.o
+rm -f *.tab.c
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+test . = "." || test -z "" || rm -f 
+rm -f ./.deps/asm_abort.Po
+rm -f ./.deps/asm_addint16.Po
+rm -f ./.deps/asm_addint32.Po
+rm -f ./.deps/asm_addint64.Po
+rm -f ./.deps/asm_addint8.Po
+rm -f ./.deps/asm_addsleb128.Po
+rm -f ./.deps/asm_addstrz.Po
+rm -f ./.deps/asm_adduint16.Po
+rm -f ./.deps/asm_adduint32.Po
+rm -f ./.deps/asm_adduint64.Po
+rm -f ./.deps/asm_adduint8.Po
+rm -f ./.deps/asm_adduleb128.Po
+rm -f ./.deps/asm_align.Po
+rm -f ./.deps/asm_begin.Po
+rm -f ./.deps/asm_end.Po
+rm -f ./.deps/asm_error.Po
+rm -f ./.deps/asm_fill.Po
+rm -f ./.deps/asm_getelf.Po
+rm -f ./.deps/asm_newabssym.Po
+rm -f ./.deps/asm_newcomsym.Po
+rm -f ./.deps/asm_newscn.Po
+rm -f ./.deps/asm_newscn_ingrp.Po
+rm -f ./.deps/asm_newscngrp.Po
+rm -f ./.deps/asm_newsubscn.Po
+rm -f ./.deps/asm_newsym.Po
+rm -f ./.deps/asm_scngrp_newsignature.Po
+rm -f ./.deps/disasm_begin.Po
+rm -f ./.deps/disasm_cb.Po
+rm -f ./.deps/disasm_end.Po
+rm -f ./.deps/disasm_str.Po
+rm -f ./.deps/symbolhash.Po
+rm -f Makefile
+Making distclean in debuginfod
+test -z " debuginfod-find" || rm -f  debuginfod-find
+test -z "*.gcno *.gcda debuginfod-client.os libdebuginfod.so" || rm -f *.gcno *.gcda debuginfod-client.os libdebuginfod.so
+test -z "libdebuginfod.a libdebuginfod_pic.a" || rm -f libdebuginfod.a libdebuginfod_pic.a
+rm -f *.o
+test -z "debuginfod-client.os libdebuginfod.so.1" || rm -f debuginfod-client.os libdebuginfod.so.1
+rm -f *.tab.c
+test -z "debuginfod.h" || rm -f debuginfod.h
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+test . = "." || test -z "" || rm -f 
+rm -f ./.deps/debuginfod-client.Po
+rm -f ./.deps/debuginfod-find.Po
+rm -f ./.deps/debuginfod.Po
+rm -f Makefile
+Making distclean in src
+test -z "readelf nm size strip elflint findtextrel addr2line elfcmp objdump ranlib strings ar unstrip stack elfcompress elfclassify srcfiles" || rm -f readelf nm size strip elflint findtextrel addr2line elfcmp objdump ranlib strings ar unstrip stack elfcompress elfclassify srcfiles
+test -z "*.gcno *.gcda make-debug-archive *.gconv" || rm -f *.gcno *.gcda make-debug-archive *.gconv
+test -z "libar.a" || rm -f libar.a
+rm -f *.o
+rm -f *.tab.c
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+test . = "." || test -z "" || rm -f 
+rm -f ./.deps/addr2line.Po
+rm -f ./.deps/ar.Po
+rm -f ./.deps/arlib-argp.Po
+rm -f ./.deps/arlib.Po
+rm -f ./.deps/arlib2.Po
+rm -f ./.deps/elfclassify.Po
+rm -f ./.deps/elfcmp.Po
+rm -f ./.deps/elfcompress.Po
+rm -f ./.deps/elflint.Po
+rm -f ./.deps/findtextrel.Po
+rm -f ./.deps/nm.Po
+rm -f ./.deps/objdump.Po
+rm -f ./.deps/ranlib.Po
+rm -f ./.deps/readelf.Po
+rm -f ./.deps/size.Po
+rm -f ./.deps/srcfiles.Po
+rm -f ./.deps/stack.Po
+rm -f ./.deps/strings.Po
+rm -f ./.deps/strip.Po
+rm -f ./.deps/unstrip.Po
+rm -f Makefile
+Making distclean in po
+rm -f *.insert-header
+rm -f remove-potcdate.sed
+rm -f ./stamp-poT
+rm -f core core.* elfutils.po elfutils.1po elfutils.2po *.new.po
+rm -fr *.o
+rm -f Makefile Makefile.in POTFILES
+Making distclean in doc
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f Makefile
+Making distclean in tests
+test -z "arextract arsymtest newfile saridx scnnames sectiondump showptable update1 update2 update3 update4 test-nlist show-die-info get-files next-files get-lines next-lines get-pubnames get-aranges allfcts line2addr addrscopes funcscopes show-abbrev hash newscn ecp dwflmodtest find-prologues funcretval allregs rdwrmmap dwfl-bug-addr-overflow arls dwfl-bug-fd-leak dwfl-addr-sect dwfl-bug-report early-offscn dwfl-bug-getmodules dwarf-getmacros dwarf-ranges addrcfi dwfl-core-noncontig dwarfcfi test-flag-nobits dwarf-getstring rerequest_tag alldts typeiter typeiter2 low_high_pc test-elf_cntl_gelf_getshdr dwflsyms dwfllines dwfl-report-elf-align dwfl-report-segment-contiguous dwfl-report-offline-memory varlocs backtrace backtrace-child backtrace-data backtrace-dwarf debuglink debugaltlink buildid deleted deleted-lib.so aggregate_size peel_type vdsosyms getsrc_die strptr newdata elfstrtab dwfl-proc-attach elfshphehdr elfstrmerge dwelfgnucompressed elfgetchdr elfgetzdata elfputzdata zstrptr emptyfile vendorelf fillfile dwarf_default_lower_bound dwarf-die-addr-die get-units-invalid get-units-split attr-integrate-skel all-dwarf-ranges unit-info next_cfi elfcopy addsections xlate_notes elfrdwrnop dwelf_elf_e_machine_string getphdrnum leb128 read_unaligned msg_tst system-elf-libelf-test system-elf-gelf-test nvidia_extended_linemap_libdw elf-print-reloc-syms cu-dwp-section-info declfiles asm-tst1 asm-tst2 asm-tst3 asm-tst4 asm-tst5 asm-tst6 asm-tst7 asm-tst8 asm-tst9 backtrace-child-biarch  funcretval_test++11" || rm -f arextract arsymtest newfile saridx scnnames sectiondump showptable update1 update2 update3 update4 test-nlist show-die-info get-files next-files get-lines next-lines get-pubnames get-aranges allfcts line2addr addrscopes funcscopes show-abbrev hash newscn ecp dwflmodtest find-prologues funcretval allregs rdwrmmap dwfl-bug-addr-overflow arls dwfl-bug-fd-leak dwfl-addr-sect dwfl-bug-report early-offscn dwfl-bug-getmodules dwarf-getmacros dwarf-ranges addrcfi dwfl-core-noncontig dwarfcfi test-flag-nobits dwarf-getstring rerequest_tag alldts typeiter typeiter2 low_high_pc test-elf_cntl_gelf_getshdr dwflsyms dwfllines dwfl-report-elf-align dwfl-report-segment-contiguous dwfl-report-offline-memory varlocs backtrace backtrace-child backtrace-data backtrace-dwarf debuglink debugaltlink buildid deleted deleted-lib.so aggregate_size peel_type vdsosyms getsrc_die strptr newdata elfstrtab dwfl-proc-attach elfshphehdr elfstrmerge dwelfgnucompressed elfgetchdr elfgetzdata elfputzdata zstrptr emptyfile vendorelf fillfile dwarf_default_lower_bound dwarf-die-addr-die get-units-invalid get-units-split attr-integrate-skel all-dwarf-ranges unit-info next_cfi elfcopy addsections xlate_notes elfrdwrnop dwelf_elf_e_machine_string getphdrnum leb128 read_unaligned msg_tst system-elf-libelf-test system-elf-gelf-test nvidia_extended_linemap_libdw elf-print-reloc-syms cu-dwp-section-info declfiles asm-tst1 asm-tst2 asm-tst3 asm-tst4 asm-tst5 asm-tst6 asm-tst7 asm-tst8 asm-tst9 backtrace-child-biarch  funcretval_test++11
+test -z "*.gcno *.gcda libelf.h core-dump-backtrace.lock" || rm -f *.gcno *.gcda libelf.h core-dump-backtrace.lock
+rm -f *.o
+test -z "run-arextract.sh.log run-arsymtest.sh.log run-ar.sh.log newfile.log test-nlist.log run-ar-N.sh.log update1.log update2.log update3.log update4.log run-show-die-info.sh.log run-get-files.sh.log run-get-lines.sh.log run-next-files.sh.log run-next-lines.sh.log run-get-pubnames.sh.log run-get-aranges.sh.log run-allfcts.sh.log run-show-abbrev.sh.log run-line2addr.sh.log hash.log run-large-elf-file.sh.log newscn.log run-strip-test.sh.log run-strip-test2.sh.log run-strip-test3.sh.log run-strip-test4.sh.log run-strip-test5.sh.log run-strip-test6.sh.log run-strip-test7.sh.log run-strip-test8.sh.log run-strip-test9.sh.log run-strip-test10.sh.log run-strip-test11.sh.log run-strip-test12.sh.log run-strip-nothing.sh.log run-strip-g.sh.log run-annobingroup.sh.log run-strip-groups.sh.log run-strip-strmerge.sh.log run-strip-reloc-ko.sh.log run-strip-reloc-self.sh.log run-strip-reloc-ppc64.sh.log run-strip-nobitsalign.sh.log run-strip-remove-keep.sh.log run-unstrip-test.sh.log run-unstrip-test2.sh.log run-unstrip-test3.sh.log run-unstrip-test4.sh.log run-unstrip-M.sh.log run-elfstrmerge-test.sh.log run-ecp-test.sh.log run-ecp-test2.sh.log run-alldts.sh.log run-elflint-test.sh.log run-elflint-self.sh.log run-ranlib-test.sh.log run-ranlib-test2.sh.log run-ranlib-test3.sh.log run-ranlib-test4.sh.log run-addrscopes.sh.log run-strings-test.sh.log run-funcscopes.sh.log run-find-prologues.sh.log run-allregs.sh.log run-addrcfi.sh.log run-dwarfcfi.sh.log run-nm-syms.sh.log run-nm-self.sh.log run-readelf-self.sh.log run-readelf-info-plus.sh.log run-srcfiles-self.sh.log run-readelf-compressed.sh.log run-readelf-const-values.sh.log run-varlocs-self.sh.log run-exprlocs-self.sh.log run-readelf-test1.sh.log run-readelf-test2.sh.log run-readelf-test3.sh.log run-readelf-test4.sh.log run-readelf-twofiles.sh.log run-readelf-macro.sh.log run-readelf-loc.sh.log run-readelf-ranges.sh.log run-readelf-aranges.sh.log run-readelf-line.sh.log run-readelf-z.sh.log run-readelf-frames.sh.log run-readelf-n.sh.log run-retain.sh.log run-native-test.sh.log run-bug1-test.sh.log run-debuglink.sh.log run-debugaltlink.sh.log run-buildid.sh.log dwfl-bug-addr-overflow.log run-addrname-test.sh.log dwfl-bug-fd-leak.log dwfl-bug-report.log dwfl-report-segment-contiguous.log run-dwfl-bug-offline-rel.sh.log run-dwfl-addr-sect.sh.log run-disasm-x86.sh.log run-disasm-x86-64.sh.log run-early-offscn.sh.log run-dwarf-getmacros.sh.log run-dwarf-ranges.sh.log run-test-flag-nobits.sh.log run-prelink-addr-test.sh.log run-dwarf-getstring.sh.log run-rerequest_tag.sh.log run-typeiter.sh.log run-readelf-d.sh.log run-readelf-gdb_index.sh.log run-unstrip-n.sh.log run-low_high_pc.sh.log run-macro-test.sh.log run-elf_cntl_gelf_getshdr.sh.log run-test-archive64.sh.log run-readelf-vmcoreinfo.sh.log run-readelf-mixed-corenote.sh.log run-dwfllines.sh.log run-readelf-variant.sh.log run-readelf-fat-lto.sh.log run-dwfl-report-elf-align.sh.log run-addr2line-test.sh.log run-dwfl-report-offline-memory.sh.log run-addr2line-C-test.sh.log run-addr2line-i-test.sh.log run-addr2line-i-lex-test.sh.log run-addr2line-i-demangle-test.sh.log run-addr2line-alt-debugpath.sh.log run-varlocs.sh.log run-exprlocs.sh.log run-varlocs-vars.sh.log run-funcretval.sh.log run-backtrace-native.sh.log run-backtrace-data.sh.log run-backtrace-dwarf.sh.log run-backtrace-native-biarch.sh.log run-backtrace-native-core.sh.log run-backtrace-native-core-biarch.sh.log run-backtrace-core-x86_64.sh.log run-backtrace-fp-core-x86_64.sh.log run-backtrace-fp-core-aarch64.sh.log run-backtrace-fp-core-ppc64le.sh.log run-backtrace-core-x32.sh.log run-backtrace-core-i386.sh.log run-backtrace-fp-core-i386.sh.log run-backtrace-core-ppc.sh.log run-backtrace-core-s390x.sh.log run-backtrace-core-s390.sh.log run-backtrace-core-aarch64.sh.log run-backtrace-core-sparc.sh.log run-backtrace-demangle.sh.log run-stack-d-test.sh.log run-stack-i-test.sh.log run-stack-demangled-test.sh.log run-readelf-zx.sh.log run-readelf-zp.sh.log run-readelf-arm-flags.sh.log run-readelf-addr.sh.log run-readelf-str.sh.log run-readelf-multi-noline.sh.log run-readelf-types.sh.log run-readelf-dwz-multi.sh.log run-allfcts-multi.sh.log run-deleted.sh.log run-linkmap-cut.sh.log run-aggregate-size.sh.log run-peel-type.sh.log vdsosyms.log run-readelf-A.sh.log run-getsrc-die.sh.log run-strptr.sh.log newdata.log elfstrtab.log dwfl-proc-attach.log elfshphehdr.log run-lfs-symbols.sh.log run-dwelfgnucompressed.sh.log run-elfgetchdr.sh.log run-elfgetzdata.sh.log run-elfputzdata.sh.log run-zstrptr.sh.log run-compress-test.sh.log run-readelf-zdebug.sh.log run-readelf-zdebug-rel.sh.log emptyfile.log vendorelf.log fillfile.log dwarf_default_lower_bound.log run-dwarf-die-addr-die.sh.log run-get-units-invalid.sh.log run-get-units-split.sh.log run-attr-integrate-skel.sh.log run-all-dwarf-ranges.sh.log run-unit-info.sh.log run-reloc-bpf.sh.log run-next-cfi.sh.log run-next-cfi-self.sh.log run-reverse-sections.sh.log run-reverse-sections-self.sh.log run-copyadd-sections.sh.log run-copymany-be32.sh.log run-copymany-le32.sh.log run-copymany-be64.sh.log run-copymany-le64.sh.log run-typeiter-many.sh.log run-strip-test-many.sh.log run-strip-version.sh.log run-xlate-note.sh.log run-readelf-discr.sh.log run-dwelf_elf_e_machine_string.sh.log run-elfclassify.sh.log run-elfclassify-self.sh.log run-disasm-riscv64.sh.log run-pt_gnu_prop-tests.sh.log run-getphdrnum.sh.log run-test-includes.sh.log leb128.log read_unaligned.log msg_tst.log system-elf-libelf-test.log system-elf-gelf-test.log asm-tst1.log asm-tst2.log asm-tst3.log asm-tst4.log asm-tst5.log asm-tst6.log asm-tst7.log asm-tst8.log asm-tst9.log run-disasm-bpf.sh.log run-low_high_pc-dw-form-indirect.sh.log run-nvidia-extended-linemap-libdw.sh.log run-nvidia-extended-linemap-readelf.sh.log run-readelf-dw-form-indirect.sh.log run-strip-largealign.sh.log run-readelf-Dd.sh.log run-dwfl-core-noncontig.sh.log run-cu-dwp-section-info.sh.log run-declfiles.sh.log run-readelf-s.sh.log run-dwflsyms.sh.log run-readelf-compressed-zstd.sh.log run-funcretval++11.sh.log" || rm -f run-arextract.sh.log run-arsymtest.sh.log run-ar.sh.log newfile.log test-nlist.log run-ar-N.sh.log update1.log update2.log update3.log update4.log run-show-die-info.sh.log run-get-files.sh.log run-get-lines.sh.log run-next-files.sh.log run-next-lines.sh.log run-get-pubnames.sh.log run-get-aranges.sh.log run-allfcts.sh.log run-show-abbrev.sh.log run-line2addr.sh.log hash.log run-large-elf-file.sh.log newscn.log run-strip-test.sh.log run-strip-test2.sh.log run-strip-test3.sh.log run-strip-test4.sh.log run-strip-test5.sh.log run-strip-test6.sh.log run-strip-test7.sh.log run-strip-test8.sh.log run-strip-test9.sh.log run-strip-test10.sh.log run-strip-test11.sh.log run-strip-test12.sh.log run-strip-nothing.sh.log run-strip-g.sh.log run-annobingroup.sh.log run-strip-groups.sh.log run-strip-strmerge.sh.log run-strip-reloc-ko.sh.log run-strip-reloc-self.sh.log run-strip-reloc-ppc64.sh.log run-strip-nobitsalign.sh.log run-strip-remove-keep.sh.log run-unstrip-test.sh.log run-unstrip-test2.sh.log run-unstrip-test3.sh.log run-unstrip-test4.sh.log run-unstrip-M.sh.log run-elfstrmerge-test.sh.log run-ecp-test.sh.log run-ecp-test2.sh.log run-alldts.sh.log run-elflint-test.sh.log run-elflint-self.sh.log run-ranlib-test.sh.log run-ranlib-test2.sh.log run-ranlib-test3.sh.log run-ranlib-test4.sh.log run-addrscopes.sh.log run-strings-test.sh.log run-funcscopes.sh.log run-find-prologues.sh.log run-allregs.sh.log run-addrcfi.sh.log run-dwarfcfi.sh.log run-nm-syms.sh.log run-nm-self.sh.log run-readelf-self.sh.log run-readelf-info-plus.sh.log run-srcfiles-self.sh.log run-readelf-compressed.sh.log run-readelf-const-values.sh.log run-varlocs-self.sh.log run-exprlocs-self.sh.log run-readelf-test1.sh.log run-readelf-test2.sh.log run-readelf-test3.sh.log run-readelf-test4.sh.log run-readelf-twofiles.sh.log run-readelf-macro.sh.log run-readelf-loc.sh.log run-readelf-ranges.sh.log run-readelf-aranges.sh.log run-readelf-line.sh.log run-readelf-z.sh.log run-readelf-frames.sh.log run-readelf-n.sh.log run-retain.sh.log run-native-test.sh.log run-bug1-test.sh.log run-debuglink.sh.log run-debugaltlink.sh.log run-buildid.sh.log dwfl-bug-addr-overflow.log run-addrname-test.sh.log dwfl-bug-fd-leak.log dwfl-bug-report.log dwfl-report-segment-contiguous.log run-dwfl-bug-offline-rel.sh.log run-dwfl-addr-sect.sh.log run-disasm-x86.sh.log run-disasm-x86-64.sh.log run-early-offscn.sh.log run-dwarf-getmacros.sh.log run-dwarf-ranges.sh.log run-test-flag-nobits.sh.log run-prelink-addr-test.sh.log run-dwarf-getstring.sh.log run-rerequest_tag.sh.log run-typeiter.sh.log run-readelf-d.sh.log run-readelf-gdb_index.sh.log run-unstrip-n.sh.log run-low_high_pc.sh.log run-macro-test.sh.log run-elf_cntl_gelf_getshdr.sh.log run-test-archive64.sh.log run-readelf-vmcoreinfo.sh.log run-readelf-mixed-corenote.sh.log run-dwfllines.sh.log run-readelf-variant.sh.log run-readelf-fat-lto.sh.log run-dwfl-report-elf-align.sh.log run-addr2line-test.sh.log run-dwfl-report-offline-memory.sh.log run-addr2line-C-test.sh.log run-addr2line-i-test.sh.log run-addr2line-i-lex-test.sh.log run-addr2line-i-demangle-test.sh.log run-addr2line-alt-debugpath.sh.log run-varlocs.sh.log run-exprlocs.sh.log run-varlocs-vars.sh.log run-funcretval.sh.log run-backtrace-native.sh.log run-backtrace-data.sh.log run-backtrace-dwarf.sh.log run-backtrace-native-biarch.sh.log run-backtrace-native-core.sh.log run-backtrace-native-core-biarch.sh.log run-backtrace-core-x86_64.sh.log run-backtrace-fp-core-x86_64.sh.log run-backtrace-fp-core-aarch64.sh.log run-backtrace-fp-core-ppc64le.sh.log run-backtrace-core-x32.sh.log run-backtrace-core-i386.sh.log run-backtrace-fp-core-i386.sh.log run-backtrace-core-ppc.sh.log run-backtrace-core-s390x.sh.log run-backtrace-core-s390.sh.log run-backtrace-core-aarch64.sh.log run-backtrace-core-sparc.sh.log run-backtrace-demangle.sh.log run-stack-d-test.sh.log run-stack-i-test.sh.log run-stack-demangled-test.sh.log run-readelf-zx.sh.log run-readelf-zp.sh.log run-readelf-arm-flags.sh.log run-readelf-addr.sh.log run-readelf-str.sh.log run-readelf-multi-noline.sh.log run-readelf-types.sh.log run-readelf-dwz-multi.sh.log run-allfcts-multi.sh.log run-deleted.sh.log run-linkmap-cut.sh.log run-aggregate-size.sh.log run-peel-type.sh.log vdsosyms.log run-readelf-A.sh.log run-getsrc-die.sh.log run-strptr.sh.log newdata.log elfstrtab.log dwfl-proc-attach.log elfshphehdr.log run-lfs-symbols.sh.log run-dwelfgnucompressed.sh.log run-elfgetchdr.sh.log run-elfgetzdata.sh.log run-elfputzdata.sh.log run-zstrptr.sh.log run-compress-test.sh.log run-readelf-zdebug.sh.log run-readelf-zdebug-rel.sh.log emptyfile.log vendorelf.log fillfile.log dwarf_default_lower_bound.log run-dwarf-die-addr-die.sh.log run-get-units-invalid.sh.log run-get-units-split.sh.log run-attr-integrate-skel.sh.log run-all-dwarf-ranges.sh.log run-unit-info.sh.log run-reloc-bpf.sh.log run-next-cfi.sh.log run-next-cfi-self.sh.log run-reverse-sections.sh.log run-reverse-sections-self.sh.log run-copyadd-sections.sh.log run-copymany-be32.sh.log run-copymany-le32.sh.log run-copymany-be64.sh.log run-copymany-le64.sh.log run-typeiter-many.sh.log run-strip-test-many.sh.log run-strip-version.sh.log run-xlate-note.sh.log run-readelf-discr.sh.log run-dwelf_elf_e_machine_string.sh.log run-elfclassify.sh.log run-elfclassify-self.sh.log run-disasm-riscv64.sh.log run-pt_gnu_prop-tests.sh.log run-getphdrnum.sh.log run-test-includes.sh.log leb128.log read_unaligned.log msg_tst.log system-elf-libelf-test.log system-elf-gelf-test.log asm-tst1.log asm-tst2.log asm-tst3.log asm-tst4.log asm-tst5.log asm-tst6.log asm-tst7.log asm-tst8.log asm-tst9.log run-disasm-bpf.sh.log run-low_high_pc-dw-form-indirect.sh.log run-nvidia-extended-linemap-libdw.sh.log run-nvidia-extended-linemap-readelf.sh.log run-readelf-dw-form-indirect.sh.log run-strip-largealign.sh.log run-readelf-Dd.sh.log run-dwfl-core-noncontig.sh.log run-cu-dwp-section-info.sh.log run-declfiles.sh.log run-readelf-s.sh.log run-dwflsyms.sh.log run-readelf-compressed-zstd.sh.log run-funcretval++11.sh.log
+rm -f *.tab.c
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+test . = "." || test -z "" || rm -f 
+test -z "run-arextract.sh.trs run-arsymtest.sh.trs run-ar.sh.trs newfile.trs test-nlist.trs run-ar-N.sh.trs update1.trs update2.trs update3.trs update4.trs run-show-die-info.sh.trs run-get-files.sh.trs run-get-lines.sh.trs run-next-files.sh.trs run-next-lines.sh.trs run-get-pubnames.sh.trs run-get-aranges.sh.trs run-allfcts.sh.trs run-show-abbrev.sh.trs run-line2addr.sh.trs hash.trs run-large-elf-file.sh.trs newscn.trs run-strip-test.sh.trs run-strip-test2.sh.trs run-strip-test3.sh.trs run-strip-test4.sh.trs run-strip-test5.sh.trs run-strip-test6.sh.trs run-strip-test7.sh.trs run-strip-test8.sh.trs run-strip-test9.sh.trs run-strip-test10.sh.trs run-strip-test11.sh.trs run-strip-test12.sh.trs run-strip-nothing.sh.trs run-strip-g.sh.trs run-annobingroup.sh.trs run-strip-groups.sh.trs run-strip-strmerge.sh.trs run-strip-reloc-ko.sh.trs run-strip-reloc-self.sh.trs run-strip-reloc-ppc64.sh.trs run-strip-nobitsalign.sh.trs run-strip-remove-keep.sh.trs run-unstrip-test.sh.trs run-unstrip-test2.sh.trs run-unstrip-test3.sh.trs run-unstrip-test4.sh.trs run-unstrip-M.sh.trs run-elfstrmerge-test.sh.trs run-ecp-test.sh.trs run-ecp-test2.sh.trs run-alldts.sh.trs run-elflint-test.sh.trs run-elflint-self.sh.trs run-ranlib-test.sh.trs run-ranlib-test2.sh.trs run-ranlib-test3.sh.trs run-ranlib-test4.sh.trs run-addrscopes.sh.trs run-strings-test.sh.trs run-funcscopes.sh.trs run-find-prologues.sh.trs run-allregs.sh.trs run-addrcfi.sh.trs run-dwarfcfi.sh.trs run-nm-syms.sh.trs run-nm-self.sh.trs run-readelf-self.sh.trs run-readelf-info-plus.sh.trs run-srcfiles-self.sh.trs run-readelf-compressed.sh.trs run-readelf-const-values.sh.trs run-varlocs-self.sh.trs run-exprlocs-self.sh.trs run-readelf-test1.sh.trs run-readelf-test2.sh.trs run-readelf-test3.sh.trs run-readelf-test4.sh.trs run-readelf-twofiles.sh.trs run-readelf-macro.sh.trs run-readelf-loc.sh.trs run-readelf-ranges.sh.trs run-readelf-aranges.sh.trs run-readelf-line.sh.trs run-readelf-z.sh.trs run-readelf-frames.sh.trs run-readelf-n.sh.trs run-retain.sh.trs run-native-test.sh.trs run-bug1-test.sh.trs run-debuglink.sh.trs run-debugaltlink.sh.trs run-buildid.sh.trs dwfl-bug-addr-overflow.trs run-addrname-test.sh.trs dwfl-bug-fd-leak.trs dwfl-bug-report.trs dwfl-report-segment-contiguous.trs run-dwfl-bug-offline-rel.sh.trs run-dwfl-addr-sect.sh.trs run-disasm-x86.sh.trs run-disasm-x86-64.sh.trs run-early-offscn.sh.trs run-dwarf-getmacros.sh.trs run-dwarf-ranges.sh.trs run-test-flag-nobits.sh.trs run-prelink-addr-test.sh.trs run-dwarf-getstring.sh.trs run-rerequest_tag.sh.trs run-typeiter.sh.trs run-readelf-d.sh.trs run-readelf-gdb_index.sh.trs run-unstrip-n.sh.trs run-low_high_pc.sh.trs run-macro-test.sh.trs run-elf_cntl_gelf_getshdr.sh.trs run-test-archive64.sh.trs run-readelf-vmcoreinfo.sh.trs run-readelf-mixed-corenote.sh.trs run-dwfllines.sh.trs run-readelf-variant.sh.trs run-readelf-fat-lto.sh.trs run-dwfl-report-elf-align.sh.trs run-addr2line-test.sh.trs run-dwfl-report-offline-memory.sh.trs run-addr2line-C-test.sh.trs run-addr2line-i-test.sh.trs run-addr2line-i-lex-test.sh.trs run-addr2line-i-demangle-test.sh.trs run-addr2line-alt-debugpath.sh.trs run-varlocs.sh.trs run-exprlocs.sh.trs run-varlocs-vars.sh.trs run-funcretval.sh.trs run-backtrace-native.sh.trs run-backtrace-data.sh.trs run-backtrace-dwarf.sh.trs run-backtrace-native-biarch.sh.trs run-backtrace-native-core.sh.trs run-backtrace-native-core-biarch.sh.trs run-backtrace-core-x86_64.sh.trs run-backtrace-fp-core-x86_64.sh.trs run-backtrace-fp-core-aarch64.sh.trs run-backtrace-fp-core-ppc64le.sh.trs run-backtrace-core-x32.sh.trs run-backtrace-core-i386.sh.trs run-backtrace-fp-core-i386.sh.trs run-backtrace-core-ppc.sh.trs run-backtrace-core-s390x.sh.trs run-backtrace-core-s390.sh.trs run-backtrace-core-aarch64.sh.trs run-backtrace-core-sparc.sh.trs run-backtrace-demangle.sh.trs run-stack-d-test.sh.trs run-stack-i-test.sh.trs run-stack-demangled-test.sh.trs run-readelf-zx.sh.trs run-readelf-zp.sh.trs run-readelf-arm-flags.sh.trs run-readelf-addr.sh.trs run-readelf-str.sh.trs run-readelf-multi-noline.sh.trs run-readelf-types.sh.trs run-readelf-dwz-multi.sh.trs run-allfcts-multi.sh.trs run-deleted.sh.trs run-linkmap-cut.sh.trs run-aggregate-size.sh.trs run-peel-type.sh.trs vdsosyms.trs run-readelf-A.sh.trs run-getsrc-die.sh.trs run-strptr.sh.trs newdata.trs elfstrtab.trs dwfl-proc-attach.trs elfshphehdr.trs run-lfs-symbols.sh.trs run-dwelfgnucompressed.sh.trs run-elfgetchdr.sh.trs run-elfgetzdata.sh.trs run-elfputzdata.sh.trs run-zstrptr.sh.trs run-compress-test.sh.trs run-readelf-zdebug.sh.trs run-readelf-zdebug-rel.sh.trs emptyfile.trs vendorelf.trs fillfile.trs dwarf_default_lower_bound.trs run-dwarf-die-addr-die.sh.trs run-get-units-invalid.sh.trs run-get-units-split.sh.trs run-attr-integrate-skel.sh.trs run-all-dwarf-ranges.sh.trs run-unit-info.sh.trs run-reloc-bpf.sh.trs run-next-cfi.sh.trs run-next-cfi-self.sh.trs run-reverse-sections.sh.trs run-reverse-sections-self.sh.trs run-copyadd-sections.sh.trs run-copymany-be32.sh.trs run-copymany-le32.sh.trs run-copymany-be64.sh.trs run-copymany-le64.sh.trs run-typeiter-many.sh.trs run-strip-test-many.sh.trs run-strip-version.sh.trs run-xlate-note.sh.trs run-readelf-discr.sh.trs run-dwelf_elf_e_machine_string.sh.trs run-elfclassify.sh.trs run-elfclassify-self.sh.trs run-disasm-riscv64.sh.trs run-pt_gnu_prop-tests.sh.trs run-getphdrnum.sh.trs run-test-includes.sh.trs leb128.trs read_unaligned.trs msg_tst.trs system-elf-libelf-test.trs system-elf-gelf-test.trs asm-tst1.trs asm-tst2.trs asm-tst3.trs asm-tst4.trs asm-tst5.trs asm-tst6.trs asm-tst7.trs asm-tst8.trs asm-tst9.trs run-disasm-bpf.sh.trs run-low_high_pc-dw-form-indirect.sh.trs run-nvidia-extended-linemap-libdw.sh.trs run-nvidia-extended-linemap-readelf.sh.trs run-readelf-dw-form-indirect.sh.trs run-strip-largealign.sh.trs run-readelf-Dd.sh.trs run-dwfl-core-noncontig.sh.trs run-cu-dwp-section-info.sh.trs run-declfiles.sh.trs run-readelf-s.sh.trs run-dwflsyms.sh.trs run-readelf-compressed-zstd.sh.trs run-funcretval++11.sh.trs" || rm -f run-arextract.sh.trs run-arsymtest.sh.trs run-ar.sh.trs newfile.trs test-nlist.trs run-ar-N.sh.trs update1.trs update2.trs update3.trs update4.trs run-show-die-info.sh.trs run-get-files.sh.trs run-get-lines.sh.trs run-next-files.sh.trs run-next-lines.sh.trs run-get-pubnames.sh.trs run-get-aranges.sh.trs run-allfcts.sh.trs run-show-abbrev.sh.trs run-line2addr.sh.trs hash.trs run-large-elf-file.sh.trs newscn.trs run-strip-test.sh.trs run-strip-test2.sh.trs run-strip-test3.sh.trs run-strip-test4.sh.trs run-strip-test5.sh.trs run-strip-test6.sh.trs run-strip-test7.sh.trs run-strip-test8.sh.trs run-strip-test9.sh.trs run-strip-test10.sh.trs run-strip-test11.sh.trs run-strip-test12.sh.trs run-strip-nothing.sh.trs run-strip-g.sh.trs run-annobingroup.sh.trs run-strip-groups.sh.trs run-strip-strmerge.sh.trs run-strip-reloc-ko.sh.trs run-strip-reloc-self.sh.trs run-strip-reloc-ppc64.sh.trs run-strip-nobitsalign.sh.trs run-strip-remove-keep.sh.trs run-unstrip-test.sh.trs run-unstrip-test2.sh.trs run-unstrip-test3.sh.trs run-unstrip-test4.sh.trs run-unstrip-M.sh.trs run-elfstrmerge-test.sh.trs run-ecp-test.sh.trs run-ecp-test2.sh.trs run-alldts.sh.trs run-elflint-test.sh.trs run-elflint-self.sh.trs run-ranlib-test.sh.trs run-ranlib-test2.sh.trs run-ranlib-test3.sh.trs run-ranlib-test4.sh.trs run-addrscopes.sh.trs run-strings-test.sh.trs run-funcscopes.sh.trs run-find-prologues.sh.trs run-allregs.sh.trs run-addrcfi.sh.trs run-dwarfcfi.sh.trs run-nm-syms.sh.trs run-nm-self.sh.trs run-readelf-self.sh.trs run-readelf-info-plus.sh.trs run-srcfiles-self.sh.trs run-readelf-compressed.sh.trs run-readelf-const-values.sh.trs run-varlocs-self.sh.trs run-exprlocs-self.sh.trs run-readelf-test1.sh.trs run-readelf-test2.sh.trs run-readelf-test3.sh.trs run-readelf-test4.sh.trs run-readelf-twofiles.sh.trs run-readelf-macro.sh.trs run-readelf-loc.sh.trs run-readelf-ranges.sh.trs run-readelf-aranges.sh.trs run-readelf-line.sh.trs run-readelf-z.sh.trs run-readelf-frames.sh.trs run-readelf-n.sh.trs run-retain.sh.trs run-native-test.sh.trs run-bug1-test.sh.trs run-debuglink.sh.trs run-debugaltlink.sh.trs run-buildid.sh.trs dwfl-bug-addr-overflow.trs run-addrname-test.sh.trs dwfl-bug-fd-leak.trs dwfl-bug-report.trs dwfl-report-segment-contiguous.trs run-dwfl-bug-offline-rel.sh.trs run-dwfl-addr-sect.sh.trs run-disasm-x86.sh.trs run-disasm-x86-64.sh.trs run-early-offscn.sh.trs run-dwarf-getmacros.sh.trs run-dwarf-ranges.sh.trs run-test-flag-nobits.sh.trs run-prelink-addr-test.sh.trs run-dwarf-getstring.sh.trs run-rerequest_tag.sh.trs run-typeiter.sh.trs run-readelf-d.sh.trs run-readelf-gdb_index.sh.trs run-unstrip-n.sh.trs run-low_high_pc.sh.trs run-macro-test.sh.trs run-elf_cntl_gelf_getshdr.sh.trs run-test-archive64.sh.trs run-readelf-vmcoreinfo.sh.trs run-readelf-mixed-corenote.sh.trs run-dwfllines.sh.trs run-readelf-variant.sh.trs run-readelf-fat-lto.sh.trs run-dwfl-report-elf-align.sh.trs run-addr2line-test.sh.trs run-dwfl-report-offline-memory.sh.trs run-addr2line-C-test.sh.trs run-addr2line-i-test.sh.trs run-addr2line-i-lex-test.sh.trs run-addr2line-i-demangle-test.sh.trs run-addr2line-alt-debugpath.sh.trs run-varlocs.sh.trs run-exprlocs.sh.trs run-varlocs-vars.sh.trs run-funcretval.sh.trs run-backtrace-native.sh.trs run-backtrace-data.sh.trs run-backtrace-dwarf.sh.trs run-backtrace-native-biarch.sh.trs run-backtrace-native-core.sh.trs run-backtrace-native-core-biarch.sh.trs run-backtrace-core-x86_64.sh.trs run-backtrace-fp-core-x86_64.sh.trs run-backtrace-fp-core-aarch64.sh.trs run-backtrace-fp-core-ppc64le.sh.trs run-backtrace-core-x32.sh.trs run-backtrace-core-i386.sh.trs run-backtrace-fp-core-i386.sh.trs run-backtrace-core-ppc.sh.trs run-backtrace-core-s390x.sh.trs run-backtrace-core-s390.sh.trs run-backtrace-core-aarch64.sh.trs run-backtrace-core-sparc.sh.trs run-backtrace-demangle.sh.trs run-stack-d-test.sh.trs run-stack-i-test.sh.trs run-stack-demangled-test.sh.trs run-readelf-zx.sh.trs run-readelf-zp.sh.trs run-readelf-arm-flags.sh.trs run-readelf-addr.sh.trs run-readelf-str.sh.trs run-readelf-multi-noline.sh.trs run-readelf-types.sh.trs run-readelf-dwz-multi.sh.trs run-allfcts-multi.sh.trs run-deleted.sh.trs run-linkmap-cut.sh.trs run-aggregate-size.sh.trs run-peel-type.sh.trs vdsosyms.trs run-readelf-A.sh.trs run-getsrc-die.sh.trs run-strptr.sh.trs newdata.trs elfstrtab.trs dwfl-proc-attach.trs elfshphehdr.trs run-lfs-symbols.sh.trs run-dwelfgnucompressed.sh.trs run-elfgetchdr.sh.trs run-elfgetzdata.sh.trs run-elfputzdata.sh.trs run-zstrptr.sh.trs run-compress-test.sh.trs run-readelf-zdebug.sh.trs run-readelf-zdebug-rel.sh.trs emptyfile.trs vendorelf.trs fillfile.trs dwarf_default_lower_bound.trs run-dwarf-die-addr-die.sh.trs run-get-units-invalid.sh.trs run-get-units-split.sh.trs run-attr-integrate-skel.sh.trs run-all-dwarf-ranges.sh.trs run-unit-info.sh.trs run-reloc-bpf.sh.trs run-next-cfi.sh.trs run-next-cfi-self.sh.trs run-reverse-sections.sh.trs run-reverse-sections-self.sh.trs run-copyadd-sections.sh.trs run-copymany-be32.sh.trs run-copymany-le32.sh.trs run-copymany-be64.sh.trs run-copymany-le64.sh.trs run-typeiter-many.sh.trs run-strip-test-many.sh.trs run-strip-version.sh.trs run-xlate-note.sh.trs run-readelf-discr.sh.trs run-dwelf_elf_e_machine_string.sh.trs run-elfclassify.sh.trs run-elfclassify-self.sh.trs run-disasm-riscv64.sh.trs run-pt_gnu_prop-tests.sh.trs run-getphdrnum.sh.trs run-test-includes.sh.trs leb128.trs read_unaligned.trs msg_tst.trs system-elf-libelf-test.trs system-elf-gelf-test.trs asm-tst1.trs asm-tst2.trs asm-tst3.trs asm-tst4.trs asm-tst5.trs asm-tst6.trs asm-tst7.trs asm-tst8.trs asm-tst9.trs run-disasm-bpf.sh.trs run-low_high_pc-dw-form-indirect.sh.trs run-nvidia-extended-linemap-libdw.sh.trs run-nvidia-extended-linemap-readelf.sh.trs run-readelf-dw-form-indirect.sh.trs run-strip-largealign.sh.trs run-readelf-Dd.sh.trs run-dwfl-core-noncontig.sh.trs run-cu-dwp-section-info.sh.trs run-declfiles.sh.trs run-readelf-s.sh.trs run-dwflsyms.sh.trs run-readelf-compressed-zstd.sh.trs run-funcretval++11.sh.trs
+test -z "test-suite.log" || rm -f test-suite.log
+rm -f ./.deps/addrcfi.Po
+rm -f ./.deps/addrscopes.Po
+rm -f ./.deps/addsections.Po
+rm -f ./.deps/aggregate_size.Po
+rm -f ./.deps/all-dwarf-ranges.Po
+rm -f ./.deps/alldts.Po
+rm -f ./.deps/allfcts.Po
+rm -f ./.deps/allregs.Po
+rm -f ./.deps/arextract.Po
+rm -f ./.deps/arls.Po
+rm -f ./.deps/arsymtest.Po
+rm -f ./.deps/asm-tst1.Po
+rm -f ./.deps/asm-tst2.Po
+rm -f ./.deps/asm-tst3.Po
+rm -f ./.deps/asm-tst4.Po
+rm -f ./.deps/asm-tst5.Po
+rm -f ./.deps/asm-tst6.Po
+rm -f ./.deps/asm-tst7.Po
+rm -f ./.deps/asm-tst8.Po
+rm -f ./.deps/asm-tst9.Po
+rm -f ./.deps/attr-integrate-skel.Po
+rm -f ./.deps/backtrace-child.Po
+rm -f ./.deps/backtrace-data.Po
+rm -f ./.deps/backtrace.Po
+rm -f ./.deps/backtrace_child-backtrace-child.Po
+rm -f ./.deps/backtrace_dwarf-backtrace-dwarf.Po
+rm -f ./.deps/buildid.Po
+rm -f ./.deps/cu-dwp-section-info.Po
+rm -f ./.deps/debugaltlink.Po
+rm -f ./.deps/debuginfod_build_id_find.Po
+rm -f ./.deps/debuglink.Po
+rm -f ./.deps/declfiles.Po
+rm -f ./.deps/deleted.Po
+rm -f ./.deps/deleted_lib_so-deleted-lib.Po
+rm -f ./.deps/dwarf-die-addr-die.Po
+rm -f ./.deps/dwarf-getmacros.Po
+rm -f ./.deps/dwarf-getstring.Po
+rm -f ./.deps/dwarf-ranges.Po
+rm -f ./.deps/dwarf_default_lower_bound.Po
+rm -f ./.deps/dwarfcfi.Po
+rm -f ./.deps/dwelf_elf_e_machine_string.Po
+rm -f ./.deps/dwelfgnucompressed.Po
+rm -f ./.deps/dwfl-addr-sect.Po
+rm -f ./.deps/dwfl-bug-addr-overflow.Po
+rm -f ./.deps/dwfl-bug-fd-leak.Po
+rm -f ./.deps/dwfl-bug-getmodules.Po
+rm -f ./.deps/dwfl-bug-report.Po
+rm -f ./.deps/dwfl-core-noncontig.Po
+rm -f ./.deps/dwfl-proc-attach.Po
+rm -f ./.deps/dwfl-report-elf-align.Po
+rm -f ./.deps/dwfl-report-offline-memory.Po
+rm -f ./.deps/dwfl-report-segment-contiguous.Po
+rm -f ./.deps/dwfllines.Po
+rm -f ./.deps/dwflmodtest.Po
+rm -f ./.deps/dwflsyms.Po
+rm -f ./.deps/early-offscn.Po
+rm -f ./.deps/ecp.Po
+rm -f ./.deps/elf-print-reloc-syms.Po
+rm -f ./.deps/elfcopy.Po
+rm -f ./.deps/elfgetchdr.Po
+rm -f ./.deps/elfgetzdata.Po
+rm -f ./.deps/elfputzdata.Po
+rm -f ./.deps/elfrdwrnop.Po
+rm -f ./.deps/elfshphehdr.Po
+rm -f ./.deps/elfstrmerge.Po
+rm -f ./.deps/elfstrtab.Po
+rm -f ./.deps/emptyfile.Po
+rm -f ./.deps/fillfile.Po
+rm -f ./.deps/find-prologues.Po
+rm -f ./.deps/funcretval.Po
+rm -f ./.deps/funcretval_test++11.Po
+rm -f ./.deps/funcscopes.Po
+rm -f ./.deps/get-aranges.Po
+rm -f ./.deps/get-files.Po
+rm -f ./.deps/get-lines.Po
+rm -f ./.deps/get-pubnames.Po
+rm -f ./.deps/get-units-invalid.Po
+rm -f ./.deps/get-units-split.Po
+rm -f ./.deps/getphdrnum.Po
+rm -f ./.deps/getsrc_die.Po
+rm -f ./.deps/hash.Po
+rm -f ./.deps/leb128.Po
+rm -f ./.deps/line2addr.Po
+rm -f ./.deps/low_high_pc.Po
+rm -f ./.deps/msg_tst.Po
+rm -f ./.deps/newdata.Po
+rm -f ./.deps/newfile.Po
+rm -f ./.deps/newscn.Po
+rm -f ./.deps/next-files.Po
+rm -f ./.deps/next-lines.Po
+rm -f ./.deps/next_cfi.Po
+rm -f ./.deps/nvidia_extended_linemap_libdw.Po
+rm -f ./.deps/peel_type.Po
+rm -f ./.deps/rdwrmmap.Po
+rm -f ./.deps/read_unaligned.Po
+rm -f ./.deps/rerequest_tag.Po
+rm -f ./.deps/saridx.Po
+rm -f ./.deps/scnnames.Po
+rm -f ./.deps/sectiondump.Po
+rm -f ./.deps/show-abbrev.Po
+rm -f ./.deps/show-die-info.Po
+rm -f ./.deps/showptable.Po
+rm -f ./.deps/strptr.Po
+rm -f ./.deps/system_elf_gelf_test-system-elf-gelf-test.Po
+rm -f ./.deps/system_elf_libelf_test-system-elf-libelf-test.Po
+rm -f ./.deps/test-elf_cntl_gelf_getshdr.Po
+rm -f ./.deps/test-flag-nobits.Po
+rm -f ./.deps/test_nlist-test-nlist.Po
+rm -f ./.deps/typeiter.Po
+rm -f ./.deps/typeiter2.Po
+rm -f ./.deps/unit-info.Po
+rm -f ./.deps/update1.Po
+rm -f ./.deps/update2.Po
+rm -f ./.deps/update3.Po
+rm -f ./.deps/update4.Po
+rm -f ./.deps/varlocs.Po
+rm -f ./.deps/vdsosyms.Po
+rm -f ./.deps/vendorelf.Po
+rm -f ./.deps/xlate_notes.Po
+rm -f ./.deps/zstrptr.Po
+rm -f Makefile
+test -z "" || rm -f 
+test -z "elfutils.spec version.h" || rm -f elfutils.spec version.h
+test . = "." || test -z "" || rm -f 
+rm -f config.h stamp-h1
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -f cscope.out cscope.in.out cscope.po.out cscope.files
+rm -f config.status config.cache config.log configure.lineno config.status.lineno
+rm -f Makefile
+make[1]: Leaving directory '/sources/elfutils-0.191'
+configure: No --program-prefix given, using "eu-"
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for i686-pc-linux-gnu-strip... no
+checking for strip... strip
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking whether make supports nested variables... (cached) yes
+checking build system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+checking for i686-pc-linux-gnu-gcc... gcc -m32
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc -m32 accepts -g... yes
+checking for gcc -m32 option to enable C11 features... none needed
+checking whether gcc -m32 understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc -m32... gcc3
+checking whether the compiler supports GNU C++... yes
+checking whether g++ -m32 accepts -g... yes
+checking for g++ -m32 option to enable C++11 features... none needed
+checking dependency style of g++ -m32... gcc3
+checking for i686-pc-linux-gnu-ranlib... no
+checking for ranlib... ranlib
+checking for bison... bison -y
+checking for flex... flex
+checking for lex output file root... lex.yy
+checking for lex library... none needed
+checking whether yytext is a pointer... yes
+checking for i686-pc-linux-gnu-ar... no
+checking for i686-pc-linux-gnu-lib... no
+checking for i686-pc-linux-gnu-link... no
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking for i686-pc-linux-gnu-readelf... no
+checking for readelf... readelf
+checking for i686-pc-linux-gnu-nm... no
+checking for nm... nm
+checking whether gcc supports __attribute__((visibility()))... yes
+checking whether gcc supports __attribute__((gcc_struct))... yes
+checking whether gcc supports -fPIC... yes
+checking whether gcc supports -fPIE... yes
+checking whether gcc supports -Wl,-z,defs... yes
+checking whether the compiler generates build-ids... no
+configure: WARNING: compiler doesn't generate build-id by default
+checking whether gcc supports -Wl,-z,relro... yes
+checking for __thread support... yes
+checking whether gcc provides stdatomic.h... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking whether fts.h is bad when included (with LFS)... no
+checking whether to add -D_FORTIFY_SOURCE=2 or =3 to CFLAGS... yes -D_FORTIFY_SOURCE=3
+checking for library containing gzdirect... -lz
+checking for library containing BZ2_bzdopen... -lbz2
+checking for library containing lzma_auto_decoder... -llzma
+checking for library containing ZSTD_decompress... -lzstd
+checking for i686-pc-linux-gnu-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for libzstd >= 1.4.0... yes
+checking for gcc -m32 options needed to detect all undeclared functions... none needed
+checking whether memrchr is declared... yes
+checking whether rawmemchr is declared... yes
+checking whether powerof2 is declared... yes
+checking whether mempcpy is declared... yes
+checking whether reallocarray is declared... yes
+checking for process_vm_readv... yes
+checking for mremap... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for error.h... yes
+checking for err.h... yes
+checking for sched.h... yes
+checking for sched_getaffinity... yes
+checking for sys/resource.h... yes
+checking for getrlimit... yes
+checking whether strerror_r is declared... yes
+checking whether strerror_r returns char *... yes
+checking for __cxa_demangle in -lstdc++... yes
+checking whether symbol versioning is supported... yes
+checking whether gcc accepts -Wstack-usage... yes
+checking whether gcc has a sane -Wlogical-op... yes
+checking whether gcc accepts -Wduplicated-cond... yes
+checking whether gcc accepts -Wnull-dereference... yes
+checking whether gcc accepts -Wimplicit-fallthrough... yes
+checking whether the compiler accepts -Wimplicit-fallthrough=5... yes
+checking whether the compiler accepts -Wtrampolines... yes
+checking whether the compiler accepts -Wno-packed-not-aligned... yes
+checking whether the compiler accepts -Wuse-after-free=3... yes
+checking whether the compiler accepts -fno-addrsig... no
+checking for library containing argp_parse... none required
+checking for library containing fts_close... none required
+checking for library containing _obstack_free... none required
+checking for a sed that does not truncate output... /usr/bin/sed
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for ld used by gcc -m32... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking 32-bit host C ABI... yes
+checking how to run the C preprocessor... gcc -m32 -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ELF binary format... yes
+checking for the common suffixes of directories in the library search path... lib,lib32,lib
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyPreferredLanguages... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking size of long... 4
+checking for struct user_regs_struct... yes
+checking gcc -m32 option for 32-bit word size... -m32
+checking for 64-bit host... no
+configure: WARNING: not running biarch tests, gcc -m64 does not work
+checking for bunzip2... yes
+checking for zstd... yes
+checking whether g++ -m32 supports C++11 features with -std=c++11... yes
+configure: building (bootstrap) dummy libdebuginfo library
+checking for pthread_setname_np in -lpthread... yes
+checking for execinfo.h... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating config/Makefile
+config.status: creating Makefile
+config.status: creating elfutils.spec
+config.status: creating debuginfod/Makefile
+config.status: creating debuginfod/debuginfod.h
+config.status: creating doc/Makefile
+config.status: creating lib/Makefile
+config.status: creating libelf/Makefile
+config.status: creating libebl/Makefile
+config.status: creating libdwelf/Makefile
+config.status: creating libdw/Makefile
+config.status: creating libdwfl/Makefile
+config.status: creating libcpu/Makefile
+config.status: creating libasm/Makefile
+config.status: creating backends/Makefile
+config.status: creating src/Makefile
+config.status: creating po/Makefile.in
+config.status: creating tests/Makefile
+config.status: creating config/libelf.pc
+config.status: creating config/libdw.pc
+config.status: creating config/libdebuginfod.pc
+config.status: creating version.h
+config.status: creating config/profile.sh
+config.status: creating config/profile.csh
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+configure:
+=====================================================================
+        elfutils: 0.191 (eu_version: 191)
+=====================================================================
+
+    Prefix                             : /usr
+    Program prefix ("eu-" recommended) : eu-
+    Source code location               : .
+    Maintainer mode                    : 
+    build arch                         : i686-pc-linux-gnu
+
+    CFLAGS=-D_FORTIFY_SOURCE=3 -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -fstack-clash-protection -ffunction-sections -fdata-sections
+    CXXFLAGS=-D_FORTIFY_SOURCE=3 -march=x86-64-v3 -mtune=haswell -O2 -pipe -fno-plt -fPIC -fstack-clash-protection -ffunction-sections -fdata-sections -Wp,-D_GLIBCXX_ASSERTIONS
+
+  RECOMMENDED FEATURES (should all be yes)
+    gzip support                       : yes
+    bzip2 support                      : yes
+    lzma/xz support                    : yes
+    zstd support                       : yes
+    zstd compression support           : yes
+    libstdc++ demangle support         : yes
+    File textrel check                 : yes
+    Symbol versioning                  : yes
+
+  NOT RECOMMENDED FEATURES (should all be no)
+    Experimental thread safety         : no
+    install elf.h                      : no
+
+  OTHER FEATURES
+    Deterministic archives by default  : false
+    Native language support            : yes
+    Extra Valgrind annotations         : no
+    libdebuginfod client support       : dummy
+    Debuginfod server support          : no
+    Default DEBUGINFOD_URLS            : 
+
+  EXTRA TEST FEATURES (used with make check)
+    have bunzip2 installed (required)  : yes
+    have zstd installed                : yes
+    C++11                              : yes
+    debug branch prediction            : no
+    gprof support                      : no
+    gcov support                       : no
+    run all tests under valgrind       : no
+    gcc undefined behaviour sanitizer  : no
+    gcc address sanitizer              : no
+    clang memory sanitizer             : no
+    use rpath in tests                 : no
+    test biarch                        : no
+
+make[1]: Entering directory '/sources/elfutils-0.191'
+make --no-print-directory all-recursive
+Making all in config
+make[3]: Nothing to be done for 'all'.
+Making all in lib
+  CC       xasprintf.o
+  CC       xstrdup.o
+  CC       xstrndup.o
+  CC       xmalloc.o
+  CC       next_prime.o
+  CC       crc32.o
+  CC       crc32_file.o
+  CC       color.o
+  CC       error.o
+  CC       printversion.o
+  AR       libeu.a
+Making all in libelf
+  CC       elf_version.o
+  CC       elf_hash.o
+  CC       elf_error.o
+  CC       elf_fill.o
+  CC       elf_begin.o
+  CC       elf_rand.o
+  CC       elf_next.o
+  CC       elf_end.o
+  CC       elf_kind.o
+  CC       gelf_getclass.o
+  CC       elf_getbase.o
+  CC       elf_getident.o
+  CC       elf32_fsize.o
+  CC       elf64_fsize.o
+  CC       gelf_fsize.o
+  CC       elf32_xlatetof.o
+  CC       elf32_xlatetom.o
+  CC       elf64_xlatetof.o
+  CC       elf64_xlatetom.o
+  CC       gelf_xlate.o
+  CC       elf32_getehdr.o
+  CC       elf64_getehdr.o
+  CC       elf32_newehdr.o
+  CC       gelf_getehdr.o
+  CC       elf64_newehdr.o
+  CC       gelf_newehdr.o
+  CC       gelf_update_ehdr.o
+  CC       elf32_getphdr.o
+  CC       elf64_getphdr.o
+  CC       gelf_getphdr.o
+  CC       elf32_newphdr.o
+  CC       elf64_newphdr.o
+  CC       gelf_newphdr.o
+  CC       gelf_update_phdr.o
+  CC       elf_getarhdr.o
+  CC       elf_getarsym.o
+  CC       elf_rawfile.o
+  CC       elf_cntl.o
+  CC       elf_readall.o
+  CC       elf_getscn.o
+  CC       elf_nextscn.o
+  CC       elf_ndxscn.o
+  CC       elf_newscn.o
+  CC       elf32_getshdr.o
+  CC       elf64_getshdr.o
+  CC       gelf_getshdr.o
+  CC       gelf_update_shdr.o
+  CC       elf_strptr.o
+  CC       elf_rawdata.o
+  CC       elf_getdata.o
+  CC       elf_newdata.o
+  CC       elf_getdata_rawchunk.o
+  CC       elf_flagelf.o
+  CC       elf_flagehdr.o
+  CC       elf_flagphdr.o
+  CC       elf_flagscn.o
+  CC       elf_flagshdr.o
+  CC       elf_flagdata.o
+  CC       elf_memory.o
+  CC       elf_update.o
+  CC       elf32_updatenull.o
+  CC       elf64_updatenull.o
+  CC       elf32_updatefile.o
+  CC       elf64_updatefile.o
+  CC       gelf_getsym.o
+  CC       gelf_update_sym.o
+  CC       gelf_getversym.o
+  CC       gelf_getverneed.o
+  CC       gelf_getvernaux.o
+  CC       gelf_getverdef.o
+  CC       gelf_getverdaux.o
+  CC       gelf_getrel.o
+  CC       gelf_getrela.o
+  CC       gelf_update_rel.o
+  CC       gelf_update_rela.o
+  CC       gelf_getdyn.o
+  CC       gelf_update_dyn.o
+  CC       gelf_getmove.o
+  CC       gelf_update_move.o
+  CC       gelf_getsyminfo.o
+  CC       gelf_update_syminfo.o
+  CC       gelf_getauxv.o
+  CC       gelf_update_auxv.o
+  CC       gelf_getnote.o
+  CC       gelf_xlatetof.o
+  CC       gelf_xlatetom.o
+  CC       nlist.o
+  CC       gelf_getsymshndx.o
+  CC       gelf_update_symshndx.o
+  CC       gelf_update_versym.o
+  CC       gelf_update_verneed.o
+  CC       gelf_update_vernaux.o
+  CC       gelf_update_verdef.o
+  CC       gelf_update_verdaux.o
+  CC       elf_getphdrnum.o
+  CC       elf_getshdrnum.o
+  CC       elf_getshdrstrndx.o
+  CC       gelf_checksum.o
+  CC       elf32_checksum.o
+  CC       elf64_checksum.o
+  CC       libelf_crc32.o
+  CC       libelf_next_prime.o
+  CC       elf_clone.o
+  CC       gelf_getlib.o
+  CC       gelf_update_lib.o
+  CC       elf32_offscn.o
+  CC       elf64_offscn.o
+  CC       gelf_offscn.o
+  CC       elf_getaroff.o
+  CC       elf_gnu_hash.o
+  CC       elf_scnshndx.o
+  CC       elf32_getchdr.o
+  CC       elf64_getchdr.o
+  CC       gelf_getchdr.o
+  CC       elf_compress.o
+  CC       elf_compress_gnu.o
+  CC       elf_version.os
+  CC       elf_hash.os
+  CC       elf_error.os
+  CC       elf_fill.os
+  CC       elf_begin.os
+  CC       elf_next.os
+  CC       elf_rand.os
+  CC       elf_end.os
+  CC       elf_kind.os
+  CC       gelf_getclass.os
+  CC       elf_getbase.os
+  CC       elf_getident.os
+  CC       elf32_fsize.os
+  CC       elf64_fsize.os
+  CC       gelf_fsize.os
+  CC       elf32_xlatetof.os
+  CC       elf32_xlatetom.os
+  CC       elf64_xlatetof.os
+  CC       elf64_xlatetom.os
+  CC       gelf_xlate.os
+  CC       elf32_getehdr.os
+  CC       elf64_getehdr.os
+  CC       gelf_getehdr.os
+  CC       elf32_newehdr.os
+  CC       elf64_newehdr.os
+  CC       gelf_newehdr.os
+  CC       gelf_update_ehdr.os
+  CC       elf32_getphdr.os
+  CC       elf64_getphdr.os
+  CC       gelf_getphdr.os
+  CC       elf32_newphdr.os
+  CC       elf64_newphdr.os
+  CC       gelf_newphdr.os
+  CC       gelf_update_phdr.os
+  CC       elf_getarhdr.os
+  CC       elf_getarsym.os
+  CC       elf_rawfile.os
+  CC       elf_readall.os
+  CC       elf_cntl.os
+  CC       elf_getscn.os
+  CC       elf_nextscn.os
+  CC       elf_ndxscn.os
+  CC       elf_newscn.os
+  CC       elf32_getshdr.os
+  CC       elf64_getshdr.os
+  CC       gelf_getshdr.os
+  CC       gelf_update_shdr.os
+  CC       elf_strptr.os
+  CC       elf_rawdata.os
+  CC       elf_getdata.os
+  CC       elf_newdata.os
+  CC       elf_getdata_rawchunk.os
+  CC       elf_flagelf.os
+  CC       elf_flagehdr.os
+  CC       elf_flagphdr.os
+  CC       elf_flagscn.os
+  CC       elf_flagshdr.os
+  CC       elf_flagdata.os
+  CC       elf_memory.os
+  CC       elf_update.os
+  CC       elf32_updatenull.os
+  CC       elf64_updatenull.os
+  CC       elf32_updatefile.os
+  CC       elf64_updatefile.os
+  CC       gelf_getsym.os
+  CC       gelf_update_sym.os
+  CC       gelf_getversym.os
+  CC       gelf_getverneed.os
+  CC       gelf_getvernaux.os
+  CC       gelf_getverdef.os
+  CC       gelf_getverdaux.os
+  CC       gelf_getrel.os
+  CC       gelf_getrela.os
+  CC       gelf_update_rel.os
+  CC       gelf_update_rela.os
+  CC       gelf_getdyn.os
+  CC       gelf_update_dyn.os
+  CC       gelf_getmove.os
+  CC       gelf_update_move.os
+  CC       gelf_getsyminfo.os
+  CC       gelf_update_syminfo.os
+  CC       gelf_getauxv.os
+  CC       gelf_update_auxv.os
+  CC       gelf_getnote.os
+  CC       gelf_xlatetof.os
+  CC       gelf_xlatetom.os
+  CC       nlist.os
+  CC       gelf_getsymshndx.os
+  CC       gelf_update_symshndx.os
+  CC       gelf_update_versym.os
+  CC       gelf_update_verneed.os
+  CC       gelf_update_vernaux.os
+  CC       gelf_update_verdef.os
+  CC       gelf_update_verdaux.os
+  CC       elf_getphdrnum.os
+  CC       elf_getshdrnum.os
+  CC       elf_getshdrstrndx.os
+  CC       gelf_checksum.os
+  CC       elf32_checksum.os
+  CC       elf64_checksum.os
+  CC       libelf_crc32.os
+  CC       libelf_next_prime.os
+  CC       elf_clone.os
+  CC       gelf_getlib.os
+  CC       gelf_update_lib.os
+  CC       elf32_offscn.os
+  CC       elf64_offscn.os
+  CC       gelf_offscn.os
+  CC       elf_getaroff.os
+  CC       elf_gnu_hash.os
+  CC       elf_scnshndx.os
+  CC       elf32_getchdr.os
+  CC       elf64_getchdr.os
+  CC       gelf_getchdr.os
+  CC       elf_compress.os
+  CC       elf_compress_gnu.os
+  AR       libelf.a
+  AR       libelf_pic.a
+  CCLD     libelf.so
+Making all in libcpu
+  GEN      i386_defs
+  GEN      x86_64_defs
+  CC       bpf_disasm.o
+  CC       riscv_disasm.o
+  GEN      i386.mnemonics
+  GEN      x86_64.mnemonics
+  CC       x86_64_disasm.o
+  CC       i386_disasm.o
+  CC       bpf_disasm.os
+  CC       riscv_disasm.os
+  CC       i386_disasm.os
+  CC       x86_64_disasm.os
+  AR       libcpu.a
+  AR       libcpu_pic.a
+rm x86_64_defs i386_defs
+Making all in backends
+  CC       i386_init.o
+  CC       i386_symbol.o
+  CC       i386_corenote.o
+  CC       i386_cfi.o
+  CC       i386_retval.o
+  CC       i386_regs.o
+  CC       i386_auxv.o
+  CC       i386_initreg.o
+  CC       i386_unwind.o
+  CC       sh_init.o
+  CC       sh_symbol.o
+  CC       sh_corenote.o
+  CC       sh_regs.o
+  CC       sh_retval.o
+  CC       x86_64_init.o
+  CC       x86_64_symbol.o
+  CC       x86_64_corenote.o
+  CC       x86_64_cfi.o
+  CC       x86_64_retval.o
+  CC       x86_64_regs.o
+  CC       x86_64_initreg.o
+  CC       x86_64_unwind.o
+  CC       x32_corenote.o
+  CC       ia64_init.o
+  CC       ia64_symbol.o
+  CC       ia64_regs.o
+  CC       ia64_retval.o
+  CC       alpha_init.o
+  CC       alpha_symbol.o
+  CC       alpha_retval.o
+  CC       alpha_regs.o
+  CC       alpha_corenote.o
+  CC       alpha_auxv.o
+  CC       arm_init.o
+  CC       arm_symbol.o
+  CC       arm_regs.o
+  CC       arm_corenote.o
+  CC       arm_auxv.o
+  CC       arm_attrs.o
+  CC       arm_retval.o
+  CC       arm_cfi.o
+  CC       arm_initreg.o
+  CC       arm_machineflagname.o
+  CC       aarch64_init.o
+  CC       aarch64_regs.o
+  CC       aarch64_symbol.o
+  CC       aarch64_corenote.o
+  CC       aarch64_retval.o
+  CC       aarch64_cfi.o
+  CC       aarch64_initreg.o
+  CC       aarch64_unwind.o
+  CC       sparc_init.o
+  CC       sparc_symbol.o
+  CC       sparc_regs.o
+  CC       sparc_retval.o
+  CC       sparc_corenote.o
+  CC       sparc64_corenote.o
+  CC       sparc_auxv.o
+  CC       sparc_attrs.o
+  CC       sparc_cfi.o
+  CC       sparc_initreg.o
+  CC       ppc_init.o
+  CC       ppc_symbol.o
+  CC       ppc_retval.o
+  CC       ppc_regs.o
+  CC       ppc_corenote.o
+  CC       ppc_auxv.o
+  CC       ppc_attrs.o
+  CC       ppc_cfi.o
+  CC       ppc_initreg.o
+  CC       ppc64_init.o
+  CC       ppc64_symbol.o
+  CC       ppc64_retval.o
+  CC       ppc64_corenote.o
+  CC       ppc64_unwind.o
+  CC       ppc64_resolve_sym.o
+  CC       s390_init.o
+  CC       s390_symbol.o
+  CC       s390_regs.o
+  CC       s390_retval.o
+  CC       s390_corenote.o
+  CC       s390x_corenote.o
+  CC       s390_cfi.o
+  CC       s390_initreg.o
+  CC       s390_unwind.o
+  CC       m68k_init.o
+  CC       m68k_symbol.o
+  CC       m68k_regs.o
+  CC       m68k_retval.o
+  CC       m68k_corenote.o
+  CC       m68k_cfi.o
+  CC       m68k_initreg.o
+  CC       bpf_init.o
+  CC       bpf_regs.o
+  CC       bpf_symbol.o
+  CC       riscv_init.o
+  CC       riscv_symbol.o
+  CC       riscv_cfi.o
+  CC       riscv_regs.o
+  CC       riscv_initreg.o
+  CC       riscv_corenote.o
+  CC       riscv64_corenote.o
+  CC       riscv_retval.o
+  CC       csky_attrs.o
+  CC       csky_init.o
+  CC       csky_symbol.o
+  CC       csky_cfi.o
+  CC       csky_regs.o
+  CC       csky_initreg.o
+  CC       csky_corenote.o
+  CC       loongarch_init.o
+  CC       loongarch_symbol.o
+  CC       loongarch_cfi.o
+  CC       loongarch_regs.o
+  CC       loongarch_retval.o
+  CC       loongarch_initreg.o
+  CC       loongarch_unwind.o
+  CC       loongarch_corenote.o
+  CC       arc_init.o
+  CC       arc_symbol.o
+  CC       i386_init.os
+  CC       i386_symbol.os
+  CC       i386_corenote.os
+  CC       i386_cfi.os
+  CC       i386_retval.os
+  CC       i386_regs.os
+  CC       i386_auxv.os
+  CC       i386_initreg.os
+  CC       i386_unwind.os
+  CC       sh_init.os
+  CC       sh_symbol.os
+  CC       sh_corenote.os
+  CC       sh_regs.os
+  CC       sh_retval.os
+  CC       x86_64_init.os
+  CC       x86_64_symbol.os
+  CC       x86_64_corenote.os
+  CC       x86_64_cfi.os
+  CC       x86_64_retval.os
+  CC       x86_64_regs.os
+  CC       x86_64_initreg.os
+  CC       x86_64_unwind.os
+  CC       x32_corenote.os
+  CC       ia64_init.os
+  CC       ia64_symbol.os
+  CC       ia64_regs.os
+  CC       alpha_init.os
+  CC       ia64_retval.os
+  CC       alpha_symbol.os
+  CC       alpha_retval.os
+  CC       alpha_regs.os
+  CC       alpha_corenote.os
+  CC       alpha_auxv.os
+  CC       arm_init.os
+  CC       arm_symbol.os
+  CC       arm_regs.os
+  CC       arm_corenote.os
+  CC       arm_auxv.os
+  CC       arm_attrs.os
+  CC       arm_retval.os
+  CC       arm_cfi.os
+  CC       arm_initreg.os
+  CC       arm_machineflagname.os
+  CC       aarch64_regs.os
+  CC       aarch64_init.os
+  CC       aarch64_symbol.os
+  CC       aarch64_corenote.os
+  CC       aarch64_retval.os
+  CC       aarch64_cfi.os
+  CC       aarch64_initreg.os
+  CC       aarch64_unwind.os
+  CC       sparc_init.os
+  CC       sparc_symbol.os
+  CC       sparc_regs.os
+  CC       sparc_retval.os
+  CC       sparc_corenote.os
+  CC       sparc64_corenote.os
+  CC       sparc_auxv.os
+  CC       sparc_attrs.os
+  CC       sparc_cfi.os
+  CC       sparc_initreg.os
+  CC       ppc_init.os
+  CC       ppc_symbol.os
+  CC       ppc_retval.os
+  CC       ppc_regs.os
+  CC       ppc_corenote.os
+  CC       ppc_auxv.os
+  CC       ppc_attrs.os
+  CC       ppc_cfi.os
+  CC       ppc_initreg.os
+  CC       ppc64_init.os
+  CC       ppc64_symbol.os
+  CC       ppc64_retval.os
+  CC       ppc64_corenote.os
+  CC       ppc64_unwind.os
+  CC       ppc64_resolve_sym.os
+  CC       s390_init.os
+  CC       s390_symbol.os
+  CC       s390_regs.os
+  CC       s390_retval.os
+  CC       s390_corenote.os
+  CC       s390x_corenote.os
+  CC       s390_cfi.os
+  CC       s390_initreg.os
+  CC       s390_unwind.os
+  CC       m68k_init.os
+  CC       m68k_symbol.os
+  CC       m68k_regs.os
+  CC       m68k_retval.os
+  CC       m68k_corenote.os
+  CC       m68k_cfi.os
+  CC       m68k_initreg.os
+  CC       bpf_init.os
+  CC       bpf_regs.os
+  CC       bpf_symbol.os
+  CC       riscv_init.os
+  CC       riscv_symbol.os
+  CC       riscv_cfi.os
+  CC       riscv_regs.os
+  CC       riscv_initreg.os
+  CC       riscv_corenote.os
+  CC       riscv64_corenote.os
+  CC       riscv_retval.os
+  CC       csky_attrs.os
+  CC       csky_init.os
+  CC       csky_symbol.os
+  CC       csky_cfi.os
+  CC       csky_regs.os
+  CC       csky_initreg.os
+  CC       csky_corenote.os
+  CC       loongarch_init.os
+  CC       loongarch_symbol.os
+  CC       loongarch_cfi.os
+  CC       loongarch_regs.os
+  CC       loongarch_retval.os
+  CC       loongarch_initreg.os
+  CC       loongarch_unwind.os
+  CC       loongarch_corenote.os
+  CC       arc_init.os
+  CC       arc_symbol.os
+  AR       libebl_backends.a
+  AR       libebl_backends_pic.a
+Making all in libebl
+  CC       eblopenbackend.o
+  CC       eblclosebackend.o
+  CC       eblreloctypename.o
+  CC       eblsegmenttypename.o
+  CC       eblsectiontypename.o
+  CC       eblmachineflagname.o
+  CC       eblsymboltypename.o
+  CC       ebldynamictagname.o
+  CC       eblsectionname.o
+  CC       eblsymbolbindingname.o
+  CC       eblbackendname.o
+  CC       eblosabiname.o
+  CC       eblmachineflagcheck.o
+  CC       eblmachinesectionflagcheck.o
+  CC       eblreloctypecheck.o
+  CC       eblrelocvaliduse.o
+  CC       eblrelocsimpletype.o
+  CC       ebldynamictagcheck.o
+  CC       eblcorenotetypename.o
+  CC       eblobjnotetypename.o
+  CC       eblcorenote.o
+  CC       eblobjnote.o
+  CC       ebldebugscnp.o
+  CC       eblgotpcreloccheck.o
+  CC       eblcopyrelocp.o
+  CC       eblsectionstripp.o
+  CC       eblelfclass.o
+  CC       eblelfdata.o
+  CC       eblelfmachine.o
+  CC       ebl_check_special_symbol.o
+  CC       eblbsspltp.o
+  CC       eblretval.o
+  CC       eblreginfo.o
+  CC       eblnonerelocp.o
+  CC       eblrelativerelocp.o
+  CC       eblsysvhashentrysize.o
+  CC       eblauxvinfo.o
+  CC       eblcheckobjattr.o
+  CC       ebl_check_special_section.o
+  CC       eblabicfi.o
+  CC       eblstother.o
+  CC       eblinitreg.o
+  CC       ebldwarftoregno.o
+  CC       eblnormalizepc.o
+  CC       eblunwind.o
+  CC       eblresolvesym.o
+  CC       eblcheckreloctargettype.o
+  CC       ebl_data_marker_symbol.o
+  CC       eblopenbackend.os
+  CC       eblclosebackend.os
+  CC       eblreloctypename.os
+  CC       eblsegmenttypename.os
+  CC       eblsectiontypename.os
+  CC       eblmachineflagname.os
+  CC       eblsymboltypename.os
+  CC       ebldynamictagname.os
+  CC       eblsectionname.os
+  CC       eblsymbolbindingname.os
+  CC       eblbackendname.os
+  CC       eblosabiname.os
+  CC       eblmachineflagcheck.os
+  CC       eblmachinesectionflagcheck.os
+  CC       eblreloctypecheck.os
+  CC       eblrelocvaliduse.os
+  CC       eblrelocsimpletype.os
+  CC       ebldynamictagcheck.os
+  CC       eblcorenotetypename.os
+  CC       eblobjnotetypename.os
+  CC       eblcorenote.os
+  CC       eblobjnote.os
+  CC       ebldebugscnp.os
+  CC       eblgotpcreloccheck.os
+  CC       eblcopyrelocp.os
+  CC       eblsectionstripp.os
+  CC       eblelfclass.os
+  CC       eblelfdata.os
+  CC       eblelfmachine.os
+  CC       ebl_check_special_symbol.os
+  CC       eblbsspltp.os
+  CC       eblretval.os
+  CC       eblreginfo.os
+  CC       eblnonerelocp.os
+  CC       eblrelativerelocp.os
+  CC       eblsysvhashentrysize.os
+  CC       eblauxvinfo.os
+  CC       eblcheckobjattr.os
+  CC       ebl_check_special_section.os
+  CC       eblabicfi.os
+  CC       eblstother.os
+  CC       eblinitreg.os
+  CC       ebldwarftoregno.os
+  CC       eblnormalizepc.os
+  CC       eblunwind.os
+  CC       eblresolvesym.os
+  CC       eblcheckreloctargettype.os
+  CC       ebl_data_marker_symbol.os
+  AR       libebl.a
+  AR       libebl_pic.a
+Making all in libdwelf
+  CC       dwelf_elf_gnu_debuglink.o
+  CC       dwelf_dwarf_gnu_debugaltlink.o
+  CC       dwelf_elf_gnu_build_id.o
+  CC       dwelf_scn_gnu_compressed_size.o
+  CC       dwelf_strtab.o
+  CC       dwelf_elf_begin.o
+  CC       dwelf_elf_e_machine_string.o
+  CC       dwelf_elf_gnu_debuglink.os
+  CC       dwelf_dwarf_gnu_debugaltlink.os
+  CC       dwelf_elf_gnu_build_id.os
+  CC       dwelf_scn_gnu_compressed_size.os
+  CC       dwelf_strtab.os
+  CC       dwelf_elf_begin.os
+  CC       dwelf_elf_e_machine_string.os
+  AR       libdwelf.a
+  AR       libdwelf_pic.a
+Making all in libdwfl
+  CC       dwfl_begin.o
+  CC       dwfl_end.o
+  CC       dwfl_error.o
+  CC       dwfl_version.o
+  CC       dwfl_module.o
+  CC       dwfl_report_elf.o
+  CC       relocate.o
+  CC       dwfl_module_build_id.o
+  CC       dwfl_module_report_build_id.o
+  CC       derelocate.o
+  CC       offline.o
+  CC       segment.o
+  CC       dwfl_module_info.o
+  CC       dwfl_getmodules.o
+  CC       dwfl_getdwarf.o
+  CC       dwfl_module_getdwarf.o
+  CC       dwfl_module_getelf.o
+  CC       dwfl_validate_address.o
+  CC       argp-std.o
+  CC       find-debuginfo.o
+  CC       dwfl_build_id_find_elf.o
+  CC       dwfl_build_id_find_debuginfo.o
+  CC       linux-kernel-modules.o
+  CC       linux-proc-maps.o
+  CC       dwfl_addrmodule.o
+  CC       dwfl_addrdwarf.o
+  CC       cu.o
+  CC       dwfl_module_nextcu.o
+  CC       dwfl_nextcu.o
+  CC       dwfl_cumodule.o
+  CC       dwfl_module_addrdie.o
+  CC       dwfl_addrdie.o
+  CC       lines.o
+  CC       dwfl_lineinfo.o
+  CC       dwfl_line_comp_dir.o
+  CC       dwfl_linemodule.o
+  CC       dwfl_linecu.o
+  CC       dwfl_dwarf_line.o
+  CC       dwfl_getsrclines.o
+  CC       dwfl_onesrcline.o
+  CC       dwfl_module_getsrc.o
+  CC       dwfl_getsrc.o
+  CC       dwfl_module_getsrc_file.o
+  CC       libdwfl_crc32.o
+  CC       libdwfl_crc32_file.o
+  CC       elf-from-memory.o
+  CC       dwfl_module_dwarf_cfi.o
+  CC       dwfl_module_eh_cfi.o
+  CC       dwfl_module_getsym.o
+  CC       dwfl_module_addrname.o
+  CC       dwfl_module_addrsym.o
+  CC       dwfl_module_return_value_location.o
+  CC       dwfl_module_register_names.o
+  CC       dwfl_segment_report_module.o
+  CC       link_map.o
+  CC       core-file.o
+  CC       open.o
+  CC       image-header.o
+  CC       dwfl_frame.o
+  CC       frame_unwind.o
+  CC       dwfl_frame_pc.o
+  CC       linux-pid-attach.o
+  CC       linux-core-attach.o
+  CC       dwfl_frame_regs.o
+  CC       gzip.o
+  CC       debuginfod-client.o
+  CC       bzip2.o
+  CC       lzma.o
+  CC       zstd.o
+  CC       dwfl_begin.os
+  CC       dwfl_end.os
+  CC       dwfl_error.os
+  CC       dwfl_version.os
+  CC       dwfl_module.os
+  CC       dwfl_report_elf.os
+  CC       relocate.os
+  CC       dwfl_module_build_id.os
+  CC       dwfl_module_report_build_id.os
+  CC       derelocate.os
+  CC       offline.os
+  CC       segment.os
+  CC       dwfl_module_info.os
+  CC       dwfl_getmodules.os
+  CC       dwfl_getdwarf.os
+  CC       dwfl_module_getdwarf.os
+  CC       dwfl_module_getelf.os
+  CC       dwfl_validate_address.os
+  CC       argp-std.os
+  CC       find-debuginfo.os
+  CC       dwfl_build_id_find_elf.os
+  CC       dwfl_build_id_find_debuginfo.os
+  CC       linux-kernel-modules.os
+  CC       linux-proc-maps.os
+  CC       dwfl_addrmodule.os
+  CC       dwfl_addrdwarf.os
+  CC       cu.os
+  CC       dwfl_module_nextcu.os
+  CC       dwfl_nextcu.os
+  CC       dwfl_cumodule.os
+  CC       dwfl_module_addrdie.os
+  CC       dwfl_addrdie.os
+  CC       lines.os
+  CC       dwfl_lineinfo.os
+  CC       dwfl_line_comp_dir.os
+  CC       dwfl_linemodule.os
+  CC       dwfl_linecu.os
+  CC       dwfl_dwarf_line.os
+  CC       dwfl_getsrclines.os
+  CC       dwfl_onesrcline.os
+  CC       dwfl_module_getsrc.os
+  CC       dwfl_getsrc.os
+  CC       dwfl_module_getsrc_file.os
+  CC       libdwfl_crc32.os
+  CC       libdwfl_crc32_file.os
+  CC       elf-from-memory.os
+  CC       dwfl_module_dwarf_cfi.os
+  CC       dwfl_module_eh_cfi.os
+  CC       dwfl_module_getsym.os
+  CC       dwfl_module_addrname.os
+  CC       dwfl_module_addrsym.os
+  CC       dwfl_module_return_value_location.os
+  CC       dwfl_module_register_names.os
+  CC       dwfl_segment_report_module.os
+  CC       link_map.os
+  CC       core-file.os
+  CC       open.os
+  CC       image-header.os
+  CC       frame_unwind.os
+  CC       dwfl_frame.os
+  CC       dwfl_frame_pc.os
+  CC       linux-pid-attach.os
+  CC       linux-core-attach.os
+  CC       dwfl_frame_regs.os
+  CC       gzip.os
+  CC       debuginfod-client.os
+  CC       bzip2.os
+  CC       lzma.os
+  CC       zstd.os
+  AR       libdwfl.a
+  AR       libdwfl_pic.a
+Making all in libdw
+make  all-am
+  CC       dwarf_begin.o
+  CC       dwarf_begin_elf.o
+  CC       dwarf_end.o
+  CC       dwarf_getelf.o
+  CC       dwarf_getpubnames.o
+  CC       dwarf_getabbrev.o
+  CC       dwarf_tag.o
+  CC       dwarf_error.o
+  CC       dwarf_nextcu.o
+  CC       dwarf_diename.o
+  CC       dwarf_offdie.o
+  CC       dwarf_attr.o
+  CC       dwarf_formstring.o
+  CC       dwarf_abbrev_hash.o
+  CC       dwarf_sig8_hash.o
+  CC       dwarf_attr_integrate.o
+  CC       dwarf_hasattr_integrate.o
+  CC       dwarf_child.o
+  CC       dwarf_haschildren.o
+  CC       dwarf_formaddr.o
+  CC       dwarf_formudata.o
+  CC       dwarf_formsdata.o
+  CC       dwarf_lowpc.o
+  CC       dwarf_entrypc.o
+  CC       dwarf_haspc.o
+  CC       dwarf_highpc.o
+  CC       dwarf_ranges.o
+  CC       dwarf_formref.o
+  CC       dwarf_formref_die.o
+  CC       dwarf_siblingof.o
+  CC       dwarf_dieoffset.o
+  CC       dwarf_cuoffset.o
+  CC       dwarf_diecu.o
+  CC       dwarf_hasattr.o
+  CC       dwarf_hasform.o
+  CC       dwarf_whatform.o
+  CC       dwarf_whatattr.o
+  CC       dwarf_bytesize.o
+  CC       dwarf_arrayorder.o
+  CC       dwarf_bitsize.o
+  CC       dwarf_bitoffset.o
+  CC       dwarf_srclang.o
+  CC       dwarf_getabbrevtag.o
+  CC       dwarf_getabbrevcode.o
+  CC       dwarf_abbrevhaschildren.o
+  CC       dwarf_getattrcnt.o
+  CC       dwarf_getabbrevattr.o
+  CC       dwarf_getsrclines.o
+  CC       dwarf_getsrc_die.o
+  CC       dwarf_getscopes.o
+  CC       dwarf_getscopes_die.o
+  CC       dwarf_getscopevar.o
+  CC       dwarf_linesrc.o
+  CC       dwarf_lineno.o
+  CC       dwarf_lineaddr.o
+  CC       dwarf_linecol.o
+  CC       dwarf_linebeginstatement.o
+  CC       dwarf_lineendsequence.o
+  CC       dwarf_lineblock.o
+  CC       dwarf_linecontext.o
+  CC       dwarf_linefunctionname.o
+  CC       dwarf_lineprologueend.o
+  CC       dwarf_lineepiloguebegin.o
+  CC       dwarf_lineisa.o
+  CC       dwarf_linediscriminator.o
+  CC       dwarf_lineop_index.o
+  CC       dwarf_line_file.o
+  CC       dwarf_onesrcline.o
+  CC       dwarf_formblock.o
+  CC       dwarf_getsrcfiles.o
+  CC       dwarf_filesrc.o
+  CC       dwarf_getsrcdirs.o
+  CC       dwarf_getlocation.o
+  CC       dwarf_getstring.o
+  CC       dwarf_offabbrev.o
+  CC       dwarf_getaranges.o
+  CC       dwarf_onearange.o
+  CC       dwarf_getarangeinfo.o
+  CC       dwarf_getarange_addr.o
+  CC       dwarf_getattrs.o
+  CC       dwarf_formflag.o
+  CC       dwarf_getmacros.o
+  CC       dwarf_macro_getparamcnt.o
+  CC       dwarf_macro_opcode.o
+  CC       dwarf_macro_param.o
+  CC       dwarf_macro_param1.o
+  CC       dwarf_macro_param2.o
+  CC       dwarf_macro_getsrcfiles.o
+  CC       dwarf_addrdie.o
+  CC       dwarf_getfuncs.o
+  CC       dwarf_decl_file.o
+  CC       dwarf_decl_line.o
+  CC       dwarf_decl_column.o
+  CC       dwarf_func_inline.o
+  CC       dwarf_getsrc_file.o
+  CC       libdw_findcu.o
+  CC       libdw_form.o
+  CC       libdw_alloc.o
+  CC       libdw_visit_scopes.o
+  CC       dwarf_entry_breakpoints.o
+  CC       dwarf_next_cfi.o
+  CC       cie.o
+  CC       fde.o
+  CC       cfi.o
+  CC       frame-cache.o
+  CC       dwarf_frame_info.o
+  CC       dwarf_frame_cfa.o
+  CC       dwarf_frame_register.o
+  CC       dwarf_cfi_addrframe.o
+  CC       dwarf_getcfi.o
+  CC       dwarf_getcfi_elf.o
+  CC       dwarf_cfi_end.o
+  CC       dwarf_aggregate_size.o
+  CC       dwarf_getlocation_implicit_pointer.o
+  CC       dwarf_getlocation_die.o
+  CC       dwarf_getlocation_attr.o
+  CC       dwarf_getalt.o
+  CC       dwarf_setalt.o
+  CC       dwarf_cu_getdwarf.o
+  CC       dwarf_cu_die.o
+  CC       dwarf_peel_type.o
+  CC       dwarf_default_lower_bound.o
+  CC       dwarf_die_addr_die.o
+  CC       dwarf_get_units.o
+  CC       libdw_find_split_unit.o
+  CC       dwarf_cu_info.o
+  CC       dwarf_next_lines.o
+  CC       dwarf_cu_dwp_section_info.o
+  CC       dwarf_begin.os
+  CC       dwarf_begin_elf.os
+  CC       dwarf_end.os
+  CC       dwarf_getelf.os
+  CC       dwarf_getpubnames.os
+  CC       dwarf_getabbrev.os
+  CC       dwarf_tag.os
+  CC       dwarf_error.os
+  CC       dwarf_nextcu.os
+  CC       dwarf_diename.os
+  CC       dwarf_offdie.os
+  CC       dwarf_attr.os
+  CC       dwarf_formstring.os
+  CC       dwarf_abbrev_hash.os
+  CC       dwarf_sig8_hash.os
+  CC       dwarf_attr_integrate.os
+  CC       dwarf_hasattr_integrate.os
+  CC       dwarf_child.os
+  CC       dwarf_haschildren.os
+  CC       dwarf_formaddr.os
+  CC       dwarf_formudata.os
+  CC       dwarf_formsdata.os
+  CC       dwarf_lowpc.os
+  CC       dwarf_entrypc.os
+  CC       dwarf_haspc.os
+  CC       dwarf_highpc.os
+  CC       dwarf_ranges.os
+  CC       dwarf_formref.os
+  CC       dwarf_formref_die.os
+  CC       dwarf_siblingof.os
+  CC       dwarf_dieoffset.os
+  CC       dwarf_cuoffset.os
+  CC       dwarf_diecu.os
+  CC       dwarf_hasattr.os
+  CC       dwarf_hasform.os
+  CC       dwarf_whatform.os
+  CC       dwarf_whatattr.os
+  CC       dwarf_bytesize.os
+  CC       dwarf_arrayorder.os
+  CC       dwarf_bitsize.os
+  CC       dwarf_bitoffset.os
+  CC       dwarf_srclang.os
+  CC       dwarf_getabbrevtag.os
+  CC       dwarf_getabbrevcode.os
+  CC       dwarf_abbrevhaschildren.os
+  CC       dwarf_getattrcnt.os
+  CC       dwarf_getabbrevattr.os
+  CC       dwarf_getsrclines.os
+  CC       dwarf_getsrc_die.os
+  CC       dwarf_getscopes.os
+  CC       dwarf_getscopes_die.os
+  CC       dwarf_getscopevar.os
+  CC       dwarf_linesrc.os
+  CC       dwarf_lineno.os
+  CC       dwarf_lineaddr.os
+  CC       dwarf_linecol.os
+  CC       dwarf_linebeginstatement.os
+  CC       dwarf_lineendsequence.os
+  CC       dwarf_lineblock.os
+  CC       dwarf_linecontext.os
+  CC       dwarf_linefunctionname.os
+  CC       dwarf_lineprologueend.os
+  CC       dwarf_lineepiloguebegin.os
+  CC       dwarf_lineisa.os
+  CC       dwarf_linediscriminator.os
+  CC       dwarf_lineop_index.os
+  CC       dwarf_line_file.os
+  CC       dwarf_onesrcline.os
+  CC       dwarf_formblock.os
+  CC       dwarf_getsrcfiles.os
+  CC       dwarf_filesrc.os
+  CC       dwarf_getsrcdirs.os
+  CC       dwarf_getlocation.os
+  CC       dwarf_getstring.os
+  CC       dwarf_offabbrev.os
+  CC       dwarf_getaranges.os
+  CC       dwarf_onearange.os
+  CC       dwarf_getarangeinfo.os
+  CC       dwarf_getarange_addr.os
+  CC       dwarf_getattrs.os
+  CC       dwarf_formflag.os
+  CC       dwarf_getmacros.os
+  CC       dwarf_macro_getparamcnt.os
+  CC       dwarf_macro_opcode.os
+  CC       dwarf_macro_param.os
+  CC       dwarf_macro_param1.os
+  CC       dwarf_macro_param2.os
+  CC       dwarf_macro_getsrcfiles.os
+  CC       dwarf_addrdie.os
+  CC       dwarf_getfuncs.os
+  CC       dwarf_decl_file.os
+  CC       dwarf_decl_line.os
+  CC       dwarf_decl_column.os
+  CC       dwarf_func_inline.os
+  CC       dwarf_getsrc_file.os
+  CC       libdw_findcu.os
+  CC       libdw_form.os
+  CC       libdw_alloc.os
+  CC       libdw_visit_scopes.os
+  CC       dwarf_entry_breakpoints.os
+  CC       dwarf_next_cfi.os
+  CC       cie.os
+  CC       fde.os
+  CC       cfi.os
+  CC       frame-cache.os
+  CC       dwarf_frame_info.os
+  CC       dwarf_frame_cfa.os
+  CC       dwarf_frame_register.os
+  CC       dwarf_cfi_addrframe.os
+  CC       dwarf_getcfi.os
+  CC       dwarf_getcfi_elf.os
+  CC       dwarf_cfi_end.os
+  CC       dwarf_aggregate_size.os
+  CC       dwarf_getlocation_implicit_pointer.os
+  CC       dwarf_getlocation_die.os
+  CC       dwarf_getlocation_attr.os
+  CC       dwarf_getalt.os
+  CC       dwarf_setalt.os
+  CC       dwarf_cu_getdwarf.os
+  CC       dwarf_cu_die.os
+  CC       dwarf_peel_type.os
+  CC       dwarf_default_lower_bound.os
+  CC       dwarf_die_addr_die.os
+  CC       dwarf_get_units.os
+  CC       libdw_find_split_unit.os
+  CC       dwarf_cu_info.os
+  CC       dwarf_next_lines.os
+  CC       dwarf_cu_dwp_section_info.os
+  AR       libdw.a
+  AR       libdw_pic.a
+  CCLD     libdw.so
+Making all in libasm
+  CC       asm_begin.o
+  CC       asm_abort.o
+  CC       asm_end.o
+  CC       asm_error.o
+  CC       asm_getelf.o
+  CC       asm_newscn.o
+  CC       asm_newscn_ingrp.o
+  CC       asm_newsubscn.o
+  CC       asm_newsym.o
+  CC       asm_newcomsym.o
+  CC       asm_newabssym.o
+  CC       asm_newscngrp.o
+  CC       asm_scngrp_newsignature.o
+  CC       asm_fill.o
+  CC       asm_align.o
+  CC       asm_addstrz.o
+  CC       asm_addint8.o
+  CC       asm_adduint8.o
+  CC       asm_addint16.o
+  CC       asm_adduint16.o
+  CC       asm_addint32.o
+  CC       asm_adduint32.o
+  CC       asm_addint64.o
+  CC       asm_adduint64.o
+  CC       asm_adduleb128.o
+  CC       asm_addsleb128.o
+  CC       disasm_begin.o
+  CC       disasm_cb.o
+  CC       disasm_end.o
+  CC       disasm_str.o
+  CC       symbolhash.o
+  CC       asm_begin.os
+  CC       asm_abort.os
+  CC       asm_end.os
+  CC       asm_error.os
+  CC       asm_getelf.os
+  CC       asm_newscn.os
+  CC       asm_newscn_ingrp.os
+  CC       asm_newsubscn.os
+  CC       asm_newsym.os
+  CC       asm_newcomsym.os
+  CC       asm_newabssym.os
+  CC       asm_newscngrp.os
+  CC       asm_scngrp_newsignature.os
+  CC       asm_fill.os
+  CC       asm_align.os
+  CC       asm_addstrz.os
+  CC       asm_addint8.os
+  CC       asm_adduint8.os
+  CC       asm_addint16.os
+  CC       asm_adduint16.os
+  CC       asm_addint32.os
+  CC       asm_adduint32.os
+  CC       asm_addint64.os
+  CC       asm_adduint64.os
+  CC       asm_adduleb128.os
+  CC       asm_addsleb128.os
+  CC       disasm_begin.os
+  CC       disasm_cb.os
+  CC       disasm_end.os
+  CC       disasm_str.os
+  CC       symbolhash.os
+  AR       libasm.a
+  AR       libasm_pic.a
+  CCLD     libasm.so
+Making all in debuginfod
+  CC       debuginfod-find.o
+  CC       debuginfod-client.o
+  CC       debuginfod-client.os
+  AR       libdebuginfod.a
+  AR       libdebuginfod_pic.a
+  CCLD     libdebuginfod.so.1
+ln -fs libdebuginfod.so.1 libdebuginfod.so
+  CCLD     debuginfod-find
+Making all in src
+  CC       readelf.o
+  CC       nm.o
+  CC       size.o
+  CC       strip.o
+  CC       elflint.o
+  CC       findtextrel.o
+  CC       addr2line.o
+  CC       elfcmp.o
+  CC       objdump.o
+  CC       ranlib.o
+  CC       arlib.o
+  CC       arlib2.o
+  CC       arlib-argp.o
+  CC       strings.o
+  CC       ar.o
+  CC       unstrip.o
+  CC       stack.o
+  CC       elfcompress.o
+  CC       elfclassify.o
+  CXX      srcfiles.o
+  GEN      make-debug-archive
+  CCLD     nm
+  CCLD     size
+  CCLD     strip
+  CCLD     elflint
+  CCLD     findtextrel
+  CCLD     addr2line
+  CCLD     elfcmp
+  CCLD     objdump
+  AR       libar.a
+  CCLD     strings
+  CCLD     ar
+  CCLD     unstrip
+  CCLD     stack
+  CCLD     elfcompress
+  CCLD     elfclassify
+  CCLD     ranlib
+  CXXLD    srcfiles
+  CCLD     readelf
+Making all in po
+make[3]: Nothing to be done for 'all'.
+Making all in doc
+make[3]: Nothing to be done for 'all'.
+Making all in tests
+cp ../libelf/libelf.h libelf.h
+make  all-am
+make[4]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/sources/elfutils-0.191'
+make[1]: Entering directory '/sources/elfutils-0.191/libelf'
+make[2]: Entering directory '/sources/elfutils-0.191/libelf'
+ /usr/bin/mkdir -p '/sources/elfutils-0.191/DESTDIR/usr/lib32'
+ /usr/bin/install -c -m 644  libelf.a '/sources/elfutils-0.191/DESTDIR/usr/lib32'
+ ( cd '/sources/elfutils-0.191/DESTDIR/usr/lib32' && ranlib libelf.a )
+ /usr/bin/mkdir -p '/sources/elfutils-0.191/DESTDIR/usr/include'
+ /usr/bin/install -c -m 644 libelf.h gelf.h nlist.h '/sources/elfutils-0.191/DESTDIR/usr/include'
+ /usr/bin/mkdir -p '/sources/elfutils-0.191/DESTDIR/usr/include/elfutils'
+ /usr/bin/install -c -m 644 elf-knowledge.h '/sources/elfutils-0.191/DESTDIR/usr/include/elfutils'
+make[2]: Leaving directory '/sources/elfutils-0.191/libelf'
+/bin/sh /sources/elfutils-0.191/config/install-sh -d /sources/elfutils-0.191/DESTDIR/usr/lib32
+/usr/bin/install -c libelf.so /sources/elfutils-0.191/DESTDIR/usr/lib32/libelf-0.191.so
+ln -fs libelf-0.191.so /sources/elfutils-0.191/DESTDIR/usr/lib32/libelf.so.1
+ln -fs libelf.so.1 /sources/elfutils-0.191/DESTDIR/usr/lib32/libelf.so
+make[1]: Leaving directory '/sources/elfutils-0.191/libelf'
+install: creating directory 'DESTDIR/usr/lib32/pkgconfig'
+'config/libelf.pc' -> 'DESTDIR/usr/lib32/pkgconfig/libelf.pc'
+'DESTDIR/usr/lib32/libelf-0.191.so' -> '/usr/lib32/libelf-0.191.so'
+'DESTDIR/usr/lib32/libelf.a' -> '/usr/lib32/libelf.a'
+'DESTDIR/usr/lib32/libelf.so' -> '/usr/lib32/libelf.so'
+'DESTDIR/usr/lib32/libelf.so.1' -> '/usr/lib32/libelf.so.1'
+'DESTDIR/usr/lib32/pkgconfig/libelf.pc' -> '/usr/lib32/pkgconfig/libelf.pc'
+
+
+Totalseconds: 93
+
+KB: 3064252	/

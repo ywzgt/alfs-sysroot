@@ -1,0 +1,19 @@
+/usr/bin/lz4	232544	root:root	755	
+/usr/bin/lz4c	3	root:root	777	lz4
+/usr/bin/lz4cat	3	root:root	777	lz4
+/usr/bin/unlz4	3	root:root	777	lz4
+/usr/include/lz4.h	46014	root:root	644	
+/usr/include/lz4frame.h	36085	root:root	644	
+/usr/include/lz4hc.h	20308	root:root	644	
+/usr/lib/liblz4.so	16	root:root	777	liblz4.so.1.10.0
+/usr/lib/liblz4.so.1	16	root:root	777	liblz4.so.1.10.0
+/usr/lib/liblz4.so.1.10.0	157784	root:root	755	
+/usr/lib/pkgconfig/liblz4.pc	396	root:root	644	
+/usr/lib32/liblz4.so	16	root:root	777	liblz4.so.1.10.0
+/usr/lib32/liblz4.so.1	16	root:root	777	liblz4.so.1.10.0
+/usr/lib32/liblz4.so.1.10.0	152560	root:root	755	
+/usr/lib32/pkgconfig/liblz4.pc	396	root:root	644	
+/usr/share/man/man1/lz4.1	10666	root:root	644	
+/usr/share/man/man1/lz4c.1	5	root:root	777	lz4.1
+/usr/share/man/man1/lz4cat.1	5	root:root	777	lz4.1
+/usr/share/man/man1/unlz4.1	5	root:root	777	lz4.1
