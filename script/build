@@ -98,6 +98,7 @@ _fix_git_repo() {
 	# 防止出现编译器内部错误，创建通用库：
 	sed -i 's|./configure --prefix=/usr|cp -v config{fsf,}.guess\ncp -v config{fsf,}.sub\n&|' repo/chapter08/gmp.xml
 
+	sed -i 's/patch -Np1.*-upstream-patch/[ x"\&glibc-upstream-patch;" = x ] || &/' repo/chapter08/glibc.xml
 	[ ! -e repo/chapter08/systemd.xml ] || sed -i '/-Dsysusers=false\s\+\\$/d' repo/chapter08/systemd.xml
 	for i in {packages,patches}.ent chapter03/{packages,patches}.xml; do
 		diff -u {lfs,repo}/$i &>/dev/null || { cp -vf lfs/$i repo/$i; }
