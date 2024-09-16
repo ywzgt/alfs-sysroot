@@ -1,0 +1,22 @@
+#!/bin/bash
+# https://linuxfromscratch.org/blfs/view/systemd/postlfs/nettle.html
+
+PKG="nettle"
+PKG_VERSION="3.10"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.gz"
+URL="https://ftp.gnu.org/gnu/${PKG}/${PKG_FILE}"
+MD5="c61453139d5fb44e9cdcc5b684b26e55"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << xEOFx
+	./configure --prefix=/usr \
+		--disable-static \
+		--libdir=/usr/lib
+
+make
+make install
+xEOFx
+) > tmp

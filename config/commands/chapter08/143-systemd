@@ -1,0 +1,76 @@
+#!/bin/bash
+
+sed -i -e 's/GROUP="render"/GROUP="video"/' \
+       -e 's/GROUP="sgx", //' rules.d/50-udev-default.rules.in
+
+mkdir -p build
+cd       build
+
+meson setup ..                \
+      --prefix=/usr           \
+      --buildtype=release     \
+      -D default-dnssec=no    \
+      -D firstboot=false      \
+      -D install-tests=false  \
+      -D ldconfig=false       \
+      -D sysusers=false       \
+      -D rpmmacrosdir=no      \
+      -D homed=disabled       \
+      -D userdb=false         \
+      -D man=disabled         \
+      -D mode=release         \
+      -D pamconfdir=no        \
+      -D dev-kvm-mode=0660    \
+      -D nobody-group=nogroup \
+      -D sysupdate=disabled   \
+      -D ukify=disabled       \
+      -D docdir=/usr/share/doc/systemd-256.5
+
+ninja
+
+echo 'NAME="Linux From Scratch"' > /etc/os-release
+ninja test
+
+ninja install
+
+tar -xf ../../systemd-man-pages-256.5.tar.xz \
+    --no-same-owner --strip-components=1   \
+    -C /usr/share/man
+
+systemd-machine-id-setup
+
+systemctl preset-all
+
+rm -rf *
+
+ln -sf /bin/true /usr/bin/xsltproc
+
+PKG_CONFIG_PATH="/usr/lib32/pkgconfig" \
+CC="gcc -m32 -march=i686"              \
+CXX="g++ -m32 -march=i686"             \
+LANG=en_US.UTF-8                       \
+meson --prefix=/usr                    \
+      --sysconfdir=/etc                \
+      --localstatedir=/var             \
+      --libdir=/usr/lib32              \
+      -Drootlibdir=/usr/lib32          \
+      -Dblkid=true                  \
+      -Ddefault-dnssec=no           \
+      -Dfirstboot=false             \
+      -Dinstall-tests=false         \
+      -Dldconfig=false              \
+      -Db_lto=false                 \
+      -Drpmmacrosdir=no             \
+      -Dhomed=false                 \
+      -Duserdb=false                \
+      -Dman=false                   \
+      -Dmode=release                \
+      ..
+
+LANG=en_US.UTF-8 ninja
+
+LANG=en_US.UTF-8 DESTDIR=$PWD/DESTDIR ninja install
+cp -Rv DESTDIR/usr/lib32/* /usr/lib32
+rm -rf DESTDIR
+rm -f /usr/bin/xsltproc
+

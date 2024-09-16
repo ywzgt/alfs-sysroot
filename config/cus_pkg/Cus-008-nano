@@ -1,0 +1,35 @@
+#!/bin/bash
+# https://www.linuxfromscratch.org/blfs/view/systemd/postlfs/nano.html
+
+PKG="nano"
+PKG_VERSION="8.1"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.xz"
+URL="https://www.nano-editor.org/dist/v${PKG_VERSION:0:1}/${PKG_FILE}"
+MD5="9eb581845590ad70ba89c04509c7a386"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << xEOFx
+./configure --prefix=/usr \
+		--sysconfdir=/etc \
+		--enable-utf8 \
+		--enable-color \
+		--enable-nanorc \
+		--docdir=/usr/share/doc/${PKG}-${PKG_VERSION}
+make
+make install
+install -vm644 doc/sample.nanorc /etc/nanorc
+cat <<"EOF">>/etc/nanorc
+bind ^Q exit all
+bind ^Z undo main
+bind ^Y redo main
+
+set tabsize 4
+#set tabstospaces
+
+include "/usr/share/nano/*.nanorc"
+EOF
+xEOFx
+) > tmp

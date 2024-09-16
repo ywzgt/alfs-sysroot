@@ -1,0 +1,21 @@
+Mon Sep 16 19:00:15 CST 2024
+tar: stdout: write error
+KB: 3100508	/
+Processing /sources/wheel-0.44.0
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: wheel
+  Building wheel for wheel (pyproject.toml): started
+  Building wheel for wheel (pyproject.toml): finished with status 'done'
+  Created wheel for wheel: filename=wheel-0.44.0-py3-none-any.whl size=67059 sha256=3936d05a45164bd9a542b560700cfa5d2e66d17bca0264280dd804b1ee7540c6
+  Stored in directory: /tmp/pip-ephem-wheel-cache-i5qys59u/wheels/91/dd/45/db5c5e10adfe6c176ef7a994604b3c3a944d924369979e57ee
+Successfully built wheel
+Looking in links: dist
+Processing ./dist/wheel-0.44.0-py3-none-any.whl
+Installing collected packages: wheel
+Successfully installed wheel-0.44.0
+
+
+Totalseconds: 0
+
+KB: 3102028	/

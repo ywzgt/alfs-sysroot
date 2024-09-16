@@ -1,0 +1,300 @@
+/usr/bin/[	50200	root:root	755	
+/usr/bin/b2sum	63960	root:root	755	
+/usr/bin/base32	46584	root:root	755	
+/usr/bin/base64	46576	root:root	755	
+/usr/bin/basename	41448	root:root	755	
+/usr/bin/basenc	57072	root:root	755	
+/usr/bin/cat	46688	root:root	755	
+/usr/bin/chcon	70360	root:root	755	
+/usr/bin/chgrp	74624	root:root	755	
+/usr/bin/chmod	74048	root:root	755	
+/usr/bin/chown	74616	root:root	755	
+/usr/bin/cksum	195728	root:root	755	
+/usr/bin/comm	51488	root:root	755	
+/usr/bin/cp	130968	root:root	755	
+/usr/bin/csplit	61384	root:root	755	
+/usr/bin/cut	60704	root:root	755	
+/usr/bin/date	111240	root:root	755	
+/usr/bin/dd	75688	root:root	755	
+/usr/bin/df	89400	root:root	755	
+/usr/bin/dir	164296	root:root	755	
+/usr/bin/dircolors	54600	root:root	755	
+/usr/bin/dirname	41048	root:root	755	
+/usr/bin/du	120392	root:root	755	
+/usr/bin/echo	40768	root:root	755	
+/usr/bin/env	56168	root:root	755	
+/usr/bin/expand	51808	root:root	755	
+/usr/bin/expr	54688	root:root	755	
+/usr/bin/factor	72768	root:root	755	
+/usr/bin/false	36544	root:root	755	
+/usr/bin/fmt	55624	root:root	755	
+/usr/bin/fold	46952	root:root	755	
+/usr/bin/groups	41736	root:root	755	
+/usr/bin/head	55240	root:root	755	
+/usr/bin/hostid	41128	root:root	755	
+/usr/bin/id	51096	root:root	755	
+/usr/bin/install	132832	root:root	755	
+/usr/bin/join	61216	root:root	755	
+/usr/bin/link	41208	root:root	755	
+/usr/bin/ln	71816	root:root	755	
+/usr/bin/logname	41168	root:root	755	
+/usr/bin/ls	164288	root:root	755	
+/usr/bin/md5sum	50944	root:root	755	
+/usr/bin/mkdir	51352	root:root	755	
+/usr/bin/mkfifo	41296	root:root	755	
+/usr/bin/mknod	45968	root:root	755	
+/usr/bin/mktemp	46392	root:root	755	
+/usr/bin/mv	140432	root:root	755	
+/usr/bin/nice	41352	root:root	755	
+/usr/bin/nl	52240	root:root	755	
+/usr/bin/nohup	41896	root:root	755	
+/usr/bin/nproc	41640	root:root	755	
+/usr/bin/numfmt	69048	root:root	755	
+/usr/bin/od	75920	root:root	755	
+/usr/bin/paste	46288	root:root	755	
+/usr/bin/pathchk	41744	root:root	755	
+/usr/bin/pinky	51656	root:root	755	
+/usr/bin/pr	93984	root:root	755	
+/usr/bin/printenv	40880	root:root	755	
+/usr/bin/printf	50776	root:root	755	
+/usr/bin/ptx	65808	root:root	755	
+/usr/bin/pwd	42048	root:root	755	
+/usr/bin/readlink	51248	root:root	755	
+/usr/bin/realpath	55720	root:root	755	
+/usr/bin/rm	75112	root:root	755	
+/usr/bin/rmdir	41904	root:root	755	
+/usr/bin/runcon	40816	root:root	755	
+/usr/bin/seq	46664	root:root	755	
+/usr/bin/sha1sum	50952	root:root	755	
+/usr/bin/sha224sum	51088	root:root	755	
+/usr/bin/sha256sum	51088	root:root	755	
+/usr/bin/sha384sum	51088	root:root	755	
+/usr/bin/sha512sum	51088	root:root	755	
+/usr/bin/shred	69880	root:root	755	
+/usr/bin/shuf	61176	root:root	755	
+/usr/bin/sleep	41744	root:root	755	
+/usr/bin/sort	136304	root:root	755	
+/usr/bin/split	71376	root:root	755	
+/usr/bin/stat	87848	root:root	755	
+/usr/bin/stdbuf	50840	root:root	755	
+/usr/bin/stty	76152	root:root	755	
+/usr/bin/sum	46552	root:root	755	
+/usr/bin/sync	41272	root:root	755	
+/usr/bin/tac	47328	root:root	755	
+/usr/bin/tail	79648	root:root	755	
+/usr/bin/tee	51600	root:root	755	
+/usr/bin/test	45400	root:root	755	
+/usr/bin/timeout	51992	root:root	755	
+/usr/bin/touch	94464	root:root	755	
+/usr/bin/tr	55296	root:root	755	
+/usr/bin/true	36544	root:root	755	
+/usr/bin/truncate	41704	root:root	755	
+/usr/bin/tsort	54608	root:root	755	
+/usr/bin/tty	41136	root:root	755	
+/usr/bin/uname	41288	root:root	755	
+/usr/bin/unexpand	51848	root:root	755	
+/usr/bin/uniq	55992	root:root	755	
+/usr/bin/unlink	41248	root:root	755	
+/usr/bin/users	46560	root:root	755	
+/usr/bin/vdir	164296	root:root	755	
+/usr/bin/wc	135896	root:root	755	
+/usr/bin/who	56528	root:root	755	
+/usr/bin/whoami	41216	root:root	755	
+/usr/bin/yes	41040	root:root	755	
+/usr/libexec/coreutils/libstdbuf.so	15624	root:root	755	
+/usr/sbin/chroot	51160	root:root	755	
+/usr/share/info/coreutils.info	997773	root:root	644	
+/usr/share/info/dir	106488	root:root	644	
+/usr/share/locale/af/LC_MESSAGES/coreutils.mo	26198	root:root	644	
+/usr/share/locale/af/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/be/LC_MESSAGES/coreutils.mo	53782	root:root	644	
+/usr/share/locale/be/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/bg/LC_MESSAGES/coreutils.mo	476803	root:root	644	
+/usr/share/locale/bg/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/ca/LC_MESSAGES/coreutils.mo	381066	root:root	644	
+/usr/share/locale/ca/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/cs/LC_MESSAGES/coreutils.mo	367199	root:root	644	
+/usr/share/locale/cs/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/da/LC_MESSAGES/coreutils.mo	343574	root:root	644	
+/usr/share/locale/da/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/de/LC_MESSAGES/coreutils.mo	369498	root:root	644	
+/usr/share/locale/de/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/el/LC_MESSAGES/coreutils.mo	22968	root:root	644	
+/usr/share/locale/el/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/eo/LC_MESSAGES/coreutils.mo	143231	root:root	644	
+/usr/share/locale/eo/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/es/LC_MESSAGES/coreutils.mo	212554	root:root	644	
+/usr/share/locale/es/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/et/LC_MESSAGES/coreutils.mo	339087	root:root	644	
+/usr/share/locale/et/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/eu/LC_MESSAGES/coreutils.mo	26072	root:root	644	
+/usr/share/locale/eu/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/fi/LC_MESSAGES/coreutils.mo	108155	root:root	644	
+/usr/share/locale/fi/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/fr/LC_MESSAGES/coreutils.mo	402121	root:root	644	
+/usr/share/locale/fr/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/ga/LC_MESSAGES/coreutils.mo	100542	root:root	644	
+/usr/share/locale/ga/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/gl/LC_MESSAGES/coreutils.mo	25119	root:root	644	
+/usr/share/locale/gl/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/hr/LC_MESSAGES/coreutils.mo	354932	root:root	644	
+/usr/share/locale/hr/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/hu/LC_MESSAGES/coreutils.mo	286775	root:root	644	
+/usr/share/locale/hu/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/ia/LC_MESSAGES/coreutils.mo	6837	root:root	644	
+/usr/share/locale/ia/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/id/LC_MESSAGES/coreutils.mo	123563	root:root	644	
+/usr/share/locale/id/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/it/LC_MESSAGES/coreutils.mo	140626	root:root	644	
+/usr/share/locale/it/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/ja/LC_MESSAGES/coreutils.mo	395727	root:root	644	
+/usr/share/locale/ja/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/ka/LC_MESSAGES/coreutils.mo	122161	root:root	644	
+/usr/share/locale/ka/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/kk/LC_MESSAGES/coreutils.mo	1562	root:root	644	
+/usr/share/locale/kk/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/ko/LC_MESSAGES/coreutils.mo	396756	root:root	644	
+/usr/share/locale/ko/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/lg/LC_MESSAGES/coreutils.mo	178768	root:root	644	
+/usr/share/locale/lg/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/lt/LC_MESSAGES/coreutils.mo	28415	root:root	644	
+/usr/share/locale/lt/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/ms/LC_MESSAGES/coreutils.mo	20763	root:root	644	
+/usr/share/locale/ms/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/nb/LC_MESSAGES/coreutils.mo	325148	root:root	644	
+/usr/share/locale/nb/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/nl/LC_MESSAGES/coreutils.mo	319455	root:root	644	
+/usr/share/locale/nl/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/pl/LC_MESSAGES/coreutils.mo	366711	root:root	644	
+/usr/share/locale/pl/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/pt/LC_MESSAGES/coreutils.mo	303340	root:root	644	
+/usr/share/locale/pt/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/pt_BR/LC_MESSAGES/coreutils.mo	291655	root:root	644	
+/usr/share/locale/pt_BR/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/ro/LC_MESSAGES/coreutils.mo	404941	root:root	644	
+/usr/share/locale/ro/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/ru/LC_MESSAGES/coreutils.mo	438999	root:root	644	
+/usr/share/locale/ru/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/sk/LC_MESSAGES/coreutils.mo	64845	root:root	644	
+/usr/share/locale/sk/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/sl/LC_MESSAGES/coreutils.mo	278883	root:root	644	
+/usr/share/locale/sl/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/sr/LC_MESSAGES/coreutils.mo	447934	root:root	644	
+/usr/share/locale/sr/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/sv/LC_MESSAGES/coreutils.mo	347287	root:root	644	
+/usr/share/locale/sv/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/ta/LC_MESSAGES/coreutils.mo	52416	root:root	644	
+/usr/share/locale/ta/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/tr/LC_MESSAGES/coreutils.mo	330169	root:root	644	
+/usr/share/locale/tr/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/uk/LC_MESSAGES/coreutils.mo	492949	root:root	644	
+/usr/share/locale/uk/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/vi/LC_MESSAGES/coreutils.mo	299143	root:root	644	
+/usr/share/locale/vi/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/zh_CN/LC_MESSAGES/coreutils.mo	366615	root:root	644	
+/usr/share/locale/zh_CN/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/locale/zh_TW/LC_MESSAGES/coreutils.mo	264998	root:root	644	
+/usr/share/locale/zh_TW/LC_TIME/coreutils.mo	27	root:root	777	../LC_MESSAGES/coreutils.mo
+/usr/share/man/man1/b2sum.1	2572	root:root	644	
+/usr/share/man/man1/base32.1	1838	root:root	644	
+/usr/share/man/man1/base64.1	1838	root:root	644	
+/usr/share/man/man1/basename.1	1789	root:root	644	
+/usr/share/man/man1/basenc.1	2924	root:root	644	
+/usr/share/man/man1/cat.1	1935	root:root	644	
+/usr/share/man/man1/chcon.1	2859	root:root	644	
+/usr/share/man/man1/chgrp.1	2944	root:root	644	
+/usr/share/man/man1/chmod.1	7041	root:root	644	
+/usr/share/man/man1/chown.1	4109	root:root	644	
+/usr/share/man/man1/cksum.1	3018	root:root	644	
+/usr/share/man/man1/comm.1	2175	root:root	644	
+/usr/share/man/man1/cp.1	6647	root:root	644	
+/usr/share/man/man1/csplit.1	2315	root:root	644	
+/usr/share/man/man1/cut.1	2612	root:root	644	
+/usr/share/man/man1/date.1	6284	root:root	644	
+/usr/share/man/man1/dd.1	3872	root:root	644	
+/usr/share/man/man1/df.1	3980	root:root	644	
+/usr/share/man/man1/dir.1	8125	root:root	644	
+/usr/share/man/man1/dircolors.1	1673	root:root	644	
+/usr/share/man/man1/dirname.1	1463	root:root	644	
+/usr/share/man/man1/du.1	4959	root:root	644	
+/usr/share/man/man1/echo.1	1996	root:root	644	
+/usr/share/man/man1/env.1	4039	root:root	644	
+/usr/share/man/man1/expand.1	1752	root:root	644	
+/usr/share/man/man1/expr.1	2747	root:root	644	
+/usr/share/man/man1/factor.1	1270	root:root	644	
+/usr/share/man/man1/false.1	1291	root:root	644	
+/usr/share/man/man1/fmt.1	1967	root:root	644	
+/usr/share/man/man1/fold.1	1523	root:root	644	
+/usr/share/man/man1/groups.1	1238	root:root	644	
+/usr/share/man/man1/head.1	2118	root:root	644	
+/usr/share/man/man1/hostid.1	1126	root:root	644	
+/usr/share/man/man1/id.1	1842	root:root	644	
+/usr/share/man/man1/install.1	4193	root:root	644	
+/usr/share/man/man1/join.1	3201	root:root	644	
+/usr/share/man/man1/link.1	1150	root:root	644	
+/usr/share/man/man1/ln.1	3761	root:root	644	
+/usr/share/man/man1/logname.1	1068	root:root	644	
+/usr/share/man/man1/ls.1	8147	root:root	644	
+/usr/share/man/man1/md5sum.1	2628	root:root	644	
+/usr/share/man/man1/mkdir.1	1716	root:root	644	
+/usr/share/man/man1/mkfifo.1	1471	root:root	644	
+/usr/share/man/man1/mknod.1	2075	root:root	644	
+/usr/share/man/man1/mktemp.1	2285	root:root	644	
+/usr/share/man/man1/mv.1	3813	root:root	644	
+/usr/share/man/man1/nice.1	1875	root:root	644	
+/usr/share/man/man1/nl.1	2999	root:root	644	
+/usr/share/man/man1/nohup.1	1798	root:root	644	
+/usr/share/man/man1/nproc.1	1289	root:root	644	
+/usr/share/man/man1/numfmt.1	5028	root:root	644	
+/usr/share/man/man1/od.1	4821	root:root	644	
+/usr/share/man/man1/paste.1	1547	root:root	644	
+/usr/share/man/man1/pathchk.1	1320	root:root	644	
+/usr/share/man/man1/pinky.1	1803	root:root	644	
+/usr/share/man/man1/pr.1	4769	root:root	644	
+/usr/share/man/man1/printenv.1	1470	root:root	644	
+/usr/share/man/man1/printf.1	2330	root:root	644	
+/usr/share/man/man1/ptx.1	2824	root:root	644	
+/usr/share/man/man1/pwd.1	1473	root:root	644	
+/usr/share/man/man1/readlink.1	2083	root:root	644	
+/usr/share/man/man1/realpath.1	1886	root:root	644	
+/usr/share/man/man1/rm.1	3602	root:root	644	
+/usr/share/man/man1/rmdir.1	1403	root:root	644	
+/usr/share/man/man1/runcon.1	2360	root:root	644	
+/usr/share/man/man1/seq.1	2259	root:root	644	
+/usr/share/man/man1/sha1sum.1	2641	root:root	644	
+/usr/share/man/man1/sha224sum.1	2377	root:root	644	
+/usr/share/man/man1/sha256sum.1	2381	root:root	644	
+/usr/share/man/man1/sha384sum.1	2381	root:root	644	
+/usr/share/man/man1/sha512sum.1	2381	root:root	644	
+/usr/share/man/man1/shred.1	2871	root:root	644	
+/usr/share/man/man1/shuf.1	1890	root:root	644	
+/usr/share/man/man1/sleep.1	1352	root:root	644	
+/usr/share/man/man1/sort.1	5159	root:root	644	
+/usr/share/man/man1/split.1	3226	root:root	644	
+/usr/share/man/man1/stat.1	4653	root:root	644	
+/usr/share/man/man1/stdbuf.1	2695	root:root	644	
+/usr/share/man/man1/stty.1	8788	root:root	644	
+/usr/share/man/man1/sum.1	1297	root:root	644	
+/usr/share/man/man1/sync.1	1523	root:root	644	
+/usr/share/man/man1/tac.1	1526	root:root	644	
+/usr/share/man/man1/tail.1	3524	root:root	644	
+/usr/share/man/man1/tee.1	2048	root:root	644	
+/usr/share/man/man1/test.1	4316	root:root	644	
+/usr/share/man/man1/timeout.1	2850	root:root	644	
+/usr/share/man/man1/touch.1	2854	root:root	644	
+/usr/share/man/man1/tr.1	3422	root:root	644	
+/usr/share/man/man1/true.1	1282	root:root	644	
+/usr/share/man/man1/truncate.1	2205	root:root	644	
+/usr/share/man/man1/tsort.1	1151	root:root	644	
+/usr/share/man/man1/tty.1	1192	root:root	644	
+/usr/share/man/man1/uname.1	1796	root:root	644	
+/usr/share/man/man1/unexpand.1	1885	root:root	644	
+/usr/share/man/man1/uniq.1	2607	root:root	644	
+/usr/share/man/man1/unlink.1	1142	root:root	644	
+/usr/share/man/man1/users.1	1280	root:root	644	
+/usr/share/man/man1/vdir.1	8130	root:root	644	
+/usr/share/man/man1/wc.1	2111	root:root	644	
+/usr/share/man/man1/who.1	2325	root:root	644	
+/usr/share/man/man1/whoami.1	1104	root:root	644	
+/usr/share/man/man1/yes.1	1103	root:root	644	
+/usr/share/man/man8/chroot.8	1714	root:root	644	

@@ -1,0 +1,63 @@
+Mon Sep 16 18:02:00 CST 2024
+tar: stdout: write error
+KB: 2803700	/
+make[1]: Entering directory '/sources/lz4-1.10.0'
+make[2]: Entering directory '/sources/lz4-1.10.0/lib'
+compiling dynamic library 1.10.0
+creating pkgconfig
+creating versioned links
+make[2]: Leaving directory '/sources/lz4-1.10.0/lib'
+make[2]: Entering directory '/sources/lz4-1.10.0/programs'
+==> building with multithreading support
+make[2]: Leaving directory '/sources/lz4-1.10.0/programs'
+lz4 build completed
+make[1]: Leaving directory '/sources/lz4-1.10.0'
+make[1]: Entering directory '/sources/lz4-1.10.0'
+make[2]: Entering directory '/sources/lz4-1.10.0/lib'
+Installing libraries in /usr/lib
+Installing headers in /usr/include
+lz4 libraries installed
+make[2]: Leaving directory '/sources/lz4-1.10.0/lib'
+make[2]: Entering directory '/sources/lz4-1.10.0/programs'
+Installing binaries in /usr/bin
+Installing man pages in /usr/share/man/man1
+lz4 installation completed
+make[2]: Leaving directory '/sources/lz4-1.10.0/programs'
+make[1]: Leaving directory '/sources/lz4-1.10.0'
+make[1]: Entering directory '/sources/lz4-1.10.0'
+Cleaning completed
+make[1]: Leaving directory '/sources/lz4-1.10.0'
+make[1]: Entering directory '/sources/lz4-1.10.0'
+make[2]: Entering directory '/sources/lz4-1.10.0/lib'
+compiling dynamic library 1.10.0
+creating pkgconfig
+creating versioned links
+make[2]: Leaving directory '/sources/lz4-1.10.0/lib'
+make[2]: Entering directory '/sources/lz4-1.10.0/programs'
+==> building with multithreading support
+make[2]: Leaving directory '/sources/lz4-1.10.0/programs'
+lz4 build completed
+make[1]: Leaving directory '/sources/lz4-1.10.0'
+make[1]: Entering directory '/sources/lz4-1.10.0'
+make[2]: Entering directory '/sources/lz4-1.10.0/lib'
+Installing libraries in /sources/lz4-1.10.0/m32/usr/lib32
+Installing headers in /sources/lz4-1.10.0/m32/usr/include
+lz4 libraries installed
+make[2]: Leaving directory '/sources/lz4-1.10.0/lib'
+make[2]: Entering directory '/sources/lz4-1.10.0/programs'
+/bin/sh: line 1: /usr/lib32/lz4.h: No such file or directory
+/bin/sh: line 1: /usr/lib32/lz4.h: No such file or directory
+/bin/sh: line 1: /usr/lib32/lz4.h: No such file or directory
+/bin/sh: line 1: /usr/lib32/lz4.h: No such file or directory
+/bin/sh: line 1: /usr/lib32/lz4.h: No such file or directory
+/bin/sh: line 1: /usr/lib32/lz4.h: No such file or directory
+Installing binaries in /sources/lz4-1.10.0/m32/usr/bin
+Installing man pages in /sources/lz4-1.10.0/m32/usr/share/man/man1
+lz4 installation completed
+make[2]: Leaving directory '/sources/lz4-1.10.0/programs'
+make[1]: Leaving directory '/sources/lz4-1.10.0'
+
+
+Totalseconds: 18
+
+KB: 2808028	/
