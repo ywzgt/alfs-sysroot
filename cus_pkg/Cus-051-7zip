@@ -2,10 +2,10 @@
 # https://7-zip.org
 
 PKG="7zip"
-PKG_VERSION="24.07"
+PKG_VERSION="24.08"
 PKG_FILE="7z${PKG_VERSION//.}-src.tar.xz"
 URL="https://7-zip.org/a/${PKG_FILE}"
-MD5="eeee58ccd9f010f0ffddda0ea291e57e"
+MD5="f18dd0290baa68ca89c7f0d2d272e526"
 
 ( cat << xEOFx
 cd ..
