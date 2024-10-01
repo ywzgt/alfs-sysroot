@@ -1,0 +1,90 @@
+#!/bin/bash
+set +h
+set -e
+
+
+
+PREV_SEC=${SECONDS}
+      
+ROOT=/
+
+SCRIPT_ROOT=jhalfs
+
+SRC_DIR=${ROOT}sources
+
+VERSION=14.2.0
+PKG_DEST=${SRC_DIR}/824-gcc
+
+PACKAGE=gcc-14.2.0.tar.xz
+cd $SRC_DIR
+PKGDIR=$(tar -tf $PACKAGE | head -n1 | sed 's@^./@@;s@/.*@@')
+export PKGDIR VERSION PKG_DEST
+
+if [ -d "$PKGDIR" ]; then rm -rf $PKGDIR; fi
+if [ -d "$PKG_DEST" ]; then rm -rf $PKG_DEST; fi
+if [ -d "${PKGDIR%-*}-build" ]; then  rm -rf ${PKGDIR%-*}-build; fi
+
+echo "KB: $(du -skx --exclude=lost+found --exclude=var/lib --exclude=$SCRIPT_ROOT $ROOT)"
+
+
+tar -xf $PACKAGE
+cd $PKGDIR
+
+export MAKEFLAGS="-j4"
+SECONDS=${PREV_SEC}
+
+# Start of LFS book script
+sed -e '/m64=/s/lib64/lib/' \
+    -e '/m32=/s/m32=.*/m32=..\/lib32$(call if_multiarch,:i386-linux-gnu)/' \
+    -i.orig gcc/config/i386/t-linux64
+mkdir -v build
+cd       build
+mlist=m64,m32
+../configure --prefix=/usr               \
+             LD=ld                       \
+             --enable-languages=c,c++    \
+             --enable-default-pie        \
+             --enable-default-ssp        \
+             --enable-host-pie           \
+             --enable-multilib           \
+             --with-multilib-list=$mlist \
+             --disable-bootstrap         \
+             --disable-fixincludes       \
+             --with-system-zlib
+make
+# ulimit -s -H unlimited >> $TEST_LOG 2>&1 || true
+# sed -e '/cpython/d'               -i ../gcc/testsuite/gcc.dg/plugin/plugin.exp >> $TEST_LOG 2>&1 || true
+# sed -e 's/no-pic /&-no-pie /'     -i ../gcc/testsuite/gcc.target/i386/pr113689-1.c >> $TEST_LOG 2>&1 || true
+# sed -e 's/300000/(1|300000)/'     -i ../libgomp/testsuite/libgomp.c-c++-common/pr109062.c >> $TEST_LOG 2>&1 || true
+# sed -e 's/{ target nonpic } //' \
+#     -e '/GOTPCREL/d'              -i ../gcc/testsuite/gcc.target/i386/fentryname3.c >> $TEST_LOG 2>&1 || true
+# chown -R tester . >> $TEST_LOG 2>&1 || true
+# su tester -c "PATH=$PATH make -k check" >> $TEST_LOG 2>&1 || true
+# ../contrib/test_summary >> $TEST_LOG 2>&1 || true
+make -j1 install
+chown -v -R root:root \
+    /usr/lib/gcc/$(gcc -dumpmachine)/14.2.0/include{,-fixed}
+ln -svr /usr/bin/cpp /usr/lib
+ln -sv gcc.1 /usr/share/man/man1/cc.1
+ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/14.2.0/liblto_plugin.so \
+        /usr/lib/bfd-plugins/
+mkdir -pv /usr/share/gdb/auto-load/usr/lib
+mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib
+echo 'int main(){}' > dummy.c
+cc dummy.c -v -Wl,--verbose &> dummy.log
+readelf -l a.out | grep ': /lib'
+grep -E -o '/usr/lib.*/S?crt[1in].*succeeded' dummy.log
+grep -B4 '^ /usr/include' dummy.log
+grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\n|g'
+grep "/lib.*/libc.so.6 " dummy.log
+grep found dummy.log
+rm -v dummy.c a.out dummy.log
+echo -e "\n\nTotalseconds: $SECONDS\n"
+
+# End of LFS book script
+
+echo "KB: $(du -skx --exclude=lost+found --exclude=var/lib --exclude=$SCRIPT_ROOT $ROOT)"
+cd $SRC_DIR
+rm -rf $PKGDIR
+if [ -d "${PKGDIR%-*}-build" ]; then  rm -rf ${PKGDIR%-*}-build; fi
+exit

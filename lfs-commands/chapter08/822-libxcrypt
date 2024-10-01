@@ -1,0 +1,66 @@
+#!/bin/bash
+set +h
+set -e
+
+
+
+PREV_SEC=${SECONDS}
+      
+ROOT=/
+
+SCRIPT_ROOT=jhalfs
+
+SRC_DIR=${ROOT}sources
+
+VERSION=4.4.36
+PKG_DEST=${SRC_DIR}/822-libxcrypt
+
+PACKAGE=libxcrypt-4.4.36.tar.xz
+cd $SRC_DIR
+PKGDIR=$(tar -tf $PACKAGE | head -n1 | sed 's@^./@@;s@/.*@@')
+export PKGDIR VERSION PKG_DEST
+
+if [ -d "$PKGDIR" ]; then rm -rf $PKGDIR; fi
+if [ -d "$PKG_DEST" ]; then rm -rf $PKG_DEST; fi
+if [ -d "${PKGDIR%-*}-build" ]; then  rm -rf ${PKGDIR%-*}-build; fi
+
+echo "KB: $(du -skx --exclude=lost+found --exclude=var/lib --exclude=$SCRIPT_ROOT $ROOT)"
+
+
+tar -xf $PACKAGE
+cd $PKGDIR
+
+export MAKEFLAGS="-j4"
+SECONDS=${PREV_SEC}
+
+# Start of LFS book script
+./configure --prefix=/usr                \
+            --enable-hashes=strong,glibc \
+            --enable-obsolete-api=no     \
+            --disable-static             \
+            --disable-failure-tokens
+make
+# make -k check >> $TEST_LOG 2>&1 || true
+make -j1 install
+make distclean
+CC="gcc -m32" \
+./configure --prefix=/usr                \
+            --host=i686-pc-linux-gnu     \
+            --libdir=/usr/lib32          \
+            --enable-hashes=strong,glibc \
+            --enable-obsolete-api=glibc  \
+            --disable-static             \
+            --disable-failure-tokens
+make
+cp -av .libs/libcrypt.so* /usr/lib32/ &&
+make -j1 install-pkgconfigDATA &&
+ln -svf libxcrypt.pc /usr/lib32/pkgconfig/libcrypt.pc
+echo -e "\n\nTotalseconds: $SECONDS\n"
+
+# End of LFS book script
+
+echo "KB: $(du -skx --exclude=lost+found --exclude=var/lib --exclude=$SCRIPT_ROOT $ROOT)"
+cd $SRC_DIR
+rm -rf $PKGDIR
+if [ -d "${PKGDIR%-*}-build" ]; then  rm -rf ${PKGDIR%-*}-build; fi
+exit
