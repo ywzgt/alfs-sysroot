@@ -1,0 +1,21 @@
+Tue Dec 31 17:45:36 CST 2024
+tar: stdout: write error
+KB: 3137404	/
+Processing /sources/setuptools-75.6.0
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: setuptools
+  Building wheel for setuptools (pyproject.toml): started
+  Building wheel for setuptools (pyproject.toml): finished with status 'done'
+  Created wheel for setuptools: filename=setuptools-75.6.0-py3-none-any.whl size=1224032 sha256=d0b264b999428011ec213afd95151c5185955a99a972d35fa58f3b593c0fb5f1
+  Stored in directory: /tmp/pip-ephem-wheel-cache-6cj3kgto/wheels/19/6d/d0/67fed3c687a3e9149dade06a90779aa9d6a469cb8ef3443cbb
+Successfully built setuptools
+Looking in links: dist
+Processing ./dist/setuptools-75.6.0-py3-none-any.whl
+Installing collected packages: setuptools
+Successfully installed setuptools-75.6.0
+
+
+Totalseconds: 3
+
+KB: 3164260	/

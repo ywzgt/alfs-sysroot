@@ -1,0 +1,12 @@
+#!/bin/bash
+
+./configure --prefix=/usr --docdir=/usr/share/doc/automake-1.17
+
+make
+
+# This block must be edited to suit your needs.
+make **EDITME-j$(($(nproc)>4?$(nproc):4))EDITME** check
+# End of editable block.
+
+make install
+
