@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+cd $PKGDIR
+cd ..
+make -C CPP/7zip/Bundles/Alone2 -f makefile.gcc
+install -Dvm755 CPP/7zip/Bundles/Alone2/_o/7zz /usr/bin/7z
+find /usr ! -type d -name "*.la" -exec rm -f -- "{}" +
+exit
