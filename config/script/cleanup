@@ -1,0 +1,457 @@
+#!/bin/bash
+
+MKx32=0
+case "$1" in x32) MKx32=1 ;; esac
+bld_dir="$(grep '^BUILDDIR=' alfs/configuration|sed -e 's/^BUILDDIR=//' -e 's/"//g')"
+
+_cleanup_dir() {
+		rm -rf "${bld_dir}/usr/"{,local/}lib/python*/{test,ctypes/test,distutils/tests,idlelib/idle_test,lib2to3/tests,sqlite3/test,tkinter/test,unittest/test}
+		rm -rf "${bld_dir}/tools"* "${bld_dir}/usr"{,local}/share/info
+		rm -rf "${bld_dir}"/root/.{cache,wget-hsts}
+		sed -i '/^\/root\/.\(wget-hsts\s\|cache\/\)/d' "${bld_dir}/jhalfs/installed-files/"*
+
+		find "${bld_dir}/usr" -type f -name '*.la' -delete
+		for i in "${bld_dir}/jhalfs/installed-files"/*; do
+			local change="$(grep '\.la\s' $i)"
+			[ -z "$change" ] || sed -i '/.la\s/d' "$i"
+		done
+
+		find "${bld_dir}/var/cache" ! -type d -delete
+		find "${bld_dir}/etc/ld.so.cache" -delete
+
+		if [ -d "${bld_dir}/var/lib/systemd" ]; then
+			find "${bld_dir}/var/lib/systemd" ! -type d -delete
+		fi
+}
+
+_strip_symbol() {
+		local DEST="${bld_dir}/usr"
+		local STRIP_BINARIES="--strip-all"
+		local STRIP_SHARED="--strip-unneeded"
+		local STRIP_STATIC="--strip-debug"
+
+		find "${DEST}" -type f -name '*.dbg' -delete
+
+		strip_file() {
+			local binary=$1; shift
+			local tempfile=$(mktemp "$binary.XXXXXX")
+			if strip "$@" "$binary" -o "$tempfile"; then
+				cat "$tempfile" > "$binary"
+			fi
+			rm -f "$tempfile"
+		}
+
+		local binary strip_flags
+		find "${DEST}" -type f -perm -u+w -print0 2>/dev/null | while IFS= read -rd '' binary ; do
+			case "$(LC_ALL=C readelf -h "$binary" 2>/dev/null)" in
+				*Type:*'DYN (Shared object file)'*) # Libraries (.so) or Relocatable binaries
+					strip_flags="$STRIP_SHARED";;
+				*Type:*'DYN (Position-Independent Executable file)'*) # Relocatable binaries
+					strip_flags="$STRIP_SHARED";;
+				*Type:*'EXEC (Executable file)'*) # Binaries
+					strip_flags="$STRIP_BINARIES";;
+				*Type:*'REL (Relocatable file)'*) # Libraries (.a) or objects
+					if ar t "$binary" &>/dev/null; then # Libraries (.a)
+						strip_flags="$STRIP_STATIC"
+					elif [[ $binary = *'.ko' || $binary = *'.o' ]]; then # Kernel module or object file
+						strip_flags="$STRIP_SHARED"
+					else
+						continue
+					fi
+					;;
+				*)
+					continue ;;
+			esac
+			pushd /tmp >/dev/null
+			strip_file "$binary" ${strip_flags}
+			popd >/dev/null
+		done
+}
+
+_remove_staticlib() {
+		printf "Removing static library files..."
+		local l
+		while IFS= read -rd '' l; do
+			if [[ -f "${l%.a}.so" || -h "${l%.a}.so" ]]; then
+				rm "$l"
+			fi
+		done < <(find "${bld_dir}/usr" ! -type d -name "*.a" -print0)
+		printf 'done.\n'
+}
+
+_system_conf() {
+		install -Dm644 /dev/stdin "${bld_dir}/etc/profile" <<"EFO"
+# System wide environment variables and startup programs.
+
+# System wide aliases and functions should go in /etc/bashrc.  Personal
+# environment variables and startup programs should go into
+# ~/.bash_profile.  Personal aliases and functions should go into
+# ~/.bashrc.
+
+# Functions to help us manage paths.  Second argument is the name of the
+# path variable to be modified (default: PATH)
+
+# Set the initial path
+export PATH=/usr/bin:/usr/sbin:/usr/local/bin
+
+
+# Setup some environment variables.
+export HISTSIZE=10000
+export HISTIGNORE="&:[bf]g:exit"
+
+# Set some defaults for graphical systems
+export XDG_DATA_DIRS=${XDG_DATA_DIRS:-/usr/share/}
+export XDG_CONFIG_DIRS=${XDG_CONFIG_DIRS:-/etc/xdg/}
+export XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR:-/tmp/xdg-$USER}
+export XDG_CONFIG_HOME=${HOME}/.config
+
+if [ -e /etc/hostname ]; then
+	PHOST="$(cat /etc/hostname)"
+	[ -n "$PHOST" ] || PHOST='\H'
+else
+	PHOST='\H'
+fi
+
+# Setup a red prompt for root and a green one for users.
+NORMAL="\[\e[0m\]"
+RED="\[\e[1;31m\]"
+GREEN="\[\e[1;32m\]"
+if [[ $EUID == 0 ]] ; then
+	PS1="$RED\u@${PHOST/®/.} $NORMAL\w$RED \A # $NORMAL"
+else
+	PS1="$GREEN\u@${PHOST/®/.} $NORMAL\w$GREEN \A \$ $NORMAL"
+fi
+
+for script in /etc/profile.d/*.sh ; do
+        if [ -r $script ] ; then
+                . $script
+        fi
+done
+
+unset script RED GREEN NORMAL PHOST
+
+
+alias ls='ls --color=auto'
+alias ll='ls -l --color=auto'
+alias la='ls -A --color=auto'
+alias lla='ls -la --color=auto'
+alias llh='ls -lh --color=auto'
+alias llah='ls -lah --color=auto'
+alias dir='dir --color=auto'
+alias diff='diff --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias proxyon='export http_proxy=127.0.0.1:7890 https_proxy=127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7891 && curl -I google.com'
+alias proxyoff='unset http_proxy https_proxy all_proxy'
+alias df='df -Th'
+alias free='free -h'
+alias tree='tree -C'
+
+export EDITOR=/usr/bin/nano
+export VISUAL=/usr/bin/nano
+export NINJA_STATUS="[%r %f/%t %es] "
+
+# Color man pages
+export LESS_TERMCAP_mb=$'\E[01;35m'
+export LESS_TERMCAP_md=$'\E[01;35m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;47;34m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;36m'
+export LESS="-R -s -M +Gg"
+export GROFF_NO_SGR=
+EFO
+
+		echo 'if [ -e /etc/profile ]; then source /etc/profile; fi' >> "${bld_dir}/root/.bashrc"
+		[ -d "${bld_dir}/etc/skel/" ] || mkdir -p "${bld_dir}/etc/skel"
+		echo 'if [ -e /etc/profile ]; then source /etc/profile; fi' >> "${bld_dir}/etc/skel/.bashrc"
+		echo "Generating locales..."
+		[ ! -e "${bld_dir}/usr/lib/locale/locale-archive" ] || rm "${bld_dir}/usr/lib/locale/locale-archive"
+		localedef --prefix="${bld_dir}" -i POSIX -f UTF-8 C.UTF-8 2>/dev/null || true
+		localedef --prefix="${bld_dir}" -i en_GB -f UTF-8 en_GB.UTF-8
+		localedef --prefix="${bld_dir}" -i en_US -f UTF-8 en_US.UTF-8
+		localedef --prefix="${bld_dir}" -i zh_CN -f UTF-8 zh_CN.UTF-8
+}
+
+_pacman_conf(){
+		git clone --depth=1 "https://github.com/windsey/script" packmgr
+		make DESTDIR="${bld_dir}" install -C packmgr/makepkg
+		sed -e '/^#Color/s/#//' -e '/^#VerbosePkgLists/s/#//' -e 's/^CheckSpace/#&/' -i "${bld_dir}/etc/pacman.conf"
+		if [ "${MKx32}" -eq 1 ]; then
+			sed "/^Architecture/s/auto/x86_64_x32/" -i "${bld_dir}/etc/pacman.conf"
+		else
+			sed "/^Architecture/s/auto/$(uname -m)/" -i "${bld_dir}/etc/pacman.conf"
+		fi
+
+		install -Dm644 /dev/stdin "${bld_dir}/etc/makepkg.conf" <<EFO
+#!/hint/bash
+#
+# /etc/makepkg.conf
+#
+
+DLAGENTS=('file::/usr/bin/curl -qgC - -o %o %u'
+          'ftp::/usr/bin/curl -qgfC - --ftp-pasv --retry 3 --retry-delay 3 -o %o %u'
+          'http::/usr/bin/curl -qgb "" -fLC - --retry 3 --retry-delay 3 -o %o %u'
+          'https::/usr/bin/curl -qgb "" -fLC - --retry 3 --retry-delay 3 -o %o %u'
+          'rsync::/usr/bin/rsync --no-motd -z %u %o'
+          'scp::/usr/bin/scp -C %u %o')
+VCSCLIENTS=('bzr::breezy'
+            'fossil::fossil'
+            'git::git'
+            'hg::mercurial'
+            'svn::subversion')
+CARCH="$(uname -m)"
+CHOST="$(uname -m)-pc-linux-gnu"
+CFLAGS="-march=%MARCH% -O2 -pipe -fno-plt -fPIC -DNDEBUG -w"
+CXXFLAGS="\$CFLAGS -Wp,-D_GLIBCXX_ASSERTIONS"
+LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
+LTOFLAGS="-flto=auto"
+RUSTFLAGS="-C opt-level=2"
+CPPFLAGS="-O2 -pipe -fPIC -DNDEBUG -w"
+MAKEFLAGS="-j\$(nproc)"
+BUILDENV=(!distcc color !ccache check !sign)
+BUILDDIR=/build/workdir
+OPTIONS=(addep rman strip docs !html lfs !locale !libtool !staticlibs emptydirs zipman purge !debug lto)
+. /etc/pacman.d/localedir 2>/dev/null
+. /etc/pacman.d/rmandir 2>/dev/null
+INTEGRITY_CHECK=(sha256)
+STRIP_BINARIES="--strip-all"
+STRIP_SHARED="--strip-unneeded"
+STRIP_STATIC="--strip-debug"
+MAN_DIRS=({usr{,/local}{,/share},opt/*}/{man,info})
+DOC_DIRS=(usr/{,local/}{,share/}{doc,gtk-doc} opt/*/{doc,gtk-doc}) #usr/share/info)
+PURGE_TARGETS=(usr/{,share}/info/dir .packlist *.pod) #usr/share/info/*)
+PKGDEST=/build/packages
+SRCDEST=/build/sources
+PACKAGER="Github Action <build-bot@\$(hostname)>"
+COMPRESSGZ=(gzip -c -f -n)
+COMPRESSBZ2=(bzip2 -c -f)
+COMPRESSXZ=(xz -c -z --threads=0 -)
+COMPRESSZST=(zstd -c -z -q --threads=0 -)
+COMPRESSLRZ=(lrzip -q)
+COMPRESSLZO=(lzop -q)
+COMPRESSZ=(compress -c -f)
+COMPRESSLZ4=(lz4 -q)
+COMPRESSLZ=(lzip -c -f)
+PKGEXT='.pkg.tar.xz'
+SRCEXT='.src.tar.xz'
+EFO
+
+		if [ "${MKx32}" -eq 1 ]; then
+			sed -e "/^CHOST=/s/$(uname -m)-pc-linux-gnu/&x32/" -e '/^CARCH=/s/=.*/="x86_64_x32"/' -i "${bld_dir}/etc/makepkg.conf"
+		fi
+
+		case "$(uname -m)" in
+			i?86) sed -i "s/%MARCH%/$(uname -m)/" "${bld_dir}/etc/makepkg.conf" ;;
+			x86_64) sed -i "s/%MARCH%/x86-64-v3/" "${bld_dir}/etc/makepkg.conf" ;;
+		esac
+}
+
+_pacman_db() {
+		cp -a cus_pkg "${bld_dir}/jhalfs"
+		pushd "${bld_dir}/jhalfs" >/dev/null
+		grep '^/usr/lib/lib.*so' installed-files/8*-gcc|awk '{print$1}'|sed '/libcc1.so/d' >installed-files/800-gcc-libs
+		touch logs/$(find logs/8*gcc* -exec basename {} +|sed 's/8.*gcc/800-gcc-libs/')
+
+		add_dir() {
+			local dir="$1"
+			echo "${dir}/" >>$2
+			while [[ "$dir" =~ "/" ]]; do
+				echo "${dir}/" >>$2
+				dir=${dir%/*}
+				echo "${dir}/" >>$2
+			done
+		}
+
+		copy() {
+			if [ "${1:0:9}" = "usr/lib32" ]; then
+				add_dir "$(dirname $1)" pkg.file32
+				echo "$1" >>pkg.file32
+				echo "$1" >>installed.file
+			elif [ "${1:0:10}" = "usr/libx32" ]; then
+				add_dir "$(dirname $1)" pkg.filex32
+				echo "$1" >>pkg.filex32
+				echo "$1" >>installed.file
+			else
+				add_dir "$(dirname $1)" pkg.file
+				echo "$1" >>pkg.file
+				echo "$1" >>installed.file
+			fi
+		}
+
+		for i in installed-files/*; do
+			local f=${i#*/}
+			awk '{print$1}' $i | sed 's|^/||' >tmp
+
+			if [ ! -f installed.file ]; then
+				while read -r file; do
+					[[ -z "$(find ${bld_dir}/$file 2>/dev/null)" ]] || copy "$file"
+				done <tmp
+			else
+				while read -r file; do
+					if [[ -n "$(find ${bld_dir}/$file 2>/dev/null)" ]] && [[ ! "$(<installed.file)" =~  "${file#/}" ]]; then copy "$file"; fi
+				done <tmp
+			fi
+
+			if [ "${f:0:3}" != "Cus" ]; then
+				local PKG=${i#*/???-}
+				local PV=$(find logs -name $f\* -exec basename {} + | head -1)
+				PV=${PV#$f-}
+			elif [ "${f:0:8}" = "Cus-over" ]; then
+				local PKG="$(date +%Y%m%d%S%N)-over"
+				local PV=$(date +%Y%m%d)
+				touch pkg.file
+			else
+				local PKG=$(grep '^PKG=' cus_pkg/$f|sed -e 's/PKG=//' -e 's/"//g')
+				local PV=$(grep '^PKG_VERSION=' cus_pkg/$f|sed -e 's/PKG_VERSION=//' -e 's/"//g')
+			fi
+
+			PV=${PV//-/_}
+			awk '!seen[$0]++' pkg.file | sort >files
+			sed -i '1i\%FILES%' files
+			install -Dm644 files -t "${bld_dir}/var/lib/pacman/local/${PKG}-${PV}-1"
+			local FILES="$(<files|sed '/\/$\|%FILES%/d')"
+			local FSIZE="$(cd ${bld_dir}; LC_ALL=C du -xc $FILES|awk '/total$/{print$1}')"
+			local SIZE=$((FSIZE*1024))
+			if [ "${MKx32}" -eq 1 ]; then
+				echo -e "%NAME%\n${PKG}\n\n%VERSION%\n${PV}-1\n\n%BASE%\n${PKG}\n\n%ARCH%\nx86_64_x32\n\n%BUILDDATE%\n$(date +%s)\n\n%INSTALLDATE%\n$(date +%s)\n\n%PACKAGER%\nbuildbot <bot@$(hostname)>\n\n%SIZE%\n${SIZE}\n\n%VALIDATION%\nsha256\n\n" \
+				>"${bld_dir}/var/lib/pacman/local/${PKG}-${PV}-1/desc"
+			else
+				echo -e "%NAME%\n${PKG}\n\n%VERSION%\n${PV}-1\n\n%BASE%\n${PKG}\n\n%ARCH%\n$(uname -m)\n\n%BUILDDATE%\n$(date +%s)\n\n%INSTALLDATE%\n$(date +%s)\n\n%PACKAGER%\nbuildbot <bot@$(hostname)>\n\n%SIZE%\n${SIZE}\n\n%VALIDATION%\nsha256\n\n%PROVIDES%\n${PKG}-lfs" \
+				>"${bld_dir}/var/lib/pacman/local/${PKG}-${PV}-1/desc"
+			fi
+
+			if [ -e "pkg.file32" ]; then
+				awk '!seen[$0]++' pkg.file32 | sort >files
+				sed -i '1i\%FILES%' files
+				install -Dm644 files -t "${bld_dir}/var/lib/pacman/local/${PKG}-lib32-${PV}-1"
+				local FILES="$(<files|sed '/\/$\|%FILES%/d')"
+				local FSIZE="$(cd ${bld_dir}; LC_ALL=C du -xc $FILES|awk '/total$/{print$1}')"
+				local SIZE=$((FSIZE*1024))
+				echo -e "%NAME%\n${PKG}-lib32\n\n%VERSION%\n${PV}-1\n\n%BASE%\n${PKG}\n\n%ARCH%\n$(uname -m)\n\n%BUILDDATE%\n$(date +%s)\n\n%INSTALLDATE%\n$(date +%s)\n\n%PACKAGER%\nbuildbot <bot@$(hostname)>\n\n%SIZE%\n${SIZE}\n\n%VALIDATION%\nsha256\n\n" \
+				>"${bld_dir}/var/lib/pacman/local/${PKG}-lib32-${PV}-1/desc"
+			fi
+
+			if [ -e "pkg.filex32" ]; then
+				awk '!seen[$0]++' pkg.filex32 | sort >files
+				sed -i '1i\%FILES%' files
+				install -Dm644 files -t "${bld_dir}/var/lib/pacman/local/${PKG}-libx32-${PV}-1"
+				local FILES="$(<files|sed '/\/$\|%FILES%/d')"
+				local FSIZE="$(cd ${bld_dir}; LC_ALL=C du -xc $FILES|awk '/total$/{print$1}')"
+				local SIZE=$((FSIZE*1024))
+				echo -e "%NAME%\n${PKG}-libx32\n\n%VERSION%\n${PV}-1\n\n%BASE%\n${PKG}\n\n%ARCH%\n$(uname -m)\n\n%BUILDDATE%\n$(date +%s)\n\n%INSTALLDATE%\n$(date +%s)\n\n%PACKAGER%\nbuildbot <bot@$(hostname)>\n\n%SIZE%\n${SIZE}\n\n%VALIDATION%\nsha256\n\n" \
+				>"${bld_dir}/var/lib/pacman/local/${PKG}-libx32-${PV}-1/desc"
+			fi
+
+			rm pkg.file* files
+		done
+
+		find "${bld_dir}/var/lib/pacman/local/" -maxdepth 1 -name "$(date +%Y%m)*-over*" -exec rm -rfv {} +
+
+		if [[ -n "$(find ${bld_dir}/var/lib/pacman/local -maxdepth 1 -type d -name 'Python-[0-9]*-*')" ]]; then
+			local dir="$(realpath $(find ${bld_dir}/var/lib/pacman/local -maxdepth 1 -type d -name 'Python-[0-9]*-*'))"
+			sed -i 's/Python/python/g' $dir/desc
+			mv -v $dir $(echo $dir | tr 'A-Z' 'a-z')
+		fi
+		popd >/dev/null
+
+		install -dv "${bld_dir}/var/lib/pacman/local"
+		echo "Updating alpm library database..."
+		mountpoint -q "${bld_dir}/dev" || mount -v --bind /dev "${bld_dir}/dev"
+		mountpoint -q "${bld_dir}/dev/pts" || mount -v --bind /dev/pts "${bld_dir}/dev/pts"
+		mountpoint -q "${bld_dir}/proc" || mount -vt proc proc "${bld_dir}"/proc
+		chroot "${bld_dir}" /usr/bin/env -i HOME=/root TERM="$TERM" PATH=/usr/bin:/usr/sbin /bin/bash -c pacman-db-upgrade
+		mountpoint -q "${bld_dir}/proc" && umount -v "${bld_dir}/proc" || true
+		mountpoint -q "${bld_dir}/dev/pts" && umount -lv "${bld_dir}/dev/pts" || true
+		mountpoint -q "${bld_dir}/dev" && umount -lv "${bld_dir}/dev" || true
+}
+
+_zipman() {
+		local MAN_DIRS=("${bld_dir}"/usr{,/local}/share/man)
+		local file files inode link
+		echo  "Compressing man pages..."
+		while read -rd ' ' inode; do
+			IFS= read -r file
+			find "${MAN_DIRS[@]}" -type l -print0 2>/dev/null |
+			while IFS= read -rd '' link ; do
+				if [[ "${file}" -ef "${link}" ]] ; then
+					rm -f "$link" "${link}.gz"
+					if [[ ${file%/*} = "${link%/*}" ]]; then
+						ln -s -- "${file##*/}.gz" "${link}.gz"
+					else
+						ln -s -- "/${file}.gz" "${link}.gz"
+					fi
+				fi
+			done
+			if [[ -z ${files[$inode]} ]]; then
+				files[$inode]=$file
+				gzip -9 -n -f "$file"
+			else
+				rm -f "$file"
+				ln "${files[$inode]}.gz" "${file}.gz"
+				chmod 644 "${file}.gz"
+			fi
+		done < <(find "${MAN_DIRS[@]}" -type f \! -name "*.gz" \! -name "*.bz2" \
+			-exec stat -c '%i %n' '{}' + 2>/dev/null)
+}
+
+_binutils() {
+	# ubuntu 20.04 的 strip 不支持 elf32_x86_64
+	local b_workdir="$(mktemp -d)"
+	if [[ $(strip --version|head -1|sed 's/GNU\s.*\s//') < 2.38 ]]; then
+		echo "Updating binutils..."
+		echo "STRIP version: < $(strip --version|head -1)>"
+		pushd "$b_workdir" > /dev/null
+		wget -nv -c "$(curl -sL https://linuxfromscratch.org/lfs/view/systemd/wget-list|grep '/binutils-[0-9].*\.tar.*'|head -1)"
+		tar -xf binutils-*.tar*
+		cd binutils-*[0-9]; mkdir build && cd build
+		unset {C{,XX,PP},LD}FLAGS
+		../configure --prefix=/usr       \
+             --sysconfdir=/etc   \
+             --enable-gold       \
+             --enable-ld=default \
+             --enable-plugins    \
+             --enable-shared     \
+             --disable-werror    \
+             --disable-multilib \
+             --enable-64-bit-bfd \
+             --with-system-zlib  \
+             --enable-default-hash-style=gnu > binutils-conf.log
+		make -j$(nproc) > binutils-mk.log 2>&1
+		sudo make install > binutils-ins.log 2>&1
+		popd > /dev/null
+		echo; echo "STRIP New version: < $(strip --version|head -1)>";	echo
+	fi
+}
+
+_docmd() {
+		printf '::Removing Python test files and Tools directory...'
+		_cleanup_dir
+		printf 'done.\n'
+
+		printf "::Checking Binutils Version...\n"
+		_binutils
+
+		printf "::Remove all symbol and relocation information from binaries and libraries, in '${bld_dir}/usr'..."
+		_strip_symbol
+		printf 'done.\n'
+
+		case "$1" in
+			rm_static|no_static) _remove_staticlib ;;
+		esac
+
+		echo '::Seting Some System Configuration...'
+		_system_conf; _pacman_conf
+
+		# need to waste a lot of time
+		#_zipman
+
+		echo "::Upgrading the local pacman database... "
+		_pacman_db
+}
+
+_docmd

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# This block must be edited to suit your needs.
+mkfs -v -t ext4 /dev/**EDITME<xxx>EDITME**
+# End of editable block.
+
+# This block must be edited to suit your needs.
+mkswap /dev/**EDITME<yyy>EDITME**
+# End of editable block.
+

@@ -1,0 +1,20 @@
+#!/bin/bash
+# https://www.linuxfromscratch.org/blfs/view/systemd/general/libtasn1.html
+
+PKG="libtasn1"
+PKG_VERSION="4.19.0"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.gz"
+URL="https://ftp.gnu.org/gnu/libtasn1/${PKG_FILE}"
+MD5="f701ab57eb8e7d9c105b2cd5d809b29a"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+./configure --prefix=/usr \
+	--disable-static
+make
+make install
+xEOFx
+) > tmp

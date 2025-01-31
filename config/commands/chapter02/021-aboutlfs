@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# This block must be edited to suit your needs.
+export LFS=**EDITME/mnt/lfsEDITME**
+# End of editable block.
+
+umask 022
+
+echo $LFS
+
+umask
+
