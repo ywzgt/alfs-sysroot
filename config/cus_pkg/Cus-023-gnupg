@@ -1,0 +1,23 @@
+#!/bin/bash
+# https://gitweb.gentoo.org/repo/gentoo.git/tree/app-crypt/gnupg
+# https://linuxfromscratch.org/blfs/view/systemd/postlfs/gnupg.html
+
+PKG="gnupg"
+PKG_VERSION="2.4.5"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.bz2"
+URL="https://www.gnupg.org/ftp/gcrypt/$PKG/${PKG_FILE}"
+MD5="49c3534e87744e994250d37c1b43f928"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << xEOFx
+		./configure --prefix=/usr \
+		--localstatedir=/var \
+		--sysconfdir=/etc \
+		--docdir=/usr/share/doc/$PKG-${PKG_VERSION}
+make
+make install
+xEOFx
+) > tmp

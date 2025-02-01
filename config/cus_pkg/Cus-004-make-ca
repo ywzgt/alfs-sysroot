@@ -1,0 +1,55 @@
+#!/bin/bash
+# https://www.linuxfromscratch.org/blfs/view/systemd/postlfs/make-ca.html
+
+PKG="make-ca"
+PKG_VERSION="1.13"
+PKG_FILE="${PKG}-${PKG_VERSION}.tar.xz"
+URL="https://github.com/lfs-book/make-ca/releases/download/v${PKG_VERSION}/${PKG_FILE}"
+MD5="04bd86fe2eb299788439c3466782ce45"
+
+for i in PATCH{1..10}; do
+	unset $i
+done
+
+( cat << "xEOFx"
+make install
+
+if test -e /usr/lib/systemd/system/update-pki.timer; then
+	rm -fv /usr/lib/systemd/system/update-pki.timer
+fi
+
+cat <<"EOF" > /etc/make-ca.conf
+# Configuration file for make-ca
+
+CERTDATA="certdata.txt"
+PKIDIR="/etc/pki"
+SSLDIR="/etc/ssl"
+CERTUTIL="/usr/bin/certutil"
+KEYTOOL="${JAVA_HOME}/bin/keytool"
+MD5SUM="/usr/bin/md5sum"
+OPENSSL="/usr/bin/openssl"
+TRUST="/usr/bin/trust"
+ANCHORDIR="/etc/tls/trust-source"
+ANCHORLIST="/etc/tls/anchors.md5sums"
+BUNDLEDIR="/etc/tls/certs"
+CABUNDLE="${BUNDLEDIR}/ca-bundle.crt"
+SMBUNDLE="${BUNDLEDIR}/email-ca-bundle.crt"
+CSBUNDLE="${BUNDLEDIR}/objsign-ca-bundle.crt"
+CERTDIR="${SSLDIR}/certs"
+KEYSTORE="/etc/tls/java"
+NSSDB="${PKIDIR}/nssdb"
+LOCALDIR="${SSLDIR}/local"
+DESTDIR=""
+URL="https://hg.mozilla.org/releases/mozilla-release/raw-file/default/security/nss/lib/ckfw/builtins/certdata.txt"
+
+# Source must be downloaded over https
+# Valid urls for download are below
+# Default to NSS release branch
+
+# https://hg.mozilla.org/projects/nss/raw-file/tip/lib/ckfw/builtins/certdata.txt
+# https://hg.mozilla.org/releases/mozilla-release/raw-file/default/security/nss/lib/ckfw/builtins/certdata.txt
+# https://hg.mozilla.org/mozilla-central/raw-file/default/security/nss/lib/ckfw/builtins/certdata.txt
+# https://hg.mozilla.org/releases/mozilla-beta/raw-file/default/security/nss/lib/ckfw/builtins/certdata.txt
+EOF
+xEOFx
+) > tmp
