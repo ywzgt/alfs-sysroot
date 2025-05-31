@@ -1,0 +1,36 @@
+Cloning into '/lfs_build/jhalfs/book-source'...
+Already on 'multilib'
+Your branch is up to date with 'origin/multilib'.
+/lfs_build/jhalfs/book-source/chapter08/ncurses.xml:140: parser error : Entity 'ncurses-base-version' not defined
+install -vm755 dest/usr/lib/libncursesw.so.&ncurses-base-version; /usr/lib
+                                                                 ^
+/lfs_build/jhalfs/book-source/chapter08/ncurses.xml:141: parser error : Entity 'ncurses-base-version' not defined
+rm -v  dest/usr/lib/libncursesw.so.&ncurses-base-version;
+                                                         ^
+/lfs_build/jhalfs/book-source/chapter06/bash.xml:48: parser error : Entity 'bash-crosscompile-fix-patch' not defined
+<screen><userinput remap="pre">patch -Np1 -i ../&bash-crosscompile-fix-patch;</u
+                                                                             ^
+/lfs_build/jhalfs/book-source/chapter08/coreutils.xml:46: parser error : Entity 'coreutils-upstream-patch' not defined
+<screen><userinput remap="pre">patch -Np1 -i ../&coreutils-upstream-patch;</user
+                                                                          ^
+/lfs_build/jhalfs/book-source/chapter08/perl.xml:46: parser error : Entity 'perl-upstream-fix-patch' not defined
+<screen><userinput remap="pre">patch -Np1 -i ../&perl-upstream-fix-patch;</useri
+                                                                         ^
+/lfs_build/jhalfs/book-source/chapter08/python.xml:48: parser error : Entity 'python-security-fixes-patch' not defined
+   <screen><userinput remap="pre">patch -Np1 -i ../&python-security-fixes-patch;
+                                                                               ^
+/lfs_build/jhalfs/book-source/chapter08/ncurses.xml:140: parser error : Entity 'ncurses-base-version' not defined
+install -vm755 dest/usr/lib/libncursesw.so.&ncurses-base-version; /usr/lib
+                                                                 ^
+/lfs_build/jhalfs/book-source/chapter08/ncurses.xml:141: parser error : Entity 'ncurses-base-version' not defined
+rm -v  dest/usr/lib/libncursesw.so.&ncurses-base-version;
+                                                         ^
+/lfs_build/jhalfs/book-source/chapter08/perl.xml:46: parser error : Entity 'perl-upstream-fix-patch' not defined
+<screen><userinput remap="pre">patch -Np1 -i ../&perl-upstream-fix-patch;</useri
+                                                                         ^
+/lfs_build/jhalfs/book-source/chapter08/python.xml:48: parser error : Entity 'python-security-fixes-patch' not defined
+   <screen><userinput remap="pre">patch -Np1 -i ../&python-security-fixes-patch;
+                                                                               ^
+/lfs_build/jhalfs/book-source/chapter08/coreutils.xml:46: parser error : Entity 'coreutils-upstream-patch' not defined
+<screen><userinput remap="pre">patch -Np1 -i ../&coreutils-upstream-patch;</user
+                                                                          ^
