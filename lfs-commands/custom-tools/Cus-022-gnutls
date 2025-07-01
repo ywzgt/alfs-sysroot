@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+cd $PKGDIR
+		./configure --prefix=/usr 		--disable-tests 		--docdir=/usr/share/doc/gnutls-3.8.6 		--with-default-trust-store-pkcs11="pkcs11:" 		--with-included-unistring
+make
+make install
+find /usr ! -type d -name "*.la" -exec rm -f -- "{}" +
+exit

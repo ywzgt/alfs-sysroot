@@ -1,0 +1,75 @@
+#!/bin/bash
+set +h
+set -e
+
+
+
+PREV_SEC=${SECONDS}
+      
+ROOT=/
+
+SCRIPT_ROOT=jhalfs
+
+SRC_DIR=${ROOT}sources
+
+VERSION=6.15.4
+PKG_DEST=${SRC_DIR}/1002-kernel
+
+PACKAGE=linux-6.15.4.tar.xz
+cd $SRC_DIR
+PKGDIR=$(tar -tf $PACKAGE | head -n1 | sed 's@^./@@;s@/.*@@')
+export PKGDIR VERSION PKG_DEST
+
+if [ -d "$PKGDIR" ]; then rm -rf $PKGDIR; fi
+if [ -d "$PKG_DEST" ]; then rm -rf $PKG_DEST; fi
+if [ -d "${PKGDIR%-*}-build" ]; then  rm -rf ${PKGDIR%-*}-build; fi
+
+if [ "${PKGDIR%$VERSION}" = "$PKGDIR" ]; then
+    echo Mismatch between version and directory name ! Exiting...
+    exit 2
+fi
+
+echo "KB: $(du -skx --exclude=lost+found --exclude=var/lib --exclude=$SCRIPT_ROOT $ROOT)"
+
+
+tar -xf $PACKAGE
+cd $PKGDIR
+
+export MAKEFLAGS="-j4"
+SECONDS=${PREV_SEC}
+
+# Start of LFS book script
+make mrproper
+cp -v ../kernel-config .config
+timeout 60 make oldconfig ||\
+{ echo kernel config is not complete and cannot be used\!
+echo You should enter chroot '("make -C <build_dir>/jhalfs chroot")'
+echo then run '"make oldconfig" in /sources/linux-<version>,'
+echo answer the questions, and save the resulting configuration,
+echo then copy the resulting .config to /sources/kernel-config,
+echo exit chroot and restart the build.
+exit 124; }
+make
+make -j1 modules_install
+cp -v arch/x86/boot/bzImage /boot/vmlinuz-6.15.4-lfs-r12.3-932-systemd
+cp -v System.map /boot/System.map-6.15.4
+cp -v .config /boot/config-6.15.4
+cp -r Documentation -T /usr/share/doc/linux-6.15.4
+install -v -m755 -d /etc/modprobe.d
+cat > /etc/modprobe.d/usb.conf << "EOF"
+# Begin /etc/modprobe.d/usb.conf
+
+install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i ohci_hcd ; true
+install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; true
+
+# End /etc/modprobe.d/usb.conf
+EOF
+echo -e "\n\nTotalseconds: $SECONDS\n"
+
+# End of LFS book script
+
+echo "KB: $(du -skx --exclude=lost+found --exclude=var/lib --exclude=$SCRIPT_ROOT $ROOT)"
+cd $SRC_DIR
+rm -rf $PKGDIR
+if [ -d "${PKGDIR%-*}-build" ]; then  rm -rf ${PKGDIR%-*}-build; fi
+exit
