@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+cd $PKGDIR
+./configure --prefix=/usr 		--libexecdir=/usr/lib 		--with-secure-path 		--with-all-insults 		--with-env-editor 		--without-pam 		--docdir=/usr/share/doc/sudo-1.9.15p5 		--with-passprompt=" 🔐 %p : "
+
+make
+make install
+ln -sfv libsudo_util.so.0.0.0 /usr/lib/sudo/libsudo_util.so.0
+
+sed -e '/root ALL=(ALL:ALL) ALL$/a\Defaults secure_path="\/usr\/local\/sbin:\/usr\/local\/bin:\/usr\/sbin:\/usr\/bin"\nDefaults timestamp_timeout=30' 		-e '/^# %wheel ALL=(ALL:ALL) ALL$/s/# //' -i /etc/sudoers
+find /usr ! -type d -name "*.la" -exec rm -f -- "{}" +
+exit
