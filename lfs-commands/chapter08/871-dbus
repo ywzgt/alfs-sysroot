@@ -1,0 +1,64 @@
+#!/bin/bash
+set +h
+set -e
+
+
+
+PREV_SEC=${SECONDS}
+      
+ROOT=/
+
+SCRIPT_ROOT=jhalfs
+
+SRC_DIR=${ROOT}sources
+
+VERSION=1.16.2
+PKG_DEST=${SRC_DIR}/871-dbus
+
+PACKAGE=dbus-1.16.2.tar.xz
+cd $SRC_DIR
+PKGDIR=$(tar -tf $PACKAGE | head -n1 | sed 's@^./@@;s@/.*@@')
+export PKGDIR VERSION PKG_DEST
+
+if [ -d "$PKGDIR" ]; then rm -rf $PKGDIR; fi
+if [ -d "$PKG_DEST" ]; then rm -rf $PKG_DEST; fi
+if [ -d "${PKGDIR%-*}-build" ]; then  rm -rf ${PKGDIR%-*}-build; fi
+
+echo "KB: $(du -skx --exclude=lost+found --exclude=var/lib --exclude=$SCRIPT_ROOT $ROOT)"
+
+
+tar -xf $PACKAGE
+cd $PKGDIR
+
+export MAKEFLAGS="-j4"
+SECONDS=${PREV_SEC}
+
+# Start of LFS book script
+mkdir build
+cd    build
+
+meson setup --prefix=/usr --buildtype=release --wrap-mode=nofallback ..
+ninja
+# ninja test >> $TEST_LOG 2>&1 || true
+ninja install
+ln -sfv /etc/machine-id /var/lib/dbus
+rm -rf *
+PKG_CONFIG_PATH="/usr/lib32/pkgconfig" \
+CC="gcc -m32 -march=i686"              \
+CXX="g++ -m32 -march=i686"             \
+meson setup --prefix=/usr --libdir=/usr/lib32 --buildtype=release --wrap-mode=nofallback ..
+ninja
+DESTDIR=$(pwd)/destdir ninja install
+mkdir -pv /usr/lib32/pkgconfig
+cp -av $(pwd)/destdir/usr/lib32/libdbus-1.so* /usr/lib32/
+cp -av $(pwd)/destdir/usr/lib32/dbus-1.0 /usr/lib32/
+cp -v  $(pwd)/destdir/usr/lib32/pkgconfig/dbus-1.pc /usr/lib32/pkgconfig/
+echo -e "\n\nTotalseconds: $SECONDS\n"
+
+# End of LFS book script
+
+echo "KB: $(du -skx --exclude=lost+found --exclude=var/lib --exclude=$SCRIPT_ROOT $ROOT)"
+cd $SRC_DIR
+rm -rf $PKGDIR
+if [ -d "${PKGDIR%-*}-build" ]; then  rm -rf ${PKGDIR%-*}-build; fi
+exit
