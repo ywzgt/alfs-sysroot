@@ -1,0 +1,9 @@
+Cloning into '/lfs_build/jhalfs/book-source'...
+Already on 'multilib'
+Your branch is up to date with 'origin/multilib'.
+/lfs_build/jhalfs/book-source/chapter08/coreutils.xml:46: parser error : Entity 'coreutils-upstream-patch' not defined
+<screen><userinput remap="pre">patch -Np1 -i ../&coreutils-upstream-patch;</user
+                                                                          ^
+/lfs_build/jhalfs/book-source/chapter08/coreutils.xml:46: parser error : Entity 'coreutils-upstream-patch' not defined
+<screen><userinput remap="pre">patch -Np1 -i ../&coreutils-upstream-patch;</user
+                                                                          ^
