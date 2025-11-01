@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+cd $PKGDIR
+./configure --prefix=/usr \
+		--with-gitconfig=/etc/gitconfig \
+		--with-libpcre2 \
+		--with-python=python3
+make
+perllibDIR="$(/usr/bin/perl -MConfig -wle 'print $Config{installsitelib}')"
+make perllibdir=${perllibDIR} install
+find /usr ! -type d -name "*.la" -exec rm -f -- "{}" +
+exit

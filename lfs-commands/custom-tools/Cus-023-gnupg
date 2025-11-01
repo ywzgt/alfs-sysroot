@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+cd $PKGDIR
+		./configure --prefix=/usr 		--localstatedir=/var 		--sysconfdir=/etc 		--docdir=/usr/share/doc/gnupg-2.4.5
+make
+make install
+find /usr ! -type d -name "*.la" -exec rm -f -- "{}" +
+exit
