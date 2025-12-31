@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+cd $PKGDIR
+./configure --prefix=/usr 		--disable-static 		--docdir=/usr/share/doc/pcre2-10.44 		--enable-unicode 		$([[ $(gcc -dumpmachine) = *-gnux32 ]] || echo --enable-jit) 		--enable-pcre2-16 		--enable-pcre2-32 		--enable-pcre2grep-libz 		--enable-pcre2grep-libbz2 		--enable-pcre2test-libreadline
+
+make
+make install
+find /usr ! -type d -name "*.la" -exec rm -f -- "{}" +
+exit
