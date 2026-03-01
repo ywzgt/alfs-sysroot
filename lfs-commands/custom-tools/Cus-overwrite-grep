@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+cd $PKGDIR
+sed -i "s/echo/#echo/" src/egrep.sh
+./configure --prefix=/usr
+make
+make DESTDIR=$PWD/DES install
+install -vm755 DES/usr/bin/grep -t /usr/bin/
+find /usr ! -type d -name "*.la" -exec rm -f -- "{}" +
+exit
