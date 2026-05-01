@@ -1,0 +1,18 @@
+Cloning into '/lfs_build/jhalfs/book-source'...
+Already on 'multilib'
+Your branch is up to date with 'origin/multilib'.
+/lfs_build/jhalfs/book-source/chapter08/openrc.xml:13: parser error : Entity 'openrc-version' not defined
+    <productnumber>&openrc-version;</productnumber>
+                                   ^
+/lfs_build/jhalfs/book-source/chapter08/openrc.xml:14: parser error : Entity 'openrc-url' not defined
+    <address>&openrc-url;</address>
+                         ^
+/lfs_build/jhalfs/book-source/chapter08/openrc.xml:17: parser error : Entity 'openrc-version' not defined
+  <title>OpenRC-&openrc-version;</title>
+                                ^
+/lfs_build/jhalfs/book-source/chapter08/openrc.xml:34: parser error : Entity 'openrc-fin-sbu' not defined
+        <seg>&openrc-fin-sbu;</seg>
+                             ^
+/lfs_build/jhalfs/book-source/chapter08/openrc.xml:35: parser error : Entity 'openrc-fin-du' not defined
+        <seg>&openrc-fin-du;</seg>
+                            ^

@@ -1,0 +1,21 @@
+#!/bin/bash
+set +h
+set -e
+
+echo "MLFS #3c25d" > /etc/lfs-release
+cat > /etc/lsb-release << "EOF"
+DISTRIB_ID="Linux From Scratch"
+DISTRIB_RELEASE="MLFS #3c25d"
+DISTRIB_CODENAME="jhalfs-Linux®FromScratch"
+DISTRIB_DESCRIPTION="Linux From Scratch"
+EOF
+cat > /etc/os-release << "EOF"
+NAME="Linux From Scratch"
+VERSION="MLFS #3c25d"
+ID=lfs
+PRETTY_NAME="Multilib Linux From Scratch #3c25d"
+VERSION_CODENAME="jhalfs-Linux®FromScratch"
+HOME_URL="https://www.linuxfromscratch.org/lfs/"
+RELEASE_TYPE="development"
+EOF
+exit
